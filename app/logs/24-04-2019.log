@@ -1,0 +1,2091 @@
+[Wed, 24 Apr 19 05:45:03 +1000][ERROR] Could not create relation between DA 14718 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 05:45:03 +1000][ERROR] Could not create relation between DA 14718 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 05:45:18 +1000][ERROR] Could not create relation between DA 14718 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 05:45:18 +1000][ERROR] Could not create relation between DA 14718 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 05:50:44 +1000][ERROR] Could not create relation between DA 14632 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 05:51:02 +1000][ERROR] Could not create relation between DA 14632 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 05:55:02 +1000][ERROR] Could not create relation between DA 14609 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 05:55:15 +1000][ERROR] Could not create relation between DA 14609 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:00:43 +1000][ERROR] Could not create relation between DA 14593 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:00:56 +1000][ERROR] Could not create relation between DA 14593 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:06:22 +1000][ERROR] Could not create relation between DA 14484 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:06:40 +1000][ERROR] Could not create relation between DA 14484 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:16:40 +1000][ERROR] Could not create relation between DA 14381 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:16:40 +1000][ERROR] Could not create relation between DA 14381 and User 13 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:30:50 +1000][ERROR] Could not create relation between DA 14270 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:30:59 +1000][ERROR] Could not create relation between DA 14270 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:35:42 +1000][ERROR] Could not create relation between DA 14216 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:35:42 +1000][ERROR] Could not create relation between DA 14216 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:35:51 +1000][ERROR] Could not create relation between DA 14216 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:35:51 +1000][ERROR] Could not create relation between DA 14216 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:36:39 +1000][ERROR] Could not create relation between DA 14188 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:36:49 +1000][ERROR] Could not create relation between DA 14188 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:40:33 +1000][ERROR] Could not create relation between DA 14182 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:40:33 +1000][ERROR] Could not create relation between DA 14182 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:40:42 +1000][ERROR] Could not create relation between DA 14182 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 06:40:42 +1000][ERROR] Could not create relation between DA 14182 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:01:31 +1000][ERROR] Could not create relation between DA 14065 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:01:39 +1000][ERROR] Could not create relation between DA 14065 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:05:37 +1000][ERROR] Could not create relation between DA 14046 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:05:56 +1000][ERROR] Could not create relation between DA 14046 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:11:53 +1000][ERROR] Could not create relation between DA 13778 and User 13 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:15:48 +1000][ERROR] Could not create relation between DA 13772 and User 13 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:16:15 +1000][ERROR] Could not create relation between DA 13745 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:16:24 +1000][ERROR] Could not create relation between DA 13745 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:20:19 +1000][ERROR] Could not create relation between DA 13735 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:20:27 +1000][ERROR] Could not create relation between DA 13735 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:21:00 +1000][ERROR] Could not create relation between DA 13678 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:21:08 +1000][ERROR] Could not create relation between DA 13678 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:25:44 +1000][ERROR] Could not create relation between DA 13642 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:25:52 +1000][ERROR] Could not create relation between DA 13642 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:26:58 +1000][ERROR] Could not create relation between DA 13559 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:30:12 +1000][ERROR] Could not create relation between DA 13557 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:30:20 +1000][ERROR] Could not create relation between DA 13557 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:31:30 +1000][ERROR] Could not create relation between DA 13518 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:31:30 +1000][ERROR] Could not create relation between DA 13518 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:31:30 +1000][ERROR] Could not create relation between DA 13518 and User 13 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:31:43 +1000][ERROR] Could not create relation between DA 13518 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:31:43 +1000][ERROR] Could not create relation between DA 13518 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:31:43 +1000][ERROR] Could not create relation between DA 13518 and User 13 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:41:58 +1000][ERROR] Could not create relation between DA 13359 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:45:02 +1000][ERROR] Could not create relation between DA 13358 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:45:10 +1000][ERROR] Could not create relation between DA 13358 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:45:10 +1000][ERROR] Could not create relation between DA 13357 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:45:18 +1000][ERROR] Could not create relation between DA 13357 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:45:18 +1000][ERROR] Could not create relation between DA 13356 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:45:26 +1000][ERROR] Could not create relation between DA 13356 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:46:49 +1000][ERROR] Could not create relation between DA 12997 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:46:49 +1000][ERROR] Could not create relation between DA 12997 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:46:57 +1000][ERROR] Could not create relation between DA 12997 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:46:57 +1000][ERROR] Could not create relation between DA 12997 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:50:42 +1000][ERROR] Could not create relation between DA 12969 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:50:51 +1000][ERROR] Could not create relation between DA 12969 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:56:20 +1000][ERROR] Could not create relation between DA 12956 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:56:29 +1000][ERROR] Could not create relation between DA 12956 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:56:39 +1000][ERROR] Could not create relation between DA 12954 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 07:56:48 +1000][ERROR] Could not create relation between DA 12954 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 08:05:23 +1000][ERROR] Could not create relation between DA 12861 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 08:05:33 +1000][ERROR] Could not create relation between DA 12861 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 08:26:57 +1000][ERROR] Could not create relation between DA 12604 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 08:36:48 +1000][ERROR] Could not create relation between DA 12440 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 08:46:40 +1000][ERROR] Could not create relation between DA 12323 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 08:46:52 +1000][ERROR] Could not create relation between DA 12323 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:06:43 +1000][ERROR] Could not create relation between DA 12134 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:06:56 +1000][ERROR] Could not create relation between DA 12134 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:14:56 +1000][ERROR] Could not create relation between DA 11980 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:14:56 +1000][ERROR] Could not create relation between DA 11980 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:02 +1000][ERROR] Could not create relation between DA 11979 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:03 +1000][ERROR] Could not create relation between DA 11979 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:09 +1000][ERROR] Could not create relation between DA 11979 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:09 +1000][ERROR] Could not create relation between DA 11979 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:21 +1000][ERROR] Could not create relation between DA 11979 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:21 +1000][ERROR] Could not create relation between DA 11979 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:27 +1000][ERROR] Could not create relation between DA 11979 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:27 +1000][ERROR] Could not create relation between DA 11979 and User 12 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:40 +1000][ERROR] Could not create relation between DA 11896 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:47 +1000][ERROR] Could not create relation between DA 11896 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:53 +1000][ERROR] Could not create relation between DA 11896 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:15:53 +1000][ERROR] Could not create relation between DA 11895 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:16:00 +1000][ERROR] Could not create relation between DA 11896 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:16:00 +1000][ERROR] Could not create relation between DA 11895 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:18:00 +1000][ERROR] Could not create relation between DA 11823 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:18:13 +1000][ERROR] Could not create relation between DA 11823 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:18:13 +1000][ERROR] Could not create relation between DA 11822 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:25:33 +1000][ERROR] Could not create relation between DA 11593 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:25:46 +1000][ERROR] Could not create relation between DA 11593 and User 4 (Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => users_phrase_id is required
+            [_field:protected] => users_phrase_id
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+    [1] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => show_on_alerts is required
+            [_field:protected] => show_on_alerts
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)
+[Wed, 24 Apr 19 09:28:57 +1000][INFO] User with email [jeraldfeller@gmail.com] has successfully registered.

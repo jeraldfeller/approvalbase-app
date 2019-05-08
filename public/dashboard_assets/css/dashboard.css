@@ -1,0 +1,51 @@
+.icomoon{
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icomoon-spin {
+    -webkit-animation: spin 1s infinite linear;
+    -moz-animation: spin 1s infinite linear;
+    -o-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+
+#documents-chart {
+    height: 230px;
+    position: relative;
+    text-align: center;
+}
+
+#alerts-chart {
+    height: 200px;
+    position: relative;
+    text-align: center;
+}
+
+#applications-saved-chart{
+    height: 200px;
+    width: 99%;
+    padding-right: 10px !important;
+    text-align: center;
+}
+
+.councils-wrapper{
+    overflow: hidden;
+}
+#councils-container{
+    text-align: center;
+    height: 200px;
+    position: relative;
+    overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.region-map{
+    height: 200px;
+}

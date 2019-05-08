@@ -1,0 +1,13 @@
+[Tue, 16 Oct 18 09:00:01 +1100][ERROR] Could not register user [snadira2013@gmail.com]. (Model error: Array
+(
+    [0] => Phalcon\Mvc\Model\Message Object
+        (
+            [_type:protected] => PresenceOf
+            [_message:protected] => phrase_detect_email is required
+            [_field:protected] => phrase_detect_email
+            [_model:protected] => 
+            [_code:protected] => 0
+        )
+
+)
+)

@@ -1,0 +1,834 @@
+[09-Oct-2018 11:56:24 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$viewsDirCommon in /home/approval/public_html/dev/app/controllers/common/_BaseController.php on line 20
+[09-Oct-2018 11:56:24 Australia/Sydney] PHP Fatal error:  Uncaught Phalcon\Mvc\View\Exception: Views directory must be a string or an array in phalcon/mvc/view.zep:179
+Stack trace:
+#0 /home/approval/public_html/dev/app/controllers/common/_BaseController.php(20): Phalcon\Mvc\View->setViewsDir(NULL)
+#1 [internal function]: Common\Controllers\_BaseController->afterExecuteRoute(Object(Phalcon\Mvc\Dispatcher), NULL)
+#2 [internal function]: Phalcon\Dispatcher->dispatch()
+#3 /home/approval/public_html/dev/public/index.php(54): Phalcon\Mvc\Application->handle()
+#4 {main}
+  thrown in phalcon/mvc/view.zep on line 179
+[09-Oct-2018 11:57:00 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$viewsDirCommon in /home/approval/public_html/dev/app/controllers/common/_BaseController.php on line 20
+[09-Oct-2018 11:57:00 Australia/Sydney] PHP Fatal error:  Uncaught Phalcon\Mvc\View\Exception: Views directory must be a string or an array in phalcon/mvc/view.zep:179
+Stack trace:
+#0 /home/approval/public_html/dev/app/controllers/common/_BaseController.php(20): Phalcon\Mvc\View->setViewsDir(NULL)
+#1 [internal function]: Common\Controllers\_BaseController->afterExecuteRoute(Object(Phalcon\Mvc\Dispatcher), NULL)
+#2 [internal function]: Phalcon\Dispatcher->dispatch()
+#3 /home/approval/public_html/dev/public/index.php(55): Phalcon\Mvc\Application->handle()
+#4 {main}
+  thrown in phalcon/mvc/view.zep on line 179
+[10-Oct-2018 12:54:41 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%common%%pricing%%index.volt.php on line 85
+[10-Oct-2018 12:54:53 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%common%%pricing%%index.volt.php on line 85
+[10-Oct-2018 12:55:19 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%common%%pricing%%index.volt.php on line 85
+[10-Oct-2018 12:55:38 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%common%%pricing%%index.volt.php on line 85
+[10-Oct-2018 14:40:18 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:18 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:18 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 14:40:18 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 14:40:25 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:25 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:25 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 14:40:25 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 14:40:31 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:31 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:31 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 14:40:31 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 14:40:35 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:35 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 14:40:35 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 14:40:35 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:45:55 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:45:55 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:45:55 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:45:55 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:46:04 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:46:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:46:04 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:46:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:46:36 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:46:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:46:36 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:46:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:46:54 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:46:54 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:46:54 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:46:54 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:47:01 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:47:01 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:47:01 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:47:01 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:48:14 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:48:14 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:48:14 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:48:14 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:50:41 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:50:41 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 15:50:41 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 15:50:41 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 22:27:28 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 22:27:28 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[10-Oct-2018 22:27:28 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[10-Oct-2018 22:27:28 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:13:44 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:13:44 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:13:44 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:13:44 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:13:47 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:13:47 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:13:47 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:13:47 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:13:57 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:13:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:13:57 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:13:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:18:53 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:18:53 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:18:53 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:18:53 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:21:08 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:21:08 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:21:08 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:21:08 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:21:22 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:21:22 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:21:22 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:21:22 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:22:59 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:22:59 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:22:59 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:22:59 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:08 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:08 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:08 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:08 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:10 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:10 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:10 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:10 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:16 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:16 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:16 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:16 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:18 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:18 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[11-Oct-2018 17:23:18 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[11-Oct-2018 17:23:18 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[12-Oct-2018 20:15:02 Australia/Sydney] PHP Warning:  Phalcon\Mvc\View\Engine\Volt\Compiler::compileFile(): Only 0 of 286 bytes written, possibly out of free disk space in /home/approval/public_html/dev/public/index.php on line 55
+[12-Oct-2018 20[12-Oct-2018 20:20:02 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'users_phrases.exclude_phrase' in 'field list' in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php:931
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, NULL)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo->query('SELECT `users_p...', Array, NULL)
+#3 [internal function]: Phalcon\Mvc\Model\Query->_executeSelect(Array, Array, NULL)
+#4 [internal function]: Phalcon\Mvc\Model\Query->execute()
+#5 [internal function]: Phalcon\Mvc\Model::find(Array)
+#6 [internal function]: Phalcon\Mvc\Model\Manager->getRelationRecords(Object(Phalcon\Mvc\Model\Relation), NULL, Object(Aiden\Models\Users), NULL)
+#7 [internal function]: Phalcon\Mvc\Model->_getRelatedRecords('Aiden\\Models\\Us...', 'getPhrases', Array)
+#8 /home/approval/public_html/dev/app/compiled/%%home%%approval%%pu in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 931
+[12-Oct-2018 20:25:09 Australia/Sydney] PHP Parse error:  syntax error, unexpected end of file, expecting ']' in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 332
+[12-Oct-2018 20:25:21 Australia/Sydney] PHP Parse error:  syntax error, unexpected end of file, expecting ']' in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 332
+[12-Oct-2018 20:26:10 Australia/Sydney] PHP Parse error:  syntax error, unexpected end of file, expecting ']' in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 332
+[13-Oct-2018 19:30:57 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[13-Oct-2018 19:30:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[13-Oct-2018 19:30:57 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[13-Oct-2018 19:30:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[13-Oct-2018 19:31:02 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[13-Oct-2018 19:31:02 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[13-Oct-2018 19:31:02 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[13-Oct-2018 19:31:02 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[13-Oct-2018 19:31:10 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[13-Oct-2018 19:31:10 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[13-Oct-2018 19:31:10 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[13-Oct-2018 19:31:10 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 11:28:04 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 11:28:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 11:28:04 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 11:28:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 14:48:32 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 14:48:32 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 14:48:32 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 14:48:32 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 14:48:37 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 14:48:37 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 14:48:37 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 14:48:37 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 14:48:46 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 14:48:46 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1042
+[14-Oct-2018 14:48:46 Australia/Sydney] PHP Notice:  Undefined property: Phalcon\Config::$htmlEntities in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 14:48:46 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 1047
+[14-Oct-2018 14:51:30 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'das_users.email_sent' in 'field list' in /home/approval/public_html/dev/app/models/Das.php:365
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo->query('SELECT `das_use...', Array, Array)
+#3 [internal function]: Phalcon\Mvc\Model\Query->_executeSelect(Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model\Query->execute()
+#5 /home/approval/public_html/dev/app/models/Das.php(365): Phalcon\Mvc\Model::findFirst(Array)
+#6 /home/approval/public_html/dev/app/controllers/dashboard/LeadsController.php(41): Aiden\Models\Das->getLinkedDasUsers(Object(Aiden\Models\Users))
+#7 [internal function]: Aiden\Controllers\LeadsController->viewAction('1756')
+#8 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\LeadsController), 'viewAction', Array)
+#9 [inte in /home/approval/public_html/dev/app/models/Das.php on line 365
+[14-Oct-2018 14:51:45 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'das_users.email_sent' in 'field list' in /home/approval/public_html/dev/app/models/Das.php:365
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo->query('SELECT `das_use...', Array, Array)
+#3 [internal function]: Phalcon\Mvc\Model\Query->_executeSelect(Array, Array, Array)
+#4 [internal function]: Phalcon\Mvc\Model\Query->execute()
+#5 /home/approval/public_html/dev/app/models/Das.php(365): Phalcon\Mvc\Model::findFirst(Array)
+#6 /home/approval/public_html/dev/app/controllers/dashboard/LeadsController.php(41): Aiden\Models\Das->getLinkedDasUsers(Object(Aiden\Models\Users))
+#7 [internal function]: Aiden\Controllers\LeadsController->viewAction('1756')
+#8 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\LeadsController), 'viewAction', Array)
+#9 [inte in /home/approval/public_html/dev/app/models/Das.php on line 365
+[14-Oct-2018 15:10:38 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'das_users.email_sent' in 'field list' in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php:31
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, NULL)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo->query('SELECT `das_use...', Array, NULL)
+#3 [internal function]: Phalcon\Mvc\Model\Query->_executeSelect(Array, Array, NULL)
+#4 [internal function]: Phalcon\Mvc\Model\Query->execute()
+#5 /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php(31): Phalcon\Mvc\Model::find(Array)
+#6 [internal function]: Aiden\Controllers\IndexController->indexAction()
+#7 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\IndexController), 'indexAction', Array)
+#8 [internal function]: Phalcon\Dispatcher->dispatch()
+#9 /home/approval/public_html/dev/public/index.php(55): Phalco in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php on line 31
+[14-Oct-2018 15:10:40 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'das_users.email_sent' in 'field list' in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php:31
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, NULL)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo->query('SELECT `das_use...', Array, NULL)
+#3 [internal function]: Phalcon\Mvc\Model\Query->_executeSelect(Array, Array, NULL)
+#4 [internal function]: Phalcon\Mvc\Model\Query->execute()
+#5 /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php(31): Phalcon\Mvc\Model::find(Array)
+#6 [internal function]: Aiden\Controllers\IndexController->indexAction()
+#7 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\IndexController), 'indexAction', Array)
+#8 [internal function]: Phalcon\Dispatcher->dispatch()
+#9 /home/approval/public_html/dev/public/index.php(55): Phalco in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php on line 31
+[14-Oct-2018 15:14:25 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'das_users.email_sent' in 'field list' in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php:31
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, NULL)
+#2 [internal function]: Phalcon\Db\Adapter\Pdo->query('SELECT `das_use...', Array, NULL)
+#3 [internal function]: Phalcon\Mvc\Model\Query->_executeSelect(Array, Array, NULL)
+#4 [internal function]: Phalcon\Mvc\Model\Query->execute()
+#5 /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php(31): Phalcon\Mvc\Model::find(Array)
+#6 [internal function]: Aiden\Controllers\IndexController->indexAction()
+#7 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\IndexController), 'indexAction', Array)
+#8 [internal function]: Phalcon\Dispatcher->dispatch()
+#9 /home/approval/public_html/dev/public/index.php(55): Phalco in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php on line 31
+[16-Oct-2018 12:17:00 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 12:17:00 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 12:17:03 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 12:17:03 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 12:17:05 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 12:17:05 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 12:17:17 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 12:17:17 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 15:56:40 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 15:56:40 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 16:13:52 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 16:13:52 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 16:13:52 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 16:13:52 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 16:14:36 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 16:14:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 16:14:40 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 16:14:40 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 16:14:45 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 16:14:45 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 18:15:22 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 18:15:22 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 285
+[16-Oct-2018 18:15:33 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 18:15:33 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 18:16:01 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 18:16:01 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 286
+[16-Oct-2018 18:17:02 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 18:17:02 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 286
+[16-Oct-2018 18:17:04 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 286
+[16-Oct-2018 18:17:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 286
+[16-Oct-2018 18:17:11 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php:426
+Stack trace:
+#0 [internal function]: Aiden\Controllers\Admin\DatatablesController->leadsAction()
+#1 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\Admin\DatatablesController), 'leadsAction', Array)
+#2 [internal function]: Phalcon\Dispatcher->dispatch()
+#3 /home/approval/public_html/dev/public/index.php(55): Phalcon\Mvc\Application->handle()
+#4 {main}
+  thrown in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php on line 426
+[16-Oct-2018 21:01:04 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:01:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:01:16 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 21:01:16 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 21:01:29 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 21:01:29 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 21:01:47 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:01:47 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:02:26 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:02:26 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:13:33 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:13:33 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:13:37 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:13:37 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:13:56 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 21:13:56 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 21:14:07 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:14:07 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:14:15 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:14:15 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:14:28 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:14:28 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:16:01 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:16:01 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:17:04 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:17:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:55:00 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:55:00 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:55:06 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:55:06 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 21:59:38 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:59:38 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:59:41 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:59:41 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:59:46 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:59:46 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 21:59:49 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:59:49 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 21:59:54 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 21:59:54 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:00:42 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:00:42 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:00:45 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 22:00:45 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 22:00:56 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:00:56 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:01:13 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:01:13 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:01:15 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php:421
+Stack trace:
+#0 [internal function]: Aiden\Controllers\Admin\DatatablesController->leadsAction()
+#1 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\Admin\DatatablesController), 'leadsAction', Array)
+#2 [internal function]: Phalcon\Dispatcher->dispatch()
+#3 /home/approval/public_html/dev/public/index.php(55): Phalcon\Mvc\Application->handle()
+#4 {main}
+  thrown in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php on line 421
+[16-Oct-2018 22:01:21 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:01:21 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:01:25 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php:421
+Stack trace:
+#0 [internal function]: Aiden\Controllers\Admin\DatatablesController->leadsAction()
+#1 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\Admin\DatatablesController), 'leadsAction', Array)
+#2 [internal function]: Phalcon\Dispatcher->dispatch()
+#3 /home/approval/public_html/dev/public/index.php(55): Phalcon\Mvc\Application->handle()
+#4 {main}
+  thrown in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php on line 421
+[16-Oct-2018 22:03:37 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:03:37 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:03:39 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php:421
+Stack trace:
+#0 [internal function]: Aiden\Controllers\Admin\DatatablesController->leadsAction()
+#1 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\Admin\DatatablesController), 'leadsAction', Array)
+#2 [internal function]: Phalcon\Dispatcher->dispatch()
+#3 /home/approval/public_html/dev/public/index.php(55): Phalcon\Mvc\Application->handle()
+#4 {main}
+  thrown in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php on line 421
+[16-Oct-2018 22:03:42 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:03:42 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:03:46 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:03:46 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:04:06 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:04:06 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:04:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:04:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:05:34 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:05:34 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:05:53 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:05:53 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:05:57 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:05:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:06:00 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:06:00 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:06:04 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:06:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:06:14 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:06:14 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:06:17 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:06:17 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:07:36 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:07:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:07:43 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:07:43 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:08:13 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:08:13 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:08:26 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:08:26 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:08:30 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:08:30 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:08:35 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:08:35 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:08:50 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:08:50 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:09:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:09:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:09:33 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:09:33 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:10:05 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:10:05 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:10:12 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:10:12 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:10:20 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:10:20 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:10:20 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php:895
+Stack trace:
+#0 [internal function]: unknown()
+#1 [internal function]: Phalcon\Mvc\View\Engine\Volt->render('/home/approval/...', Array, true)
+#2 [internal function]: Phalcon\Mvc\View->_engineRender(Array, 'leads/view', true, true, NULL)
+#3 [internal function]: Phalcon\Mvc\View->render('leads', 'view')
+#4 /home/approval/public_html/dev/public/index.php(55): Phalcon\Mvc\Application->handle()
+#5 {main}
+  thrown in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 895
+[16-Oct-2018 22:10:26 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:10:26 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:17:00 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:17:00 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:17:21 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:17:21 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:19:23 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:19:23 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:19:38 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:19:38 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:21:24 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:21:24 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:21:33 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:21:33 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:21:36 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:21:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:21:43 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:21:43 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:22:21 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:22:21 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:24:44 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:24:44 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:24:48 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:24:48 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:24:51 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:24:51 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:24:54 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:24:54 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:25:00 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:00 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:03 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:25:03 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:25:13 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:13 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:29 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:29 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:30 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:25:30 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:25:45 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:45 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:25:59 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:25:59 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:26:06 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:26:06 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:26:12 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:26:12 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:27:57 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:27:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:28:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:28:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:28:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 22:28:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 22:28:17 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:28:17 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:28:52 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:28:52 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:29:48 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:29:48 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:29:51 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:29:51 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:29:58 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:29:58 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:30:15 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:30:15 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:30:19 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:30:19 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:31:31 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:31:31 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:34:45 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:34:45 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:34:49 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:34:49 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:35:04 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:35:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[16-Oct-2018 22:35:18 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:35:18 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:40:57 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:40:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:41:18 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:41:18 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:41:21 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:41:21 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:41:50 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:41:50 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:41:55 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 22:41:55 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[16-Oct-2018 22:41:58 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:41:58 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:43:48 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:43:48 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:51:05 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:51:05 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:51:08 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:51:08 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:51:29 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:51:29 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[16-Oct-2018 22:51:36 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:51:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 22:59:59 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 22:59:59 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 23:00:20 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 23:00:20 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 23:00:30 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 23:00:30 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[16-Oct-2018 23:00:49 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 23:00:49 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 23:00:52 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 23:00:52 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[16-Oct-2018 23:01:01 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 23:01:01 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 23:01:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%users%%index.volt.php on line 297
+[16-Oct-2018 23:01:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%users%%index.volt.php on line 297
+[16-Oct-2018 23:01:12 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 23:01:12 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%leads%%index.volt.php on line 297
+[16-Oct-2018 23:05:30 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[16-Oct-2018 23:05:30 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 01:33:48 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 01:33:48 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 01:34:49 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 01:34:50 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:51:01 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 07:51:01 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 07:51:04 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:51:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:52:28 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 07:52:28 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 07:52:41 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:52:41 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:52:43 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 07:52:43 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 07:52:44 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:52:44 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:52:47 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:52:47 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:52:58 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:52:58 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:05 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:05 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:15 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:15 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:32 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:32 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:50 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:50 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:53:53 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:53:53 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:55:55 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:55:55 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:55:58 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:55:58 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 07:56:04 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 07:56:04 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 07:56:24 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 07:56:24 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 08:10:17 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 08:10:17 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 08:20:02 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 08:20:02 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 08:20:06 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 08:20:06 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 08:20:13 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 08:20:13 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 08:20:15 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 08:20:15 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 08:20:19 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 08:20:19 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 14:30:29 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 14:30:30 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 14:30:33 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 14:30:33 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 14:54:55 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 14:54:55 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 14:58:36 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 14:58:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 16:31:47 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 16:31:47 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 16:32:01 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:32:01 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:32:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:32:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:55:13 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 16:55:13 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 16:55:23 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 16:55:23 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 16:55:29 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:55:29 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:55:36 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 16:55:36 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 16:55:54 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:55:54 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 16:56:12 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[17-Oct-2018 16:56:12 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%admin%%councils%%index.volt.php on line 297
+[17-Oct-2018 20:30:37 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 20:30:37 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 20:30:47 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 20:30:47 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 20:50:02 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 20:50:02 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 20:50:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 20:50:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 20:52:28 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 20:52:28 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%phrases%%index.volt.php on line 297
+[17-Oct-2018 20:52:39 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 20:52:39 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 20:53:18 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 20:53:18 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 21:24:34 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 21:24:34 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 21:24:40 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 21:24:40 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 297
+[17-Oct-2018 21:34:57 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 21:34:57 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%councils%%index.volt.php on line 297
+[17-Oct-2018 21:35:05 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 21:35:05 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 21:46:07 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 21:46:07 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%index%%index.volt.php on line 296
+[17-Oct-2018 21:46:09 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 21:46:09 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 22:01:30 Australia/Sydney] PHP Notice:  Undefined variable: user in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[17-Oct-2018 22:01:30 Australia/Sydney] PHP Notice:  Trying to get property of non-object in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 297
+[12-Nov-2018 14:50:35 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/approval/public_html/dev/app/config/services.php:53
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/approval/public_html/dev/app/config/services.php(53): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Closure->{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 [internal function]: Phalcon\Di->get('db', NULL)
+#6 [internal function]: Phalcon\Di->getShared('db')
+#7 [internal function]: Phalcon\Mvc\Model\Manager->_getConnection(Object(Aiden\Models\Das), NULL)
+#8 [internal function]: Phalcon\Mvc\Model\Manager->getReadConnection(Object(Aiden\Models\Das))
+#9 [internal function]: Phalcon\Mvc\Model->getReadConnection()
+#10 [internal function]: Phalcon\Mvc\Model\Query->getReadConnection(Object(Aiden\Models\Das) in /home/approval/public_html/dev/app/config/services.php on line 53
+[12-Nov-2018 14:50:37 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/approval/public_html/dev/app/config/services.php:53
+Stack trace:
+#0 [internal function]: PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->connect(Array)
+#2 /home/approval/public_html/dev/app/config/services.php(53): Phalcon\Db\Adapter\Pdo->__construct(Array)
+#3 [internal function]: Closure->{closure}()
+#4 [internal function]: Phalcon\Di\Service->resolve(NULL, Object(Phalcon\Di\FactoryDefault))
+#5 [internal function]: Phalcon\Di->get('db', NULL)
+#6 [internal function]: Phalcon\Di->getShared('db')
+#7 [internal function]: Phalcon\Mvc\Model\Manager->_getConnection(Object(Aiden\Models\Das), NULL)
+#8 [internal function]: Phalcon\Mvc\Model\Manager->getReadConnection(Object(Aiden\Models\Das))
+#9 [internal function]: Phalcon\Mvc\Model->getReadConnection()
+#10 [internal function]: Phalcon\Mvc\Model\Query->getReadConnection(Object(Aiden\Models\Das) in /home/approval/public_html/dev/app/config/services.php on line 53
+[12-Nov-2018 14:51:18 Australia/Sydney] PHP Fatal error:  Uncaught Phalcon\Mvc\Dispatcher\Exception: Aiden\Controllers\DatatablesController handler class cannot be loaded in /home/approval/public_html/dev/public/index.php:61
+Stack trace:
+#0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Aiden\\Controlle...', 2)
+#1 [internal function]: Phalcon\Dispatcher->dispatch()
+#2 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\Application->handle()
+#3 {main}
+  thrown in /home/approval/public_html/dev/public/index.php on line 61
+[12-Nov-2018 14:51:31 Australia/Sydney] PHP Fatal error:  Uncaught Phalcon\Mvc\Dispatcher\Exception: Aiden\Controllers\DatatablesController handler class cannot be loaded in /home/approval/public_html/dev/public/index.php:61
+Stack trace:
+#0 [internal function]: Phalcon\Mvc\Dispatcher->_throwDispatchException('Aiden\\Controlle...', 2)
+#1 [internal function]: Phalcon\Dispatcher->dispatch()
+#2 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\Application->handle()
+#3 {main}
+  thrown in /home/approval/public_html/dev/public/index.php on line 61
+[12-Nov-2018 15:15:59 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php on line 44
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:01 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:05 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/IndexController.php on line 44
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:06 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:22 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:27 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:16:28 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 1 given in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 134
+[12-Nov-2018 15:26:24 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php:898
+Stack trace:
+#0 [internal function]: unknown()
+#1 [internal function]: Phalcon\Mvc\View\Engine\Volt->render('/home/approval/...', Array, true)
+#2 [internal function]: Phalcon\Mvc\View->_engineRender(Array, 'leads/view', true, true, NULL)
+#3 [internal function]: Phalcon\Mvc\View->render('leads', 'view')
+#4 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\Application->handle()
+#5 {main}
+  thrown in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 898
+[12-Nov-2018 15:26:39 Australia/Sydney] PHP Fatal error:  Uncaught Error: Call to a member function format() on null in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php:898
+Stack trace:
+#0 [internal function]: unknown()
+#1 [internal function]: Phalcon\Mvc\View\Engine\Volt->render('/home/approval/...', Array, true)
+#2 [internal function]: Phalcon\Mvc\View->_engineRender(Array, 'leads/view', true, true, NULL)
+#3 [internal function]: Phalcon\Mvc\View->render('leads', 'view')
+#4 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\Application->handle()
+#5 {main}
+  thrown in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%view.volt.php on line 898
+[12-Nov-2018 15:30:10 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ASC
+                LIMIT 0,25' at line 5 in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php:209
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php(209): Phalcon\Db\Adapter\Pdo->query('SELECT `email`,...', Array, Array)
+#3 [internal function]: Aiden\Controllers\Admin\DatatablesController->usersAction()
+#4 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\Admin\DatatablesController), 'usersAction', Array)
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\App in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php on line 209
+[12-Nov-2018 15:40:02 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ASC
+                LIMIT 0,25' at line 5 in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php:208
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php(208): Phalcon\Db\Adapter\Pdo->query('SELECT `email`,...', Array, Array)
+#3 [internal function]: Aiden\Controllers\Admin\DatatablesController->usersAction()
+#4 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\Admin\DatatablesController), 'usersAction', Array)
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\App in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php on line 208
+[12-Nov-2018 15:40:09 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ASC
+                LIMIT 0,25' at line 5 in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php:208
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php(208): Phalcon\Db\Adapter\Pdo->query('SELECT `email`,...', Array, Array)
+#3 [internal function]: Aiden\Controllers\Admin\DatatablesController->usersAction()
+#4 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\Admin\DatatablesController), 'usersAction', Array)
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\App in /home/approval/public_html/dev/app/controllers/dashboard/admin/DatatablesController.php on line 208
+[12-Nov-2018 17:21:38 Australia/Sydney] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'lanc' in 'where clause' in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php:76
+Stack trace:
+#0 [internal function]: PDOStatement->execute()
+#1 [internal function]: Phalcon\Db\Adapter\Pdo->executePrepared(Object(PDOStatement), Array, Array)
+#2 /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php(76): Phalcon\Db\Adapter\Pdo->query('SELECT\n        ...', Array, Array)
+#3 [internal function]: Aiden\Controllers\DatatablesController->searchAction()
+#4 [internal function]: Phalcon\Dispatcher->callActionMethod(Object(Aiden\Controllers\DatatablesController), 'searchAction', Array)
+#5 [internal function]: Phalcon\Dispatcher->dispatch()
+#6 /home/approval/public_html/dev/public/index.php(61): Phalcon\Mvc\Application->handle()
+#7 {main}
+  thrown in /home/approval/public_html/dev/app/controllers/dashboard/DatatablesController.php on line 76
+[12-Nov-2018 18:16:13 Australia/Sydney] PHP Warning:  money_format() expects exactly 2 parameters, 3 given in /home/approval/public_html/dev/app/models/Das.php on line 233
+[12-Nov-2018 18:32:37 Australia/Sydney] PHP Notice:  Undefined variable: currentViewedLead in /home/approval/public_html/dev/app/compiled/%%home%%approval%%public_html%%dev%%app%%views%%dashboard%%leads%%index.volt.php on line 916

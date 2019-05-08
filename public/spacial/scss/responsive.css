@@ -1,0 +1,51 @@
+@media (max-width: 1030px){
+    #join .highlighted p:after{
+        right: 110px;
+    }
+}
+@media (max-width: 820px){
+    #join .highlighted p:after{
+        right: 80px;
+    }
+    .macbook-container{
+        display: none;
+    }
+}
+@media (max-width: 767px){
+    #join:after {
+        display: none;
+    }
+
+
+
+    #join .bulleted p:before {
+        display: none;
+    }
+    #join .highlighted p:before {
+        display: none;
+    }
+    #join .highlighted p:after {
+        display: none;
+    }
+
+    .btn-cta{
+        white-space: normal;
+    }
+
+
+
+}
+@media (max-width: 416px){
+    .customer-icon-container{
+        text-align: center;
+    }
+}
+
+@media (max-width: 320px){
+    .index-header section .cta .btn-outline{
+        font-size: 7px;
+    }
+    .index-header section .cta .btn-primary{
+        font-size: 7px;
+    }
+}

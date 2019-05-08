@@ -1,0 +1,4 @@
+app/config/*
+app/cookies/*
+app/compiled/*
+vendor
