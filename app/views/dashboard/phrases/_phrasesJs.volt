@@ -227,8 +227,8 @@
 
 
           $('#input_phrase_edit').val($phrase);
-          if ($costTo > 100000000) {
-            $('#cost-to_edit').val(100000000).trigger('change');
+          if ($costTo > 50000000) {
+            $('#cost-to_edit').val(50000000).trigger('change');
           } else {
             $('#cost-to_edit').val($costTo).trigger('change');
           }

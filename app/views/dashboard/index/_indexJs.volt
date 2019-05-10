@@ -130,7 +130,7 @@
         $('.data-projects-percent-value').html(response.applications.incDec.percent + '%');
 
 
-        $('.data-value').html(shortizeNumber(response.applications.totalCost));
+        $('.data-value').html('$'+shortizeNumber(response.applications.totalCost));
 
         resolve(true);
       });

@@ -84,7 +84,7 @@
                                                             <option value="10000000">$10,000,000</option>
                                                             <option value="15000000">$15,000,000</option>
                                                             <option value="25000000">$25,000,000</option>
-                                                            <option value="50000000">$50,000,000</option>
+                                                            <option value="50000000">$50,000,000+</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-md-2 no-mrg-left no-mrg-right no-pdd-left no-pdd-right">
@@ -100,7 +100,7 @@
                                                             <option value="10000000">$10,000,000</option>
                                                             <option value="15000000">$15,000,000</option>
                                                             <option value="25000000">$25,000,000</option>
-                                                            <option value="50000000">$50,000,000</option>
+                                                            <option value="50000000">$50,000,000+</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -200,7 +200,7 @@
                                                             <option value="10000000">$10,000,000</option>
                                                             <option value="15000000">$15,000,000</option>
                                                             <option value="25000000">$25,000,000</option>
-                                                            <option value="50000000">$50,000,000</option>
+                                                            <option value="50000000">$50,000,000+</option>
                                                         </select>
                                                     </div>
                                                     <div class="col-md-2 no-mrg-left no-mrg-right no-pdd-left no-pdd-right">
@@ -216,7 +216,7 @@
                                                             <option value="10000000">$10,000,000</option>
                                                             <option value="15000000">$15,000,000</option>
                                                             <option value="25000000">$25,000,000</option>
-                                                            <option value="50000000">$50,000,000</option>
+                                                            <option value="50000000">$50,000,000+</option>
                                                         </select>
                                                     </div>
                                                 </div>

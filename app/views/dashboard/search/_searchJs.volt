@@ -341,7 +341,7 @@
               }
               if (response.parties.length > 0) {
                 for ($p = 0; $p < response.parties.length; $p++) {
-                  $partTable += '<tr><td><strong>' + response.parties[$p].role + '</strong></td><td class="break-word">' + response.parties[$p].name + '</td></tr>';
+                  $partTable += '<tr><td><strong>' + response.parties[$p].role + '</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com.au/search?newwindow=1&q='+response.parties[$p].name+'">' + response.parties[$p].name + '</a></td></tr>';
                 }
               } else {
                 $partTable = 'No details available.';

@@ -1093,7 +1093,6 @@ class CronController extends _BaseController
     // PDF Documents
     public function scanDasDocumentsAction()
     {
-
         $pdf = new PdfController();
         $pdf->getDocumentUrlAction(40);
     }
@@ -1105,6 +1104,9 @@ class CronController extends _BaseController
         $pdf = new PdfController();
         $pdf->uploadToAmazonS3();
     }
+
+
+
 
 
     public function fixParramattaAction()
@@ -1315,9 +1317,23 @@ class CronController extends _BaseController
 
 
     public function checkDaDocsAction(){
-        $docs = DasDocuments::find([
-           'conditions' => 'checked = 0 AND as3_url is not null ORDER BY id DESC LIMIT 40',
-        ]);
+//        $docs = DasDocuments::find([
+//           'conditions' => 'checked = 0 AND as3_url is not null ORDER BY id DESC LIMIT 40',
+//        ]);
+
+        $dd = new DasDocuments();
+        $sql = 'SELECT dd.* FROM `das_documents` dd, `das` d
+                WHERE d.council_id = 29 
+                AND dd.das_id = d.id
+                AND dd.checked = 0 
+                AND dd.as3_url IS NOT NULL 
+                ORDER BY dd.id DESC LIMIT 100';
+
+        $docs = new \Phalcon\Mvc\Model\Resultset\Simple(
+            null
+            , $dd
+            , $dd->getReadConnection()->query($sql, [], [])
+        );
 
         if($docs){
             foreach ($docs as $row){
@@ -1391,6 +1407,7 @@ class CronController extends _BaseController
             $dd->setAs3Url('');
             $dd->setAs3Processed(0);
             $dd->setStatus(0);
+            $dd->setChecked(0);
             $dd->save();
         }
 

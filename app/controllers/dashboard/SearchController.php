@@ -106,7 +106,7 @@ class SearchController extends _BaseController
 
         foreach ($documentsArr as $docs) {
             $documents[] = [
-                'name' => $docs->getName(),
+                'name' => $this->highlightDocKeywords($docs->getName()),
                 'url' => $docs->getUrl()
             ];
         }
@@ -150,6 +150,19 @@ class SearchController extends _BaseController
         ]);
     }
 
+
+    public function highlightDocKeywords($docName){
+        $keys = ['arch', 'plans', 'see', 'environmental effects'];
+        for($i = 0; $i < count($keys); $i++){
+            // Add delimiters
+            $replacePattern = "/" . $keys[$i] . "/";
+            $replacePattern .= 'i';
+            $replaceString = "<span class=\"highlighted-phrase\"><span style='opacity: 0;'>_</span>\$0<span style='opacity: 0;'>_</span></span>";
+            $docName = preg_replace($replacePattern, $replaceString, $docName);
+        }
+
+        return $docName;
+    }
 
     public function getDaNotesAction(){
         $userId = $this->getUser()->getId();

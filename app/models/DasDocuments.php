@@ -58,6 +58,11 @@ class DasDocuments extends _BaseModel {
      */
     protected $checked_status;
 
+    /**
+     * @Column(type="string", nullable=true)
+     */
+    protected $error_message;
+
 
     /**
      * Returns the database table name
@@ -268,6 +273,26 @@ class DasDocuments extends _BaseModel {
      */
     public function getCheckedStatus() {
         return (bool) $this->checked_status;
+
+    }
+
+
+    /**
+     * Gets the document's AS3 URL
+     * @return type
+     */
+    public function getErrorMessage() {
+        return $this->error_message;
+
+    }
+
+    /**
+     * Sets the document's AS3 URL
+     * @param string $url
+     */
+    public function setErrorMessage(string $error_message) {
+
+        $this->error_message = $error_message;
 
     }
 

@@ -53,6 +53,9 @@ class PhrasesController extends _BaseController {
         $councils = $this->request->getPost('councils');
         $costFrom = $this->request->getPost('costFrom');
         $costTo = $this->request->getPost('costTo');
+        if($costTo == 50000000){
+            $costTo = 999999999999;
+        }
 
         if($inputPhrase !== '-'){
             $phrase = UsersPhrases::findFirst([

@@ -24,9 +24,8 @@
                     <span style="color: #9fa2a6; cursor: pointer;" data-toggle="modal" data-target="#emailModal">I can't see my region</span>
                 </div>
 
-                <div class="col-sm-12 no-pdd-left text-center">
+                <div class="col-sm-12 no-pdd-left text-center mrg-top-10">
                         <a href="http://approvalbase.com/home-9-2/" target="_blank">Licence Agreement</a> & <a href="http://approvalbase.com/home-9-2-2/" target="_blank">Privacy Policy</a>
-
                 </div>
                 <div class="col-sm-12 no-pdd-left mrg-btm-20 text-center">
                     <label>

@@ -25,8 +25,8 @@ class DatatablesController extends _BaseController
         $minCost = $customSearchData['minCost'];
         $maxCostValue = $customSearchData['maxCostValue'];
         $includeNull = ($minCost == 0 ? " OR d.estimated_cost IS NULL " : "");
-        if ($maxCost == 100000000) {
-            $maxCost = $maxCostValue;
+        if ($maxCost == 50000000) {
+            $maxCost = 999999999999;
         }
         $costQuery = " AND ((d.estimated_cost >= " . $minCost . " AND d.estimated_cost <= " . $maxCost . ")" . $includeNull . ")";
         $councils = $customSearchData['councils'];
@@ -318,8 +318,8 @@ class DatatablesController extends _BaseController
         $minCost = $customSearchData['minCost'];
         $maxCostValue = $customSearchData['maxCostValue'];
         $includeNull = ($minCost == 0 ? " OR d.estimated_cost IS NULL " : "");
-        if ($maxCost == 100000000) {
-            $maxCost = $maxCostValue;
+        if ($maxCost == 50000000) {
+            $maxCost = 999999999999;
         }
         $costQuery = " AND ((d.estimated_cost >= " . $minCost . " AND d.estimated_cost <= " . $maxCost . ")" . $includeNull . ")";
         $councils = $customSearchData['councils'];
@@ -983,12 +983,26 @@ class DatatablesController extends _BaseController
             }else{
                 $councils = 'All';
             }
+
+            $costTo = $phrase->getCostTo();
+            if($costTo == 999999999999){
+                $costTo = number_format(50000000).'+';
+            }else{
+                $costTo = ($phrase->getCostTo() != 0 ? "$" . number_format($phrase->getCostTo()) : '0');
+            }
+
+            $costFrom = $phrase->getCostFrom();
+            if($costFrom == 999999999999){
+                $costFrom = number_format(50000000).'+';
+            }else{
+                $costFrom = ($phrase->getCostFrom() != 0 ? "$" . number_format($phrase->getCostFrom()) : '0');
+            }
             $dataRow = [
                 'DT_RowId' => "phrase_" . $phrase->getId(),
                 $phrase->getPhrase(),
                 $councils,
-                ($phrase->getCostFrom() != 0 ? "$" . number_format($phrase->getCostFrom()) : '0'),
-                ($phrase->getCostTo() != 0 ? "$" . number_format($phrase->getCostTo()) : '0'),
+                $costFrom,
+                $costTo,
 //                $phrase->getExcludePhrase() ? "" : $phrase->phraseOccurences,
                 $action
             ];

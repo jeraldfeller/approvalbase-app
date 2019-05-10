@@ -31,11 +31,11 @@ class PdfController extends _BaseController
         $sql = 'SELECT dd.id as docId, dd.name, dd.url, d.id, c.name as councilName
                 FROM das d, das_documents dd, councils c
                 WHERE dd.das_id = d.id
-
+          
                 AND d.council_id = c.id
                 AND dd.as3_processed = 0
                 AND (dd.status = 0 OR dd.status IS NULL)
-            
+                ORDER BY RAND()
                 LIMIT ' . $limit;
 
 
@@ -55,7 +55,7 @@ class PdfController extends _BaseController
                 $dasId = $row->id;
                 $council = $row->councilName;
 
-
+                echo $council . ': ' . $url . '<br>';
                 // fetch and download documents
 
                 // Accept terms for some of councils
@@ -94,106 +94,156 @@ class PdfController extends _BaseController
 
 
 
-//                        $this->acceptTerms($termsUrl, $this->getAspFormDataByUrl($termsUrl), $council);
+                        $this->acceptTerms($termsUrl, $formData, $council);
                         $pdfUrl = $this->curlCheckUrl($url, [], true);
                         $baseName = str_replace([' ', '/'], '_',$docName);
-                        $file = fopen('pdf/'.$docId.'_=_'.$baseName.'.pdf', "w");
-                        fwrite($file, $pdfUrl['html']);
-                        fclose($file);
 
-//                        $file = fopen('pdf/test.html', "w");
-//                        fwrite($file, $pdfUrl['html']);
-//                        fclose($file);
+
+                        // Delete pdf if not exists
+                        if(strpos($pdfUrl['html'], 'Page does not exist.') === false){
+                            $file = fopen('pdf/'.$docId.'_=_'.$baseName.'.pdf', "w");
+                            fwrite($file, $pdfUrl['html']);
+                            fclose($file);
+                        }else{
+                            // Delete pdf
+                            $this->deletePdfById($docId);
+                            echo $pdfUrl['html'] . '<Br>';
+                        }
                         break;
                     default:
                         $pdfUrl = $this->curlCheckUrl($url, $header);
+                        if(isset($pdfUrl['error'])){
+                            $this->setErrorMessage($docId, $pdfUrl['error']);
+
+                        }
                         break;
                 }
 
 
-                echo $council . ': ' . $url . '<br>';
+
 
 
                 if ($pdfUrl['url'] != false) {
-                    $pdfUrl['url'] = trim(str_replace(' ', '%20', $pdfUrl['url']));
-                    switch ($council) {
-                        case 'Bankstown':
-                            $parseUrl = parse_url($pdfUrl['url']);
-                            parse_str($parseUrl['query']);
-                            $qryTitle = $title;
-                            $qryTitle = $docName;
-                            $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $qryTitle) . '.pdf';
-                            $pdfUrl = trim($pdfUrl['url']);
-                            break;
-                        case 'Camden':
-                            parse_str(basename($pdfUrl['url']));
-                            $qryTitle = $fileName;
-                            $qryTitle = $docName;
-                            $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $qryTitle) . '.pdf';
-                            $pdfUrl = trim($pdfUrl['url']);
-                            break;
-                        case 'Fairfield City':
-                            $html = str_get_html(str_replace('%20', ' ', $pdfUrl['html']));
-                            $iframe = $html->find('iframe', 0);
-                            if ($iframe) {
-                                $src = str_replace('../../', '', $iframe->getAttribute('src'));
-                                $srcPath = explode('/', $src);
-                                $srcPath = str_replace([' ', '/'], '_', $docName);
-                                $pdfUrl = 'https://openaccess.fairfieldcity.nsw.gov.au/OpenAccess/' . $srcPath[0] . '/' . $srcPath[1];
-                                $path = 'pdf/' . $docId . '_=_' . $srcPath[1];
-                            } else {
-                                $path = '';
-                            }
-                            break;
-                        case 'Georges River':
-                            $html = str_get_html(str_replace('%20', ' ', $pdfUrl['html']));
-                            $iframe = $html->find('iframe', 0);
-                            if ($iframe) {
+//                    $file = fopen('pdf/test'.$docId.'.html', "w");
+//                    fwrite($file, $pdfUrl['html']);
+//                    fclose($file);
 
-                                $src = str_replace('../../', '', $iframe->getAttribute('src'));
-                                $pdfUrl = $src;
+                    // Delete pdf if not exists
+                    if(strpos($pdfUrl['html'], 'Requested file does not exist.') === false){
+                        $pdfUrl['url'] = trim(str_replace(' ', '%20', $pdfUrl['url']));
+                        switch ($council) {
+                            case 'Bankstown':
+                                $parseUrl = parse_url($pdfUrl['url']);
+                                parse_str($parseUrl['query']);
+                                $qryTitle = $title;
+                                $qryTitle = $docName;
+                                $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $qryTitle) . '.pdf';
+                                $pdfUrl = trim($pdfUrl['url']);
+                                break;
+                            case 'Camden':
+                                parse_str(basename($pdfUrl['url']));
+                                $qryTitle = $fileName;
+                                $qryTitle = $docName;
+                                $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $qryTitle) . '.pdf';
+                                $pdfUrl = trim($pdfUrl['url']);
+                                break;
+                            case 'Fairfield City':
+                                $html = str_get_html(str_replace('%20', ' ', $pdfUrl['html']));
+                                $iframe = $html->find('iframe', 0);
+                                if ($iframe) {
+                                    $src = str_replace('../../', '', $iframe->getAttribute('src'));
+                                    $srcPath = explode('/', $src);
+                                    $srcPath = str_replace([' ', '/'], '_', $docName);
+                                    $pdfUrl = 'https://openaccess.fairfieldcity.nsw.gov.au/OpenAccess/' . $srcPath[0] . '/' . $srcPath[1];
+                                    $path = 'pdf/' . $docId . '_=_' . $srcPath[1];
+                                } else {
+                                    $path = '';
+                                }
+                                break;
+                            case 'Georges River':
+                                $html = str_get_html(str_replace('%20', ' ', $pdfUrl['html']));
+                                $iframe = $html->find('iframe', 0);
+                                if ($iframe) {
+
+                                    $src = str_replace('../../', '', $iframe->getAttribute('src'));
+                                    $pdfUrl = $src;
 //                                $path = 'pdf/' . $docId . '_=_' . basename($pdfUrl);
-                                $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $docName);
-                            } else {
-                                $path = '';
-                            }
-                            break;
-                        default:
-                            $pdfData = $pdfUrl['html'];
-                            $pdfUrl = trim($pdfUrl['url']);
-                            $baseName = basename($pdfUrl);
-                            $baseName = str_replace([' ', '/'], '_',$docName);
-                            $path = 'pdf/' . $docId . '_=_' . $this->clean($baseName);
-                            break;
+                                    $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $docName);
+                                } else {
+                                    $path = '';
+                                }
+                                break;
+                            default:
+                                $pdfData = $pdfUrl['html'];
+                                $pdfUrl = trim($pdfUrl['url']);
+                                $baseName = basename($pdfUrl);
+                                $baseName = str_replace([' ', '/'], '_',$docName);
+                                $path = 'pdf/' . $docId . '_=_' . $this->clean($baseName);
+                                break;
 
+                        }
+                    }else{
+                        // Delete pdf
+                        $this->deletePdfById($docId);
+                        echo $pdfUrl['html'] . '<Br>';
                     }
-//                    if ($path != '') {
-//                        if($council != 'Penrith' && $council != 'Willoughby') {
-//                            var_dump('1st');
-//                            if (!strpos($path, '.doc') && !strpos($path, '.DOC')) {
-//                                $path = (!strpos($path, '.pdf') && !strpos($path, '.PDF') ? $path . '.pdf' : $path);
-//                            }
-//                            file_put_contents($path, fopen($pdfUrl, 'r'));
-//                        }
-//                    }
+
+                    if ($path != '') {
+                        if($council != 'Penrith' && $council != 'Willoughby') {
+                            if (!strpos($path, '.doc') && !strpos($path, '.DOC')) {
+                                $path = (!strpos($path, '.pdf') && !strpos($path, '.PDF') ? $path . '.pdf' : $path);
+                            }
+                            $fopen = @fopen($pdfUrl, 'r');
+                            if($fopen !== false){
+                                file_put_contents($path, $fopen);
+                            }else{
+                                // Delete Docs in database
+                                $this->deletePdfById($docId);
+                            }
+                        }
+                    }
                 }
             }
 
         }
 
-        if ($path != '') {
-            if($council != 'Penrith' && $council != 'Willoughby'){
-                var_dump('2nd');
-                if (!strpos($path, '.doc') && !strpos($path, '.DOC')) {
-                    $path = (!strpos($path, '.pdf') && !strpos($path, '.PDF') ? $path . '.pdf' : $path);
-                }
-                file_put_contents($path, fopen($pdfUrl, 'r'));
-            }
-
-        }
+//        echo 'PATH: ' . $path . '<br>';
+//        if ($path != '') {
+//            if($council != 'Penrith' && $council != 'Willoughby'){
+//                var_dump('2nd');
+//                if (!strpos($path, '.doc') && !strpos($path, '.DOC')) {
+//                    $path = (!strpos($path, '.pdf') && !strpos($path, '.PDF') ? $path . '.pdf' : $path);
+//                }
+//                file_put_contents($path, fopen($pdfUrl, 'r'));
+//            }
+//
+//        }
         return true;
     }
 
+
+    public function deletePdfById($id){
+        $dd = DasDocuments::findFirst([
+            'conditions' => 'id = ' . $id
+        ]);
+        if($dd){
+            $dd->delete();
+        }
+
+        return true;
+    }
+
+    public function setErrorMessage($id, $message){
+        $dd = DasDocuments::findFirst([
+            'conditions' => 'id = ' . $id
+        ]);
+        if($dd){
+            $dd->setErrorMessage($message);
+            $dd->save();
+        }
+
+        return true;
+    }
 
     public function uploadToAmazonS3()
     {
@@ -345,6 +395,8 @@ class PdfController extends _BaseController
 
     }
 
+    
+    
 
 
 
@@ -391,8 +443,7 @@ class PdfController extends _BaseController
         curl_close($curl);
 
         if ($err) {
-            var_dump($err);
-            return false;
+            return ['error' => $err, 'url' => false];
         } else {
             if ($target == false) {
                 return ['url' => $url, 'html' => $response];

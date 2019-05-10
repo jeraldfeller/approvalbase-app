@@ -261,7 +261,7 @@ class SettingsController extends _BaseController
         $charge = Charge::create([
             'amount' => $amount,
             'currency' => 'usd',
-            'description' => 'Monthly subsription',
+            'description' => 'Monthly subscription',
             'customer' => $customerId,
             'metadata' => ['userId' => $this->getUser()->getId()]
         ]);
