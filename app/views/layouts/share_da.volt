@@ -484,7 +484,9 @@
                                                         <td style="vertical-align: top; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 10px;"
                                                             valign="top">
                                                             <div style="color: #666666; font-weight: 600; font-size:18px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 0 10px;">
-                                                                Parramatta                                                                - DA/1038/2017/A                                                            </div>
+                                                                {{ council.readAttribute('name') }}
+                                                                - {{ da.readAttribute('council_reference') }}
+                                                            </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -501,7 +503,8 @@
                                                                     <td class="content-block"
                                                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
                                                                         valign="top">
-                                                                        Development Application - Section 4.55(2) modification to consent for DA/1038/2017 for the demolition works and construction of a five (5) storey mixed-use building including ground floor retail tenancy, forty (40) serviced apartment units, rooftop terrace and two (2) basement car parking levels for 23 vehicles. Proposed modifications seeks two additional full storeys and a partial third storey with an additonal floor area 1352.4sqm, and additional building height of 6.46metres including an additional twenty eight (28) serviced apartments and removal of one (1) car parking space to be utilised by the hydrant.                                                                    </td>
+                                                                        {{ da.readAttribute('description') }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                                                     <td class="content-block"
@@ -512,7 +515,8 @@
                                                                     <td class="content-block"
                                                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
                                                                         valign="top">
-                                                                        $5,335,497                                                                    </td>
+                                                                        ${{ da.readAttribute('estimated_cost_formatted') }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                                                     <td class="content-block"
@@ -523,7 +527,8 @@
                                                                     <td class="content-block"
                                                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
                                                                         valign="top">
-                                                                        10/05/2019                                                                    </td>
+                                                                        {{ da.readAttribute('lodge_date_str') }}
+                                                                    </td>
                                                                 </tr>
                                                                 <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                                                     <td class="content-block"
@@ -534,18 +539,25 @@
                                                                     <td class="content-block"
                                                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
                                                                         valign="top">
+                                                                        {% for add in address %}
+                                                                            {{ add.readAttribute('clean_address') }}
+                                                                        {% endfor %}
                                                                     </td>
                                                                 </tr>
-                                                                <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
-                                                                    <td class="content-block"
-                                                                        style="min-width: 120px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
-                                                                        valign="top">
-                                                                        Officer                                                                        </td>
-                                                                    <td class="content-block"
-                                                                        style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
-                                                                        valign="top">
-                                                                        Shaylin Moodliar                                                                        </td>
-                                                                </tr>
+                                                                {% for p in parties %}
+                                                                    <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
+                                                                        <td class="content-block"
+                                                                            style="min-width: 120px; font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
+                                                                            valign="top">
+                                                                            {{ p.readAttribute('role') }}
+                                                                        </td>
+                                                                        <td class="content-block"
+                                                                            style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
+                                                                            valign="top">
+                                                                            {{ p.readAttribute('name') }}
+                                                                        </td>
+                                                                    </tr>
+                                                                {% endfor %}
 
 
                                                                 <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
@@ -557,33 +569,11 @@
                                                                     <td colspan="" class="content-block"
                                                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
                                                                         valign="top">
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107521_=_WasteManagementPlan-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Waste Management Plan - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107522_=_TrafficImpactReport-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Traffic Impact Report - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107523_=_BCAReport-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">BCA Report - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107524_=_HeritageImpactStatement-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Heritage Impact Statement - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107525_=_StatementofEnvironmentalEffects-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Statement of Environmental Effects - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107526_=_Applicationform-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Application form - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107527_=_Politicaldonations-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Political donations - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107528_=_AccessReport-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Access Report - 404-406 Church Street Parramatta</a>
-                                                                        <br>
-                                                                        <a style="text-decoration: none;"
-                                                                           href="https://s3.amazonaws.com/approvalbase-pdf-storage/107529_=_ArchitecturalPlans-404-406ChurchStreetParramatta.pdf"><img style="width: 25px;" width="25" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png">Architectural Plans - 404-406 Church Street Parramatta</a>
-                                                                        <br>
+                                                                        {% for d in docs %}
+                                                                            <a style="text-decoration: none;"
+                                                                               href="{{ (d.readAttribute('as3_url') != '' ? d.readAttribute('as3_url') : d.readAttribute('url')) }}"><img style="width: 15px;" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png"> {{ d.readAttribute('name') }}</a>
+                                                                            <br>
+                                                                        {% endfor %}
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -649,4 +639,3 @@
 </table>
 </body>
 </html>
-null

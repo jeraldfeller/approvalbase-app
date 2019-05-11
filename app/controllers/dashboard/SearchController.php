@@ -12,7 +12,6 @@ use Aiden\Models\Councils;
 
 class SearchController extends _BaseController
 {
-
     public function indexAction()
     {
         if ($this->getUser()->level == 1) {

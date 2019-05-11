@@ -398,6 +398,26 @@
             });
 
 
+            $('.shareBtn').unbind().click(async function(){
+              $btn = $(this);
+              $btn.html('<i class="fa fa-spinner fa-spin font-size-20"></i>');
+              $btn.prop('disabled', true);
+              $dasId = $(this).attr('data-id');
+              $.ajax({
+                url: '{{ url('notifications/getUsersEmail?ajax=1') }}',
+                type: 'GET',
+                data: {
+                  columnClass: 'col-sm-12'
+                },
+                dataType: 'json'
+              }).done(function (response) {
+                $('#shareContainer').html(response.share);
+                $('#shareModal').modal('show');
+                $('#sendShareBtn').attr('data-id', $dasId);
+                $btn.html('<i class="ion-ios7-upload-outline font-size-20"></i>');
+                $btn.prop('disabled', false);
+              });
+            });
 
             $('.star').unbind().on('click', function () {
               $starIcon = $(this).find('.star-icon');
@@ -837,8 +857,6 @@
         "metadata": metadata
       }
     }
-
-
   });
 
 
@@ -846,6 +864,7 @@
     $template = '<div class="row card-slider">' +
       '<div class="col-sm-12 mrg-btm-10">' +
       '<button data-id="' + d + '" class="btn btn-default pull-right downloadPdfBtn"  title="Download PDF"><i class="fa fa-download font-size-20"></i></button>' +
+      '<button data-id="' + d + '" class="btn btn-default pull-right mrg-right-10 shareBtn"  title="Share"><i class="ion-ios7-upload-outline font-size-20"></i></button>' +
       '<button data-id="' + d + '" class="btn btn-default pull-right star mrg-right-10"><i id="star-'+d+'" class="star-icon ion-ios7-star-outline font-size-20"></i></button>' +
       '</div>' +
       '<div class="col-sm-6">' +

@@ -12,6 +12,36 @@ namespace Aiden\Models;
 class Email extends _BaseModel
 {
 
+    public static function shareDaEmail($email, $name, $emailsTo, $council, $da, $docs, $address, $parties){
+        $di = \Phalcon\DI::getDefault();
+        $view = $di->getView();
+        $view->start();
+        $view->setVars([
+            'council' => $council,
+            'da' => $da,
+            'docs' => $docs,
+            'address' => $address,
+            'parties' => $parties
+        ]);
+        $view->setTemplateAfter('share_da'); // template name
+        $view->render('controller', 'action');
+        $view->finish();
+
+        $emailHtml = $view->getContent();
+
+
+        $config = $di->getConfig();
+        $postFields = [
+            'from' => sprintf('%s <%s>', $name, $email),
+            'subject' => 'Shared Application',
+            'html' => $emailHtml,
+            'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
+            'to' => $emailsTo
+        ];
+
+        return self::sendEmail($postFields, $config);
+    }
+
     public static function contactFormEmail($subject, $message, $email, $name){
 
         $di = \Phalcon\DI::getDefault();
@@ -242,7 +272,6 @@ class Email extends _BaseModel
         // Error
         if ($info['http_code'] != 200) {
             $message = sprintf('Could not send email, HTTP STATUS [%s]', $info['http_code']);
-            echo $message;
             return false;
         }
 

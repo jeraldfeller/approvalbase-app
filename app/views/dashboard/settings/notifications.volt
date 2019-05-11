@@ -24,10 +24,17 @@
         </div>
     </div>
 
+
     <div class="row mrg-top-20 emails-container {% if user['sendNotificationsOnLeads'] == false %}display-none{% endif %}">
         <div class="col-md-10">
             <h3>Alerts</h3>
             <div id="alertsContainer">
+
+            </div>
+        </div>
+        <div class="col-md-10 mrg-top-20">
+            <h3>Share via email</h3>
+            <div id="shareContainer">
 
             </div>
         </div>

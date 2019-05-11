@@ -126,8 +126,10 @@ class SettingsController extends _BaseController
 
     public function getUsersEmailAction()
     {
+
         $userId = $this->getUser()->getId();
         $solution = $this->getUser()->getSolution();
+        $columnClass = ($this->request->getQuery('columnClass') ? $this->request->getQuery('columnClass') : 'col-sm-7');
         $primaryEmails = UsersEmail::find([
             'conditions' => 'users_id = :usersId:',
             'bind' => [
@@ -137,13 +139,15 @@ class SettingsController extends _BaseController
 
         $alerts = '';
         $billing = '';
+        $share = '';
 
         $alertsCount = '';
         $billingCount = '';
+        $shareCount = '';
         foreach ($primaryEmails as $p) {
             switch ($p->getType()) {
                 case 'alerts':
-                    $alerts .= '<div class="col-sm-7 no-pdd-left mrg-top-10">
+                    $alerts .= '<div class="'.$columnClass.' no-pdd-left mrg-top-10">
                                         <div class="">
                                             <input data-type="alerts" data-id="' . $p->getId() . '" value="' . $p->getEmail() . '" type="email" class="form-control input-email" placeholder="email address" />
                                         </div>
@@ -151,20 +155,29 @@ class SettingsController extends _BaseController
                     $alertsCount++;
                     break;
                 case 'billing':
-                    $billing .= '<div class="col-sm-7 no-pdd-left mrg-top-10">
+                    $billing .= '<div class="'.$columnClass.' no-pdd-left mrg-top-10">
                                         <div class="">
                                             <input data-type="billing" data-id="' . $p->getId() . '" value="' . $p->getEmail() . '" type="email" class="form-control input-email" placeholder="email address" />
                                         </div>
                                     </div>';
                     $billingCount++;
                     break;
+                case 'share':
+                    $share .= '<div class="'.$columnClass.' no-pdd-left mrg-top-10">
+                                        <div class="">
+                                            <input data-type="share" data-id="' . $p->getId() . '" value="' . $p->getEmail() . '" type="email" class="form-control input-email" placeholder="email address" />
+                                        </div>
+                                    </div>';
+                    $shareCount++;
+                    break;
+
             }
 
         }
 
 
         while ($alertsCount != 5) {
-            $alerts .= '<div class="col-sm-7 no-pdd-left mrg-top-10">
+            $alerts .= '<div class="'.$columnClass.' no-pdd-left mrg-top-10">
                         <div class="">
                             <input data-type="alerts" data-id="0" type="email" class="form-control input-email" placeholder="email address" />
                         </div>
@@ -174,7 +187,7 @@ class SettingsController extends _BaseController
         }
 
         while ($billingCount != 5) {
-            $billing .= '<div class="col-sm-7 no-pdd-left mrg-top-10">
+            $billing .= '<div class="'.$columnClass.' no-pdd-left mrg-top-10">
                         <div class="">
                             <input data-type="billing" data-id="0" type="email" class="form-control input-email" placeholder="email address" />
                         </div>
@@ -183,9 +196,20 @@ class SettingsController extends _BaseController
             $billingCount++;
         }
 
+        while ($shareCount != 5) {
+            $share .= '<div class="'.$columnClass.' no-pdd-left mrg-top-10">
+                        <div class="">
+                            <input data-type="share" data-id="0" type="email" class="form-control input-email" placeholder="email address" />
+                        </div>
+                    </div>
+                ';
+            $shareCount++;
+        }
+
         return json_encode([
             'alerts' => $alerts,
-            'billing' => $billing
+            'billing' => $billing,
+            'share' => $share
         ]);
 
     }

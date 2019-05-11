@@ -1,4 +1,6 @@
 app/config/*
 app/cookies/*
 app/compiled/*
+public/pdf/*
+public/pdf-zip/*
 vendor

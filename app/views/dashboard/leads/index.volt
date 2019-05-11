@@ -64,6 +64,8 @@
                         </div>
                     </div>
 
+                    <!-- start modal -->
+
                     <div class="modal fade" id="filterModal" tabindex="-1" role="dialog">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
@@ -179,6 +181,38 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal fade" id="shareModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="modalTitle">
+                                        <i class="fa fa-share-alt"></i> Share
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="shareContainer">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button class="btn btn-primary pull-right" id="sendShareBtn">Share</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- END MODAL -->
                 </div>
                 {% include "includes/flashMessages.volt" %}
                 {#Context Menu#}
@@ -219,4 +253,5 @@
         </div>
     </div>
     {% include "leads/_leadsJs.volt" %}
+    {% include "_helpers/_shareDaJs.volt" %}
 {% endblock %}

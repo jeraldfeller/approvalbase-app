@@ -58,7 +58,8 @@ class SecurityPlugin extends Plugin {
                 'Aiden\Controllers:councils' => ['index', 'subscribe', 'unsubscribe', 'bulkSubscribe', 'bulkUnsubscribe'],
                 'Aiden\Controllers:cron' => ['checkSubscription', 'alertNotification', 'alertPoiNotification', 'execScanPhrase', 'getAddressLatLang', 'getCleanAddress', 'execScanPoi', 'execCSVPoi', 'fixParramatta', 'getDaDocs', 'cleanUsersDa', 'checkDaDocs', 'updateDasData', 'rescanGetDaDocs'],
                 'Aiden\Controllers:poi' => ['index', 'primary', 'secondary', 'alert', 'alertSaved', 'get', 'save', 'delete', 'getPoiAlerts', 'saveDa', 'import'],
-                'Aiden\Controllers:pdf' => ['downloadPdf', 'download']
+                'Aiden\Controllers:pdf' => ['downloadPdf', 'download'],
+                'Aiden\Controllers:helpers' => ['shareDa'],
 
             ];
 

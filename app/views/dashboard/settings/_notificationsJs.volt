@@ -37,6 +37,7 @@
           }).done(function (response) {
                 $('#alertsContainer').html(response.alerts);
                 $('#billingContainer').html(response.billing);
+                $('#shareContainer').html(response.share);
           });
 
 

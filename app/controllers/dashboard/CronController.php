@@ -1327,6 +1327,7 @@ class CronController extends _BaseController
                 AND dd.das_id = d.id
                 AND dd.checked = 0 
                 AND dd.as3_url IS NOT NULL 
+              
                 ORDER BY dd.id DESC LIMIT 100';
 
         $docs = new \Phalcon\Mvc\Model\Resultset\Simple(
@@ -1349,6 +1350,7 @@ class CronController extends _BaseController
                     $ed->setDocId($id);
                     $ed->setAs3Url($url);
                     $ed->setFixed(0);
+                    $ed->setStatus(0);
                     $ed->save();
                 }else{
                     $row->setCheckedStatus(1);

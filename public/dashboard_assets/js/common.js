@@ -95,9 +95,6 @@ function downloadPdfZip($btn, dasId, $part, $files = [], $index = 0){
         }, 1000);
 
       }
-
-
-
     });
   })
 
