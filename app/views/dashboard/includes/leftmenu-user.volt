@@ -33,7 +33,7 @@
                 <a href="{{ url("leads") }}" class="{% if isActive == true %} active{% endif %}">
                     <i class="ion-ios7-bell-outline"></i>
                     <span>Alerts </span>
-                    <span class="badge label-purple new-alerts"></span>
+                    <span class="badge label-blue new-alerts"></span>
                 </a>
             </li>
 

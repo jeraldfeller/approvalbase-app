@@ -26,7 +26,7 @@
     </head>
 
     <body id="signin" class="clear">
-    <a href="{{ url() }}" class="logo">
+    <a href="http://approvalbase.com" class="logo">
         <img class="title-logo"
              src={{ url("front-end/assets/images/logo-black.png") }} alt="">
     </a>

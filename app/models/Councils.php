@@ -255,11 +255,24 @@ class Councils extends _BaseModel
 
     public function getUncrawledDas()
     {
-
+        // get parent council for merged councils
+        switch ($this->getId()) {
+            case 33: // Marrickville -> parent Innerwest
+                $id = 17;
+                break;
+            case 1: // Ashfield -> parent Innerwest
+                $id = 17;
+                break;
+            case 16: // Leichhardt -> parent Innerwest
+                $id = 17;
+                break;
+            default:
+                $id = $this->getId();
+        }
         return Das::find([
             "conditions" => "council_id = :council_id: AND DATEDIFF(NOW(), created) < 14 ",
             "bind" => [
-                "council_id" => $this->getId()
+                "council_id" => $id
             ]
         ]);
 

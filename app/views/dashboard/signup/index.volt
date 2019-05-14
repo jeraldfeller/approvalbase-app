@@ -70,6 +70,10 @@
 
     <script>
         $(function(){
+          $preFilled = "{{ preFilledEmail }}";
+          if($preFilled != ''){
+            $('#email').val($preFilled);
+          }
           $('.signupBtn').prop('disabled', true);
           $('.iAgree').click(function(){
 

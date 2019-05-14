@@ -2,24 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="560a9276-8802-40ad-a394-333ab28e0e54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard/_helpers/_shareDaJs.volt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/share_da.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/100219_=_D0350806623042019DevelopmentApplication-11ChathamStreetRandwick.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/100343_=_Plans-CertificationofShadowDiagramswithPlans.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/100492_=_DevelopmentApplicationForm.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/100870_=_SitePlans-224RockyPointRoadRamsgate-NautilusDesignGroup.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/101179_=_HeritageImpactStatement-16HuntleyStAlexandria.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/101484_=_ProposedElevation188PittStreetSYDNEYNSW2000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/101833_=_P0023222301052019SDoc-GeotechnicalInvestigationReport-160BrookStreetCoogee.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/101888_=_P0023209930042019SDoc-08of14-EastWestElevation-45EasternAvenueKingsford.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/103556_=_NotificationLetter-D2019388.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test100196.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test100219.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test100343.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test100492.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test100870.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test101179.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test101484.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test101833.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test101888.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test102784.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/pdf/test103556.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/classes/SecurityPlugin.php" afterPath="$PROJECT_DIR$/app/classes/SecurityPlugin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/CronController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/CronController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/SearchController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/SearchController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Email.php" afterPath="$PROJECT_DIR$/app/models/Email.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/common/_templates/test.volt" afterPath="$PROJECT_DIR$/app/views/common/_templates/test.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/leads/index.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/leads/index.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/search/search.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/search/search.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/settings/_notificationsJs.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/settings/_notificationsJs.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/settings/notifications.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/settings/notifications.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dashboard_assets/js/common.js" afterPath="$PROJECT_DIR$/public/dashboard_assets/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/PdfController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/PdfController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/SignupController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/SignupController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/_BaseController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/_BaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Councils.php" afterPath="$PROJECT_DIR$/app/models/Councils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Users.php" afterPath="$PROJECT_DIR$/app/models/Users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/_templates/base.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/_templates/base.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/includes/leftmenu-user.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/includes/leftmenu-user.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/includes/leftmenu.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/includes/leftmenu.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/settings/_billingJs.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/settings/_billingJs.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/signup/index.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/signup/index.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dashboard_assets/css/custom.css" afterPath="$PROJECT_DIR$/public/dashboard_assets/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,100 +49,107 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HelpersController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php">
+      <file leaf-file-name="CronController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/CronController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="54" column="75" lean-forward="false" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
+            <state relative-caret-position="198">
+              <caret line="1097" column="34" lean-forward="true" selection-start-line="1097" selection-start-column="14" selection-end-line="1097" selection-end-column="34" />
               <folding>
-                <element signature="e#125#146#0#PHP" expanded="true" />
+                <element signature="e#127#156#0#PHP" expanded="true" />
+                <marker date="1557864857779" expanded="true" signature="816:926" ph="SELECT id, n... users" />
+                <marker date="1557864857779" expanded="true" signature="2332:2534" ph="SELECT b.id,... billing" />
+                <marker date="1557864857779" expanded="true" signature="5220:5647" ph="SELECT d.id das" />
+                <marker date="1557864857779" expanded="true" signature="11614:12222" ph="SELECT d.id das" />
+                <marker date="1557864857779" expanded="true" signature="23882:24303" ph="SELECT d.id,... das" />
+                <marker date="1557864857779" expanded="true" signature="24376:24695" ph="SELECT d.id,... das" />
+                <marker date="1557864857779" expanded="true" signature="41637:41780" ph="SELECT dd.id... das" />
+                <marker date="1557864857779" expanded="true" signature="42666:42777" ph="SELECT dd.* das_documents" />
+                <marker date="1557864857779" expanded="true" signature="45244:45354" ph="SELECT d.* F... das" />
+                <marker date="1557864857779" expanded="true" signature="48225:48488" ph="SELECT dd.* das_documents" />
+                <marker date="1557864857779" expanded="true" signature="49922:50092" ph="select dd.*,... das_documents" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php">
+      <file leaf-file-name="PdfController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/PdfController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="131" column="90" lean-forward="false" selection-start-line="131" selection-start-column="90" selection-end-line="131" selection-end-column="90" />
+            <state relative-caret-position="68">
+              <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
-                <marker date="1557466799397" expanded="true" signature="4631:4984" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="4686:4941" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="5168:5522" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="5223:5479" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="5703:6055" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="5758:6012" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="6261:6501" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="6300:6474" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="6675:6916" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="6714:6889" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="7087:7326" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="7126:7299" ph="..." />
-                <marker date="1557466799397" expanded="true" signature="11897:12058" ph="SELECT b.*, billing" />
+                <marker date="1557559135496" expanded="true" signature="603:959" ph="SELECT dd.id... das" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_searchJs.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="866" column="140" lean-forward="true" selection-start-line="866" selection-start-column="117" selection-end-line="866" selection-end-column="140" />
-              <folding>
-                <marker date="1557535173630" expanded="true" signature="18074:18101" ph="..." />
-                <marker date="1557535173630" expanded="true" signature="18302:18311" ph="..." />
-                <marker date="1557535173630" expanded="true" signature="22458:22477" ph="..." />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="3501" column="29" lean-forward="false" selection-start-line="3501" selection-start-column="29" selection-end-line="3501" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SearchController.php">
+      <file leaf-file-name="_billingJs.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/settings/_billingJs.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-              <folding>
-                <element signature="e#37#58#0#PHP" expanded="true" />
-                <marker date="1557480969293" expanded="true" signature="5091:5102" ph="..." />
-                <marker date="1557480969293" expanded="true" signature="5128:5139" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Email.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Email.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/index.volt">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/signup/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3638">
-              <caret line="214" column="38" lean-forward="false" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+            <state relative-caret-position="111">
+              <caret line="74" column="40" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_leadsJs.volt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt">
+      <file leaf-file-name="SignupController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SignupController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="283" column="60" lean-forward="false" selection-start-line="283" selection-start-column="60" selection-end-line="283" selection-end-column="60" />
-              <folding>
-                <marker date="1557536225263" expanded="true" signature="14617:14644" ph="..." />
-                <marker date="1557536225263" expanded="true" signature="14845:14854" ph="..." />
-                <marker date="1557536225263" expanded="true" signature="18700:18719" ph="..." />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="signin_base.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/base.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="leftmenu-user.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/includes/leftmenu-user.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -140,16 +165,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>showNotification</find>
-      <find>format</find>
-      <find>#card-</find>
-      <find>add</find>
-      <find>getMetrics</find>
-      <find>notifications</find>
-      <find>notifications/getUsersEmailAction</find>
       <find>getUsersEmailAction</find>
       <find>phrases</find>
-      <find>ErrorDocs</find>
       <find>(100</find>
       <find>getDaDocsAction</find>
       <find>stripe</find>
@@ -170,6 +187,14 @@
       <find>.star</find>
       <find>shareModal</find>
       <find>fa-share</find>
+      <find>PDF</find>
+      <find>getDocumentUrlAction</find>
+      <find>setTimeout</find>
+      <find>ErrorDocs</find>
+      <find>getUncrawledDas</find>
+      <find>user</find>
+      <find>data-projects-percent-caret</find>
+      <find>.label-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,31 +203,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/subscription_email.volt" />
-        <option value="$PROJECT_DIR$/app/views/layouts/subscription_notification.volt" />
-        <option value="$PROJECT_DIR$/app/views/layouts/email.volt" />
-        <option value="$PROJECT_DIR$/app/views/layouts/poi_email.volt" />
-        <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/app/models/DasUsersNotes.php" />
         <option value="$PROJECT_DIR$/app/views/layouts/welcome_email.volt" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/IndexController.php" />
         <option value="$PROJECT_DIR$/app/models/DasUsers.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/SignupController.php" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt" />
         <option value="$PROJECT_DIR$/public/dashboard_assets/js/vendor/jquery.timeago.js" />
         <option value="$PROJECT_DIR$/app/views/dashboard/_templates/_head.js.volt" />
         <option value="$PROJECT_DIR$/app/config/local/config.php" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/signup/index.volt" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt" />
         <option value="$PROJECT_DIR$/app/views/dashboard/phrases/index.volt" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/PhrasesController.php" />
         <option value="$PROJECT_DIR$/app/views/dashboard/phrases/_phrasesJs.volt" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/DatatablesController.php" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/_templates/base.volt" />
         <option value="$PROJECT_DIR$/app/models/DasDocuments.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/PdfController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/CronController.php" />
         <option value="$PROJECT_DIR$/app/views/dashboard/settings/_notificationsJs.volt" />
         <option value="$PROJECT_DIR$/app/views/dashboard/settings/notifications.volt" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php" />
@@ -225,9 +236,24 @@
         <option value="$PROJECT_DIR$/app/controllers/dashboard/SearchController.php" />
         <option value="$PROJECT_DIR$/app/controllers/common/IndexController.php" />
         <option value="$PROJECT_DIR$/app/views/common/index/index.volt" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/includes/leftmenu-user.volt" />
         <option value="$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt" />
         <option value="$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/PdfController.php" />
+        <option value="$PROJECT_DIR$/app/models/Councils.php" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/includes/leftmenu.volt" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/_BaseController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/IndexController.php" />
+        <option value="$PROJECT_DIR$/app/models/Users.php" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_templates/base.volt" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/settings/_billingJs.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/SignupController.php" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/signup/index.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/CronController.php" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt" />
+        <option value="$PROJECT_DIR$/public/dashboard_assets/css/custom.css" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/includes/leftmenu-user.volt" />
       </list>
     </option>
   </component>
@@ -269,7 +295,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -293,15 +318,65 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,30 +401,8 @@
               <option name="myItemId" value="dashboard" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="settings" />
+              <option name="myItemId" value="signup" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,10 +425,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dashboard" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -496,54 +545,6 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -584,93 +585,10 @@
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="development" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="classes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -791,12 +709,16 @@
       <workItem from="1557366749059" duration="15903000" />
       <workItem from="1557452941765" duration="21951000" />
       <workItem from="1557495600891" duration="7000" />
-      <workItem from="1557534697845" duration="1653000" />
+      <workItem from="1557534697845" duration="9033000" />
+      <workItem from="1557561393721" duration="3678000" />
+      <workItem from="1557719596097" duration="454000" />
+      <workItem from="1557793993293" duration="9225000" />
+      <workItem from="1557864690660" duration="2376000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73434000" />
+    <option name="totallyTimeSpent" value="96547000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -808,12 +730,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43464568" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -836,69 +758,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/_head.js.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="67" lean-forward="false" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/dashboard_assets/js/vendor/jquery.timeago.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="231" column="4" lean-forward="false" selection-start-line="231" selection-start-column="4" selection-end-line="231" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SignupController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/login/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="19" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/local/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/signup/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="27" column="152" lean-forward="false" selection-start-line="27" selection-start-column="117" selection-end-line="27" selection-end-column="152" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="132" column="34" lean-forward="false" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/phrases/index.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3706">
@@ -910,13 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3332">
           <caret line="196" column="35" lean-forward="false" selection-start-line="196" selection-start-column="32" selection-end-line="196" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/DatatablesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16745">
-          <caret line="990" column="104" lean-forward="false" selection-start-line="990" selection-start-column="104" selection-end-line="990" selection-end-column="104" />
         </state>
       </provider>
     </entry>
@@ -941,13 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/PdfController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="128" column="36" lean-forward="false" selection-start-line="126" selection-start-column="21" selection-end-line="128" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Das.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -963,24 +808,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/dashboard_assets/js/share-da.js" />
-    <entry file="file://$PROJECT_DIR$/public/dashboard_assets/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="96" column="7" lean-forward="false" selection-start-line="96" selection-start-column="7" selection-end-line="96" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/settings/_notificationsJs.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/_BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1005,24 +836,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/CronController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="63" column="167" lean-forward="false" selection-start-line="63" selection-start-column="144" selection-end-line="63" selection-end-column="167" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Web Elements/Premium Templates/wolf/wolf-html/email-notification.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5917">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="48" column="45" lean-forward="false" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1061,71 +878,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/share_da.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9741">
-          <caret line="573" column="170" lean-forward="false" selection-start-line="573" selection-start-column="170" selection-end-line="573" selection-end-column="170" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/search.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3196">
           <caret line="188" column="26" lean-forward="false" selection-start-line="161" selection-start-column="20" selection-end-line="188" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3638">
-          <caret line="214" column="38" lean-forward="false" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="54" column="75" lean-forward="false" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
-          <folding>
-            <element signature="e#125#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="131" column="90" lean-forward="false" selection-start-line="131" selection-start-column="90" selection-end-line="131" selection-end-column="90" />
-          <folding>
-            <marker date="1557466799397" expanded="true" signature="4631:4984" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="4686:4941" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="5168:5522" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="5223:5479" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="5703:6055" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="5758:6012" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="6261:6501" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="6300:6474" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="6675:6916" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="6714:6889" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="7087:7326" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="7126:7299" ph="..." />
-            <marker date="1557466799397" expanded="true" signature="11897:12058" ph="SELECT b.*, billing" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding>
-            <element signature="e#37#58#0#PHP" expanded="true" />
-            <marker date="1557480969293" expanded="true" signature="5091:5102" ph="..." />
-            <marker date="1557480969293" expanded="true" signature="5128:5139" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,43 +892,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/includes/leftmenu.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/base.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/common/_templates/base.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,10 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1556037203000" expanded="true" signature="918:1071" ph="..." />
-            <marker date="1556037203000" expanded="true" signature="1011:1039" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1191,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,15 +917,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/includes/leftmenu-user.volt">
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="550">
+          <caret line="54" column="75" lean-forward="false" selection-start-line="54" selection-start-column="75" selection-end-line="54" selection-end-column="75" />
+          <folding>
+            <element signature="e#125#146#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="131" column="90" lean-forward="false" selection-start-line="131" selection-start-column="90" selection-end-line="131" selection-end-column="90" />
         </state>
       </provider>
     </entry>
@@ -1215,22 +941,227 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="866" column="140" lean-forward="true" selection-start-line="866" selection-start-column="117" selection-end-line="866" selection-end-column="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Email.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="14" column="55" lean-forward="false" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="214" column="38" lean-forward="false" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/includes/leftmenu.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Councils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="265" column="34" lean-forward="false" selection-start-line="265" selection-start-column="34" selection-end-line="265" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/share_da.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="551" column="94" lean-forward="true" selection-start-line="551" selection-start-column="81" selection-end-line="551" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-824">
+          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" column="30" lean-forward="false" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
           <folding>
-            <marker date="1557535173630" expanded="true" signature="18074:18101" ph="..." />
-            <marker date="1557535173630" expanded="true" signature="18302:18311" ph="..." />
-            <marker date="1557535173630" expanded="true" signature="22458:22477" ph="..." />
+            <marker date="1557808026650" expanded="true" signature="6314:6890" ph="SELECT c.nam... councils" />
+            <marker date="1557808026650" expanded="true" signature="6343:6444" ph="SELECT count... das" />
+            <marker date="1557808026650" expanded="true" signature="6495:6646" ph="SELECT count... das_documents" />
+            <marker date="1557808026650" expanded="true" signature="6693:6804" ph="SELECT SUM(e... das" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/_BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="44" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13838">
+          <caret line="814" column="35" lean-forward="false" selection-start-line="814" selection-start-column="17" selection-end-line="814" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/settings/_billingJs.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="40" lean-forward="false" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/DatatablesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="52" />
+          <folding>
+            <marker date="1557298567885" expanded="true" signature="5154:6102" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="6159:7040" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="7417:8470" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="8525:9436" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="11232:11558" ph="..." />
+            <marker date="1557298567885" expanded="true" signature="11348:11518" ph="..." />
+            <marker date="1557298567885" expanded="true" signature="17683:18894" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="18951:20021" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="20398:21728" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="21783:22974" ph="SELECT d.id,... das" />
+            <marker date="1557298567885" expanded="true" signature="24254:24580" ph="..." />
+            <marker date="1557298567885" expanded="true" signature="24370:24540" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="22" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SignupController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="27" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/signup/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="74" column="40" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="-10004">
           <caret line="283" column="60" lean-forward="false" selection-start-line="283" selection-start-column="60" selection-end-line="283" selection-end-column="60" />
           <folding>
             <marker date="1557536225263" expanded="true" signature="14617:14644" ph="..." />
             <marker date="1557536225263" expanded="true" signature="14845:14854" ph="..." />
             <marker date="1557536225263" expanded="true" signature="18700:18719" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="3501" column="29" lean-forward="false" selection-start-line="3501" selection-start-column="29" selection-end-line="3501" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dashboard_assets/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/base.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="67" column="22" lean-forward="false" selection-start-line="67" selection-start-column="6" selection-end-line="67" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/includes/leftmenu-user.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="49" lean-forward="false" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/CronController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="1097" column="34" lean-forward="true" selection-start-line="1097" selection-start-column="14" selection-end-line="1097" selection-end-column="34" />
+          <folding>
+            <element signature="e#127#156#0#PHP" expanded="true" />
+            <marker date="1557864857779" expanded="true" signature="816:926" ph="SELECT id, n... users" />
+            <marker date="1557864857779" expanded="true" signature="2332:2534" ph="SELECT b.id,... billing" />
+            <marker date="1557864857779" expanded="true" signature="5220:5647" ph="SELECT d.id das" />
+            <marker date="1557864857779" expanded="true" signature="11614:12222" ph="SELECT d.id das" />
+            <marker date="1557864857779" expanded="true" signature="23882:24303" ph="SELECT d.id,... das" />
+            <marker date="1557864857779" expanded="true" signature="24376:24695" ph="SELECT d.id,... das" />
+            <marker date="1557864857779" expanded="true" signature="41637:41780" ph="SELECT dd.id... das" />
+            <marker date="1557864857779" expanded="true" signature="42666:42777" ph="SELECT dd.* das_documents" />
+            <marker date="1557864857779" expanded="true" signature="45244:45354" ph="SELECT d.* F... das" />
+            <marker date="1557864857779" expanded="true" signature="48225:48488" ph="SELECT dd.* das_documents" />
+            <marker date="1557864857779" expanded="true" signature="49922:50092" ph="select dd.*,... das_documents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/PdfController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <marker date="1557559135496" expanded="true" signature="603:959" ph="SELECT dd.id... das" />
           </folding>
         </state>
       </provider>

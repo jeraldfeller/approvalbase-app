@@ -133,5 +133,4 @@ class _BaseController extends \Phalcon\Mvc\Controller {
         return $this->user;
 
     }
-
 }

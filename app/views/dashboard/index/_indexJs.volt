@@ -121,13 +121,16 @@
 
         // Projects
         $('.data-projects').html(formatNumber(response.applications.totalCount));
-        $('.data-projects-percent').addClass(response.applications.incDec.status);
-        if (response.applications.incDec.status == 'up') {
-          $('.data-projects-percent-caret').addClass('fa-caret-up');
-        } else {
-          $('.data-projects-percent-caret').addClass('fa-caret-down');
-        }
-        $('.data-projects-percent-value').html(response.applications.incDec.percent + '%');
+//        $('.data-projects-percent').addClass(response.applications.incDec.status);
+//        if (response.applications.incDec.status == 'up') {
+//          $('.data-projects-percent-caret').addClass('fa-caret-up');
+//        } else {
+//          $('.data-projects-percent-caret').addClass('fa-caret-down');
+//        }
+        $('.data-projects-percent').addClass('up');
+        $('.data-projects-percent-caret').addClass('fa-caret-up');
+        $('.data-projects-percent-value').html('');
+//        $('.data-projects-percent-value').html(response.applications.incDec.percent + '%');
 
 
         $('.data-value').html('$'+shortizeNumber(response.applications.totalCost));
@@ -141,7 +144,7 @@
     $('#documents-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
 
-      setTimeout(function () {
+    //  setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -154,7 +157,7 @@
         }).done(function (response) {
           resolve(response);
         });
-      }, 1000)
+    //  }, 1000)
 
     });
   }
@@ -163,7 +166,7 @@
   function getAlertsData() {
     $('#alerts-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-      setTimeout(function () {
+     // setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -175,7 +178,7 @@
         }).done(function (response) {
           resolve(response);
         });
-      }, 2300)
+    //  }, 2300)
 
     });
   }
@@ -183,7 +186,7 @@
   function getProjectsData() {
     $('#alerts-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-      setTimeout(function () {
+    //  setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -195,7 +198,7 @@
         }).done(function (response) {
           resolve(response);
         });
-      }, 2300)
+    //  }, 2300)
 
     });
   }
@@ -231,7 +234,7 @@
   function getApplicationsSavedData() {
     $('#applications-saved-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-      setTimeout(function () {
+   //   setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -244,7 +247,7 @@
         }).done(function (response) {
           resolve(response);
         });
-      }, 3100)
+   //   }, 3100)
 
     });
   }
@@ -253,7 +256,7 @@
   function getSources() {
     $('#councils-container').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-      setTimeout(function () {
+    //  setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getSources') }}',
           type: 'POST',
@@ -265,7 +268,7 @@
         }).done(function (response) {
           resolve(response);
         });
-      }, 4000)
+   //   }, 4000)
 
     });
   }

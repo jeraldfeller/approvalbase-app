@@ -8,6 +8,7 @@
 
 namespace Aiden\Controllers;
 
+use Aiden\Forms\EditLeadForm;
 use Aiden\Models\Das;
 use Aiden\Models\DasAddresses;
 use Aiden\Models\DasDocuments;
@@ -159,7 +160,7 @@ class CronController extends _BaseController
 //            [
 //                'conditions' => 'id = :id:',
 //                'bind' => [
-//                    'id' => 41
+//                    'id' => 23
 //                ]
 //            ]
 //        );
@@ -1356,6 +1357,16 @@ class CronController extends _BaseController
                     $row->setCheckedStatus(1);
                     $row->setChecked(1);
                     $row->save();
+
+                    $ed = ErrorDocs::find([
+                        'conditions' => 'doc_id = :docId:',
+                        'bind' => $id
+                    ]);
+                    if($ed){
+                        $ed->setFixed(1);
+                        $ed->setStatus(2);
+                        $ed->save();
+                    }
                 }
             }
         }

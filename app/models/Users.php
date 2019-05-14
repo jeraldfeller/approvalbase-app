@@ -802,6 +802,7 @@ class Users extends _BaseModel {
 
         if($user){
             return array(
+                'id' => $user->getId(),
                 'firstName' => $user->getName(),
                 'lastName' => $user->getLastName(),
                 'email' => $user->getEmail(),

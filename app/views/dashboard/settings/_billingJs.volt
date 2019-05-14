@@ -34,7 +34,7 @@
       });
 
       var handler = StripeCheckout.configure({
-        key: 'pk_test_1Vnj0DXwfyRR50rFbF7m5k1N',
+        key: 'pk_test_W6wWyBSALsmO1o0sWHrAxUEG00TCnqLlnh',
         image: '{{ url() }}dashboard_assets/images/logo-sm.png',
         locale: 'auto',
         token: function(token) {
@@ -59,6 +59,7 @@
               location.href = '/billing';
             },
             error: function (data) {
+              console.log('ER: ', data);
               showNotification('Ops! Something went wrong, please try again.', 'error');
               $('body').unblock();
             }

@@ -16,8 +16,10 @@ class SignupController extends _BaseController {
             'form' => new \Aiden\Forms\RegisterForm(),
             'user'  => $this->getUser(),
             'page_title' => 'Sign Up Free Trial Account | ApprovalBase',
-            'solution' => 'search'
+            'solution' => 'search',
+            'preFilledEmail' => ($this->request->getQuery('email') ? $this->request->getQuery('email') : '')
         ]);
+
 
     }
 

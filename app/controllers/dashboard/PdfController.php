@@ -31,7 +31,6 @@ class PdfController extends _BaseController
         $sql = 'SELECT dd.id as docId, dd.name, dd.url, d.id, c.name as councilName
                 FROM das d, das_documents dd, councils c
                 WHERE dd.das_id = d.id
-          
                 AND d.council_id = c.id
                 AND dd.as3_processed = 0
                 AND (dd.status = 0 OR dd.status IS NULL)
@@ -100,13 +99,15 @@ class PdfController extends _BaseController
 
 
                         // Delete pdf if not exists
-                        if(strpos($pdfUrl['html'], 'Page does not exist.') === false){
+                        if(strpos($pdfUrl['html'], '%PDF') !== false){
+//                        if(strpos($pdfUrl['html'], 'Page does not exist.') === false){
+//
                             $file = fopen('pdf/'.$docId.'_=_'.$baseName.'.pdf', "w");
                             fwrite($file, $pdfUrl['html']);
                             fclose($file);
                         }else{
                             // Delete pdf
-                            $this->deletePdfById($docId);
+//                            $this->deletePdfById($docId);
                             echo $pdfUrl['html'] . '<Br>';
                         }
                         break;

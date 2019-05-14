@@ -3498,6 +3498,10 @@ a, area, button, [role="button"], input:not([type="range"]), label, select, summ
     background-color: #6773f1;
 }
 
+.label-blue{
+    background-color: #3f71fc;
+}
+
 .progress{
     margin-bottom: 0 !important;
 }

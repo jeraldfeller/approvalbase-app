@@ -30,6 +30,10 @@
     </script>
 
 
+    <!-- Fresh chat -->
+    <script src="https://wchat.freshchat.com/js/widget.js"></script>
+
+
 </head>
 
 <body>
@@ -66,5 +70,27 @@
   });
 </script>
 <script src="{{ url("dashboard_assets/js/common.js?v=2.0.9") }}"></script>
+<script>
+  window.fcWidget.init({
+    token: "73980d49-1fd2-4f1e-ad5c-74635f2a14df",
+    host: "https://wchat.freshchat.com"
+  });
+  // Make sure fcWidget.init is included before setting these values
+
+  // To set unique user id in your system when it is available
+  window.fcWidget.setExternalId("{{ user['id'] }}");
+
+  // To set user name
+  window.fcWidget.user.setFirstName("{{ user['firstName'] }}");
+
+  // To set user email
+  window.fcWidget.user.setEmail("{{ user['email'] }}");
+
+  // To set user properties
+  window.fcWidget.user.setProperties({
+    plan: "{{ user['solution'] }}",                 // meta property 1
+    status: "{{ user['subscriptionStatus'] }}"                // meta property 2
+  });
+</script>
 </body>
 </html>
