@@ -264,7 +264,7 @@ class SettingsController extends _BaseController
     public function stripeApiAction()
     {
         $token = $this->request->getPost('token');
-        $amount = 49900;
+        $amount = 125000;
         $stripe = new Stripe();
         $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
 

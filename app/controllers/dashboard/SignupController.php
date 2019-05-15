@@ -143,6 +143,10 @@ class SignupController extends _BaseController {
             \Aiden\Models\Email::welcomeNotification($email, $name, $lname, $verificationCode);
 
 
+            // Append User data into Google Sheets
+            \Aiden\Models\GoogleSheets::appendUsers($user, \Aiden\Models\GoogleSheets::getClient());
+
+
             if($solution == 'search'){
                 return $this->response->redirect('search', false, 302);
             }else{

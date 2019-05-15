@@ -339,7 +339,7 @@
 
                                             <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 510px; margin: 0 auto; padding: 0;"><tr style="vertical-align: top; text-align: left; padding: 0;" align="left"><td class="text-pad" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #666666; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 10px 10px;" align="left" valign="top">
                                                         <p style="font-size: 15px; color: #666666; line-height: 22px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; margin: 0 0 10px; padding: 0;">
-                                                            We have detected <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">{{ totalMatches }}</strong> application(s) that contain your phrases
+                                                            We have detected <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">{{ totalMatches }}</strong> project(s) that contain your phrases
                                                         </p>
                                                     <td class="expander" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #666666; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
                                                 </tr></table>
@@ -350,7 +350,7 @@
                                                     <tbody>
                                                     <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
                                                         <td style="vertical-align: top; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 10px;" valign="top">
-                                                            <div style="color: #666666; font-weight: 600; font-size:18px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 0 10px;">
+                                                            <div style="color: #3f71fc; font-weight: 600; font-size:18px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 0 10px;">
                                                                 {{ key|e  }}
                                                             </div>
                                                         </td>
@@ -368,7 +368,7 @@
                                                         {% for da in value['das'] %}
                                                     <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 12px; margin: 0;">
                                                         <td colspan=2 class="content-block" style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;" valign="top">
-                                                            <strong><em><a href="{{ BASE_URI }}leads/{{ da['dasId'] }}/view">{{ da['addresses'] }}</a></em></strong>
+                                                            <strong><em><a style="color: #3f71fc;" href="{{ BASE_URI }}leads/{{ da['dasId'] }}/view">{{ da['addresses'] }}</a></em></strong>
                                                         </td>
                                                     </tr>
                                                     <tr style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 11px; margin: 0;">

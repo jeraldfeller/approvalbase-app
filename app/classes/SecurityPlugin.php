@@ -56,7 +56,7 @@ class SecurityPlugin extends Plugin {
                 'Aiden\Controllers:phrases' => ['index', 'create', 'delete', 'flipCase', 'flipLiteral', 'flipExclude', 'get'],
                 'Aiden\Controllers:settings' => ['index', 'support', 'updateProfile', 'contact', 'billing', 'stripeApi', 'updateSeen', 'notifications', 'notificationsUpdate', 'save', 'getUsersEmail', 'updateUsersEmail', 'cancelSubscription'],
                 'Aiden\Controllers:councils' => ['index', 'subscribe', 'unsubscribe', 'bulkSubscribe', 'bulkUnsubscribe'],
-                'Aiden\Controllers:cron' => ['checkSubscription', 'alertNotification', 'alertPoiNotification', 'execScanPhrase', 'getAddressLatLang', 'getCleanAddress', 'execScanPoi', 'execCSVPoi', 'fixParramatta', 'getDaDocs', 'cleanUsersDa', 'checkDaDocs', 'updateDasData', 'rescanGetDaDocs'],
+                'Aiden\Controllers:cron' => ['checkSubscription', 'alertNotification', 'alertPoiNotification', 'execScanPhrase', 'getAddressLatLang', 'getCleanAddress', 'execScanPoi', 'execCSVPoi', 'fixParramatta', 'getDaDocs', 'cleanUsersDa', 'checkDaDocs', 'updateDasData', 'rescanGetDaDocs', 'updateUsersGoogleSheets'],
                 'Aiden\Controllers:poi' => ['index', 'primary', 'secondary', 'alert', 'alertSaved', 'get', 'save', 'delete', 'getPoiAlerts', 'saveDa', 'import'],
                 'Aiden\Controllers:pdf' => ['downloadPdf', 'download'],
                 'Aiden\Controllers:helpers' => ['shareDa'],

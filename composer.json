@@ -5,6 +5,7 @@
         "mailgun/mailgun-php": "^2.6",
         "php-http/guzzle6-adapter": "^1.1",
         "php-http/message": "^1.7",
-        "aws/aws-sdk-php": "^3.86"
+        "aws/aws-sdk-php": "^3.86",
+        "google/apiclient": "^2.0"
     }
 }

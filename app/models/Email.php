@@ -135,7 +135,7 @@ class Email extends _BaseModel
         $config = $di->getConfig();
         $postFields = [
             'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
-            'subject' => 'Welcome to ApprovalBase',
+            'subject' => 'Welcome to ApprovalBase!',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
             'to' => $email

@@ -40,12 +40,12 @@
                                     <div style="max-width: 600px; display: block; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0 auto; padding: 15px 35px;">
                                         <table cellspacing="0" style="width: 100%; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" width="100%"><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"><td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 15px 0 0;">
                                                     <p style="font-size: 15px; color: #222; line-height: 22px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; margin: 0 0 10px; padding: 0;">
-                                                        Hi <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">{{ fname }}</strong>,
+                                                        Hi {{ fname }},
                                                         <br style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" />
-                                                        This is a receipt for your payment of <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">${{amount}}</strong> you
-                                                        made to <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">ApprovalBase</strong>
+                                                        This is a receipt for your payment of ${{amount}} you
+                                                        made to ApprovalBase
                                                         <br style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" />
-                                                        with your card ending in <strong style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">{{cardNumber}}</strong>.
+                                                        with your card ending in {{cardNumber}}.
                                                     </p>
                                                 </td>
                                             </tr></table></div><!-- /content -->
@@ -57,18 +57,18 @@
                                                         Payment Date
                                                     </div>
 
-                                                    <strong style="font-size: 14px; display: inline-block; color: #333; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
+
                                                         {{paymentDate}}
-                                                    </strong>
+
                                                 </td>
                                                 <td style="vertical-align: top; text-align: right; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" align="right" valign="top">
                                                     <div style="color: #929292; font-size: 15px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 7px;">
                                                         Invoice No.
                                                     </div>
 
-                                                    <strong style="font-size: 14px; display: inline-block; color: #333; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
+
                                                         {{transactionId}}
-                                                    </strong>
+
                                                 </td>
                                             </tr></table></div><!-- /content -->
 
@@ -79,9 +79,8 @@
                                                         Payment From
                                                     </div>
 
-                                                    <strong style="font-size: 15px; display: inline-block; color: #333; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 8px;">
+
                                                         {{fname}} {{lname}}
-                                                    </strong>
 
                                                     <div style="color: #222; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
                                                         {{userEmail}}
@@ -92,7 +91,7 @@
                                                     <div style="color: #929292; font-size: 15px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 7px;">
                                                         Payment To
                                                     </div>
-                                                    <strong style="font-size: 15px; display: inline-block; color: #333; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 8px;">ApprovalBase</strong>
+                                                   ApprovalBase
                                                     <div style="color: #222; line-height: 19px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
                                                         1 Bligh Street
                                                         <br style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" />
@@ -126,9 +125,9 @@
                                                 </td>
                                             </tr><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"><td style="text-align: right; color: #666; font-size: 18px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 25px 0 0;" colspan="2" align="right">
                                                     Total
-                                                    <span style="display: inline-block; color: #52c375; font-weight: 600; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 0 20px;">
-	${{ amount }}
-                                                        <span style="color: #A2E2B6; font-size: 13px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">(USD)</span>
+                                                    <div style="color: #666; text-align: right; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" align="right">
+                                                        ${{ amount }}
+                                                    </div>
 </span>
                                                 </td>
                                             </tr></table></div><!-- /content -->

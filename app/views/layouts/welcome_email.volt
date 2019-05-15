@@ -339,20 +339,27 @@
                                                         Hi {{ firstName }},
                                                     </h3>
                                                     <p class="lead" style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;" align="left">
-                                                        Welcome to ApprovalBase!
+                                                        As Head of Customer Experience, I personally wanted to reach out and welcome you. We are excited that you have chosen to explore ApprovalBase as a sales and information partner for your business.
                                                     </p>
                                                     <p  style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;">
-                                                        Your 10-day free trial is now active. Get ready to build new business and supercharge your sales.
+                                                        You’ve now begun your 10-day free trial. If you have any questions feel free to send us an email or live chat with us directly in the bottom right corner, once you login.
                                                     </p>
+                                                    <p  style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;">
+                                                        We look forward to building a long lasting relationship!
+                                                    </p>
+
+                                                    <p  style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;">
+                                                        Best,
+                                                    </p>
+                                                    <p  style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;">
+                                                        Dee Arro <br>
+                                                        Head of Customer Experience <br>
+                                                        ApprovalBase
+                                                    </p>
+
                                                     <a href="{{ url }}" style="text-decoration: none; background: #3f71fc; border: 0; font-weight: 600; color: #fff; display: inline-block; box-shadow: rgba(23,43,99,.24) 0 7px 28px; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; padding: 12px 23px; text-shadow: 1px 1px rgba(0,0,0,.09); border-radius: 4px; cursor: pointer; text-align: center; -webkit-transition: all .2s; -moz-transition: all .2s; -ms-transition: all .2s; -o-transition: all .2s; transition: all .2s;">Get Started</a>
                                                     <p style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 16px; margin: 25px 0 10px; padding: 0;" align="left">
                                                         If you have any questions, please contact us at <a style="text-decoration: none; color: #42b1e2;" href="mailto:support@approvalbase.com">support@approvalbase.com</a>
-                                                    </p>
-                                                    <p style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 16px; margin: 20px 0 10px; padding: 0;" align="left">
-                                                        Have a great day!
-                                                    </p>
-                                                    <p style="font-weight: 500; color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; text-align: left; line-height: 19px; font-size: 16px; margin: 30px 0 10px; padding: 0;" align="left">
-                                                        The Team at ApprovalBase
                                                     </p>
                                                 </td>
                                                 <td class="expander" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>

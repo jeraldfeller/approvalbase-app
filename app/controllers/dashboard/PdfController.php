@@ -31,6 +31,7 @@ class PdfController extends _BaseController
         $sql = 'SELECT dd.id as docId, dd.name, dd.url, d.id, c.name as councilName
                 FROM das d, das_documents dd, councils c
                 WHERE dd.das_id = d.id
+    
                 AND d.council_id = c.id
                 AND dd.as3_processed = 0
                 AND (dd.status = 0 OR dd.status IS NULL)
@@ -86,9 +87,9 @@ class PdfController extends _BaseController
                             "ctl00_script_TSM" => "",
                             "__EVENTTARGET" => "",
                             "__EVENTARGUMENT" => "",
-                            "__VIEWSTATE" => "\/wEPDwUKMTQ2MzgzODU5OQ9kFgJmD2QWAgIDD2QWBAIEDxYCHgRUZXh0ZWQCCA9kFgICAQ9kFgQCAQ8WAh8ABfEaPGgxIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij5ESVNDTEFJTUVSIDwvaDE+CjxwPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IDEzcHg7Ij48c3Ryb25nPklmIHlvdSBhY2Nlc3MgdGhpcyB3ZWJzaXRlIHlvdSB3aWxsIGJlIHRha2VuIHRvIGhhdmUgYWdyZWVkIHRvIHRoZSBmb2xsb3dpbmcgVGVybXMgYW5kIENvbmRpdGlvbnM6Jm5ic3A7PC9zdHJvbmc+PC9zcGFuPjwvcD4KPGJyIC8+ClRoZSBjb250ZW50cyBvZiB0aGlzIHdlYnNpdGUgKHdoaWNoIGluY2x1ZGVzIGRvd25sb2FkYWJsZSBtYXRlcmlhbCkgYXJlIHN1YmplY3QgdG8gY29weXJpZ2h0IGFuZCBhcmUgcHJvdGVjdGVkIGJ5IGxhd3Mgb2YgQXVzdHJhbGlhIGFuZCBvdGhlciBjb3VudHJpZXMgdGhyb3VnaCBpbnRlcm5hdGlvbmFsIHRyZWF0aWVzLiA8YnIgLz4KPGJyIC8+CkNvdW5jaWwgZ3JhbnRzIHlvdSBhIG5vbi1leGNsdXNpdmUgbGljZW5jZSB0byByZXByb2R1Y2UgdGhlIGNvbnRlbnRzIG9mIHRoaXMgd2Vic2l0ZSBpbiB5b3VyIHdlYiBicm93c2VyIChhbmQgaW4gYW55IGNhY2hlIGZpbGUgcHJvZHVjZWQgYnkgeW91ciB3ZWIgYnJvd3NlcikgZm9yIHRoZSBzb2xlIHB1cnBvc2Ugb2Ygdmlld2luZyB0aGUgY29udGVudC4gQ291bmNpbCByZXNlcnZlcyBhbGwgb3RoZXIgcmlnaHRzLiA8YnIgLz4KPGJyIC8+ClRoZSBpbmZvcm1hdGlvbiBwcm92aWRlZCBvbiB0aGlzIHdlYnNpdGUgaXMgdG8gYXNzaXN0IGN1c3RvbWVycyBpbiB0cmFja2luZyB0aGUgcHJvZ3Jlc3Mgb2YgQXBwbGljYXRpb25zLiBJdCByZXByZXNlbnRzIGtleSBtaWxlc3RvbmVzIGluIHRoZSBBcHBsaWNhdGlvbiBwcm9jZXNzIGJ1dCBpcyBub3QgYSBkZXRhaWxlZCBoaXN0b3J5LiBQZXJzb25zIHdpc2hpbmcgdG8gY29uZmlybSBpbmZvcm1hdGlvbiBpbiBkZXRhaWwgc2hvdWxkIGNvbnRhY3QgQ291bmNpbCB2aWEgZWl0aGVyIHRoZSBlbWFpbCBmYWNpbGl0eSBvciBpbiB3cml0aW5nIGluIG9yZGVyIHRvIG9idGFpbiBhIHdyaXR0ZW4gcmVzcG9uc2UuIDxiciAvPgo8YnIgLz4KVGhlIGluZm9ybWF0aW9uIHByb3ZpZGVkIGJ5IHRoZSBTZXJ2aWNlIG1heSBjb250YWluIGluYWNjdXJhY2llcyBvciBlcnJvcnMuIENvdW5jaWwgbWFrZXMgbm8gd2FycmFudGllcyBvciByZXByZXNlbnRhdGlvbnMgcmVnYXJkaW5nIHRoZSBjdXJyZW5jeSwgcXVhbGl0eSwgYWNjdXJhY3ksIG1lcmNoYW50YWJpbGl0eSBvciBmaXRuZXNzIGZvciB0aGUgcHVycG9zZSBvZiB0aGUgaW5mb3JtYXRpb24gcHJvdmlkZWQgYnkgdGhlIFNlcnZpY2UsIG9yIHRoYXQgdGhlIFNlcnZpY2UgaXMgZnJlZSBmcm9tIGFueSB2aXJ1cyBvciBvdGhlciBkZWZlY3QuIEl0IGlzIHlvdXIgc29sZSByZXNwb25zaWJpbGl0eSB0byBtYWtlIHlvdXIgb3duIGFzc2Vzc21lbnQgb2YgdGhlIGluZm9ybWF0aW9uIHByb3ZpZGVkIGJ5IHRoZSBTZXJ2aWNlLjxiciAvPgo8YnIgLz4KQ291bmNpbCB3aWxsIG5vdCBpbiBhbnkgY2lyY3Vtc3RhbmNlcyBiZSBsaWFibGUgdG8geW91IGZvciBhbnkgbG9zcyBvciBkYW1hZ2UgKGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24sIGNvbnNlcXVlbnRpYWwgbG9zcyBvciBkYW1hZ2UpIGhvd2V2ZXIgY2F1c2VkIGFuZCB3aGV0aGVyIGFyaXNpbmcgZGlyZWN0bHkgb3IgaW5kaXJlY3RseSBmcm9tIHlvdXIgdXNlIG9mIHRoZSBpbmZvcm1hdGlvbiBwcm92aWRlZCBieSB0aGUgU2VydmljZS4gPGJyIC8+CjxiciAvPgpZb3UgYWNrbm93bGVkZ2UgdGhhdCBiZWNhdXNlIG9mIHRoZSBuYXR1cmUgb2YgdGhlIGludGVybmV0IGFuZCB0aGlyZCBwYXJ0eSBkZXBlbmRlbmNpZXMsIENvdW5jaWwgZG9lcyBub3Qgd2FycmFudCB0aGF0IGFjY2VzcyB0byBvciB1c2Ugb2YgdGhlIFNlcnZpY2Ugd2lsbCBiZSBjb250aW51b3VzIG9yIHVuaW50ZXJydXB0ZWQuIEZyb20gdGltZSB0byB0aW1lIHRoZSBTZXJ2aWNlIG1heSBub3QgYmUgYXZhaWxhYmxlIGR1ZSB0byB1cGdyYWRlcyBvciBtYWludGVuYW5jZS4pPGJyIC8+CkNvdW5jaWwgcmVzZXJ2ZXMgdGhlIHJpZ2h0IHRvIGNoYW5nZSBhbnkgYXNwZWN0IG9mIHRoZSBTZXJ2aWNlLCBpbmNsdWRpbmcgbW9kaWZ5aW5nLCBzdXNwZW5kaW5nLCByZXBsYWNpbmcgb3IgdGVybWluYXRpbmcgdGhlIFNlcnZpY2UgYXMgd2VsbCBhcyBpbXBvc2luZyBhbnkgZmVlIGZvciBhY2Nlc3MgdG8gdGhlIFNlcnZpY2UuIENvdW5jaWwgd2lsbCBoYXZlIG5vIGxpYWJpbGl0eSB0byB5b3UgaWYgdGhlIFNlcnZpY2UgaXMgbW9kaWZpZWQsIHN1c3BlbmRlZCwgcmVwbGFjZWQgb3IgdGVybWluYXRlZC4gWW91IGFncmVlIHRvIHdhaXZlIGFsbCByaWdodHMgeW91IG1heSBoYXZlIGFnYWluc3QgQ291bmNpbCBpbiByZXNwZWN0IG9mIGFueSBzdWNoIGFjdGlvbiB0YWtlbiBieSBDb3VuY2lsLjxiciAvPgo8YnIgLz4KWW91IGFncmVlIG5vdCB0byBpbnRlcmZlcmUgd2l0aCB0aGUgcHJvcGVyIHdvcmtpbmcgb2YgdGhlIFNlcnZpY2UuIFlvdSBhZ3JlZSBub3QgdG8gZG8gYW55dGhpbmcgdGhhdCBpbXBvc2VzIGFuIHVucmVhc29uYWJsZSBvciBkaXNwcm9wb3J0aW9uYXRlbHkgbGFyZ2UgbG9hZCBvbiB0aGUgU2VydmljZSwgb3IgdXNlIHRoZSBTZXJ2aWNlIG90aGVyIHRoYW4gdG8gZ2FpbiBpbmZvcm1hdGlvbi4gPGJyIC8+CjxiciAvPgo8c3Bhbj5BbGwgbWF0dGVycyByZWxhdGluZyB0byB0aGlzIHdlYnNpdGUgYXJlIGdvdmVybmVkIGJ5IHRoZSBsYXdzIG9mIHRoZSBTdGF0ZSBvZiBOU1csIEF1c3RyYWxpYS4gPC9zcGFuPkJ5IGFjY2Vzc2luZyB0aGlzIGluZm9ybWF0aW9uIEkgcmVxdWVzdCB0byBkbyBzbyB1bmRlciB0aGUgR292ZXJubWVudCBJbmZvcm1hdGlvbiAoUHVibGljIEFjY2VzcykgQWN0IDIwMDkgKEdJUEEgQWN0KSBhbmQgSSB1bmRlcnN0YW5kIHRoYXQgQ291bmNpbCBpcyBtYWtpbmcgdGhlIGluZm9ybWF0aW9uIGF2YWlsYWJsZSB1bmRlciB0aGUgcHJvdmlzaW9ucyBvZiB0aGUgR0lQQSBBY3QuIDxiciAvPgo8YnIgLz4KUHJpdmFjeSBOb3RpZmljYXRpb24gLSBJbmZvcm1hdGlvbiBwcm92aWRlZCB0byBDb3VuY2lsIGluIGNvcnJlc3BvbmRlbmNlLCBzdWJtaXNzaW9ucyBvciByZXF1ZXN0cyAodmVyYmFsLCBlbGVjdHJvbmljIG9yIHdyaXR0ZW4pLCBpbmNsdWRpbmcgcGVyc29uYWwgaW5mb3JtYXRpb24gc3VjaCBhcyB5b3VyIG5hbWUgYW5kIGFkZHJlc3MsIG1heSBiZSBtYWRlIHB1YmxpY2x5IGF2YWlsYWJsZSwgaW5jbHVkaW5nIHZpYSBDb3VuY2lsIHdlYnNpdGUsIGluIGFjY29yZGFuY2Ugd2l0aCB0aGUgR292ZXJubWVudCBJbmZvcm1hdGlvbiAoUHVibGljIEFjY2VzcykgQWN0IChHSVBBIEFjdCkgMjAwOS4gQ291bmNpbCByZXNlcnZlcyB0aGUgcmlnaHQgdG8gcmVwcm9kdWNlIGluIHdob2xlIG9yIGluIHBhcnQgYW55IGNvcnJlc3BvbmRlbmNlIG9yIHN1Ym1pc3Npb24uJm5ic3A7ZAIJDxYCHwBlZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUaY3RsMDAkY3RNYWluJGNoa0FncmVlJGNoazGNmhzo+YGNHNog3bdr8Jbf6DdgPQ==",
+                            "__VIEWSTATE" => "/wEPDwUKMTQ2MzgzODU5OQ9kFgJmD2QWAgIDD2QWBAIEDxYCHgRUZXh0ZWQCCA9kFgICAQ9kFgQCAQ8WAh8ABfEaPGgxIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij5ESVNDTEFJTUVSIDwvaDE+CjxwPjxzcGFuIHN0eWxlPSJmb250LXNpemU6IDEzcHg7Ij48c3Ryb25nPklmIHlvdSBhY2Nlc3MgdGhpcyB3ZWJzaXRlIHlvdSB3aWxsIGJlIHRha2VuIHRvIGhhdmUgYWdyZWVkIHRvIHRoZSBmb2xsb3dpbmcgVGVybXMgYW5kIENvbmRpdGlvbnM6Jm5ic3A7PC9zdHJvbmc+PC9zcGFuPjwvcD4KPGJyIC8+ClRoZSBjb250ZW50cyBvZiB0aGlzIHdlYnNpdGUgKHdoaWNoIGluY2x1ZGVzIGRvd25sb2FkYWJsZSBtYXRlcmlhbCkgYXJlIHN1YmplY3QgdG8gY29weXJpZ2h0IGFuZCBhcmUgcHJvdGVjdGVkIGJ5IGxhd3Mgb2YgQXVzdHJhbGlhIGFuZCBvdGhlciBjb3VudHJpZXMgdGhyb3VnaCBpbnRlcm5hdGlvbmFsIHRyZWF0aWVzLiA8YnIgLz4KPGJyIC8+CkNvdW5jaWwgZ3JhbnRzIHlvdSBhIG5vbi1leGNsdXNpdmUgbGljZW5jZSB0byByZXByb2R1Y2UgdGhlIGNvbnRlbnRzIG9mIHRoaXMgd2Vic2l0ZSBpbiB5b3VyIHdlYiBicm93c2VyIChhbmQgaW4gYW55IGNhY2hlIGZpbGUgcHJvZHVjZWQgYnkgeW91ciB3ZWIgYnJvd3NlcikgZm9yIHRoZSBzb2xlIHB1cnBvc2Ugb2Ygdmlld2luZyB0aGUgY29udGVudC4gQ291bmNpbCByZXNlcnZlcyBhbGwgb3RoZXIgcmlnaHRzLiA8YnIgLz4KPGJyIC8+ClRoZSBpbmZvcm1hdGlvbiBwcm92aWRlZCBvbiB0aGlzIHdlYnNpdGUgaXMgdG8gYXNzaXN0IGN1c3RvbWVycyBpbiB0cmFja2luZyB0aGUgcHJvZ3Jlc3Mgb2YgQXBwbGljYXRpb25zLiBJdCByZXByZXNlbnRzIGtleSBtaWxlc3RvbmVzIGluIHRoZSBBcHBsaWNhdGlvbiBwcm9jZXNzIGJ1dCBpcyBub3QgYSBkZXRhaWxlZCBoaXN0b3J5LiBQZXJzb25zIHdpc2hpbmcgdG8gY29uZmlybSBpbmZvcm1hdGlvbiBpbiBkZXRhaWwgc2hvdWxkIGNvbnRhY3QgQ291bmNpbCB2aWEgZWl0aGVyIHRoZSBlbWFpbCBmYWNpbGl0eSBvciBpbiB3cml0aW5nIGluIG9yZGVyIHRvIG9idGFpbiBhIHdyaXR0ZW4gcmVzcG9uc2UuIDxiciAvPgo8YnIgLz4KVGhlIGluZm9ybWF0aW9uIHByb3ZpZGVkIGJ5IHRoZSBTZXJ2aWNlIG1heSBjb250YWluIGluYWNjdXJhY2llcyBvciBlcnJvcnMuIENvdW5jaWwgbWFrZXMgbm8gd2FycmFudGllcyBvciByZXByZXNlbnRhdGlvbnMgcmVnYXJkaW5nIHRoZSBjdXJyZW5jeSwgcXVhbGl0eSwgYWNjdXJhY3ksIG1lcmNoYW50YWJpbGl0eSBvciBmaXRuZXNzIGZvciB0aGUgcHVycG9zZSBvZiB0aGUgaW5mb3JtYXRpb24gcHJvdmlkZWQgYnkgdGhlIFNlcnZpY2UsIG9yIHRoYXQgdGhlIFNlcnZpY2UgaXMgZnJlZSBmcm9tIGFueSB2aXJ1cyBvciBvdGhlciBkZWZlY3QuIEl0IGlzIHlvdXIgc29sZSByZXNwb25zaWJpbGl0eSB0byBtYWtlIHlvdXIgb3duIGFzc2Vzc21lbnQgb2YgdGhlIGluZm9ybWF0aW9uIHByb3ZpZGVkIGJ5IHRoZSBTZXJ2aWNlLjxiciAvPgo8YnIgLz4KQ291bmNpbCB3aWxsIG5vdCBpbiBhbnkgY2lyY3Vtc3RhbmNlcyBiZSBsaWFibGUgdG8geW91IGZvciBhbnkgbG9zcyBvciBkYW1hZ2UgKGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24sIGNvbnNlcXVlbnRpYWwgbG9zcyBvciBkYW1hZ2UpIGhvd2V2ZXIgY2F1c2VkIGFuZCB3aGV0aGVyIGFyaXNpbmcgZGlyZWN0bHkgb3IgaW5kaXJlY3RseSBmcm9tIHlvdXIgdXNlIG9mIHRoZSBpbmZvcm1hdGlvbiBwcm92aWRlZCBieSB0aGUgU2VydmljZS4gPGJyIC8+CjxiciAvPgpZb3UgYWNrbm93bGVkZ2UgdGhhdCBiZWNhdXNlIG9mIHRoZSBuYXR1cmUgb2YgdGhlIGludGVybmV0IGFuZCB0aGlyZCBwYXJ0eSBkZXBlbmRlbmNpZXMsIENvdW5jaWwgZG9lcyBub3Qgd2FycmFudCB0aGF0IGFjY2VzcyB0byBvciB1c2Ugb2YgdGhlIFNlcnZpY2Ugd2lsbCBiZSBjb250aW51b3VzIG9yIHVuaW50ZXJydXB0ZWQuIEZyb20gdGltZSB0byB0aW1lIHRoZSBTZXJ2aWNlIG1heSBub3QgYmUgYXZhaWxhYmxlIGR1ZSB0byB1cGdyYWRlcyBvciBtYWludGVuYW5jZS4pPGJyIC8+CkNvdW5jaWwgcmVzZXJ2ZXMgdGhlIHJpZ2h0IHRvIGNoYW5nZSBhbnkgYXNwZWN0IG9mIHRoZSBTZXJ2aWNlLCBpbmNsdWRpbmcgbW9kaWZ5aW5nLCBzdXNwZW5kaW5nLCByZXBsYWNpbmcgb3IgdGVybWluYXRpbmcgdGhlIFNlcnZpY2UgYXMgd2VsbCBhcyBpbXBvc2luZyBhbnkgZmVlIGZvciBhY2Nlc3MgdG8gdGhlIFNlcnZpY2UuIENvdW5jaWwgd2lsbCBoYXZlIG5vIGxpYWJpbGl0eSB0byB5b3UgaWYgdGhlIFNlcnZpY2UgaXMgbW9kaWZpZWQsIHN1c3BlbmRlZCwgcmVwbGFjZWQgb3IgdGVybWluYXRlZC4gWW91IGFncmVlIHRvIHdhaXZlIGFsbCByaWdodHMgeW91IG1heSBoYXZlIGFnYWluc3QgQ291bmNpbCBpbiByZXNwZWN0IG9mIGFueSBzdWNoIGFjdGlvbiB0YWtlbiBieSBDb3VuY2lsLjxiciAvPgo8YnIgLz4KWW91IGFncmVlIG5vdCB0byBpbnRlcmZlcmUgd2l0aCB0aGUgcHJvcGVyIHdvcmtpbmcgb2YgdGhlIFNlcnZpY2UuIFlvdSBhZ3JlZSBub3QgdG8gZG8gYW55dGhpbmcgdGhhdCBpbXBvc2VzIGFuIHVucmVhc29uYWJsZSBvciBkaXNwcm9wb3J0aW9uYXRlbHkgbGFyZ2UgbG9hZCBvbiB0aGUgU2VydmljZSwgb3IgdXNlIHRoZSBTZXJ2aWNlIG90aGVyIHRoYW4gdG8gZ2FpbiBpbmZvcm1hdGlvbi4gPGJyIC8+CjxiciAvPgo8c3Bhbj5BbGwgbWF0dGVycyByZWxhdGluZyB0byB0aGlzIHdlYnNpdGUgYXJlIGdvdmVybmVkIGJ5IHRoZSBsYXdzIG9mIHRoZSBTdGF0ZSBvZiBOU1csIEF1c3RyYWxpYS4gPC9zcGFuPkJ5IGFjY2Vzc2luZyB0aGlzIGluZm9ybWF0aW9uIEkgcmVxdWVzdCB0byBkbyBzbyB1bmRlciB0aGUgR292ZXJubWVudCBJbmZvcm1hdGlvbiAoUHVibGljIEFjY2VzcykgQWN0IDIwMDkgKEdJUEEgQWN0KSBhbmQgSSB1bmRlcnN0YW5kIHRoYXQgQ291bmNpbCBpcyBtYWtpbmcgdGhlIGluZm9ybWF0aW9uIGF2YWlsYWJsZSB1bmRlciB0aGUgcHJvdmlzaW9ucyBvZiB0aGUgR0lQQSBBY3QuIDxiciAvPgo8YnIgLz4KUHJpdmFjeSBOb3RpZmljYXRpb24gLSBJbmZvcm1hdGlvbiBwcm92aWRlZCB0byBDb3VuY2lsIGluIGNvcnJlc3BvbmRlbmNlLCBzdWJtaXNzaW9ucyBvciByZXF1ZXN0cyAodmVyYmFsLCBlbGVjdHJvbmljIG9yIHdyaXR0ZW4pLCBpbmNsdWRpbmcgcGVyc29uYWwgaW5mb3JtYXRpb24gc3VjaCBhcyB5b3VyIG5hbWUgYW5kIGFkZHJlc3MsIG1heSBiZSBtYWRlIHB1YmxpY2x5IGF2YWlsYWJsZSwgaW5jbHVkaW5nIHZpYSBDb3VuY2lsIHdlYnNpdGUsIGluIGFjY29yZGFuY2Ugd2l0aCB0aGUgR292ZXJubWVudCBJbmZvcm1hdGlvbiAoUHVibGljIEFjY2VzcykgQWN0IChHSVBBIEFjdCkgMjAwOS4gQ291bmNpbCByZXNlcnZlcyB0aGUgcmlnaHQgdG8gcmVwcm9kdWNlIGluIHdob2xlIG9yIGluIHBhcnQgYW55IGNvcnJlc3BvbmRlbmNlIG9yIHN1Ym1pc3Npb24uJm5ic3A7ZAIJDxYCHwBlZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUaY3RsMDAkY3RNYWluJGNoa0FncmVlJGNoazGNmhzo+YGNHNog3bdr8Jbf6DdgPQ==",
                             "__VIEWSTATEGENERATOR" => "A8DC4E82",
-                            "__EVENTVALIDATION" => "\/wEdAATJB0NxPvcVWf\/FLQLibO1VOcBhpQsJgyMjpoz897IvWkTdyBz\/e\/CcgfJ5zxj4jwg\/VxUvaVtQChmSC3DOB0MpRrO5C68mFmt0JepQoG0l9w66+GI="
+                            "__EVENTVALIDATION" => "/wEdAATJB0NxPvcVWf/FLQLibO1VOcBhpQsJgyMjpoz897IvWkTdyBz/e/CcgfJ5zxj4jwg/VxUvaVtQChmSC3DOB0MpRrO5C68mFmt0JepQoG0l9w66+GI="
                             ];
 
 
@@ -110,6 +111,31 @@ class PdfController extends _BaseController
 //                            $this->deletePdfById($docId);
                             echo $pdfUrl['html'] . '<Br>';
                         }
+                        break;
+                    case 'Inner West':
+                            if(strpos($url, 'eservices.lmc.nsw.gov.au') !== false){
+                                $termsUrl = "http://eservices.lmc.nsw.gov.au/ApplicationTracking/Common/Common/terms.aspx";
+                                $formData = [
+                                    "ctl00_rcss_TSSM" => "",
+                                    "ctl00_script_TSM" => "",
+                                    "__EVENTTARGET" => "",
+                                    "__EVENTARGUMENT" => "",
+                                    "__VIEWSTATE" => "/wEPDwUKMTQ2MzgzODU5OQ9kFgJmD2QWAgIFD2QWBAIFDxYCHgRUZXh0ZWQCCw9kFgICAQ9kFgQCAQ8WAh8ABZUZPGRpdiBzdHlsZT0iYm9yZGVyOiAwcHggc29saWQgI2RkZGRkZDsgYm9yZGVyLWltYWdlOiBub25lOyB3aWR0aDogMTAwJTsgb3ZlcmZsb3c6IHZpc2libGU7Ij4KPGgyPldlbGNvbWUgdG8gSW5uZXIgV2VzdCBDb3VuY2lsIChMZWljaGhhcmR0KSBBcHBsaWNhdGlvbiBUcmFja2luZzwvaDI+CjxkaXYgc3R5bGU9Im1hcmdpbjogMzBweDsiPgpUaGUgQXBwbGljYXRpb24gVHJhY2tpbmcgc2VydmljZSBlbmFibGVzIHRoZSBwdWJsaWMgdG8gbW9uaXRvciB0aGUgcHJvZ3Jlc3Mgb2YgdGhlIGZvbGxvd2luZyB0eXBlcyBvZiBhcHBsaWNhdGlvbnM6CjxiciAvPgo8YnIgLz4KPHRhYmxlPgogICAgPGNvbGdyb3VwPjxjb2wgc3R5bGU9IndpZHRoOiAzMyU7IiAvPgogICAgPGNvbCBzdHlsZT0id2lkdGg6IDMzJTsiIC8+CiAgICA8Y29sIHN0eWxlPSJ3aWR0aDogMzMlOyIgLz4KICAgIDwvY29sZ3JvdXA+CiAgICA8dGJvZHk+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQ+QWN0aXZpdHkgQXBwbGljYXRpb248L3RkPgogICAgICAgICAgICA8dGQ+RXh0ZXJuYWwgUmVmZXJyYWw8L3RkPgogICAgICAgICAgICA8dGQ+U2VjdGlvbiAzNyBTdHJhdGEgQ2VydGlmaWNhdGUgQXBwbGljYXRpb248L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQ+QnVpbGRpbmcgQ2VydGlmaWNhdGU8L3RkPgogICAgICAgICAgICA8dGQ+SGVyaXRhZ2UgRXhlbXB0aW9uIENlcnRpZmljYXRlPC90ZD4KICAgICAgICAgICAgPHRkPlNlY3Rpb24gOTYgTW9kaWZpY2F0aW9uIG9mIERldmVsb3BtZW50IENvbnNlbnQ8L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQ+Q29tcGx5aW5nIERldmVsb3BtZW50IENlcnRpZmljYXRlPC90ZD4KICAgICAgICAgICAgPHRkPk9jY3VwYXRpb24gQ2VydGlmaWNhdGU8L3RkPgogICAgICAgICAgICA8dGQ+U3ViZGl2aXNpb24gQ2VydGlmaWNhdGU8L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQ+Q29uc3RydWN0aW9uIENlcnRpZmljYXRlPC90ZD4KICAgICAgICAgICAgPHRkPlByZSBEQSBNZWV0aW5nPC90ZD4KICAgICAgICAgICAgPHRkPlN3aW1taW5nIFBvb2wgQ29tcGxpYW5jZSBDZXJ0aWZpY2F0ZTwvdGQ+CiAgICAgICAgPC90cj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZD5Db25zdHJ1Y3Rpb24gQ2VydGlmaWNhdGUgTW9kaWZpY2F0aW9uPC90ZD4KICAgICAgICAgICAgPHRkPlJldmlldyBvZiBEZXZlbG9wbWVudCBEZXRlcm1pbmF0aW9uPC90ZD4KICAgICAgICAgICAgPHRkPlRyZWUgQXBwbGljYWl0b248L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQ+RGV2ZWxvcG1lbnQgQXBwbGljYXRpb248L3RkPgogICAgICAgICAgICA8dGQ+Um9hZHMgQWN0IEFwcGxpY2F0aW9uPC90ZD4KICAgICAgICAgICAgPHRkPlRyZWUgQXBwZWFsIEFwcGxpY2F0aW9uPC90ZD4KICAgICAgICA8L3RyPgogICAgPC90Ym9keT4KPC90YWJsZT4KPC9kaXY+CjxoMj5EaXNjbGFpbWVyPC9oMj4KPGRpdiBzdHlsZT0ibWFyZ2luOiAzMHB4OyI+CklmIHlvdSBhY2Nlc3MgdGhpcyB3ZWJzaXRlIHlvdSB3aWxsIGJlIHRha2VuIHRvIGhhdmUgYWdyZWVkIHRvIHRoZSBmb2xsb3dpbmcgVGVybXMgYW5kIENvbmRpdGlvbnM6CjxiciAvPgo8YnIgLz4KVGhlIGNvbnRlbnRzIG9mIHRoaXMgd2Vic2l0ZSAod2hpY2ggaW5jbHVkZXMgZG93bmxvYWRhYmxlIG1hdGVyaWFsKSBhcmUgc3ViamVjdCB0byBjb3B5cmlnaHQgYW5kIGFyZSBwcm90ZWN0ZWQgYnkgbGF3cyBvZiBBdXN0cmFsaWEgYW5kIG90aGVyIGNvdW50cmllcyB0aHJvdWdoIGludGVybmF0aW9uYWwgdHJlYXRpZXMuCjxiciAvPgo8YnIgLz4KSW5uZXIgV2VzdCBDb3VuY2lsIGdyYW50cyB5b3UgYSBub24tZXhjbHVzaXZlIGxpY2VuY2UgdG8gcmVwcm9kdWNlIHRoZSBjb250ZW50cyBvZiB0aGlzIHdlYnNpdGUgaW4geW91ciB3ZWIgYnJvd3NlciAoYW5kIGluIGFueSBjYWNoZSBmaWxlIHByb2R1Y2VkIGJ5IHlvdXIgd2ViIGJyb3dzZXIpIGZvciB0aGUgc29sZSBwdXJwb3NlIG9mIHZpZXdpbmcgdGhlIGNvbnRlbnQuJm5ic3A7SW5uZXIgV2VzdCZuYnNwO0NvdW5jaWwgcmVzZXJ2ZXMgYWxsIG90aGVyIHJpZ2h0cy4KPGJyIC8+CjxiciAvPgpUaGUgaW5mb3JtYXRpb24gcHJvdmlkZWQgb24gdGhpcyB3ZWJzaXRlIGlzIHRvIGFzc2lzdCBjdXN0b21lcnMgaW4gdHJhY2tpbmcgdGhlIHByb2dyZXNzIG9mIEFwcGxpY2F0aW9ucy4gSXQgcmVwcmVzZW50cyBrZXkgbWlsZXN0b25lcyBpbiB0aGUgQXBwbGljYXRpb24gcHJvY2VzcyBidXQgaXMgbm90IGEgZGV0YWlsZWQgaGlzdG9yeS4gUGVyc29ucyB3aXNoaW5nIHRvIGNvbmZpcm0gaW5mb3JtYXRpb24gaW4gZGV0YWlsIHNob3VsZCBjb250YWN0IENvdW5jaWwgdmlhIGVpdGhlciB0aGUgZW1haWwgZmFjaWxpdHkgYXQgdGhlIGJvdHRvbSBvZiB0aGUgQXBwbGljYXRpb24gdHJhY2tpbmcgd2luZG93LCBvciBpbiB3cml0aW5nIGluIG9yZGVyIHRvIG9idGFpbiBhIHdyaXR0ZW4gcmVzcG9uc2UuCjxiciAvPgo8YnIgLz4KVG8gdGhlIG1heGltdW0gZXh0ZW50IHBlcm1pdHRlZCBieSBsYXcsJm5ic3A7SW5uZXIgV2VzdCZuYnNwO0NvdW5jaWwgZXhjbHVkZXMgYWxsIGxpYWJpbGl0eSB0byB5b3UgZm9yIGxvc3Mgb3IgZGFtYWdlIG9mIGFueSBraW5kIChob3dldmVyIGNhdXNlZCwgaW5jbHVkaW5nIGJ5IG5lZ2xpZ2VuY2UpIGFyaXNpbmcgZnJvbSBvciByZWxhdGluZyBpbiBhbnkgd2F5IHRvIHRoZSBjb250ZW50cyBvZiB0aGlzIHdlYnNpdGUgYW5kL29yIHlvdXIgdXNlIG9mIGl0Lgo8YnIgLz4KPGJyIC8+CkFsbCBtYXR0ZXJzIHJlbGF0aW5nIHRvIHRoaXMgd2Vic2l0ZSBhcmUgZ292ZXJuZWQgYnkgdGhlIGxhd3Mgb2YgdGhlIFN0YXRlIG9mIE5ldyBTb3V0aCBXYWxlcywgQXVzdHJhbGlhLgo8YnIgLz4KPGJyIC8+CkJ5IGFjY2Vzc2luZyB0aGlzIGluZm9ybWF0aW9uIEkgcmVxdWVzdCB0byBkbyBzbyB1bmRlciB0aGUgR292ZXJubWVudCBJbmZvcm1hdGlvbiAoUHVibGljIEFjY2VzcykgQWN0IDIwMDkgKEdJUEEgQWN0KSBhbmQgSSB1bmRlcnN0YW5kIHRoYXQgQ291bmNpbCBpcyBtYWtpbmcgdGhlIGluZm9ybWF0aW9uIGF2YWlsYWJsZSB1bmRlciB0aGUgcHJvdmlzaW9ucyBvZiB0aGUgR0lQQSBBY3QuCjwvZGl2Pgo8L2Rpdj5kAgkPFgIfAGVkGAEFHl9fQ29udHJvbHNSZXF1aXJlUG9zdEJhY2tLZXlfXxYBBRpjdGwwMCRjdE1haW4kY2hrQWdyZWUkY2hrMZ3naJv3viACgPlS5sZRh6Xu9gCb",
+                                    "__VIEWSTATEGENERATOR" => "88524751",
+                                    "__EVENTVALIDATION" => "/wEdAARp1NkhAoKaK1I3hXc8MEhSOcBhpQsJgyMjpoz897IvWkTdyBz/e/CcgfJ5zxj4jwg/VxUvaVtQChmSC3DOB0MpkNxT3w602E/WJYe1zMh6GAw3VwQ="
+                                ];
+                                $this->acceptTerms($termsUrl, $formData, $council);
+                                $pdfUrl = $this->curlCheckUrl($url, [], true);
+                                $baseName = str_replace([' ', '/'], '_',$docName);
+                                // Delete pdf if not exists
+                                if(strpos($pdfUrl['html'], '%PDF') !== false){
+                                    $file = fopen('pdf/'.$docId.'_=_'.$baseName.'.pdf', "w");
+                                    fwrite($file, $pdfUrl['html']);
+                                    fclose($file);
+                                }else{
+                                    echo $pdfUrl['html'] . '<Br>';
+                                }
+                            }
                         break;
                     default:
                         $pdfUrl = $this->curlCheckUrl($url, $header);
@@ -190,7 +216,7 @@ class PdfController extends _BaseController
                     }
 
                     if ($path != '') {
-                        if($council != 'Penrith' && $council != 'Willoughby') {
+                        if($council != 'Penrith' && $council != 'Willoughby' && $council != 'Inner West') {
                             if (!strpos($path, '.doc') && !strpos($path, '.DOC')) {
                                 $path = (!strpos($path, '.pdf') && !strpos($path, '.PDF') ? $path . '.pdf' : $path);
                             }
@@ -411,7 +437,7 @@ class PdfController extends _BaseController
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 300,
+                CURLOPT_TIMEOUT => 400,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "GET",
                 CURLOPT_FOLLOWLOCATION => 1, // follow redirects
@@ -426,7 +452,7 @@ class PdfController extends _BaseController
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => "",
                 CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 300,
+                CURLOPT_TIMEOUT => 400,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => "GET",
                 CURLOPT_FOLLOWLOCATION => 1, // follow redirects
@@ -617,6 +643,27 @@ class PdfController extends _BaseController
                     "Content-Type: application/x-www-form-urlencoded",
                     "Content-Length: " . strlen($formData)
                 ];
+                break;
+            case 'Inner West':
+                if(strpos($url, 'eservices.lmc.nsw.gov.au') !== false){
+
+                    $formData["__EVENTTARGET"] = null;
+                    $formData["__EVENTARGUMENT"] = null;
+                    $formData['ctl00$ctMain$BtnAgree'] = "I Agree";
+
+                    $formData = http_build_query($formData);
+
+                    $requestHeaders = [
+                        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+                        "Accept-Encoding: gzip, deflate",
+                        "Content-Type: application/x-www-form-urlencoded",
+                        "Content-Length: " . strlen($formData),
+                        "Host: eservices.lmc.nsw.gov.au",
+                        "Origin: http://eservices.lmc.nsw.gov.au",
+                        "Referer: http://eservices.lmc.nsw.gov.au/ApplicationTracking/Common/Common/terms.aspx",
+                    ];
+
+                }
                 break;
         }
 

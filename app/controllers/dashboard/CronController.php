@@ -160,7 +160,7 @@ class CronController extends _BaseController
 //            [
 //                'conditions' => 'id = :id:',
 //                'bind' => [
-//                    'id' => 23
+//                    'id' => 31
 //                ]
 //            ]
 //        );
@@ -1451,6 +1451,10 @@ class CronController extends _BaseController
 
 
 
+    public function updateUsersGoogleSheetsAction(){
+        $gs = new GoogleSheetsController();
+        return $gs->updateUsers();
+    }
 
 
     public function curlToGet($url){
