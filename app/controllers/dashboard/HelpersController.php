@@ -22,6 +22,7 @@ class HelpersController extends _BaseController
     public function shareDaAction(){
         $email = $this->getUser()->getEmail();
         $name = $this->getUser()->getLastName().', '. $this->getUser()->getName();
+        $fullName = $this->getUser()->getName() . ' ' . $this->getUser()->getLastName();
         $emails = $this->request->getPost('emails');
         $emailsTo = implode(',', $emails);
         $dasId = $this->request->getPost('dasId');
@@ -52,6 +53,6 @@ class HelpersController extends _BaseController
             'conditions' => 'das_id = :id:',
             'bind' => ['id' => $dasId]
         ]);
-        return json_encode(\Aiden\Models\Email::shareDaEmail($email, $name, $emailsTo, $council, $da, $docs, $address, $parties));
+        return json_encode(\Aiden\Models\Email::shareDaEmail($email, $fullName, $name, $emailsTo, $council, $da, $docs, $address, $parties));
     }
 }

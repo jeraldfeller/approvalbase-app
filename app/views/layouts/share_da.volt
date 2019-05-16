@@ -483,6 +483,16 @@
                                                     <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
                                                         <td style="vertical-align: top; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 10px;"
                                                             valign="top">
+                                                            <div style="color: #666666; font-size:12px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 0 10px;">
+                                                                <p>Hi there,</p>
+
+                                                                <p>{{ name }} has shared this project with you via ApprovalBase.</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
+                                                        <td style="vertical-align: top; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 10px;"
+                                                            valign="top">
                                                             <div style="color: #666666; font-weight: 600; font-size:18px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0 0 0 10px;">
                                                                 {{ council.readAttribute('name') }}
                                                                 - {{ da.readAttribute('council_reference') }}

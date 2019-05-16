@@ -12,7 +12,7 @@ namespace Aiden\Models;
 class Email extends _BaseModel
 {
 
-    public static function shareDaEmail($email, $name, $emailsTo, $council, $da, $docs, $address, $parties){
+    public static function shareDaEmail($email, $fullName, $name, $emailsTo, $council, $da, $docs, $address, $parties){
         $di = \Phalcon\DI::getDefault();
         $view = $di->getView();
         $view->start();
@@ -21,7 +21,8 @@ class Email extends _BaseModel
             'da' => $da,
             'docs' => $docs,
             'address' => $address,
-            'parties' => $parties
+            'parties' => $parties,
+            'name' => $fullName
         ]);
         $view->setTemplateAfter('share_da'); // template name
         $view->render('controller', 'action');
