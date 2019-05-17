@@ -15,198 +15,193 @@
     isMobile = true;
   }
   $(function () {
+    $freshLogin = localStorage.getItem('freshLogin');
+    console.log( $freshLogin);
+    $onBoardingFinish = {{ onboardingStatus }};
 
-    $hasSeenModal = '{{ user['seenModal'] }}';
-    if ($hasSeenModal != 1) {
-      localStorage.removeItem('tourFinished');
-      localStorage.removeItem('tourFinal');
-      localStorage.removeItem('customSearch');
-    } else {
-      $hasToured = localStorage.setItem('tourFinished', 'true');
+    if($onBoardingFinish == 1){
+      $('#welcome-modal').modal('show');
     }
-    $hasToured = localStorage.getItem('tourFinished');
-    console.log($hasToured);
-    if ($hasToured == null) {
-      $('#filterModal').modal('show');
-      $('body').attr('id', 'ui');
-      var tour;
+    if($freshLogin == 'true'){
 
-      tour = new Shepherd.Tour({
-        defaults: {
-          classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
-          showCancelLink: true
-        }
-      });
+      $hasSeenModal = '{{ user['seenModal'] }}';
+      $onboardingAlerts = '{{ user['onboardingAlerts'] }}';
+      $onboardingFilter = '{{ user['onboardingFilter'] }}';
 
-
-
-      tour.addStep('step1', {
-        title: 'Search',
-        text: 'Search applications for key phrases and filter by <br> council area, construction cost and lodgement date',
-        attachTo: {
-          element: '#searchFilterModal',
-          on: 'bottom'
+      if($hasSeenModal == 1 && $onboardingAlerts == 1 && $onboardingFilter == 1){
+        console.log('oboarding finish');
+      }else{
+        $hasToured = localStorage.removeItem('tourFinished');
+//      $tourFinal = localStorage.removeItem('tourFinal');
+        console.log('unfinished');
+      }
+      $.ajax({
+        url: '{{ url('account-profile/updateSeen') }}',
+        type: 'POST',
+        data: {
+          v: 'search'
         },
-        buttons: [
-          {
-            text: 'Exit',
-            classes: 'btn btn-default',
-            action: tour.cancel
-          },
-          {
-            text: 'Next',
-            classes: 'btn btn-primary',
-            action: tour.next
-          }]
+        dataType: 'json'
       });
 
-//      tour.addStep('step', {
-//        title: 'Search by applicant name or description',
-//        text: 'You can focus your search on project description or applicant name. <br> Searching by applicant name allows you see multiple applications lodged by the same applicant',
-//        attachTo: {
-//          element: '.step-filter',
-//          on: 'bottom'
-//        },
-//        buttons: [
-//          {
-//            text: 'Back',
-//            classes: 'btn btn-default',
-//            action: tour.back
-//          },
-//          {
-//            text: 'Next',
-//            classes: 'btn btn-primary',
-//            action: tour.next
-//          }]
-//      });
+      $hasToured = localStorage.getItem('tourFinished');
+      $tourFinal = localStorage.getItem('tourFinal');
+      console.log($hasToured);
+      if ($hasToured == null) {
+        $('#filterModal').modal('show');
+        $('body').attr('id', 'ui');
+        var tour;
 
-      tour.addStep('step2', {
-        title: 'Filter',
-        text: 'Filter results by council area',
-        attachTo: {
-          element: '.step-councils',
-          on: 'bottom'
-        },
-        buttons: [
-          {
-            text: 'Back',
-            classes: 'btn btn-default',
-            action: tour.back
-          },
-          {
-            text: 'Next',
-            classes: 'btn btn-primary',
-            action: tour.next
-          }]
-      });
-
-      tour.addStep('step3', {
-        title: 'Filter',
-        text: 'Filter results by construction value',
-        attachTo: {
-          element: '.step-cost',
-          on: 'bottom'
-        },
-        buttons: [
-          {
-            text: 'Back',
-            classes: 'btn btn-default',
-            action: tour.back
-          },
-          {
-            text: 'Next',
-            classes: 'btn btn-primary',
-            action: tour.next
-          }]
-      });
-
-      tour.addStep('step4', {
-        title: 'Filter',
-        text: 'Filter results by lodgement date. The default search period is 12 months',
-        attachTo: {
-          element: '.step-date',
-          on: 'bottom'
-        },
-        buttons: [
-          {
-            text: 'Back',
-            classes: 'btn btn-default',
-            action: tour.back
-          },
-          {
-            text: 'Next',
-            classes: 'btn btn-primary',
-            action: tour.next
-          }]
-      });
-
-      tour.addStep('step5', {
-        title: 'View application',
-        text: 'Click the row to open the application and view the address and attachments',
-        attachTo: {
-          element: '.row_1',
-          on: 'top'
-        },
-        buttons: [
-          {
-            text: 'Back',
-            classes: 'btn btn-default',
-            action: tour.back
-          },
-          {
-            text: 'Next',
-            classes: 'btn btn-primary',
-            action: tour.next
-          }]
-      });
-
-      tour.addStep('step6', {
-        title: 'Save application',
-        text: 'Click the star to save the application',
-        attachTo: {
-          element: '.star',
-          on: 'top'
-        },
-        buttons: [
-          {
-            text: 'Back',
-            classes: 'btn btn-default',
-            action: tour.back
-          },
-          {
-            text: 'Next',
-            classes: 'btn btn-primary',
-            action: tour.next
-          }
-        ]
-      });
-
-
-      Shepherd.on('complete', function () {
-        localStorage.setItem('tourSearch', 'true');
-        $('body').removeAttr('id');
-        location.href = '{{ url('filters') }}';
-      })
-      setTimeout(function(){
-        tour.start();
-        Shepherd.on('show', function(){
-          if(tour.getCurrentStep().id == 'step4'){
-            console.log('STEP4');
-           $('#filterModal').modal('hide');
-          }
-          if(tour.getCurrentStep().id == 'step5'){
-            console.log('STEP5');
-            $('tbody .redirect:eq(0)').trigger('click')
+        tour = new Shepherd.Tour({
+          defaults: {
+            classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
+            showCancelLink: true
           }
         });
-      }, 500);
+        tour.addStep('step1', {
+          title: 'Search',
+          text: 'Search applications for key phrases and filter by <br> council area, construction cost and lodgement date',
+          attachTo: {
+            element: '#searchFilterModal',
+            on: 'bottom'
+          },
+          buttons: [
+            {
+              text: 'Exit',
+              classes: 'btn btn-default',
+              action: tour.cancel
+            },
+            {
+              text: 'Next',
+              classes: 'btn btn-primary',
+              action: tour.next
+            }]
+        });
+
+        tour.addStep('step2', {
+          title: 'Filter',
+          text: 'Filter results by council area',
+          attachTo: {
+            element: '.step-councils',
+            on: 'bottom'
+          },
+          buttons: [
+            {
+              text: 'Back',
+              classes: 'btn btn-default',
+              action: tour.back
+            },
+            {
+              text: 'Next',
+              classes: 'btn btn-primary',
+              action: tour.next
+            }]
+        });
+
+        tour.addStep('step3', {
+          title: 'Filter',
+          text: 'Filter results by construction value',
+          attachTo: {
+            element: '.step-cost',
+            on: 'bottom'
+          },
+          buttons: [
+            {
+              text: 'Back',
+              classes: 'btn btn-default',
+              action: tour.back
+            },
+            {
+              text: 'Next',
+              classes: 'btn btn-primary',
+              action: tour.next
+            }]
+        });
+
+        tour.addStep('step4', {
+          title: 'Filter',
+          text: 'Filter results by lodgement date. The default search period is 12 months',
+          attachTo: {
+            element: '.step-date',
+            on: 'bottom'
+          },
+          buttons: [
+            {
+              text: 'Back',
+              classes: 'btn btn-default',
+              action: tour.back
+            },
+            {
+              text: 'Next',
+              classes: 'btn btn-primary',
+              action: tour.next
+            }]
+        });
+
+        tour.addStep('step5', {
+          title: 'View application',
+          text: 'Click the row to open the application and view the address and attachments',
+          attachTo: {
+            element: '.row_1',
+            on: 'top'
+          },
+          buttons: [
+            {
+              text: 'Back',
+              classes: 'btn btn-default',
+              action: tour.back
+            },
+            {
+              text: 'Next',
+              classes: 'btn btn-primary',
+              action: tour.next
+            }]
+        });
+
+        tour.addStep('step6', {
+          title: 'Save application',
+          text: 'Click the star to save the application',
+          attachTo: {
+            element: '.star',
+            on: 'top'
+          },
+          buttons: [
+            {
+              text: 'Back',
+              classes: 'btn btn-default',
+              action: tour.back
+            },
+            {
+              text: 'Next',
+              classes: 'btn btn-primary',
+              action: tour.next
+            }
+          ]
+        });
 
 
+        Shepherd.on('complete', function () {
+          localStorage.setItem('tourSearch', 'true');
+          $('body').removeAttr('id');
+          location.href = '{{ url('filters') }}?t=1';
+        })
+        setTimeout(function(){
+          tour.start();
+          Shepherd.on('show', function(){
+            if(tour.getCurrentStep().id == 'step4'){
+              console.log('STEP4');
+              $('#filterModal').modal('hide');
+            }
+            if(tour.getCurrentStep().id == 'step5'){
+              console.log('STEP5');
+              $('tbody .redirect:eq(0)').trigger('click')
+            }
+          });
+        }, 500);
 
-
-
-
+      }
     }
+
 
     $searchHistory = JSON.parse(localStorage.getItem('customSearch'));
     $searchHistory = null;
@@ -857,6 +852,7 @@
         "metadata": metadata
       }
     }
+
   });
 
 

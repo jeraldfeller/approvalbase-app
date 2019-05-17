@@ -21,6 +21,7 @@ class LeadsController extends _BaseController {
         $dasMaxCost = Das::find([
             'conditions' => '1=1 ORDER BY estimated_cost DESC LIMIT 1'
         ]);
+
         $councils = Councils::find([
             'conditions' => 'id != :ashfieldId: AND id != :leichId: AND id != :marrickId: AND id != :bankstownId: AND id != :canterburyId: ORDER BY name ASC',
             'bind' => [
@@ -32,7 +33,7 @@ class LeadsController extends _BaseController {
             ]
         ]);
 
-
+        $onboardingStatus =  ($this->request->getQuery("t") ? 1 : 0);
         $this->view->setVars([
             'page_title' => 'Leads',
             'lead_status' => DasUsers::STATUS_LEAD,
@@ -40,7 +41,8 @@ class LeadsController extends _BaseController {
             "defaultDateRange" => array(date('m/d/Y', strtotime('-6 months')), date('m/d/Y', strtotime('+ 1 days'))),
             "maxCost" => 50000000,
             "maxCostValue" => $dasMaxCost[0]->getEstimatedCost(),
-            "councils" => $councils
+            "councils" => $councils,
+            "onboardingStatus" => $onboardingStatus
         ]);
 
         $this->view->pick('leads/index');

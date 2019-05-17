@@ -67,6 +67,7 @@
   $(function() {
       getNewAlertCount();
       refreshGetAlertCount();
+      localStorage.setItem('freshLogin', false);
   });
 </script>
 <script src="{{ url("dashboard_assets/js/common.js?v=2.0.9") }}"></script>

@@ -39,6 +39,7 @@ class SearchController extends _BaseController
         ]);
 
         $leadId = ($this->request->getQuery("l") ? $this->request->getQuery("l") : '');
+        $onboardingStatus =  ($this->request->getQuery("t") ? 1 : 0);
         $this->view->setVars([
             'page_title' => 'Search',
             "defaultDateRange" => array(date('m/d/Y', strtotime('-6 months')), date('m/d/Y', strtotime('+ 1 days'))),
@@ -46,6 +47,7 @@ class SearchController extends _BaseController
             "maxCostValue" => $dasMaxCost[0]->getEstimatedCost(),
             "councils" => $councils,
             "currentViewedLead" => $leadId,
+            "onboardingStatus" => $onboardingStatus
 
         ]);
         $this->view->pick('search/search');

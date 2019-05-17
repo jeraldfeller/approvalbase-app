@@ -4,3 +4,4 @@ app/compiled/*
 public/pdf/*
 public/pdf-zip/*
 vendor/*
+public/index.php

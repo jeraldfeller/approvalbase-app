@@ -188,6 +188,24 @@
                         </div>
                     </div>
 
+                    <div id="ui">
+                        <div class="modal fade" id="welcome-modal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <header>
+                                            Start searching!
+                                        </header>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <!-- end modals -->
 
                 </div>

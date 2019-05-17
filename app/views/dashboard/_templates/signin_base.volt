@@ -36,8 +36,12 @@
         <span class="bottom">(c) 2019 ApprovalBase Inc. All rights reserved. <a href="#">support@approvalbase.com</a></span>
     </footer>
     <script>
+      localStorage.setItem('freshLogin', true);
       localStorage.removeItem('customSearch');
       localStorage.removeItem('customSearchLeads')
+      localStorage.removeItem('tourFinished');
+      localStorage.removeItem('tourFinal');
+      localStorage.removeItem('customSearch');
     </script>
     </body>
 </html>

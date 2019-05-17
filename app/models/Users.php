@@ -80,6 +80,17 @@ class Users extends _BaseModel {
      */
     protected $seen_modal;
 
+
+    /**
+     * @Column(type="boolean", nullable=true)
+     */
+    protected $onboarding_alerts;
+
+    /**
+     * @Column(type="boolean", nullable=true)
+     */
+    protected $onboarding_filter;
+
     /**
      * @Column(type="boolean", nullable=false)
      */
@@ -460,6 +471,46 @@ class Users extends _BaseModel {
     }
 
 
+
+    /**
+     * Returns whether a user wants to be emailed after a phrase is detected in a DA
+     * @return bool
+     */
+    public function getOnboardingAlerts() {
+
+        return (bool) $this->onboarding_alerts;
+
+    }
+
+    /**
+     * Sets whether a user wants to be emailed after a phrase is detected in a DA
+     * @param type $phraseDetectEmail
+     */
+    public function setOnboardingAlerts(bool $onboarding_alerts) {
+        $this->onboarding_alerts = (int) $onboarding_alerts;
+
+    }
+
+    /**
+     * Returns whether a user wants to be emailed after a phrase is detected in a DA
+     * @return bool
+     */
+    public function getOnboardingFilter() {
+
+        return (bool) $this->onboarding_filter;
+
+    }
+
+    /**
+     * Sets whether a user wants to be emailed after a phrase is detected in a DA
+     * @param type $phraseDetectEmail
+     */
+    public function setOnboardingFilter(bool $onboarding_filter) {
+        $this->onboarding_filter = (int) $onboarding_filter;
+
+    }
+
+
     /**
      * Gets the user's subscription status
      * @return string
@@ -814,6 +865,8 @@ class Users extends _BaseModel {
                 'imageUrl' => $user->getImageUrl(),
                 'subscriptionStatus' => $user->getSubscriptionStatus(),
                 'seenModal' => $user->getSeenModal(),
+                'onboardingAlerts' => $user->getOnboardingAlerts(),
+                'onboardingFilter' => $user->getOnboardingFilter(),
                 'sendNotificationsOnLeads' => $user->getSendNotificationsOnLeads(),
                 'showAlerts' => $user->getShowAlerts(),
                 'solution' => $user->getSolution()

@@ -23,13 +23,14 @@ class PhrasesController extends _BaseController {
         foreach($councils as $row){
             $councilIds[] = $row->getId();
         }
-
+        $onboardingStatus =  ($this->request->getQuery("t") ? 1 : 0);
         $this->view->setVars([
             "page_title" => 'Filters',
             "councils" => $councils,
             "councilIds" => json_encode($councilIds),
             "maxCost" => 50000000,
-            "maxCostValue" => $dasMaxCost[0]->getEstimatedCost()
+            "maxCostValue" => $dasMaxCost[0]->getEstimatedCost(),
+            "onboardingStatus" => $onboardingStatus
         ]);
     }
 

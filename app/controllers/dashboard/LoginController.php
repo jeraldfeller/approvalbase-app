@@ -59,7 +59,7 @@ class LoginController extends _BaseController {
                     return $this->response->redirect('leads', false, 302);
                 }
                 else {
-                    if($user->getSeenModal() == true){
+                    if($user->getSeenModal() == true && $user->getOnboardingAlerts() == true && $user->getOnboardingFilter() == true){
                         if($user->getSolution() == 'search'){
                             return $this->response->redirect('leads', false, 302);
                         }else{

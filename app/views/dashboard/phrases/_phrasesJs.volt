@@ -19,140 +19,118 @@
       isMobile = true;
     }
 
-    $hasToured = localStorage.getItem('tourFinished');
-    $tourFinal = localStorage.getItem('tourFinal');
-    $hasCreatedSample = localStorage.getItem('hasCreatedSample');
-    if ($hasToured != 'true') {
-      if ($tourFinal != null) {
-        $('#createFilterModal').modal('show');
-        $('body').attr('id', 'ui');
-        var tour;
 
-        tour = new Shepherd.Tour({
-          defaults: {
-            classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
-            showCancelLink: true
-          }
-        });
+    $onBoardingFinish = {{ onboardingStatus }};
+    $onboardingAlerts = '{{ user['onboardingAlerts'] }}';
+    $hasSeenModal = '{{ user['seenModal'] }}';
+    $onboardingFilter = '{{ user['onboardingFilter'] }}';
+    if($onBoardingFinish == 1){
+      $.ajax({
+        url: '{{ url('account-profile/updateSeen') }}',
+        type: 'POST',
+        data: {
+          v: 'filter'
+        },
+        dataType: 'json'
+      });
+      $hasToured = localStorage.getItem('tourFinished');
+      $hasCreatedSample = localStorage.getItem('hasCreatedSample');
+    //  if ($hasSeenModal == 1 && $onboardingFilter != 1) {
+        console.log($hasSeenModal, $onboardingFilter);
+        if ($hasToured != 'true') {
+          if ($hasToured == null) {
+            $('#createFilterModal').modal('show');
+            $('body').attr('id', 'ui');
+            var tour;
 
-        tour.addStep('start', {
-          text: ' Start by adding phrases',
-          attachTo: {
-            element: '#input_phrase',
-            on: 'bottom'
-          },
-          buttons: [
-            {
-              text: 'Done',
-              classes: 'btn btn-success',
-              action: tour.next
-            }]
-        });
+            tour = new Shepherd.Tour({
+              defaults: {
+                classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
+                showCancelLink: true
+              }
+            });
 
-        Shepherd.on('complete', function () {
-          localStorage.setItem('tourFinished', 'true');
-          $('body').removeAttr('id');
-
-          $.ajax({
-            url: '{{ url('account-profile/updateSeen') }}',
-            type: 'POST',
-            data: {},
-            dataType: 'json'
-          });
-        })
-        setTimeout(function() {
-          tour.start();
-        }, 500);
-      } else {
-        if ($hasToured == null) {
-          $('#createFilterModal').modal('show');
-          $('body').attr('id', 'ui');
-          var tour;
-
-          tour = new Shepherd.Tour({
-            defaults: {
-              classes: 'shepherd-element shepherd-open shepherd-theme-arrows',
-              showCancelLink: true
-            }
-          });
-
-          if($hasCreatedSample == null){
-            Shepherd.on('start', function () {
-              setTimeout(function(){
-                $('#input_phrase').val('pool');
+            if($hasCreatedSample == null){
+              Shepherd.on('start', function () {
+                setTimeout(function(){
+                  $('#input_phrase').val('pool');
 //                $('#filter1').val('description').trigger('change');
 //                $('#councils').val(9).trigger('change');
 //                $('#input_case_sensitive').prop('checked', true);
-              }, 400);
+                }, 400);
 
-            });
+              });
 
-            tour.addStep('step1', {
-              title: 'Search phrase',
-              text: 'To create an automated email alert, enter a search phrase, select filters and click Create Phrase',
+              tour.addStep('step1', {
+                title: 'Search phrase',
+                text: 'To create an automated email alert, enter a search phrase, select filters and click Create Phrase',
+                attachTo: {
+                  element: '#input_phrase',
+                  on: 'bottom'
+                },
+                buttons: [
+                  {
+                    text: 'Exit',
+                    classes: 'btn btn-default',
+                    action: tour.cancel
+                  },
+                  {
+                    text: 'Next',
+                    classes: 'btn btn-primary',
+                    action: tour.next
+                  }]
+              });
+
+              localStorage.setItem('hasCreatedSample', 'true');
+            }
+
+
+            tour.addStep('step2', {
+              text: 'Your phrase will be added to the Filters page and we will alert you if we detect this phrase in any projects',
               attachTo: {
-                element: '#input_phrase',
-                on: 'bottom'
+                element: '.step-table',
+                on: 'top'
               },
               buttons: [
                 {
-                  text: 'Exit',
+                  text: 'Back',
                   classes: 'btn btn-default',
-                  action: tour.cancel
+                  action: tour.back
                 },
                 {
                   text: 'Next',
                   classes: 'btn btn-primary',
                   action: tour.next
                 }]
+
             });
 
-            localStorage.setItem('hasCreatedSample', 'true');
+
+
+
+            Shepherd.on('complete', function () {
+              localStorage.setItem('tourPhrase', 'true');
+              $('body').removeAttr('id');
+              location.href = '{{ url('leads') }}?t=1';
+            })
+
+
+            setTimeout(function(){
+              tour.start();
+
+              Shepherd.on('show', function(){
+                if(tour.getCurrentStep().id == 'step1'){
+                  $('#createBtn').trigger('click');
+                }
+              });
+            }, 500);
           }
 
-
-          tour.addStep('step2', {
-            text: 'Your phrase will be added below and we will alert you if we detect this phrase in any applications',
-            attachTo: {
-              element: '.step-table',
-              on: 'top'
-            },
-            buttons: [
-              {
-                text: 'Back',
-                classes: 'btn btn-default',
-                action: tour.back
-              },
-              {
-                text: 'Next',
-                classes: 'btn btn-primary',
-                action: tour.next
-              }]
-
-          });
-
-
-
-
-          Shepherd.on('complete', function () {
-            localStorage.setItem('tourPhrase', 'true');
-            $('body').removeAttr('id');
-            location.href = '{{ url('leads') }}';
-          })
-
-
-          setTimeout(function(){
-            tour.start();
-
-            Shepherd.on('show', function(){
-              if(tour.getCurrentStep().id == 'step1'){
-                $('#createBtn').trigger('click');
-              }
-            });
-          }, 500);
         }
-      }
+
+     // }
     }
+
 
 
 

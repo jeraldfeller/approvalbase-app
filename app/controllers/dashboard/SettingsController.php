@@ -404,7 +404,19 @@ class SettingsController extends _BaseController
 
     public function updateSeenAction()
     {
-        $this->getUser()->setSeenModal(1);
+        $v = $this->request->getPost('v');
+        switch ($v){
+            case 'search':
+                $this->getUser()->setSeenModal(1);
+                break;
+            case 'alerts':
+                $this->getUser()->setOnboardingAlerts(1);
+                break;
+            case 'filter':
+                $this->getUser()->setOnboardingFilter(1);
+                break;
+        }
+
         $this->getUser()->save();
         return true;
     }
