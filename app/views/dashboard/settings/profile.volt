@@ -9,8 +9,7 @@
 
     <form method="post">
         <div class="form-group avatar-field clearfix">
-            <div class="col-sm-3">
-                <img src="{{ user['imageUrl']}}" class="img-responsive img-circle" id="avatarImg" />
+            <div class="col-sm-3 avatar-round" style="background-image: url('{{ user['imageUrl']}}')">
             </div>
             <div class="col-sm-9">
                 <label>Set up your avatar picture</label>

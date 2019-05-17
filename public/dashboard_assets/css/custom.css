@@ -3520,3 +3520,18 @@ a, area, button, [role="button"], input:not([type="range"]), label, select, summ
 .shepherd-element{
     z-index: 9956662 !important;
 }
+
+.avatar-round{
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 60px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 60px;
+    -moz-background-clip: padding;
+    border-radius: 60px;
+    background-clip: padding-box;
+    margin: 7px 0 0 5px;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+}

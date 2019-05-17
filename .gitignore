@@ -1,6 +1,8 @@
 app/config/*
 app/cookies/*
 app/compiled/*
+app/logs/*
+public/index.php
 public/pdf/*
 public/pdf-zip/*
 vendor/*
