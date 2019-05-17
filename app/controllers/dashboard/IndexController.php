@@ -185,13 +185,13 @@ class IndexController extends _BaseController
         }
 
         $sql = 'SELECT c.name, (
-            SELECT count(id) FROM das WHERE council_id = c.id AND created >= "'.$from.'" AND created <= "'.$to.'"
+            SELECT count(id) FROM das WHERE estimated_cost IS NOT NULL AND council_id = c.id AND created >= "'.$from.'" AND created <= "'.$to.'"
         ) as projectsCount,
         (
-            SELECT count(dd.id) FROM das_documents dd, das d WHERE d.council_id = c.id AND d.id = dd.das_id AND d.created >= "'.$from.'" AND d.created <= "'.$to.'"
+            SELECT count(dd.id) FROM das_documents dd, das d WHERE estimated_cost IS NOT NULL AND d.council_id = c.id AND d.id = dd.das_id AND d.created >= "'.$from.'" AND d.created <= "'.$to.'"
         ) as docsCount,
         (
-            SELECT SUM(estimated_cost) FROM das WHERE council_id = c.id AND created >= "'.$from.'" AND created <= "'.$to.'"
+            SELECT SUM(estimated_cost) FROM das WHERE estimated_cost IS NOT NULL AND council_id = c.id AND created >= "'.$from.'" AND created <= "'.$to.'"
         ) as totalCost
         FROM councils c ORDER BY `projectsCount` DESC LIMIT 10';
 
