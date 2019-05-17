@@ -16,11 +16,11 @@
                             <div class="plans">
                                 <div class="plan clearfix selected">
                                     <div class="price">
-                                        $1,250s/mo
+                                        $1,250/mo
                                     </div>
                                     <div class="info">
                                         <div class="name">
-                                            Standard
+                                            Business
                                         </div>
                                         <div class="details">
                                             Unlimited
