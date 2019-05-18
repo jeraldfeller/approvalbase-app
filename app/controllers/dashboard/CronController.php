@@ -29,7 +29,7 @@ class CronController extends _BaseController
 {
     public function checkSubscriptionAction()
     {
-        $dateNow = date('Y-m-d H:i:s');
+        $dateNow = date('Y-m-d');
         //check trial users
         $user = new Users();
         $sql = 'SELECT id, name, last_name, email, created, subscription_status FROM users WHERE subscription_status = "trial"';
@@ -41,6 +41,7 @@ class CronController extends _BaseController
 
         foreach ($results as $row) {
             $createdPlus10 = date('Y-m-d', strtotime($row->getCreated()->format('Y-m-d') . '+10 days'));
+            echo $row->getEmail() . ' ' . $dateNow . ' - ' . $createdPlus10 . '<br>';
             if ($createdPlus10 <= $dateNow) {
                 // trial expired
                 $this->updateSubscriptionStatus($row->getId());
@@ -62,12 +63,12 @@ class CronController extends _BaseController
                 }
 
                 // send email notification;
-                \Aiden\Models\Email::subscriptionExpirationNotification('trial', $row->getName(), $row->getLastName(), $row->getEmail() . ',' . implode(',', $emailsTo));
+                   \Aiden\Models\Email::subscriptionExpirationNotification('trial', $row->getName(), $row->getLastName(), $row->getEmail() . ',' . implode(',', $emailsTo));
             }
         }
 
         // check billing
-        $dateNow = date('Y-m-d H:i:s', strtotime('+3 days'));
+        $dateNow = date('Y-m-d', strtotime('+3 days'));
         $billing = new Billing();
         $sql = 'SELECT b.id, b.users_id, u.name, u.last_name, u.email  
                 FROM billing b, users u 
