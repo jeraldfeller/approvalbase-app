@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/compiled/theme.css?v=5.20')}}" />
+<link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/compiled/theme.css?v=5.3')}}" />
 <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/ionicons.min.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/themify/themify-icons.css?v=1.0')}}" />
 <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/brankic.css')}}" />

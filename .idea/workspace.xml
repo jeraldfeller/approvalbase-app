@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="560a9276-8802-40ad-a394-333ab28e0e54" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/UsersShareDa.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/PdfController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/PdfController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/_helpers/_shareDaJs.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/_helpers/_shareDaJs.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php" afterPath="$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/login/index.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/login/index.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dashboard_assets/css/custom.css" afterPath="$PROJECT_DIR$/public/dashboard_assets/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/dashboard/search/search.volt" afterPath="$PROJECT_DIR$/app/views/dashboard/search/search.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/dashboard_assets/css/compiled/theme.css" afterPath="$PROJECT_DIR$/public/dashboard_assets/css/compiled/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/token.json" afterPath="$PROJECT_DIR$/public/token.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,89 +21,87 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PdfController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/PdfController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="96" column="42" lean-forward="false" selection-start-line="96" selection-start-column="31" selection-end-line="96" selection-end-column="42" />
-              <folding>
-                <marker date="1558327035323" expanded="true" signature="603:964" ph="SELECT dd.id... das" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelpersController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="82" column="82" lean-forward="true" selection-start-line="82" selection-start-column="82" selection-end-line="82" selection-end-column="82" />
-              <folding>
-                <element signature="e#125#146#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersShareDa.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/UsersShareDa.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-317">
-              <caret line="206" column="35" lean-forward="false" selection-start-line="206" selection-start-column="35" selection-end-line="206" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Das.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Das.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="188" column="5" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="188" selection-end-column="5" />
-              <folding>
-                <element signature="e#32#55#0#PHP" expanded="true" />
-                <marker date="1556036337000" expanded="true" signature="11453:11464" ph="..." />
-                <marker date="1556036337000" expanded="true" signature="11490:11501" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_searchJs.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="410" column="32" lean-forward="false" selection-start-line="410" selection-start-column="19" selection-end-line="410" selection-end-column="32" />
+            <state relative-caret-position="465">
+              <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+              <folding>
+                <marker date="1558428211536" expanded="true" signature="19083:19110" ph="..." />
+                <marker date="1558428211536" expanded="true" signature="19311:19320" ph="..." />
+                <marker date="1558428211536" expanded="true" signature="23467:23486" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="420" column="57" lean-forward="false" selection-start-line="420" selection-start-column="57" selection-end-line="420" selection-end-column="57" />
+              <folding>
+                <marker date="1558428243022" expanded="true" signature="11898:12059" ph="SELECT b.*, billing" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_indexJs.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="102" column="33" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_shareDaJs.volt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/dashboard/_helpers/_shareDaJs.volt">
+      <file leaf-file-name="_phrasesJs.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/phrases/_phrasesJs.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="29" column="52" lean-forward="false" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+            <state relative-caret-position="253">
+              <caret line="34" column="9" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="34" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/custom.css">
+      <file leaf-file-name="_leadsJs.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="3540" column="33" lean-forward="false" selection-start-line="3540" selection-start-column="33" selection-end-line="3540" selection-end-column="33" />
+            <state relative-caret-position="251">
+              <caret line="25" column="9" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="25" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.volt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/search.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="221" column="6" lean-forward="false" selection-start-line="221" selection-start-column="6" selection-end-line="221" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/compiled/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="8986" column="35" lean-forward="false" selection-start-line="8986" selection-start-column="35" selection-end-line="8986" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ui.html" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Web Elements/Premium Templates/wolf/wolf-html/ui.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="83">
+              <caret line="319" column="8" lean-forward="false" selection-start-line="265" selection-start-column="2" selection-end-line="319" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -113,8 +110,8 @@
       <file leaf-file-name="_head.css.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+            <state relative-caret-position="0">
+              <caret line="0" column="98" lean-forward="false" selection-start-line="0" selection-start-column="98" selection-end-line="0" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -141,11 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get</find>
-      <find>downloadPdfBtn</find>
-      <find>Common</find>
-      <find>sendShareBtn</find>
-      <find>shareBtn</find>
       <find>showNo</find>
       <find>.shareBtn</find>
       <find>.star</find>
@@ -166,11 +158,16 @@
       <find>getCleanAddressAction</find>
       <find>getCleanAddress</find>
       <find>google</find>
-      <find>welcome-modal</find>
       <find>updateSeenAction</find>
       <find>applications</find>
       <find>share</find>
+      <find>40</find>
+      <find>welcome</find>
+      <find>welcome-modal</find>
+      <find>#welcome-modal</find>
       <find>#sendShareBtn</find>
+      <find>success:</find>
+      <find>success</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,7 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/config/development/config.php" />
         <option value="$PROJECT_DIR$/app/views/common/_templates/test.volt" />
         <option value="$PROJECT_DIR$/app/controllers/common/IndexController.php" />
         <option value="$PROJECT_DIR$/app/views/common/index/index.volt" />
@@ -198,9 +194,7 @@
         <option value="$PROJECT_DIR$/app/controllers/dashboard/SignupController.php" />
         <option value="$PROJECT_DIR$/app/models/Email.php" />
         <option value="$PROJECT_DIR$/app/views/dashboard/leads/index.volt" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/search/search.volt" />
         <option value="$PROJECT_DIR$/app/models/Users.php" />
-        <option value="$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/SearchController.php" />
         <option value="$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/LeadsController.php" />
@@ -208,7 +202,6 @@
         <option value="$PROJECT_DIR$/app/views/dashboard/phrases/_phrasesJs.volt" />
         <option value="$PROJECT_DIR$/app/views/dashboard/_templates/signin_base.volt" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/LoginController.php" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/dashboard/settings/billing.volt" />
         <option value="$PROJECT_DIR$/app/views/dashboard/settings/profile.volt" />
@@ -226,10 +219,14 @@
         <option value="$PROJECT_DIR$/app/views/dashboard/_templates/base.volt" />
         <option value="$PROJECT_DIR$/app/models/UsersShareDa.php" />
         <option value="$PROJECT_DIR$/app/views/dashboard/_helpers/_shareDaJs.volt" />
-        <option value="$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt" />
         <option value="$PROJECT_DIR$/public/dashboard_assets/css/custom.css" />
         <option value="$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/public/dashboard_assets/css/compiled/theme.css" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php" />
+        <option value="$PROJECT_DIR$/app/views/dashboard/search/search.volt" />
       </list>
     </option>
   </component>
@@ -348,6 +345,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard_assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiled" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approvalbase-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -426,7 +449,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
+              <option name="myItemId" value="phrases" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -452,7 +475,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_templates" />
+              <option name="myItemId" value="leads" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -478,25 +501,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_helpers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approvalbase-app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -694,12 +699,12 @@
       <workItem from="1558326742414" duration="1878000" />
       <workItem from="1558396403598" duration="505000" />
       <workItem from="1558403551761" duration="2003000" />
-      <workItem from="1558408112873" duration="8233000" />
+      <workItem from="1558408112873" duration="13297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157407000" />
+    <option name="totallyTimeSpent" value="162471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -739,20 +744,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/google/apiclient/src/Google/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="91" column="18" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/GoogleSheets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -795,27 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Web Elements/Premium Templates/wolf/wolf-html/ui.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="304" column="20" lean-forward="false" selection-start-line="301" selection-start-column="14" selection-end-line="304" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/search.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3247">
-          <caret line="191" column="65" lean-forward="false" selection-start-line="191" selection-start-column="52" selection-end-line="191" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="395" column="42" lean-forward="false" selection-start-line="395" selection-start-column="42" selection-end-line="395" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Users.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12918">
@@ -827,20 +797,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="49" column="51" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/phrases/_phrasesJs.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="53" lean-forward="false" selection-start-line="113" selection-start-column="49" selection-end-line="113" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -933,13 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="347" lean-forward="false" selection-start-line="26" selection-start-column="211" selection-end-line="26" selection-end-column="347" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/CronController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="102" column="12" lean-forward="false" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1036,26 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Das.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="188" column="5" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="188" selection-end-column="5" />
-          <folding>
-            <element signature="e#32#55#0#PHP" expanded="true" />
-            <marker date="1556036337000" expanded="true" signature="11453:11464" ph="..." />
-            <marker date="1556036337000" expanded="true" signature="11490:11501" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="410" column="32" lean-forward="false" selection-start-line="410" selection-start-column="19" selection-end-line="410" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/dashboard.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1072,19 +1001,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="92" lean-forward="false" selection-start-line="9" selection-start-column="92" selection-end-line="9" selection-end-column="92" />
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/CronController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="3540" column="33" lean-forward="false" selection-start-line="3540" selection-start-column="33" selection-end-line="3540" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="73">
+          <caret line="1320" column="31" lean-forward="false" selection-start-line="1320" selection-start-column="20" selection-end-line="1320" selection-end-column="31" />
+          <folding>
+            <marker date="1558168123648" expanded="true" signature="810:920" ph="SELECT id, n... users" />
+            <marker date="1558168123648" expanded="true" signature="2409:2611" ph="SELECT b.id,... billing" />
+            <marker date="1558168123648" expanded="true" signature="5297:5724" ph="SELECT d.id das" />
+            <marker date="1558168123648" expanded="true" signature="11691:12299" ph="SELECT d.id das" />
+            <marker date="1558168123648" expanded="true" signature="23959:24380" ph="SELECT d.id,... das" />
+            <marker date="1558168123648" expanded="true" signature="24453:24772" ph="SELECT d.id,... das" />
+            <marker date="1558168123648" expanded="true" signature="41714:41857" ph="SELECT dd.id... das" />
+            <marker date="1558168123648" expanded="true" signature="42743:42854" ph="SELECT dd.* das_documents" />
+            <marker date="1558168123648" expanded="true" signature="45321:45431" ph="SELECT d.* F... das" />
+            <marker date="1558168123648" expanded="true" signature="48302:48565" ph="SELECT dd.* das_documents" />
+            <marker date="1558168123648" expanded="true" signature="49999:50169" ph="select dd.*,... das_documents" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="82" column="82" lean-forward="true" selection-start-line="82" selection-start-column="82" selection-end-line="82" selection-end-column="82" />
+          <folding>
+            <element signature="e#125#146#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,13 +1047,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/HelpersController.php">
+    <entry file="file://$PROJECT_DIR$/app/models/Das.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="82" column="82" lean-forward="true" selection-start-line="82" selection-start-column="82" selection-end-line="82" selection-end-column="82" />
+        <state relative-caret-position="289">
+          <caret line="188" column="5" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="188" selection-end-column="5" />
           <folding>
-            <element signature="e#125#146#0#PHP" expanded="true" />
+            <element signature="e#32#55#0#PHP" expanded="true" />
+            <marker date="1556036337000" expanded="true" signature="11453:11464" ph="..." />
+            <marker date="1556036337000" expanded="true" signature="11490:11501" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="3540" column="33" lean-forward="false" selection-start-line="3540" selection-start-column="33" selection-end-line="3540" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Web Elements/Premium Templates/wolf/wolf-html/ui.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="319" column="8" lean-forward="false" selection-start-line="265" selection-start-column="2" selection-end-line="319" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dashboard_assets/css/compiled/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="8986" column="35" lean-forward="false" selection-start-line="8986" selection-start-column="35" selection-end-line="8986" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/_templates/_head.css.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="98" lean-forward="false" selection-start-line="0" selection-start-column="98" selection-end-line="0" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/leads/_leadsJs.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="25" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/phrases/_phrasesJs.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="27" selection-start-column="6" selection-end-line="34" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,10 +1115,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/dashboard/SettingsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        <state relative-caret-position="491">
+          <caret line="420" column="57" lean-forward="false" selection-start-line="420" selection-start-column="57" selection-end-line="420" selection-end-column="57" />
+          <folding>
+            <marker date="1558428243022" expanded="true" signature="11898:12059" ph="SELECT b.*, billing" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/_searchJs.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="29" column="25" lean-forward="false" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding>
+            <marker date="1558428211536" expanded="true" signature="19083:19110" ph="..." />
+            <marker date="1558428211536" expanded="true" signature="19311:19320" ph="..." />
+            <marker date="1558428211536" expanded="true" signature="23467:23486" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/index/_indexJs.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="102" column="33" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dashboard/search/search.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="221" column="6" lean-forward="false" selection-start-line="221" selection-start-column="6" selection-end-line="221" selection-end-column="6" />
           <folding />
         </state>
       </provider>

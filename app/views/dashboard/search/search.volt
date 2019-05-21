@@ -189,7 +189,52 @@
                     </div>
 
                     <div id="ui">
-                        <div class="modal fade" id="welcome-modal" tabindex="-1" role="dialog">
+
+
+                        <div class="modal fade welcome-modal" id="welcome-modal-first" tabindex="-1" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <header>
+                                            Welcome to ApprovalBase
+                                        </header>
+
+                                        <p>
+                                            Thanks for signing up! We recommend that you take the Guided Tour so we can show you around and get you set up.
+                                        </p>
+
+                                        <div class="get-started">
+                                            <div class="row">
+                                                <div class="col-md-4 animated fadeInDown">
+                                                    <i class="ion-navigate"></i>
+                                                    <a href="#" id="guided_tour_cta">Guided Tour</a>
+                                                </div>
+                                                <div class="col-md-4 animated fadeInDown two">
+                                                    <i class="ion-wrench"></i>
+                                                    <a href="/filters">Set up filters</a>
+                                                </div>
+                                                <div class="col-md-4 animated fadeInDown three">
+                                                    <i class="ion-help-circled"></i>
+                                                    <a href="https://player.vimeo.com/video/334581219?autoplay=1&api=1&player_id=html5boxiframevideo0" onclick="window.open(this.href, 'Approvalbase',
+'right=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">Watch our tutorial </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="#" id="skip_cta" data-dismiss="modal" class="go-dashboard">
+                                            Skip and take me to the Search page
+                                            <i class="fa fa-angle-double-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="modal fade welcome-modal" id="welcome-modal" tabindex="-1" role="dialog">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">

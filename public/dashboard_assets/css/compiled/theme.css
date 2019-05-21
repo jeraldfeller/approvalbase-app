@@ -183,10 +183,10 @@ a:focus, button:focus, input[type="submit"]:focus {
 .paging a i.fa-trash-o {
   font-size: 12px;
 }
-#welcome-modal .modal-dialog {
+.welcome-modal .modal-dialog {
   margin-top: 65px;
 }
-#welcome-modal .modal-content {
+.welcome-modal .modal-content {
   background: #f5f8fc;
   background: -webkit-linear-gradient(white, #f5f8fc);
   background: -moz-linear-gradient(white, #f5f8fc);
@@ -195,20 +195,20 @@ a:focus, button:focus, input[type="submit"]:focus {
   background: linear-gradient(white, #f5f8fc);
   font-family: "Helvetica Neue", Arial;
 }
-#welcome-modal .modal-content .modal-header {
+.welcome-modal .modal-content .modal-header {
   border-bottom: 0;
 }
-#welcome-modal .modal-content .modal-body {
+.welcome-modal .modal-content .modal-body {
   padding-bottom: 50px;
 }
-#welcome-modal .modal-content .modal-body header {
+.welcome-modal .modal-content .modal-body header {
   text-align: center;
   font-weight: 600;
   font-size: 22px;
   color: #444;
   margin-bottom: 23px;
 }
-#welcome-modal .modal-content .modal-body p {
+.welcome-modal .modal-content .modal-body p {
   font-size: 13px;
   color: #555;
   margin: 0 auto;
@@ -216,24 +216,24 @@ a:focus, button:focus, input[type="submit"]:focus {
   text-align: center;
   line-height: 20px;
 }
-#welcome-modal .modal-content .modal-body .get-started {
+.welcome-modal .modal-content .modal-body .get-started {
   margin-top: 40px;
 }
-#welcome-modal .modal-content .modal-body .get-started .col-md-4 {
+.welcome-modal .modal-content .modal-body .get-started .col-md-4 {
   text-align: center;
   padding-bottom: 50px;
 }
-#welcome-modal .modal-content .modal-body .get-started .col-md-4 i {
+.welcome-modal .modal-content .modal-body .get-started .col-md-4 i {
   font-size: 38px;
   color: #7FA5BE;
 }
-#welcome-modal .modal-content .modal-body .get-started .col-md-4 a {
+.welcome-modal .modal-content .modal-body .get-started .col-md-4 a {
   color: #576C91;
   display: block;
   margin-top: 12px;
   font-size: 13px;
 }
-#welcome-modal .modal-content .modal-body .go-dashboard {
+.welcome-modal .modal-content .modal-body .go-dashboard {
   color: #008cdd;
   text-align: center;
   display: block;
@@ -8957,7 +8957,7 @@ body.open-sidebar #wrapper #content {
 #ui #form-modal .fa-calendar {
   color: #789BCE;
 }
-#ui #welcome-modal .animated {
+#ui .welcome-modal .animated {
   -webkit-animation-duration: 0.35s;
   -moz-animation-duration: 0.35s;
   -o-animation-duration: 0.35s;
@@ -8966,31 +8966,31 @@ body.open-sidebar #wrapper #content {
   -moz-animation-timing-function: cubic-bezier(0.4, 1.49, 0.37, 1.07);
   animation-timing-function: cubic-bezier(0.4, 1.49, 0.37, 1.07);
 }
-#ui #welcome-modal .animated.two {
+#ui .welcome-modal .animated.two {
   -webkit-animation-duration: 0.45s;
   -moz-animation-duration: 0.45s;
   -o-animation-duration: 0.45s;
   animation-duration: 0.45s;
 }
-#ui #welcome-modal .animated.three {
+#ui .welcome-modal .animated.three {
   -webkit-animation-duration: 0.55s;
   -moz-animation-duration: 0.55s;
   -o-animation-duration: 0.55s;
   animation-duration: 0.55s;
 }
-#ui #welcome-modal .animated.four {
+#ui .welcome-modal .animated.four {
   -webkit-animation-duration: 0.62s;
   -moz-animation-duration: 0.62s;
   -o-animation-duration: 0.62s;
   animation-duration: 0.62s;
 }
-#ui #welcome-modal .animated.five {
+#ui .welcome-modal .animated.five {
   -webkit-animation-duration: 0.7s;
   -moz-animation-duration: 0.7s;
   -o-animation-duration: 0.7s;
   animation-duration: 0.7s;
 }
-#ui #welcome-modal .animated.six {
+#ui .welcome-modal .animated.six {
   -webkit-animation-duration: 0.73s;
   -moz-animation-duration: 0.73s;
   -o-animation-duration: 0.73s;

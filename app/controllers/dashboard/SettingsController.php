@@ -415,6 +415,11 @@ class SettingsController extends _BaseController
             case 'filter':
                 $this->getUser()->setOnboardingFilter(1);
                 break;
+            case 'all':
+                $this->getUser()->setSeenModal(1);
+                $this->getUser()->setOnboardingAlerts(1);
+                $this->getUser()->setOnboardingFilter(1);
+                break;
         }
 
         $this->getUser()->save();
