@@ -641,6 +641,9 @@ class PdfController extends _BaseController
                     "Accept: */*; q=0.01",
                     "Accept-Encoding: none",
                     "Content-Type: application/x-www-form-urlencoded",
+                    "Host: eplanning.willoughby.nsw.gov.au",
+                    "Origin: https://eplanning.willoughby.nsw.gov.au",
+                    "Referer: https://eplanning.willoughby.nsw.gov.au/Common/Common/terms.aspx",
                     "Content-Length: " . strlen($formData)
                 ];
                 break;

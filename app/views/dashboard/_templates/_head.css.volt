@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/dataTables.css?v=1.0')}}" />
 <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/messenger/messenger.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/messenger/messenger-theme-flat.css?v=1.0.1')}}" />
-<link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/custom.css?v=5.2.2')}}" />
+<link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/custom.css?v=5.2.4')}}" />
 <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/jquery.dataTables.css?v=1.0.5')}}" />
 
 

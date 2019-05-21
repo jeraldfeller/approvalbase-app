@@ -26,7 +26,11 @@ $(function () {
           showNotification('Application shared successfully.','success');
           $('#shareModal').modal('hide');
         }else{
-          showNotification('Ops. Something went wrong please try again.', 'error');
+          if(response.status == false){
+            showNotification(response.message, 'info');
+          }else{
+            showNotification('Ops. Something went wrong please try again.', 'error');
+          }
         }
         $btn.html('Share');
         $btn.prop('disabled', false);

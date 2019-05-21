@@ -1,4 +1,6 @@
 <?php
+ini_set('session.cookie_domain', substr($_SERVER['SERVER_NAME'],strpos($_SERVER['SERVER_NAME'],"."),100));
+
 date_default_timezone_set('Australia/Sydney');
 /*
  *---------------------------------------------------------------
@@ -23,6 +25,7 @@ switch (ENVIRONMENT) {
         error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
         define('BASE_URI', 'http://app.approvalbase.com/');
         define('ADMIN_EMAIL', 'oscar@willowcapital.com.au');
+
         break;
 
     case 'development':

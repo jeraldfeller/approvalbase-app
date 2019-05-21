@@ -3535,3 +3535,8 @@ a, area, button, [role="button"], input:not([type="range"]), label, select, summ
     background-size: cover;
     background-position: center center;
 }
+
+
+.messenger-fixed{
+    z-index: 89999999 !important;
+}

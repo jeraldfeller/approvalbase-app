@@ -31,4 +31,9 @@
                 <a href="{{ url("signup") }}">Sign up here</a>.
             </div>
         </div>
+
+
+    <script>
+        localStorage.removeItem('user_meta');
+    </script>
 {% endblock %}
