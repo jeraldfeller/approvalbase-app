@@ -30,7 +30,7 @@ switch (ENVIRONMENT) {
 
     case 'development':
         require $_SERVER["DOCUMENT_ROOT"] . '/../vendor/autoload.php';
-        define('BASE_URI', 'http://dev.approval-base-new.com/');
+        define('BASE_URI', 'http://dev.approvalbase.com/');
         define('ADMIN_EMAIL', 'jeraldfeller@gmail.com');
         break;
     case 'local':

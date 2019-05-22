@@ -2637,6 +2637,15 @@ html{
     cursor: pointer;
 }
 
+.overflow-x-scroll{
+    overflow-x: scroll;
+}
+
+.overflow-y-scroll{
+    overflow-y: scroll;
+}
+
+
 .search-thumb {
     line-height: 40px;
     width: 40px;
@@ -3539,4 +3548,12 @@ a, area, button, [role="button"], input:not([type="range"]), label, select, summ
 
 .messenger-fixed{
     z-index: 89999999 !important;
+}
+
+
+/*MODAL MOBILE RESPONSIVE*/
+@media only screen and (max-width: 767px) {
+    .modal-backdrop{
+        display: none !important;
+    }
 }

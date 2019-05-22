@@ -276,7 +276,7 @@
                 </div>
                 <!-- end context menu -->
 
-                <div class="row">
+                <div class="row overflow-x-scroll">
                     {# Search Table #}
                     <table id="dt-opt" class="table-hover">
                         <thead>

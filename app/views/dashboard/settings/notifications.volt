@@ -26,25 +26,25 @@
 
 
     <div class="row mrg-top-20 emails-container {% if user['sendNotificationsOnLeads'] == false %}display-none{% endif %}">
-        <div class="col-md-10">
+        <div class="col-sm-10">
             <h3>Alerts</h3>
             <div id="alertsContainer">
 
             </div>
         </div>
-        <div class="col-md-10 mrg-top-20">
+        <div class="col-sm-10 mrg-top-20">
             <h3>Share via email</h3>
             <div id="shareContainer">
 
             </div>
         </div>
-        <div class="col-md-10 mrg-top-20">
+        <div class="col-sm-10 mrg-top-20">
             <h3>Billing</h3>
             <div id="billingContainer">
 
             </div>
         </div>
-        <div class="col-md-12 mrg-top-20">
+        <div class="col-sm-12 mrg-top-20">
             <button class="btn btn-primary" id="saveUsersEmail">Save</button>
         </div>
     </div>

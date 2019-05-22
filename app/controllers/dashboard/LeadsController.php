@@ -63,6 +63,7 @@ class LeadsController extends _BaseController {
         ]);
 
         $leadId = ($this->request->getQuery("l") ? $this->request->getQuery("l") : '');
+        $onboardingStatus =  ($this->request->getQuery("t") ? 1 : 0);
         $this->view->setVars([
             'currentViewedLead' => $leadId,
             'page_title' => 'Saved Leads',
@@ -71,6 +72,7 @@ class LeadsController extends _BaseController {
             "maxCost" => 100000000,
             "maxCostValue" => $dasMaxCost[0]->getEstimatedCost(),
             "councils" => $councils,
+            "onboardingStatus" => $onboardingStatus
         ]);
 
         $this->view->pick('leads/index');

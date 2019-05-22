@@ -869,7 +869,7 @@
       '<button data-id="' + d + '" class="btn btn-default pull-right mrg-right-10 shareBtn"  title="Share"><i class="ion-ios7-upload-outline font-size-20"></i></button>' +
       '<button data-id="' + d + '" class="btn btn-default pull-right star mrg-right-10"><i id="star-'+d+'" class="star-icon ion-ios7-star-outline font-size-20"></i></button>' +
       '</div>' +
-      '<div class="col-sm-6">' +
+      '<div class="col-sm-6 col-xs-12">' +
       '<div class="card child-card">' +
       '<div class="card-block break-word">' +
       '<h4 class="card-title">Documents</h4>' +
@@ -877,7 +877,7 @@
       '</div>' +
       '</div>' +
       '</div>' +
-      '<div class="col-sm-6">' +
+      '<div class="col-sm-6 col-xs-12">' +
       '<div class="card child-card">' +
       '<div class="card-block">' +
       '<h4 class="card-title">Details</h4>' +
@@ -885,7 +885,7 @@
       '</div>' +
       '</div>' +
       '</div>' +
-      '<div class="col-sm-12">' +
+      '<div class="col-sm-12 col-xs-12">' +
       '<div class="card child-card">' +
       '<div class="card-block">' +
       '<h4 class="card-title">Notes</h4>' +
