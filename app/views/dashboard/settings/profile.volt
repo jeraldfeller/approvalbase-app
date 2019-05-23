@@ -8,12 +8,13 @@
     </p>
 
     <form method="post">
+
         <div class="form-group avatar-field clearfix">
-            <div class="col-sm-3 avatar-round" style="background-image: url('{{ user['imageUrl']}}')">
+            <div class="col-sm-3 col-xs-3 avatar-round profile-photo" style="background-image: url('{{ user['imageUrl']}}?v={{ unix }}')">
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-9 col-xs-9">
                 <label>Set up your avatar picture</label>
-                <input type="file" name="avatar"/>
+                <input style="color: transparent;" type="file" name="avatar" id="avatarInput" onchange="changeAvatar(this);"/>
             </div>
         </div>
         <div class="form-group">

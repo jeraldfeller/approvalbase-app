@@ -192,15 +192,24 @@
           $('.editSave').attr('data-id', $id);
           $('.deleteSave').attr('data-id', $id);
           if ($councils != 'all') {
-            $("#councils_edit").val($councils).trigger('change');
+              $("#councils_edit").val($councils).trigger('change');
           }else{
-            $("#councils_edit").select2("val", " ");
+              if(typeof typeof $("#councils_edit").attr('data-select2-id') != 'undefined'){
+                  $("#councils_edit").val(" ");
+              }else{
+                  $("#councils_edit").select2("val", " ");
+              }
+
           }
 
           if ($filterBy != 'all') {
-            $("#filter1_edit").val($filterBy).trigger('change');
+             $("#filter1_edit").val($filterBy).trigger('change');
           }else{
-            $("#filter1_edit").select2("val", " ");
+              if(typeof typeof $("#councils_edit").attr('data-select2-id') != 'undefined') {
+                  $("#filter1_edit").val(" ");
+              }else{
+                  $("#filter1_edit").select2("val", " ");
+              }
           }
 
 

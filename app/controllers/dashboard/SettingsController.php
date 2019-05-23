@@ -22,7 +22,8 @@ class SettingsController extends _BaseController
     public function indexAction()
     {
         $this->view->setVars([
-            'page_title' => 'Profile settings'
+            'page_title' => 'Profile settings',
+            'unix' => time()
         ]);
 
     }

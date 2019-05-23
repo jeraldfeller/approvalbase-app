@@ -20,10 +20,10 @@
                                     </div>
                                     <div class="info">
                                         <div class="name">
-                                            Business
+                                            Unlimited
                                         </div>
                                         <div class="details">
-                                            Unlimited
+                                            GST Inclusive
                                         </div>
                                         <div class="select">
                                             <i class="fa fa-check"></i>

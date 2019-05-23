@@ -1,4 +1,19 @@
 <script type="text/javascript">
+    function changeAvatar(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.profile-photo').css({
+                    'backgroundImage': "url('"+e.target.result+"')"
+                });
+
+                $("form").submit();
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
   $(function () {
     $("form").submit(function(e){
       $btn = $('#save');
@@ -28,8 +43,7 @@
             $json = JSON.parse(data);
             if($json.avatar != ''){
               $('#avatarImg').attr('src', $json.avatar+"?"+Math.random());
-              $('.avatar').attr('src', $json.avatar+"?"+Math.random());
-
+              // $('.avatar').attr('src', $json.avatar+"?"+Math.random());
             }
             $('.user-name').html($json.name);
             {#window.location.href = '{{ url('account-profile')}}';#}
@@ -48,51 +62,7 @@
           showNotification('Ops! Something went wrong, please try again.', 'error');
         }
       });
-
-
-
     });
-    /*
-    $('#save').click(function(){
-      $btn = $(this);
-      $btn.html('<i class="fa fa-spinner fa-spin"></i>');
-      $btn.attr('disabled', 'disabled');
-
-      $firstName = $('#firstName').val();
-      $lastName = $('#lastName').val();
-      $websiteUrl = $('#websiteUrl').val();
-      $companyName = $('#companyName').val();
-      $companyCity = $('#companyCity').val();
-      $companyCountry = $('#companyCountry').val();
-
-      $.ajax({
-        url: '{{ url('account-profile/save?ajax=1') }}',
-        type: 'POST',
-        data: {
-          data: {
-            firstName: $firstName,
-            lastName: $lastName,
-            websiteUrl: $websiteUrl,
-            companyName: $companyName,
-            companyCity: $companyCity,
-            companyCountry: $companyCountry
-          }
-        },
-        dataType: 'json'
-      }).done(function (response) {
-        if(response == true){
-
-        }else{
-          alert('Ops! Something went wrong, please try again.');
-        }
-
-        $btn.html('Save changes');
-        $btn.removeAttr('disabled');
-      });
-
-
-
-    });
-    */
   });
+
 </script>
