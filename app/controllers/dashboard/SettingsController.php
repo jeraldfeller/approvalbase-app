@@ -12,6 +12,7 @@ use PHPMailer\PHPMailer\Exception;
 use Stripe\Charge;
 use Stripe\Customer;
 use Stripe\Stripe;
+use Stripe\Subscription;
 use Stripe\Token;
 use Mailgun\Mailgun;
 
@@ -44,7 +45,8 @@ class SettingsController extends _BaseController
         $this->view->setVars([
             'page_title' => 'Billing',
             'current' => $billing['current'],
-            'invoices' => $billing['invoices']
+            'invoices' => $billing['invoices'],
+            'stripeApiKey' => Admin::getApiKeyBySource('stripe')['apiKey']
         ]);
         $this->view->pick('settings/index');
     }
@@ -88,7 +90,7 @@ class SettingsController extends _BaseController
                     $basePath = "dashboard_assets/images/avatars/" . $userId . "." . $ext;
                     $targetPath = __DIR__ . '/../../../public/dashboard_assets/images/avatars/' . $userId . '.' . $ext;
                     if (move_uploaded_file($source, $targetPath)) {
-
+                         $this->correctImageOrientation($targetPath);
                     } else {
                         return false;
                     }
@@ -109,6 +111,36 @@ class SettingsController extends _BaseController
             'avatarBasePath' => $basePath
         );
         return json_encode(Users::updateUserInfo($data, $userId));
+    }
+
+    function correctImageOrientation($filename) {
+        if (function_exists('exif_read_data')) {
+            $exif = exif_read_data($filename);
+            var_dump($exif);
+            if($exif && isset($exif['Orientation'])) {
+                $orientation = $exif['Orientation'];
+                if($orientation != 1){
+                    $img = imagecreatefromjpeg($filename);
+                    $deg = 0;
+                    switch ($orientation) {
+                        case 3:
+                            $deg = 180;
+                            break;
+                        case 6:
+                            $deg = 270;
+                            break;
+                        case 8:
+                            $deg = 90;
+                            break;
+                    }
+                    if ($deg) {
+                        $img = imagerotate($img, $deg, 0);
+                    }
+                    // then rewrite the rotated image back to the disk as $filename
+                    imagejpeg($img, $filename, 95);
+                } // if there is some rotation necessary
+            } // if have the exif orientation info
+        } // if function exists
     }
 
     public function notificationsUpdateAction()
@@ -265,10 +297,9 @@ class SettingsController extends _BaseController
     public function stripeApiAction()
     {
         $token = $this->request->getPost('token');
-        $amount = 125000;
+        $amount = 89900;
         $stripe = new Stripe();
         $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
-
 
         // create customer
         if ($this->getUser()->getStripeCustomerId() == '') {
@@ -330,6 +361,79 @@ class SettingsController extends _BaseController
         }
     }
 
+
+    public function subscribeAction(){
+        $token = $this->request->getPost('token');
+        $cardNumber = $this->request->getPost('cardNumber');
+        $amount = 89900;
+        $stripe = new Stripe();
+        $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
+
+
+        // create customer
+        if ($this->getUser()->getStripeCustomerId() == '') {
+            $customer = Customer::create([
+                'email' => $this->getUser()->getEmail(),
+                'source' => $token
+            ]);
+            $customerId = $customer->id;
+            $this->getUser()->setStripeCustomerId($customerId);
+            $this->getUser()->save();
+        } else {
+            $customerId = $this->getUser()->getStripeCustomerId();
+        }
+        // create subscription;
+        $subscription = Subscription::create([
+            "customer" => $customerId,
+            "billing" => "charge_automatically",
+            "items" => [
+                [
+                    "plan" => "plan_F7f8zhkeMi6y3C",
+                ],
+            ]
+        ]);
+
+
+        if ($subscription->status == 'active') {
+            $date = date('Y-m-d H:i:s', $subscription->current_period_start);
+            $endDate = date('Y-m-d H:i:s', $subscription->current_period_end);
+
+            $billing = new Billing();
+            $billing->setUsersId($this->getUser()->getId());
+            $billing->setChargeId('18801-'.$subscription->id);
+            $billing->setDateCreated(new \DateTime($date));
+            $billing->setAmount($amount / 100);
+            $billing->setSubscriptionStartDate(new \DateTime($date));
+            $billing->setSubscriptionEndDate(new \DateTime($endDate));
+            $billing->setStatus('active');
+            if ($billing->save()) {
+                $this->getUser()->setSubscriptionStatus('active');
+                $this->getUser()->save(0);
+
+                // sent email notification
+                // get users emails
+                $emails = UsersEmail::find([
+                    'conditions' => 'users_id = :usersId: AND type = :type:',
+                    'bind' => [
+                        'usersId' => $this->getUser()->getId(),
+                        'type' => 'billing'
+                    ]
+                ]);
+
+                $emailsTo = [];
+                foreach ($emails as $em){
+                    if($em->getEmail() != $this->getUser()->getEmail()){
+                        $emailsTo[] = $em->getEmail();
+                    }
+                }
+                \Aiden\Models\Email::subscriptionEmailNotification($this->getUser()->getName(), $this->getUser()->getLastName(), $this->getUser()->getEmail().','.implode(',', $emailsTo), $amount / 100, '18801-'.$subscription->id, '');
+            }
+            return json_encode(true);
+        } else {
+            return json_encode(false);
+        }
+    }
+
     public function getUsersBilling()
     {
         $billing = new Billing();
@@ -382,6 +486,9 @@ class SettingsController extends _BaseController
     public function cancelSubscriptionAction(){
         $userId = $this->getUser()->getId();
         $this->getUser()->setSubscriptionStatus('canceled');
+        $stripe = new Stripe();
+        $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
+
         if($this->getUser()->save()){
             $billing = Billing::findFirst([
                'conditions' => 'users_id = :userId: ORDER BY id DESC',
@@ -392,6 +499,16 @@ class SettingsController extends _BaseController
 
             if($billing){
                 $billing->setStatus('canceled');
+                $billing->save();
+
+                // cancel stripe subscription
+                $subId = str_replace('18801-', '', $billing->getChargeId());
+                $subscription = Subscription::update(
+                    $subId,
+                    [
+                        'cancel_at_period_end' => true
+                    ]
+                );
                 return json_encode(true);
             }else{
                 return json_encode(false);

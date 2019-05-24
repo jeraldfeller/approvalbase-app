@@ -45,7 +45,7 @@
                                                         This is a receipt for your payment of ${{amount}} you
                                                         made to ApprovalBase
                                                         <br style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" />
-                                                        with your card ending in {{cardNumber}}.
+
                                                     </p>
                                                 </td>
                                             </tr></table></div><!-- /content -->

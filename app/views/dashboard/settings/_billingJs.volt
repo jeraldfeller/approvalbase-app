@@ -34,7 +34,7 @@
       });
 
       var handler = StripeCheckout.configure({
-        key: 'pk_test_W6wWyBSALsmO1o0sWHrAxUEG00TCnqLlnh',
+        key: '{{ stripeApiKey }}',
         image: '{{ url() }}dashboard_assets/images/logo-sm.png',
         locale: 'auto',
         token: function(token) {
@@ -43,7 +43,7 @@
           // Get the token ID to your server-side code for use.
           console.log(token);
           $.ajax({
-            url: '{{ url('billing/stripeApi?ajax=3') }}',
+            url: '{{ url('billing/subscribe') }}',
             type: 'POST',
             data: {
               token: token.id

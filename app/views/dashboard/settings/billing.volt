@@ -16,7 +16,7 @@
                             <div class="plans">
                                 <div class="plan clearfix selected">
                                     <div class="price">
-                                        $1,250/mo
+                                        $899/mo
                                     </div>
                                     <div class="info">
                                         <div class="name">

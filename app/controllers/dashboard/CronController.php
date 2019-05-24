@@ -68,12 +68,14 @@ class CronController extends _BaseController
         }
 
         // check billing
-        $dateNow = date('Y-m-d', strtotime('+3 days'));
+//        $dateNow = date('Y-m-d', strtotime('+3 days'));
+        $dateNow = date('Y-m-d');
         $billing = new Billing();
         $sql = 'SELECT b.id, b.users_id, u.name, u.last_name, u.email  
                 FROM billing b, users u 
                 WHERE b.users_id = u.id
-                AND b.subscription_end_date <= "' . $dateNow . '"';
+                AND b.subscription_end_date <= "' . $dateNow . '"
+                AND b.status = "canceled"';
         $results = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
             , $billing
@@ -1359,9 +1361,9 @@ class CronController extends _BaseController
                     $row->setChecked(1);
                     $row->save();
 
-                    $ed = ErrorDocs::find([
+                    $ed = ErrorDocs::findFirst([
                         'conditions' => 'doc_id = :docId:',
-                        'bind' => $id
+                        'bind' => ['docId' => $id]
                     ]);
                     if($ed){
                         $ed->setFixed(1);
