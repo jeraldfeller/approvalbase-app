@@ -346,7 +346,7 @@
                                                     </p>
 
                                                     <p style="text-align: center; font-size: 11px; color: #8b8b8b; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; margin: 0; padding: 0 0 10px;" align="center">
-                                                        If you have any questions, please contact us at support@approvalbase.com
+                                                        If you have any questions, please contact us at <a style="color: #3f71fc;" href="mailto:support@approvalbase.com">support@approvalbase.com</a>
                                                     </p>
                                                     <p style="text-align: center; font-size: 11px; color: #8b8b8b; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; margin: 0; padding: 0 0 10px;" align="center">
                                                         ApprovalBase

@@ -364,7 +364,6 @@ class SettingsController extends _BaseController
 
     public function subscribeAction(){
         $token = $this->request->getPost('token');
-        $cardNumber = $this->request->getPost('cardNumber');
         $amount = 89900;
         $stripe = new Stripe();
         $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
