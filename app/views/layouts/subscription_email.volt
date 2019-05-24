@@ -24,7 +24,7 @@
                             <table class="container" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 580px; margin: 0 auto; padding: 0;"><tr style="vertical-align: top; text-align: left; padding: 0;" align="left"><td class="wrapper last" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 0px 0px;" align="left" valign="top">
 
                                         <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;"><tr style="vertical-align: top; text-align: left; padding: 0;" align="left"><td style="text-align: center; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 0px 0px;" align="center" valign="top">
-                                                    <span class="logo" style="color: #fff; text-align: center; font-size: 18px; text-shadow: 1px 1px rgba(0, 0, 0, 0.23); display: inline-block; padding: 10px 0;"><img style="width: 170px;" width="170" src="http://app.approvalbase.com/front-end/assets/images/ab_logos/approvalbase-email-header.png"></span>
+                                                    <span class="logo" style="color: #fff; text-align: center; font-size: 18px; text-shadow: 1px 1px rgba(0, 0, 0, 0.23); display: inline-block; padding: 10px 0;"><img style="width: 170px;" width="170" src="https://approvalbase.com/wp-content/uploads/2019/05/AB-Logo-80.png"></span>
                                                 </td>
                                                 <td class="expander" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
                                             </tr></table></td>
@@ -82,8 +82,8 @@
 
                                                         {{fname}} {{lname}}
 
-                                                    <div style="color: #222; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
-                                                        {{userEmail}}
+                                                    <div style="color: #3f71fc !important; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
+                                                        <a style="color: #3f71fc;" href="mailto:{{userEmail}}">{{userEmail}}</a>
                                                     </div>
 
                                                 </td>
@@ -136,7 +136,7 @@
                                     <div style="max-width: 600px; display: block; border-top-color: #e9ebed; border-top-style: solid; border-top-width: 1px; font-size: 14px; text-align: center; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; background: #f8f9fa; margin: 0 auto; padding: 15px 35px;" align="center">
                                         <table bgcolor="" cellspacing="0" style="width: 100%; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 25px 0;" width="100%"><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"><td style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
                                                     <p style="text-align: center; font-size: 11px; color: #8b8b8b; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; margin: 0; padding: 0 0 10px;" align="center">
-                                                        If you have any questions, please contact us at support@approvalbase.com
+                                                        If you have any questions, please contact us at <a style="color: #3f71fc;" href="mailto:support@approvalbase.com">support@approvalbase.com</a>
                                                     </p>
                                                     <p style="text-align: center; font-size: 11px; color: #8b8b8b; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; margin: 0; padding: 0 0 10px;" align="center">
                                                         ApprovalBase

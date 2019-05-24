@@ -71,8 +71,8 @@
         // Open Checkout with further options:
         handler.open({
           name: 'Approval Base',
-          description: '$1,250/mo',
-          amount: 125000,
+          description: '$899/mo',
+          amount: 89900,
           email: '{{ user['email'] }}'
         });
         e.preventDefault();

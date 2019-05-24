@@ -72,7 +72,7 @@
                             </div>
                             <div class="col-sm-6 text-right">
                                 <span>Invoice No.</span>
-                                <strong>{{ row['chargeId'] }}</strong>
+                                <strong>{{ row['invoice'] }}</strong>
                             </div>
                         </div>
                     </div>

@@ -28,6 +28,17 @@ class Billing extends _BaseModel
      */
     protected $charge_id;
 
+
+    /**
+     * @Column(type="string", nullable=false)
+     */
+    protected $invoice_id;
+
+    /**
+     * @Column(type="string", nullable=false)
+     */
+    protected $invoice;
+
     /**
      * @Column(type="string", nullable=false)
      */
@@ -114,6 +125,39 @@ class Billing extends _BaseModel
      */
     public function setChargeId(string $charge_id) {
         $this->charge_id = $charge_id;
+    }
+
+    /**
+     * Returns the email address
+     * @return string
+     */
+    public function getInvoiceId() {
+        return $this->invoice_id;
+    }
+
+    /**
+     * Sets the email address
+     * @param string $email
+     */
+    public function setInvoiceId(string $invoice_id) {
+        $this->invoice_id = $invoice_id;
+    }
+
+
+    /**
+     * Returns the email address
+     * @return string
+     */
+    public function getInvoice() {
+        return $this->invoice;
+    }
+
+    /**
+     * Sets the email address
+     * @param string $email
+     */
+    public function setInvoice(string $invoice) {
+        $this->invoice = $invoice;
     }
 
     /**

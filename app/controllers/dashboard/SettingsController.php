@@ -398,9 +398,14 @@ class SettingsController extends _BaseController
             $date = date('Y-m-d H:i:s', $subscription->current_period_start);
             $endDate = date('Y-m-d H:i:s', $subscription->current_period_end);
 
+            // retrieve invoice
+            $invoice = \Stripe\Invoice::retrieve($subscription->latest_invoice);
+
             $billing = new Billing();
             $billing->setUsersId($this->getUser()->getId());
-            $billing->setChargeId('18801-'.$subscription->id);
+            $billing->setChargeId($subscription->id);
+            $billing->setInvoiceId($subscription->latest_invoice);
+            $billing->setInvoice('18801-'.$invoice->number);
             $billing->setDateCreated(new \DateTime($date));
             $billing->setAmount($amount / 100);
             $billing->setSubscriptionStartDate(new \DateTime($date));
@@ -426,7 +431,7 @@ class SettingsController extends _BaseController
                         $emailsTo[] = $em->getEmail();
                     }
                 }
-                \Aiden\Models\Email::subscriptionEmailNotification($this->getUser()->getName(), $this->getUser()->getLastName(), $this->getUser()->getEmail().','.implode(',', $emailsTo), $amount / 100, '18801-'.$subscription->id, '');
+                \Aiden\Models\Email::subscriptionEmailNotification($this->getUser()->getName(), $this->getUser()->getLastName(), $this->getUser()->getEmail().','.implode(',', $emailsTo), $amount / 100, '18801-'.$invoice->number, '');
             }
             return json_encode(true);
         } else {
@@ -452,6 +457,7 @@ class SettingsController extends _BaseController
                 $current = array(
                     'id' => $row->getId(),
                     'chargeId' => $row->getChargeId(),
+                    'invoice' => $row->getInvoice(),
                     'startDate' => $row->getSubscriptionStartDate()->format('M d, Y'),
                     'endDate' => $row->getSubscriptionEndDate()->format('M d, Y'),
                     'status' => ucfirst($row->getStatus()),
@@ -464,6 +470,7 @@ class SettingsController extends _BaseController
             $invoices[] = array(
                 'id' => $row->getId(),
                 'chargeId' => $row->getChargeId(),
+                'invoice' => $row->getInvoice(),
                 'startDate' => $row->getSubscriptionStartDate()->format('M d, Y'),
                 'endDate' => $row->getSubscriptionEndDate()->format('M d, Y'),
                 'status' => ucfirst($row->getStatus()),
@@ -502,7 +509,7 @@ class SettingsController extends _BaseController
                 $billing->save();
 
                 // cancel stripe subscription
-                $subId = str_replace('18801-', '', $billing->getChargeId());
+                $subId = $billing->getChargeId();
                 $subscription = Subscription::update(
                     $subId,
                     [
