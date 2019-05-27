@@ -22,6 +22,9 @@
                 <div class="actions">
                     {{ form.render('submit', ['value' : 'Sign in to your account', 'class' : 'btn btn-primary btn-sm']) }}
                 </div>
+                <div class="mrg-top-10 text-center">
+                    <a href="{{ url("forgot-password") }}">forgot your password?</a>
+                </div>
             {{ endform() }}
         </div>
 

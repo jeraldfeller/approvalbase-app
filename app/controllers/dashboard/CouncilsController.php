@@ -51,6 +51,8 @@ class CouncilsController extends _BaseController {
             $this->flashSession->notice("You were already subscribed to " . $council->getName());
         }
 
+        $council = null;
+
         return $this->response->redirect('councils');
 
     }
@@ -93,6 +95,8 @@ class CouncilsController extends _BaseController {
             $this->flashSession->notice("You weren't subscribed to " . $council->getName());
         }
 
+        $usersCouncils = null;
+        $council = null;
         return $this->response->redirect('councils');
 
     }
@@ -147,6 +151,7 @@ class CouncilsController extends _BaseController {
             'saved_ids' => $savedIds
         ];
 
+        $usersCouncils = null;
         echo json_encode($response);
         $this->view->disable();
 
@@ -197,6 +202,7 @@ class CouncilsController extends _BaseController {
             'saved_ids' => $savedIds
         ];
 
+        $usersCouncils = null;
         echo json_encode($response);
         $this->view->disable();
 

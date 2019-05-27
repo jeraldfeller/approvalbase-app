@@ -16,6 +16,7 @@
                 <strong>Your information</strong>
                 {{ form.render('name', ['class' : 'form-control', 'placeholder' : 'First Name']) }}
                 {{ form.render('lname', ['class' : 'form-control', 'placeholder' : 'Last Name']) }}
+                {{ form.render('mobileNumber', ['class' : 'form-control', 'placeholder' : 'Mobile Number']) }}
                 {{ form.render('websiteUrl', ['class' : 'form-control', 'placeholder' : 'Your Website URL']) }}
                 {{ form.render('companyName', ['class' : 'form-control', 'placeholder' : 'Your Company Name']) }}
                 {{ form.render('companyCountry', ['class' : 'form-control', 'placeholder' : 'Your Company Country']) }}

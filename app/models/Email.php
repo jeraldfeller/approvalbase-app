@@ -146,6 +146,35 @@ class Email extends _BaseModel
     }
 
 
+    public static function forgotPasswordEmail($email, $firstName, $verificationCode, $usersId){
+        $di = \Phalcon\DI::getDefault();
+        $config = $di->getConfig();
+        $view = $di->getView();
+        $view->start();
+        $view->setVars([
+            'userEmail' => $email,
+            'firstName' => $firstName,
+            'url' => $config->baseUri.'change-password?vc='.$verificationCode.'&a='.$usersId,
+        ]);
+        $view->setTemplateAfter('forgot_password'); // template name
+        $view->render('controller', 'action');
+        $view->finish();
+
+        $emailHtml = $view->getContent();
+
+
+        $config = $di->getConfig();
+        $postFields = [
+            'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
+            'subject' => 'Reset your ApprovalBase password',
+            'html' => $emailHtml,
+            'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
+            'to' => $email
+        ];
+
+        return self::sendEmail($postFields, $config);
+    }
+
     public static function subscriptionEmailNotification($fname, $lname, $email, $amount, $transactionId, $cardNumber){
         $di = \Phalcon\DI::getDefault();
         $view = $di->getView();

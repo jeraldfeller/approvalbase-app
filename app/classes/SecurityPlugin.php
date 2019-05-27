@@ -67,8 +67,10 @@ class SecurityPlugin extends Plugin {
             $guestResources = [
                 'Common\Controllers:login' => ['index', 'do', 'destroy'],
                 'Common\Controllers:signup' => ['index', 'do', 'monitorSignup'],
+                'Aiden\Controllers:users' => ['forgotPasswordIndex', 'sendForgotPasswordEmail', 'changePasswordRequestIndex', 'changePasswordConfirm'],
                 'Aiden\Controllers:login' => ['index', 'do', 'destroy'],
-                'Aiden\Controllers:signup' => ['index', 'do', 'monitorSignup']
+                'Aiden\Controllers:signup' => ['index', 'do', 'monitorSignup'],
+
             ];
             // Global resources (everyone can access)
             $allAccessResources = [
@@ -186,11 +188,12 @@ class SecurityPlugin extends Plugin {
 
             // If user isn't logged in, redirect to login page.
             if ($role === 'Guests') {
-
-                $this->flashSession->notice('Please login to continue.');
-                $this->response->redirect('login', false, 302);
-                $this->view->disable();
-                return false;
+                if($action != 'changePasswordIndex'){
+                    $this->flashSession->notice('Please login to continue.');
+                    $this->response->redirect('login', false, 302);
+                    $this->view->disable();
+                    return false;
+                }
             }
             else {
 

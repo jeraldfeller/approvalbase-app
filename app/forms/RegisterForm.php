@@ -47,6 +47,24 @@ class RegisterForm extends \Phalcon\Forms\Form
             ]);
         $this->add($lname);
 
+        $mobileNumber = new \Phalcon\Forms\Element\Text('mobileNumber', [
+            'class' => 'form-control',
+            'placeholder' => 'Mobile Number: ',
+            'required' => '',
+        ]);
+        $mobileNumber
+            ->setLabel('Mobile Number:')
+            ->addValidators([
+                new \Phalcon\Validation\Validator\StringLength([
+                    'max' => 15,
+                    'min' => 6,
+                    'messageMaximum' => 'The mobile number is too long.',
+                    'messageMinimum' => 'The mobile number is too short.',
+                    'cancelOnFail' => false,
+                ]),
+            ]);
+        $this->add($mobileNumber);
+
 
         // Website Url
         $websiteUrl = new \Phalcon\Forms\Element\Text('websiteUrl', [

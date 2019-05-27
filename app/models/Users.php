@@ -30,6 +30,11 @@ class Users extends _BaseModel {
     /**
      * @Column(type="string", nullable=true)
      */
+    protected $mobile_number;
+
+    /**
+     * @Column(type="string", nullable=true)
+     */
     protected $website_url;
 
     /**
@@ -211,6 +216,28 @@ class Users extends _BaseModel {
         $this->last_name = $last_name;
 
     }
+
+
+    /**
+     * Returns the email address
+     * @return string
+     */
+    public function getMobileNumber() {
+
+        return $this->mobile_number;
+
+    }
+
+    /**
+     * Sets the email address
+     * @param string $email
+     */
+    public function setMobileNumber(string $mobile_number) {
+
+        $this->mobile_number = $mobile_number;
+
+    }
+
 
 
     /**

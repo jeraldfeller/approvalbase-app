@@ -58,6 +58,7 @@ class SignupController extends _BaseController {
         $verificationCode = $this->generateRandomString();
         $name = $this->request->getPost("name", "string");
         $lname = $this->request->getPost("lname", "string");
+        $mobileNumber = $this->request->getPost("mobileNumber", "string");
         $email = $this->request->getPost("email", "string");
         $password = $this->request->getPost("password");
         $websiteUrl = $this->request->getPost("websiteUrl", "string");
@@ -86,6 +87,7 @@ class SignupController extends _BaseController {
         $user = new \Aiden\Models\Users();
         $user->setName($name);
         $user->setLastName($lname);
+        $user->setMobileNumber($mobileNumber);
         $user->setEmail($email);
         $user->setWebsiteUrl($websiteUrl);
         $user->setCompanyName($companyName);
@@ -141,7 +143,7 @@ class SignupController extends _BaseController {
 
             // send email notification to admin
 
-            \Aiden\Models\Email::signupNotification($user);
+           // \Aiden\Models\Email::signupNotification($user);
             \Aiden\Models\Email::welcomeNotification($email, $name, $lname, $verificationCode);
 
 

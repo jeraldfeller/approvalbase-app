@@ -70,21 +70,24 @@ class HelpersController extends _BaseController
 
                     // record share action
                     UsersShareDa::recordDaMail($dasId, $usersId, $emails);
-
+                    $emailCountObj = null;
                     return json_encode(\Aiden\Models\Email::shareDaEmail($email, $fullName, $name, $emailsTo, $council, $da, $docs, $address, $parties));
                 } else {
+                    $emailCountObj = null;
                     return json_encode([
                         'status' => false,
                         'message' => 'Project can only be shared twice per day.'
                     ]);
                 }
             } else {
+                $emailCountObj = null;
                 return json_encode([
                     'status' => false,
                     'message' => 'Only ' . (20 - $emailCountObj['totalMailCount']) . ' email(s) allowed to share for this day.'
                 ]);
             }
         } else {
+            $emailCountObj = null;
             return json_encode([
                 'status' => false,
                 'message' => 'You have reached 20 emails limit for today.'

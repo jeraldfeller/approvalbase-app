@@ -64,8 +64,12 @@ class CronController extends _BaseController
 
                 // send email notification;
                    \Aiden\Models\Email::subscriptionExpirationNotification('trial', $row->getName(), $row->getLastName(), $row->getEmail() . ',' . implode(',', $emailsTo));
+
             }
         }
+
+        $emails = null;
+        $results = null;
 
         // check billing
 //        $dateNow = date('Y-m-d', strtotime('+3 days'));
@@ -105,6 +109,8 @@ class CronController extends _BaseController
             \Aiden\Models\Email::subscriptionExpirationNotification('expired', $row->name, $row->last_name, $row->email . ',' . implode(',', $emailsTo));
         }
 
+        $emails = null;
+        $results = null;
 
     }
 
@@ -121,6 +127,8 @@ class CronController extends _BaseController
             $billing->save();
             $this->updateSubscriptionStatus($userId);
         }
+
+        $billing = null;
 
         return true;
     }
@@ -139,6 +147,7 @@ class CronController extends _BaseController
 
         }
 
+        $userEnt = null;
         return true;
     }
 
@@ -299,6 +308,12 @@ class CronController extends _BaseController
             }
 
         }
+
+        $di = null;
+        $emails = null;
+        $daEntity = null;
+        $das = null;
+
 
     }
 
@@ -482,6 +497,11 @@ class CronController extends _BaseController
             }
         }
 
+        $di = null;
+        $emails = null;
+        $daEntity = null;
+        $das = null;
+        $poiClass = null;
     }
 
 
@@ -714,6 +734,14 @@ class CronController extends _BaseController
             echo "Cron file locked, the crawler is already processing a phrase search";
         }
 
+        $up = null;
+        $user = null;
+        $ep = null;
+        $result = null;
+        $dasUsersCheck = null;
+        $dasUsers = null;
+        $dasPhrases = null;
+
     }
 
     // MAPBOX API get address lat, lang
@@ -820,6 +848,11 @@ class CronController extends _BaseController
 
             }
         }
+
+        $di = null;
+        $addresses = null;
+        $ca = null;
+        $poi = null;
     }
 
 
@@ -867,6 +900,9 @@ class CronController extends _BaseController
                 $row->save();
             }
         }
+        $di = null;
+        $ca = null;
+        $addresses = null;
     }
 
 
@@ -985,6 +1021,11 @@ class CronController extends _BaseController
             }
             //   }
         }
+
+        $das = null;
+        $poi = null;
+        $poiToDelete = null;
+        $dasPoiUsers = null;
     }
 
 
@@ -1090,6 +1131,13 @@ class CronController extends _BaseController
 
 
         $this->alertPoiNotificationAction(true, $poiIds);
+
+        $das = null;
+        $poi = null;
+        $poiToDelete = null;
+        $dasPoiUsers = null;
+        $dasPoiUsersNew = null;
+        $distance = null;
         return true;
     }
 
@@ -1099,6 +1147,7 @@ class CronController extends _BaseController
     {
         $pdf = new PdfController();
         $pdf->getDocumentUrlAction(40);
+        $pdf = null;
     }
 
     // Scan PDF directory and send to Amazon S3
@@ -1107,6 +1156,7 @@ class CronController extends _BaseController
     {
         $pdf = new PdfController();
         $pdf->uploadToAmazonS3();
+        $pdf = null;
     }
 
 
@@ -1144,6 +1194,10 @@ class CronController extends _BaseController
                 $ddas->save();
             }
         }
+
+        $das = null;
+        $ddas = null;
+        $result = null;
     }
 
 
@@ -1235,8 +1289,10 @@ class CronController extends _BaseController
         }
 
 
-
-
+        $das = null;
+        $result = null;
+        $dd = null;
+        $did = null;
     }
 
 
@@ -1306,6 +1362,11 @@ class CronController extends _BaseController
                 $did->save();
             }
         }
+
+        $das = null;
+        $result = null;
+        $did = null;
+        $dd = null;
     }
 
 
@@ -1317,6 +1378,7 @@ class CronController extends _BaseController
         if($da){
             $da->delete();
         }
+        $da = null;
     }
 
 
@@ -1374,6 +1436,9 @@ class CronController extends _BaseController
             }
         }
 
+        $dd = null;
+        $docs = null;
+        $ed = null;
         return true;
     }
 
@@ -1409,6 +1474,9 @@ class CronController extends _BaseController
         }
 
 
+        $result = null;
+        $dasDoc = null;
+        $ed = null;
         return true;
 
     }
@@ -1427,6 +1495,8 @@ class CronController extends _BaseController
             $dd->save();
         }
 
+        $dd = null;
+
         return true;
     }
 
@@ -1443,11 +1513,14 @@ class CronController extends _BaseController
                         case 5: // Camdem
                             $camden = new CamdenTask();
                             $camden->init(['data'], $da);
+                            $camden = null;
                             break;
                     }
                 }
             }
         }
+
+        $das = null;
         return true;
     }
 
@@ -1456,7 +1529,9 @@ class CronController extends _BaseController
 
     public function updateUsersGoogleSheetsAction(){
         $gs = new GoogleSheetsController();
-        return $gs->updateUsers();
+        $uu = $gs->updateUsers();
+        $gs = null;
+        return $uu;
     }
 
 
