@@ -114,12 +114,14 @@ class SignupController extends _BaseController {
             $ue->setEmail($email);
             $ue->setType('alerts');
             $ue->save();
+            $ue = null;
 
             $ue = new UsersEmail();
             $ue->setUserId($user->getId());
             $ue->setEmail($email);
             $ue->setType('billing');
             $ue->save();
+            $ue = null;
 
             $this->session->set('auth', [
                 'user' => $user

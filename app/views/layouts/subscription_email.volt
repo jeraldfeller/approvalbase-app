@@ -120,7 +120,17 @@
                                                 </td>
                                                 <td style="border-top-width: 3px; border-top-style: solid; border-top-color: #ECECEC; vertical-align: top; color: #252525; font-size: 15px; line-height: 23px; width: 30%; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 18px 0;" valign="top">
                                                     <div style="color: #666; text-align: right; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" align="right">
-                                                        ${{ amount }}
+                                                        $817.27
+                                                    </div>
+                                                </td>
+                                            </tr><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"><td style="vertical-align: top; color: #252525; font-size: 15px; line-height: 23px; width: 70%; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 18px 0;" valign="top">
+                                                    <div class="item" style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
+                                                        GST
+                                                    </div>
+                                                </td>
+                                                <td style="vertical-align: top; color: #252525; font-size: 15px; line-height: 23px; width: 30%; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 18px 0;" valign="top">
+                                                    <div style="color: #666; text-align: right; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;" align="right">
+                                                        $81.73
                                                     </div>
                                                 </td>
                                             </tr><tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"><td style="text-align: right; color: #666; font-size: 18px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 25px 0 0;" colspan="2" align="right">

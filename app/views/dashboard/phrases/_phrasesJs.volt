@@ -34,7 +34,7 @@
         dataType: 'json'
       });
       $hasToured = localStorage.getItem('tourFinished');
-      $hasCreatedSample = localStorage.getItem('hasCreatedSample');
+
     //  if ($hasSeenModal == 1 && $onboardingFilter != 1) {
         console.log($hasSeenModal, $onboardingFilter);
         if ($hasToured != 'true') {
@@ -50,16 +50,8 @@
               }
             });
 
-            if($hasCreatedSample == null){
-              Shepherd.on('start', function () {
-                setTimeout(function(){
-                  $('#input_phrase').val('pool');
-//                $('#filter1').val('description').trigger('change');
-//                $('#councils').val(9).trigger('change');
-//                $('#input_case_sensitive').prop('checked', true);
-                }, 400);
 
-              });
+
 
               tour.addStep('step1', {
                 title: 'Search phrase',
@@ -81,8 +73,8 @@
                   }]
               });
 
-              localStorage.setItem('hasCreatedSample', 'true');
-            }
+
+
 
 
             tour.addStep('step2', {
@@ -120,7 +112,8 @@
 
               Shepherd.on('show', function(){
                 if(tour.getCurrentStep().id == 'step1'){
-                  $('#createBtn').trigger('click');
+                    $('#createFilterModal').modal('hide')
+
                 }
               });
             }, 500);
@@ -545,8 +538,11 @@
           showNotification('Ops. Something went wrong please try again.', 'error');
         }
 
+         $btn.prop('disabled', false);
+        $btn.html('Save');
         table.ajax.reload();
         $('#createFilterModal').modal('hide');
+
       });
     });
 

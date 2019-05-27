@@ -7,6 +7,7 @@
  */
 
 namespace Aiden\Controllers;
+
 use Aiden\Models\Das;
 use Aiden\Models\DasAddresses;
 use Aiden\Models\DasDocuments;
@@ -21,10 +22,11 @@ use Aiden\Models\UsersShareDa;
 
 class HelpersController extends _BaseController
 {
-    public function shareDaAction(){
+    public function shareDaAction()
+    {
         $usersId = $this->getUser()->getId();
         $email = $this->getUser()->getEmail();
-        $name = $this->getUser()->getLastName().', '. $this->getUser()->getName();
+        $name = $this->getUser()->getLastName() . ', ' . $this->getUser()->getName();
         $fullName = $this->getUser()->getName() . ' ' . $this->getUser()->getLastName();
         $emails = $this->request->getPost('emails');
         $emailsTo = implode(',', $emails);
@@ -34,9 +36,9 @@ class HelpersController extends _BaseController
         // DA can be only shared twice per day and max 20 emails per day
         $emailCountObj = UsersShareDa::getTotalMailCount($dasId, $usersId);
 
-        if($emailCountObj['totalMailCount'] != 20){
-            if(($emailCountObj['totalMailCount'] + count($emails)) <= 20){
-                if($emailCountObj['daShareCount'] < 2){
+        if ($emailCountObj['totalMailCount'] != 20) {
+            if (($emailCountObj['totalMailCount'] + count($emails)) <= 20) {
+                if ($emailCountObj['daShareCount'] < 2) {
                     $da = Das::findFirst([
                         'conditions' => 'id = :id:',
                         'bind' => ['id' => $dasId]
@@ -66,28 +68,73 @@ class HelpersController extends _BaseController
                     ]);
 
 
-
                     // record share action
                     UsersShareDa::recordDaMail($dasId, $usersId, $emails);
 
                     return json_encode(\Aiden\Models\Email::shareDaEmail($email, $fullName, $name, $emailsTo, $council, $da, $docs, $address, $parties));
-                }else{
+                } else {
                     return json_encode([
                         'status' => false,
                         'message' => 'Project can only be shared twice per day.'
                     ]);
                 }
-            }else{
+            } else {
                 return json_encode([
                     'status' => false,
-                    'message' => 'Only '. (20-$emailCountObj['totalMailCount'] ) .' email(s) allowed to share for this day.'
+                    'message' => 'Only ' . (20 - $emailCountObj['totalMailCount']) . ' email(s) allowed to share for this day.'
                 ]);
             }
-        }else{
+        } else {
             return json_encode([
                 'status' => false,
                 'message' => 'You have reached 20 emails limit for today.'
             ]);
         }
+    }
+
+    public function fixCouncilUrlAction()
+    {
+        $das = Das::find([
+            'conditions' => 'council_id = :councilId: AND council_url IS NULL',
+            'bind' => [
+                'councilId' => 3
+            ]
+        ]);
+
+        if(count($das) > 0){
+            foreach ($das as $row){
+                $councilUrl = 'https://eservices.blacktown.nsw.gov.au/T1PRProd/WebApps/eProperty/P1/eTrack/eTrackApplicationDetails.aspx?r=BCC.P1.WEBGUEST&f=%24P1.ETR.APPDET.VIW&ApplicationId='.$row->getCouncilReference();
+                echo $councilUrl . '<br>';
+                $row->setCouncilUrl($councilUrl);
+                $row->save();
+            }
+
+        }
+        $das = null;
+        return true;
+    }
+
+    public function fixImageUrlAction(){
+        $councils = Councils::find();
+        foreach ($councils as $council){
+            $logoUrl = $council->getLogoUrl();
+            $newLogoUrl = str_replace('http', 'https', $logoUrl);
+            echo $newLogoUrl . '<br>';
+            $council->setLogoUrl($newLogoUrl);
+            $council->save();
+        }
+        $councils = null;
+
+        $users = Users::find();
+        foreach($users as $user){
+            $imageUrl = $user->getImageUrl();
+            $newImageUrl = str_replace('http', 'https', $imageUrl);
+            echo $newImageUrl . '<br>';
+            $user->setImageUrl($newImageUrl);
+            $user->save();
+        }
+        $users = null;
+
+        return true;
     }
 }

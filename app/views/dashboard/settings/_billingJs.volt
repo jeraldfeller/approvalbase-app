@@ -43,7 +43,7 @@
           // Get the token ID to your server-side code for use.
           console.log(token);
           $.ajax({
-            url: '{{ url('billing/subscribe') }}',
+            url: '{{ url('billing/subscribe?ajax=1') }}',
             type: 'POST',
             data: {
               token: token.id

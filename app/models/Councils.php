@@ -323,6 +323,9 @@ class Councils extends _BaseModel
             $usersCouncils->save();
         }
 
+        $uc = null;
+        $usersCouncils = null;
+
 
         return true;
 

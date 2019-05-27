@@ -717,6 +717,7 @@ class Poi extends _BaseModel
             $poi->setType($type);
             $poi->setDateCreated($date);
             $poi->save();
+            $poi = null;
 
         }
 

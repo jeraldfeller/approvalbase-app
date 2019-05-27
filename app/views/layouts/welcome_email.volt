@@ -358,9 +358,7 @@
                                                     </p>
 
                                                     <a href="{{ url }}" style="text-decoration: none; background: #3f71fc; border: 0; font-weight: 600; color: #fff; display: inline-block; box-shadow: rgba(23,43,99,.24) 0 7px 28px; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; padding: 12px 23px; text-shadow: 1px 1px rgba(0,0,0,.09); border-radius: 4px; cursor: pointer; text-align: center; -webkit-transition: all .2s; -moz-transition: all .2s; -ms-transition: all .2s; -o-transition: all .2s; transition: all .2s;">Get Started</a>
-                                                    <p style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 19px; font-size: 16px; margin: 25px 0 10px; padding: 0;" align="left">
-                                                        If you have any questions, please contact us at <a style="text-decoration: none; color: #42b1e2;" href="mailto:support@approvalbase.com">support@approvalbase.com</a>
-                                                    </p>
+
                                                 </td>
                                                 <td class="expander" style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0;" align="left" valign="top"></td>
                                             </tr></table></td>
