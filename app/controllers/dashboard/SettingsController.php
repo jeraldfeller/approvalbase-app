@@ -5,6 +5,7 @@ namespace Aiden\Controllers;
 use Aiden\Controllers\_BaseController;
 use Aiden\Models\Users;
 use Aiden\Models\Admin;
+use Aiden\Models\MetaData;
 use Aiden\Models\Billing;
 use Aiden\Models\UsersEmail;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -46,7 +47,8 @@ class SettingsController extends _BaseController
             'page_title' => 'Billing',
             'current' => $billing['current'],
             'invoices' => $billing['invoices'],
-            'stripeApiKey' => Admin::getApiKeyBySource('stripe')['apiKey']
+            'stripeApiKey' => Admin::getApiKeyBySource('stripe')['apiKey'],
+            'subscriptionCost' => MetaData::getMetaDataByTitle('subscription_cost')
         ]);
         $this->view->pick('settings/index');
     }
@@ -297,7 +299,7 @@ class SettingsController extends _BaseController
     public function stripeApiAction()
     {
         $token = $this->request->getPost('token');
-        $amount = 89900;
+        $amount = MetaData::getMetaDataByTitle('subscription_cost').'00';
         $stripe = new Stripe();
         $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
 
@@ -364,7 +366,7 @@ class SettingsController extends _BaseController
 
     public function subscribeAction(){
         $token = $this->request->getPost('token');
-        $amount = 89900;
+        $amount = MetaData::getMetaDataByTitle('subscription_cost').'00';
         $stripe = new Stripe();
         $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
 
@@ -381,13 +383,15 @@ class SettingsController extends _BaseController
         } else {
             $customerId = $this->getUser()->getStripeCustomerId();
         }
+
+
         // create subscription;
         $subscription = Subscription::create([
             "customer" => $customerId,
             "billing" => "charge_automatically",
             "items" => [
                 [
-                    "plan" => "plan_F7f8zhkeMi6y3C",
+                    "plan" => MetaData::getMetaDataByTitle('subscription_plan_id')
                 ],
             ]
         ]);

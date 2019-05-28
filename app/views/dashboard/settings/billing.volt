@@ -16,7 +16,7 @@
                             <div class="plans">
                                 <div class="plan clearfix selected">
                                     <div class="price">
-                                        $899/mo
+                                        ${{ subscriptionCost }}/mo
                                     </div>
                                     <div class="info">
                                         <div class="name">

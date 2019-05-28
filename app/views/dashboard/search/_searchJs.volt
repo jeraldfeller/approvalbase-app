@@ -237,6 +237,7 @@
     var literalSearch = false;
     var excludePhrase = false;
     var metadata = false;
+    var address = '';
     // table
     var table = $('#dt-opt').DataTable({
       "serverSide": true,
@@ -351,16 +352,16 @@
               $partTable += '<tbody>';
               $partTable += '<tr><td><strong>Ref.</strong></td><td>'+response.info.councilReference+'</td></tr>';
               if(response.addresses.length > 0 ){
+
                 for($a = 0; $a < response.addresses.length; $a++){
                   $partTable += '<tr><td><strong>Address</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com/maps/place/' + response.addresses[$a] + '">' + response.addresses[$a] + '</a></td></tr>';
                 }
               }
+
               if (response.parties.length > 0) {
                 for ($p = 0; $p < response.parties.length; $p++) {
                   $partTable += '<tr><td><strong>' + response.parties[$p].role + '</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com.au/search?newwindow=1&q='+response.parties[$p].name+'">' + response.parties[$p].name + '</a></td></tr>';
                 }
-              } else {
-                $partTable = 'No details available.';
               }
               $partTable += '<tr><td><strong>Link</strong></td><td class="break-word"><a href="'+response.info.councilUrl+'" target="_blank">'+response.info.councilUrl+'</a></td></tr>';
               $partTable += '</tbody>';
@@ -786,6 +787,7 @@
     $('.refineSearchBtn').click(function(){
       $('#searchFilter').val($('#searchFilterModal').val());
       filter = $('#searchFilterModal').val();
+      address = $('#searchAddress').val();
       table.ajax.reload();
       $('#filterModal').modal('hide');
     });
@@ -793,6 +795,7 @@
     $('.clearBtn').click(function(){
       localStorage.removeItem("customSearch");
       $('#searchFilter').val('');
+      $('#searchAddress').val('');
       $('#searchFilterModal').val('');
       $("#councils").val('').trigger('change');
       $('#cost-to').val(50000000).trigger('change');
@@ -855,7 +858,8 @@
         "caseSensitive": caseSensitive,
         "literalSearch": literalSearch,
         "excludePhrase": excludePhrase,
-        "metadata": metadata
+        "metadata": metadata,
+          "address": address,
       }));
 
       return {
@@ -870,7 +874,8 @@
         "caseSensitive": caseSensitive,
         "literalSearch": literalSearch,
         "excludePhrase": excludePhrase,
-        "metadata": metadata
+        "metadata": metadata,
+          "address": address,
       }
     }
 

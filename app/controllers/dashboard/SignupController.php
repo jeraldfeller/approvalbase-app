@@ -143,7 +143,7 @@ class SignupController extends _BaseController {
 
             // send email notification to admin
 
-           // \Aiden\Models\Email::signupNotification($user);
+            \Aiden\Models\Email::signupNotification($user);
             \Aiden\Models\Email::welcomeNotification($email, $name, $lname, $verificationCode);
 
 

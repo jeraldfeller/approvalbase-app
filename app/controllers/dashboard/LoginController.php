@@ -80,7 +80,7 @@ class LoginController extends _BaseController {
             // you don't want to tell a bruteforcer that.
             else {
 
-                $errorMessage = sprintf('User with email address %s was not found.', $email);
+                $errorMessage = sprintf('Invalid password.', $email);
                 $this->flashSession->error($errorMessage);
                 return $this->response->redirect('login', false, 302);
             }

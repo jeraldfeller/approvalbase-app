@@ -53,12 +53,16 @@
                                        <div class="col-sm-12 mrg-btm-20">
                                            <input type="text" class="form-control searchFilter" id="searchFilterModal" placeholder="Search">
                                        </div>
-                                       <div class=" col-md-12 col-sm-12 col-xs-12 council-dropdown step-councils">
+                                       <div class=" col-md-12 col-sm-12 col-xs-12 council-dropdown step-councils mrg-btm-20">
                                            <select id="councils" name="councils" multiple class="item-info select2 display-none ">
                                                {% for row in councils %}
                                                    <option value="{{ row.getId() }}">{{ row.getName() }}</option>
                                                {% endfor %}
                                            </select>
+                                       </div>
+
+                                       <div class="col-sm-12 ">
+                                           <input type="text" class="form-control" id="searchAddress" placeholder="Address">
                                        </div>
 
                                        <div class="col-md-6  col-sm-12 col-xs-12 cost-range pull-left step-cost mrg-top-18">

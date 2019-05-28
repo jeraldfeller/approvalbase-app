@@ -59,15 +59,22 @@ class DatatablesController extends _BaseController
         // metadata
         $metadataQuery = '';
         if ($metadata == 'false') {
-            $metadataQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1 ';
+            $metadataQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 0 ';
         }
 
+        // address
+        $address = $customSearchData['address'];
+        $addressQuery = '';
+        if($address != ''){
+            $addressQuery .= ' AND (SELECT count(id) FROM das_addresses WHERE das_id = d.id AND address LIKE "%'.$address.'%" ) > 0 ';
+        }
 
         // Check if we're searching
         $filter = $customSearchData['filter'];
         $searchFilter = $filter;
         $searchQuery = '';
         $filterByApplicant = '';
+
         $searchFilterAll = true;
         $filterBy = $customSearchData['filterBy'];
         if (strlen($filter) > 0) {
@@ -91,6 +98,9 @@ class DatatablesController extends _BaseController
 
                 $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
             }
+
+
+
         } else {
             if (count($filterBy) > 0) {
                 if (!in_array('applicant', $filterBy) || !in_array('description', $filterBy)) {
@@ -146,7 +156,8 @@ class DatatablesController extends _BaseController
                 ' . $searchQuery . '
                 ' . $costQuery . '
                 ' . $councilsQry . '
-                ' . $metadataQuery;
+                ' . $metadataQuery . '
+                 ' . $addressQuery;
         } else {
             $sql = 'SELECT
                        d.id,
@@ -168,8 +179,10 @@ class DatatablesController extends _BaseController
                 ' . $searchQuery . '
                 ' . $costQuery . '
                 ' . $councilsQry . '
-                ' . $metadataQuery;
+                ' . $metadataQuery . '
+                ' . $addressQuery;
         }
+
 
         $dasForCount = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
@@ -204,6 +217,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $addressQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         } else {
@@ -228,10 +242,12 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $addressQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         }
 
+//        echo $sql;
 
 
         // Base model
@@ -349,6 +365,13 @@ class DatatablesController extends _BaseController
         }
 
 
+        // address
+        $address = $customSearchData['address'];
+        $addressQuery = '';
+        if($address != ''){
+            $addressQuery .= ' AND (SELECT count(id) FROM das_addresses WHERE das_id = d.id AND address LIKE "%'.$address.'%" ) > 0 ';
+        }
+
         // metadata
         $metadataQuery = '';
         if ($metadata == 'false') {
@@ -445,7 +468,8 @@ class DatatablesController extends _BaseController
                 ' . $searchQuery . '
                 ' . $costQuery . '
                 ' . $councilsQry . '
-                ' . $metadataQuery;
+                ' . $metadataQuery . '
+                ' . $addressQuery;
         } else {
             $sql = 'SELECT
                        d.id,
@@ -473,7 +497,8 @@ class DatatablesController extends _BaseController
                 ' . $searchQuery . '
                 ' . $costQuery . '
                 ' . $councilsQry . '
-                ' . $metadataQuery;
+                ' . $metadataQuery . '
+                ' . $addressQuery;
         }
 
         $dasForCount = new \Phalcon\Mvc\Model\Resultset\Simple(
@@ -516,6 +541,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $addressQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         } else {
@@ -547,6 +573,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $addressQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         }
