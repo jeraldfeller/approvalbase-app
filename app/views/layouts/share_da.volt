@@ -580,7 +580,7 @@
                                                                         valign="top">
                                                                         {% for d in docs %}
                                                                             <a style="text-decoration: none;"
-                                                                               href="{{ (d.readAttribute('as3_url') != '' ? d.readAttribute('as3_url') : d.readAttribute('url')) }}"><img style="width: 15px;" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png"> {{ d.readAttribute('name') }}</a>
+                                                                               href="{{ (d.readAttribute('as3_url') != '' ? d.readAttribute('as3_url') : d.readAttribute('url')) }}"><img width="15" style="width: 15px;" src="http://app.approvalbase.com/dashboard_assets/images/pdf-icon.png"> {{ d.readAttribute('name') }}</a>
                                                                             <br>
                                                                         {% endfor %}
                                                                     </td>

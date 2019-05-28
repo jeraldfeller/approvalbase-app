@@ -150,10 +150,26 @@ class HelpersController extends _BaseController
 
     public function getSubscriptionPlanAction(){
         $stripe = new Stripe();
-        $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
+        $stripe::setApiKey(Admin::getApiKeyBySource(STRIPE_ENV)['secretKey']);
 
         $list = \Stripe\Plan::all(["limit" => 10]);
 
+        $stripe = null;
         echo json_encode($list);
+    }
+
+    public function removeStripeCustomersAction(){
+        $stripe = new Stripe();
+        $stripe::setApiKey(Admin::getApiKeyBySource(STRIPE_ENV)['secretKey']);
+
+        $list = \Stripe\Customer::all(["limit" => 20]);
+        $data = $list->data;
+        $stripe = null;
+        for($i = 0; $i < count($data); $i++){
+            $customerId = $data[$i]->id;
+            echo $customerId . '<br>';
+            $customer = \Stripe\Customer::retrieve($customerId);
+            $customer->delete();
+        }
     }
 }
