@@ -129,11 +129,41 @@
 
         </div>
         <div class="col-md-12 no-pdd-left">
-            <button id="cancelButton" class="btn btn-danger">Cancel Subscription</button>
+            <button  class="btn btn-danger" data-toggle="modal" data-target="#billingModal">Cancel Subscription</button>
         </div>
         <div class="col-md-12 no-pdd-left mrg-top-20">
             If you have any questions, please contact us at <a href="mailto:support@approvalbase.com" class="">support@approvalbase.com</a>
         </div>
+
+        <!-- modal -->
+        <div class="modal fade" id="billingModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="modalTitle">
+                            <i class="fa fa-cancel"></i> Cancel Subscription
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                               <p>Are you sure you want to cancel your subscription?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary pull-right" id="cancelButton">Yes</button>
+                                <button class="btn btn-default pull-right mrg-right-5" data-dismiss="modal">Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     {% endif %}
 
 </div>

@@ -47,7 +47,7 @@ class SettingsController extends _BaseController
             'page_title' => 'Billing',
             'current' => $billing['current'],
             'invoices' => $billing['invoices'],
-            'stripeApiKey' => Admin::getApiKeyBySource('stripe')['apiKey'],
+            'stripeApiKey' => Admin::getApiKeyBySource(STRIPE_ENV)['apiKey'],
             'subscriptionCost' => MetaData::getMetaDataByTitle('subscription_cost')
         ]);
         $this->view->pick('settings/index');
@@ -368,7 +368,7 @@ class SettingsController extends _BaseController
         $token = $this->request->getPost('token');
         $amount = MetaData::getMetaDataByTitle('subscription_cost').'00';
         $stripe = new Stripe();
-        $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
+        $stripe::setApiKey(Admin::getApiKeyBySource(STRIPE_ENV)['secretKey']);
 
 
         // create customer
@@ -497,7 +497,7 @@ class SettingsController extends _BaseController
         $userId = $this->getUser()->getId();
         $this->getUser()->setSubscriptionStatus('canceled');
         $stripe = new Stripe();
-        $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
+        $stripe::setApiKey(Admin::getApiKeyBySource(STRIPE_ENV)['secretKey']);
 
         if($this->getUser()->save()){
             $billing = Billing::findFirst([

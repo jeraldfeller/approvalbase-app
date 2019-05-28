@@ -102,7 +102,7 @@ class UsersController extends _BaseController
 
                 $rsp = json_encode([
                    'success' => true,
-                   'message' => 'If a ApprovalBase account exists for '.$email.', an e-mail will be sent with further instructions.'
+                   'message' => 'If an ApprovalBase email exists for '.$email.', an e-mail will be sent with further instructions.'
                 ]);
             }else{
                 $rsp = json_encode([

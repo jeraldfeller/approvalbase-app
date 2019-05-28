@@ -18,6 +18,12 @@ use Aiden\Models\DasUsersSearch;
 use Aiden\Models\Users;
 use Aiden\Models\Councils;
 use Aiden\Models\UsersShareDa;
+use Stripe\Charge;
+use Stripe\Customer;
+use Stripe\Stripe;
+use Stripe\Subscription;
+use Aiden\Models\Admin;
+use Aiden\Models\MetaData;
 
 
 class HelpersController extends _BaseController
@@ -139,5 +145,15 @@ class HelpersController extends _BaseController
         $users = null;
 
         return true;
+    }
+
+
+    public function getSubscriptionPlanAction(){
+        $stripe = new Stripe();
+        $stripe::setApiKey(Admin::getApiKeyBySource('stripe')['secretKey']);
+
+        $list = \Stripe\Plan::all(["limit" => 10]);
+
+        echo json_encode($list);
     }
 }

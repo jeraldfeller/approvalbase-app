@@ -223,8 +223,6 @@
                                 for ($p = 0; $p < response.parties.length; $p++) {
                                     $partTable += '<tr><td><strong>' + response.parties[$p].role + '</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com.au/search?newwindow=1&q=' + response.parties[$p].name + '">' + response.parties[$p].name + '</a></td></tr>';
                                 }
-                            } else {
-                                $partTable = 'No details available.';
                             }
                             $partTable += '<tr><td><strong>Link</strong></td><td class="break-word"><a href="' + response.info.councilUrl + '" target="_blank">' + response.info.councilUrl + '</a></td></tr>';
                             $partTable += '</tbody>';

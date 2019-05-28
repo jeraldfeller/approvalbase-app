@@ -21,6 +21,7 @@
             setTimeout(function(){
               location.href = '/billing';
             }, 1000);
+            $('#billingModal').modal('hide');
             $btn.html('Cancel Subscription');
             $btn.prop('disabled', false);
           },

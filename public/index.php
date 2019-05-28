@@ -25,13 +25,14 @@ switch (ENVIRONMENT) {
         error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
         define('BASE_URI', 'http://app.approvalbase.com/');
         define('ADMIN_EMAIL', 'oscar@willowcapital.com.au');
-
+        define('STRIPE_ENV', 'stripe');
         break;
 
     case 'development':
         require $_SERVER["DOCUMENT_ROOT"] . '/../vendor/autoload.php';
         define('BASE_URI', 'http://dev.approvalbase.com/');
         define('ADMIN_EMAIL', 'jeraldfeller@gmail.com');
+        define('STRIPE_ENV', 'stripe_dev');
         break;
     case 'local':
         define('BASE_URI', 'http://dev.approval-base.com/');
