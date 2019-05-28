@@ -375,6 +375,7 @@ class SettingsController extends _BaseController
         if ($this->getUser()->getStripeCustomerId() == '') {
             $customer = Customer::create([
                 'email' => $this->getUser()->getEmail(),
+                'name' => $this->getUser()->getName(). ' ' . $this->getUser()->getLastName(),
                 'source' => $token
             ]);
             $customerId = $customer->id;
@@ -434,7 +435,7 @@ class SettingsController extends _BaseController
                         $emailsTo[] = $em->getEmail();
                     }
                 }
-                \Aiden\Models\Email::subscriptionEmailNotification($this->getUser()->getName(), $this->getUser()->getLastName(), $this->getUser()->getEmail().','.implode(',', $emailsTo), $amount / 100, '18801-'.$invoice->number, '');
+//                \Aiden\Models\Email::subscriptionEmailNotification($this->getUser()->getName(), $this->getUser()->getLastName(), $this->getUser()->getEmail().','.implode(',', $emailsTo), $amount / 100, '18801-'.$invoice->number, '');
             }
             return json_encode(true);
         } else {
