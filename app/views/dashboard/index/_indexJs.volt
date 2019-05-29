@@ -198,7 +198,7 @@
         }).done(function (response) {
           resolve(response);
         });
-    //  }, 2300)
+  //    }, 2300)
 
     });
   }
@@ -234,7 +234,7 @@
   function getApplicationsSavedData() {
     $('#applications-saved-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-   //   setTimeout(function () {
+    // setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -247,7 +247,7 @@
         }).done(function (response) {
           resolve(response);
         });
-   //   }, 3100)
+  //  }, 3100)
 
     });
   }
@@ -256,7 +256,7 @@
   function getSources() {
     $('#councils-container').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-    //  setTimeout(function () {
+   //   setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getSources') }}',
           type: 'POST',
@@ -268,7 +268,7 @@
         }).done(function (response) {
           resolve(response);
         });
-   //   }, 4000)
+  //  }, 4000)
 
     });
   }
@@ -287,7 +287,7 @@
         }).done(function (response) {
           resolve(response);
         });
-   //   }, 4000);
+   //  }, 6000);
 
     });
   }
@@ -338,9 +338,14 @@
             }
             $('#table-tbody').html($tableHtml);
             console.log(typeof(table));
-            if(typeof(table) ==  'undefined'){
+            if(typeof(table) ==  'string'){
+                console.log('sssss');
               table = $('#datatable-example').dataTable({
-                "order": [[1, "desc"]],
+                  "order": [[1, "desc"]],
+                  fixedHeader: true,
+                  scrollY:        '500px',
+                  scrollCollapse: true,
+                  paging:         false
               });
             }
 

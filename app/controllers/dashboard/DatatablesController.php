@@ -15,6 +15,11 @@ class DatatablesController extends _BaseController
     public function searchAction()
     {
         $columns = array('', 'c.name', 'd.lodge_date', 'd.estimated_cost', 'p.name', 'd.description');
+
+
+
+        $specialFilterQuery = ' AND d.description NOT LIKE "%modification%" ';
+
         $sqlParams = [];
         $sqlTypes = [];
 
@@ -157,6 +162,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $specialFilterQuery . '
                  ' . $addressQuery;
         } else {
             $sql = 'SELECT
@@ -180,6 +186,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $specialFilterQuery . '
                 ' . $addressQuery;
         }
 
@@ -218,6 +225,7 @@ class DatatablesController extends _BaseController
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
                 ' . $addressQuery . '
+                ' . $specialFilterQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         } else {
@@ -243,6 +251,7 @@ class DatatablesController extends _BaseController
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
                 ' . $addressQuery . '
+                ' . $specialFilterQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         }
@@ -324,6 +333,7 @@ class DatatablesController extends _BaseController
         $requestStatusQry = ($requestedStatus == 2 ? ' AND du.status = 2': '');
         $shoOnAlertsQrt = ($requestedStatus == 1 ? ' AND du.show_on_alerts = 1 ': '');
         $columns = array('', 'c.name', 'd.lodge_date', 'd.estimated_cost', 'p.name', 'd.description');
+        $specialFilterQuery = ' AND d.description NOT LIKE "%modification%" ';
         $sqlParams = [];
         $sqlTypes = [];
 
@@ -469,6 +479,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $specialFilterQuery . '
                 ' . $addressQuery;
         } else {
             $sql = 'SELECT
@@ -498,6 +509,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $specialFilterQuery . '
                 ' . $addressQuery;
         }
 
@@ -541,6 +553,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $specialFilterQuery . '
                 ' . $addressQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
@@ -573,6 +586,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $specialFilterQuery . '
                 ' . $addressQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;

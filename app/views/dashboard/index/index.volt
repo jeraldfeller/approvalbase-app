@@ -10,6 +10,9 @@
         body{
             font-size: 14px !important;
         }
+        table.dataTable{
+            margin-bottom: 0 !important;
+        }
     </style>
 {% endblock %}
 {% block extra_js %}
