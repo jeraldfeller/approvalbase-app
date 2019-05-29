@@ -34,7 +34,7 @@ class Email extends _BaseModel
         $config = $di->getConfig();
         $postFields = [
             'from' => sprintf('%s <%s>', $name, $email),
-            'subject' => 'Shared Application',
+            'subject' => 'ApprovalBase',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
             'to' => $emailsTo

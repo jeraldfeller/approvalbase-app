@@ -193,7 +193,7 @@ class IndexController extends _BaseController
         (
             SELECT SUM(estimated_cost) FROM das WHERE estimated_cost IS NOT NULL AND council_id = c.id AND created >= "'.$from.'" AND created <= "'.$to.'"
         ) as totalCost
-        FROM councils c ORDER BY `projectsCount` DESC LIMIT 10';
+        FROM councils c ORDER BY `projectsCount` DESC';
 
 
         $das = new Das();
