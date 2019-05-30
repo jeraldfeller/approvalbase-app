@@ -49,15 +49,14 @@ class RegisterForm extends \Phalcon\Forms\Form
 
         $mobileNumber = new \Phalcon\Forms\Element\Text('mobileNumber', [
             'class' => 'form-control',
-            'placeholder' => 'Mobile Number: ',
-            'required' => '',
+            'placeholder' => 'Mobile Number:'
         ]);
         $mobileNumber
             ->setLabel('Mobile Number:')
             ->addValidators([
                 new \Phalcon\Validation\Validator\StringLength([
                     'max' => 15,
-                    'min' => 6,
+                    'min' => 0,
                     'messageMaximum' => 'The mobile number is too long.',
                     'messageMinimum' => 'The mobile number is too short.',
                     'cancelOnFail' => false,

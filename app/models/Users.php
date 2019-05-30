@@ -18,6 +18,11 @@ class Users extends _BaseModel {
     protected $id;
 
     /**
+     * @Column(type="string", nullable=true)
+     */
+    protected $restore_id;
+
+    /**
      * @Column(type="string", nullable=false)
      */
     protected $name;
@@ -173,6 +178,27 @@ class Users extends _BaseModel {
     public function getId() {
 
         return $this->id;
+
+    }
+
+
+    /**
+     * Sets the email address
+     * @param string $email
+     */
+    public function setRestoreId(string $restore_id) {
+
+        $this->restore_id = $restore_id;
+
+    }
+
+    /**
+     * Returns the email address
+     * @return string
+     */
+    public function getRestoreId() {
+
+        return $this->restore_id;
 
     }
 
@@ -881,6 +907,7 @@ class Users extends _BaseModel {
         if($user){
             return array(
                 'id' => $user->getId(),
+                'restoreId' => $user->getRestoreId(),
                 'firstName' => $user->getName(),
                 'lastName' => $user->getLastName(),
                 'email' => $user->getEmail(),

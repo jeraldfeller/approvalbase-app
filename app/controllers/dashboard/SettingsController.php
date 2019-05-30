@@ -555,5 +555,15 @@ class SettingsController extends _BaseController
         return true;
     }
 
+    public function setRestoreIdAction(){
+        $restoreId =  $this->request->getPost('restoreId');
+        $user = $this->getUser();
+        $user->setRestoreId($restoreId);
+        $user->save();
+        $user = null;
+
+        return true;
+
+    }
 
 }

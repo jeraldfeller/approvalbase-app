@@ -72,26 +72,47 @@
 </script>
 <script src="{{ url("dashboard_assets/js/common.js?v=2.0.9") }}"></script>
 <script>
+  var restoreId = "{{ user['restoreId'] }}"; //Which need to be fetched from your DB
   window.fcWidget.init({
-    token: "73980d49-1fd2-4f1e-ad5c-74635f2a14df",
-    host: "https://wchat.freshchat.com"
+      token: "73980d49-1fd2-4f1e-ad5c-74635f2a14df",
+      host: "https://wchat.freshchat.com",
+      externalId: {{ user['id'] }},
+      restoreId: restoreId ? restoreId : null
   });
-  // Make sure fcWidget.init is included before setting these values
-
-  // To set unique user id in your system when it is available
-  window.fcWidget.setExternalId("{{ user['id'] }}");
-
-  // To set user name
-  window.fcWidget.user.setFirstName("{{ user['firstName'] }}");
-
-  // To set user email
-  window.fcWidget.user.setEmail("{{ user['email'] }}");
-
-  // To set user properties
-  window.fcWidget.user.setProperties({
-    plan: "{{ user['solution'] }}",                 // meta property 1
-    status: "{{ user['subscriptionStatus'] }}"                // meta property 2
+  window.fcWidget.user.get(function(resp) {
+      console.log(resp);
+      var status = resp && resp.status,
+          data = resp && resp.data;
+      if (status !== 200) {
+          window.fcWidget.user.setProperties({
+              firstName: "{{ user['firstName'] }}",              // user's first name
+              lastName: "{{ user['lastName'] }}",                // user's last name
+              email: "{{ user['email'] }}",    // user's email address
+              plan: "{{ user['solution'] }}",                 // meta property 1
+              status: "{{ user['subscriptionStatus'] }}"                // meta property 2
+          });
+          window.fcWidget.on('user:created', function(resp) {
+              var status = resp && resp.status,
+                  data = resp && resp.data;
+              if (status === 200) {
+                  if (data.restoreId) {
+                      // Update restoreId in your database
+                      $.ajax({
+                          url: '{{ url('account-profile/setRestoreId?ajax=1') }}',
+                          type: 'POST',
+                          data: {
+                              restoreId: data.restoreId
+                          },
+                          dataType: 'json',
+                          success: function (data) {
+                          }
+                      })
+                  }
+              }
+          });
+      }
   });
+
 </script>
 </body>
 </html>
