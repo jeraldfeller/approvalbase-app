@@ -96,6 +96,7 @@
                   data = resp && resp.data;
               if (status === 200) {
                   if (data.restoreId) {
+                      console.log(data.restoreId);
                       // Update restoreId in your database
                       $.ajax({
                           url: '{{ url('account-profile/setRestoreId?ajax=1') }}',
