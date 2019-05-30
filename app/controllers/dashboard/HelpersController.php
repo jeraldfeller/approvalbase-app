@@ -35,7 +35,6 @@ class HelpersController extends _BaseController
         $name = $this->getUser()->getLastName() . ', ' . $this->getUser()->getName();
         $fullName = $this->getUser()->getName() . ' ' . $this->getUser()->getLastName();
         $emails = $this->request->getPost('emails');
-        $emailsTo = implode(',', $emails);
         $dasId = $this->request->getPost('dasId');
 
         // check email counts
@@ -77,7 +76,7 @@ class HelpersController extends _BaseController
                     // record share action
                     UsersShareDa::recordDaMail($dasId, $usersId, $emails);
                     $emailCountObj = null;
-                    return json_encode(\Aiden\Models\Email::shareDaEmail($email, $fullName, $name, $emailsTo, $council, $da, $docs, $address, $parties));
+                    return json_encode(\Aiden\Models\Email::shareDaEmail($email, $fullName, $name, $emails, $council, $da, $docs, $address, $parties));
                 } else {
                     $emailCountObj = null;
                     return json_encode([
@@ -171,5 +170,36 @@ class HelpersController extends _BaseController
             $customer = \Stripe\Customer::retrieve($customerId);
             $customer->delete();
         }
+    }
+
+    public function resetNorthSydneyDocsAction(){
+        $das = new Das();
+        $sql = 'SELECT dd.* FROM das_documents dd, das d WHERE d.id = dd.das_id AND d.council_id = 20';
+        $result = new \Phalcon\Mvc\Model\Resultset\Simple(
+            null
+            , $das
+            , $das->getReadConnection()->query($sql, [], [])
+        );
+        foreach ($result as $row) {
+            $docID = $row->id;
+            $dasDoc = DasDocuments::findFirst([
+                'conditions' => 'id = :id:',
+                'bind' => [
+                    'id' => $docID
+                ]
+            ]);
+
+            if($dasDoc){
+                $dasDoc->setAs3Url('');
+                $dasDoc->setAs3Processed(0);
+                $dasDoc->setStatus(0);
+                $dasDoc->save();
+            }
+
+        }
+
+        $dasDoc = null;
+        $das = null;
+        $result = null;
     }
 }

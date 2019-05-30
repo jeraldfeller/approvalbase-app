@@ -92,7 +92,7 @@ class SettingsController extends _BaseController
                     $basePath = "dashboard_assets/images/avatars/" . $userId . "." . $ext;
                     $targetPath = __DIR__ . '/../../../public/dashboard_assets/images/avatars/' . $userId . '.' . $ext;
                     if (move_uploaded_file($source, $targetPath)) {
-                         $this->correctImageOrientation($targetPath);
+//                         $this->correctImageOrientation($targetPath);
                     } else {
                         return false;
                     }

@@ -12,7 +12,7 @@ namespace Aiden\Models;
 class Email extends _BaseModel
 {
 
-    public static function shareDaEmail($email, $fullName, $name, $emailsTo, $council, $da, $docs, $address, $parties){
+    public static function shareDaEmail($email, $fullName, $name, $emails, $council, $da, $docs, $address, $parties){
         $di = \Phalcon\DI::getDefault();
         $view = $di->getView();
         $view->start();
@@ -29,9 +29,24 @@ class Email extends _BaseModel
         $view->finish();
 
         $emailHtml = $view->getContent();
-
-
         $config = $di->getConfig();
+        if(in_array($email, $emails)){
+            $key = array_search($email, $emails);
+            unset($emails[$key]);
+
+            // send email via approvalbase to avoid flag warning on email
+            $postFields = [
+                'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
+                'subject' => 'ApprovalBase',
+                'html' => $emailHtml,
+                'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
+                'to' => $email
+            ];
+            self::sendEmail($postFields, $config);
+
+        }
+        $emailsTo = implode(',', $emails);
+
         $postFields = [
             'from' => sprintf('%s <%s>', $name, $email),
             'subject' => 'ApprovalBase',

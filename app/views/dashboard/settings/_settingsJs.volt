@@ -7,8 +7,7 @@
                 $('.profile-photo').css({
                     'backgroundImage': "url('"+e.target.result+"')"
                 });
-
-                $("form").submit();
+                // $("form").submit();
             };
 
             reader.readAsDataURL(input.files[0]);
