@@ -6,8 +6,8 @@
 <script src="{{ url("dashboard_assets/js/vendor/bootstrap-contextmenu.js") }}"></script>
 <script type="text/javascript">
   localStorage.removeItem('hasCreatedSample');
-
-
+  var clickedDas = (localStorage.getItem('clickedDas') ? localStorage.getItem('clickedDas') : []);
+  clickedDas = clickedDas.split(',');
   var isMobile = false; //initiate as false
   // device detection
   if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -305,11 +305,15 @@
 
           console.log($(this).parent());
           $dasId = $(this).attr('id');
+
+          // insert to local storage for history
+            clickedDas.push($dasId);
+            localStorage.setItem('clickedDas', clickedDas);
             {#window.location.href = "{{ url('leads/') }}" + $dasId + "/view?from=search";#}
 
           console.log('for accordion', $dasId);
           row.child(format($dasId)).show();
-          $('.clicked').removeClass('clicked');
+          // $('.clicked').removeClass('clicked');
           tr.addClass('shown');
           $('.card-slider', row.child()).slideDown();
 
@@ -877,6 +881,7 @@
         "excludePhrase": excludePhrase,
         "metadata": metadata,
           "address": address,
+          "clickedDas": clickedDas
       }
     }
 

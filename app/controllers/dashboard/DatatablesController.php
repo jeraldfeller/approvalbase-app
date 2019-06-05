@@ -24,6 +24,7 @@ class DatatablesController extends _BaseController
         $sqlTypes = [];
 
         $customSearchData = $this->request->getQuery("customSearch");
+        $clickedDas = $customSearchData['clickedDas'];
         $startDate = date('Y-m-d', strtotime($customSearchData['startDate']));
         $endDate = date('Y-m-d', strtotime($customSearchData['endDate']));
         $maxCost = $customSearchData['maxCost'];
@@ -305,7 +306,7 @@ class DatatablesController extends _BaseController
 
             $dataRow = array(
                 "DT_RowId" => $row->getId(),
-                "DT_RowClass" => ($row->getId() == $this->request->getQuery("currentViewedLead", "int") ? 'active' : ''). " row_" . $index . " context-menu row-container toggleInfo ",
+                "DT_RowClass" => ($row->getId() == $this->request->getQuery("currentViewedLead", "int") ? 'active' : ''). " row_" . $index . " context-menu row-container toggleInfo " . (in_array($row->getId(), $clickedDas) ? 'clicked' : ''),
                 $councilLogo,
                 $council,
                 $uploaded,
