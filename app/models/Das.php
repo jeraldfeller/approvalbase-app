@@ -452,7 +452,7 @@ class Das extends _BaseModel {
                     if($forEmail == false){
                         $replaceString = "<span class=\"highlighted-phrase\"><span style='opacity: 0;'>_</span>\$0<span style='opacity: 0;'>_</span></span>";
                     }else{
-                        $replaceString = "<span style=\"color: #fff; background-color: #3f71fc;\"><span style='opacity: 0;'>_</span>\$0<span style='opacity: 0;'>_</span></span>";
+                        $replaceString = "<span style=\"color: #fff; background-color: #3f71fc; border-radius: 6px;\"><span style='opacity: 0;'>_</span>\$0<span style='opacity: 0;'>_</span></span>";
                     }
 
                     $description = preg_replace($replacePattern, $replaceString, $description);

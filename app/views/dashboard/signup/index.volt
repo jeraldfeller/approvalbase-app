@@ -47,7 +47,7 @@
         <div class="bottom-wrapper">
             <div class="message" style="padding: 10px !important;">
                 <span>Already have an account?</span>
-                <a href="signin.html">Sign in here</a>.
+                <a href="signin.html">Log in here</a>.
             </div>
         </div>
     </div>

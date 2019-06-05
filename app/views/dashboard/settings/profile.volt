@@ -39,11 +39,15 @@
         </div>
         <div class="form-group">
             <label>Company City</label>
-            <input type="text" class="form-control" name="companyCity" placeholder="Enter Company City" value="{{ user['companyCity'] }}" />
+            <select class="form-control" name="companyCity">
+                <option value="Sydney Metro">Sydney Metro</option>
+            </select>
         </div>
         <div class="form-group">
             <label>Company Country</label>
-            <input type="text" class="form-control" name="companyCountry" placeholder="Enter Company Country" value="{{ user['companyCountry'] }}" />
+            <select class="form-control" name="companyCountry">
+                <option value="Australia">Australia</option>
+            </select>
         </div>
 
         <div class="form-group action">

@@ -9,7 +9,7 @@
     {% endif %}
     <div class="bottom-menu hidden-sm">
         <ul>
-            <li style="width: 100%;"><a href="{{ url("login/destroy") }}"><i class="ion-log-out"></i></a></li>
+            <li style="width: 100%;"><a href="{{ url("login/destroy") }}" title="Logout"><i class="ion-log-out"></i></a></li>
         </ul>
     </div>
 </div>

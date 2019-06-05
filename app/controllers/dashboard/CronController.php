@@ -1389,7 +1389,7 @@ class CronController extends _BaseController
 
         $dd = new DasDocuments();
         $sql = 'SELECT dd.* FROM `das_documents` dd, `das` d
-                WHERE d.council_id = 29 
+                WHERE d.council_id = 20 
                 AND dd.das_id = d.id
                 AND dd.checked = 0 
                 AND dd.as3_url IS NOT NULL 
@@ -1444,7 +1444,7 @@ class CronController extends _BaseController
 
 
     public function rescanGetDaDocsAction(){
-        $sql = 'select dd.*, ed.id as ed_id, d.council_id from das_documents dd, error_docs ed, das d WHERE d.council_id = 29 and dd.das_id = d.id and ed.doc_id = dd.id and ed.status = 0';
+        $sql = 'select dd.*, ed.id as ed_id, d.council_id from das_documents dd, error_docs ed, das d WHERE d.council_id = 20 and dd.das_id = d.id and ed.doc_id = dd.id and ed.status = 0';
         $dasDoc = new DasDocuments();
         $result = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
@@ -1465,6 +1465,9 @@ class CronController extends _BaseController
                     echo $councilId . ' - ' . $as3url . '<br>';
                     switch ($councilId){
                         case 29: //Willoughby
+                            $this->updateForRescan($id);
+                            break;
+                        case 20: // North Sydney
                             $this->updateForRescan($id);
                             break;
                     }

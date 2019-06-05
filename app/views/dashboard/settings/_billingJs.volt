@@ -74,7 +74,8 @@
           name: 'Approval Base',
           description: '${{ subscriptionCost }}/mo',
           amount: {{ subscriptionCost }}00,
-          email: '{{ user['email'] }}'
+          email: '{{ user['email'] }}',
+          allowRememberMe: false
         });
         e.preventDefault();
       });

@@ -14,7 +14,7 @@ class DatatablesController extends _BaseController
 
     public function searchAction()
     {
-        $columns = array('', 'c.name', 'd.lodge_date', 'd.estimated_cost', 'p.name', 'd.description');
+        $columns = array('', 'c.name', 'd.lodge_date', 'd.estimated_cost', 'd.description');
 
 
 
@@ -120,6 +120,7 @@ class DatatablesController extends _BaseController
         $dtOrderArray = $this->request->getQuery("order");
 
         if ($searchFilterAll == true) {
+
             if ($columns[$dtOrderArray[0]['column']] != 'p.name') {
                 $sortQuery = $columns[$dtOrderArray[0]['column']] . ' ' . strtoupper($dtOrderArray[0]['dir']);
             } else {
@@ -128,6 +129,7 @@ class DatatablesController extends _BaseController
         } else {
             $sortQuery = $columns[$dtOrderArray[0]['column']] . ' ' . strtoupper($dtOrderArray[0]['dir']);
         }
+
 
 
         $filterLimit = intval($this->request->getQuery("length", "int"));
@@ -332,7 +334,7 @@ class DatatablesController extends _BaseController
         $requestedStatus = $this->request->getQuery("status", "int");
         $requestStatusQry = ($requestedStatus == 2 ? ' AND du.status = 2': '');
         $shoOnAlertsQrt = ($requestedStatus == 1 ? ' AND du.show_on_alerts = 1 ': '');
-        $columns = array('', 'c.name', 'd.lodge_date', 'd.estimated_cost', 'p.name', 'd.description');
+        $columns = array('', 'c.name', 'd.lodge_date', 'd.estimated_cost', 'd.description');
         $specialFilterQuery = ' AND d.description NOT LIKE "%modification%" ';
         $sqlParams = [];
         $sqlTypes = [];
