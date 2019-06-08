@@ -79,6 +79,11 @@ class Das extends _BaseModel {
      */
     protected $checked;
 
+    /**
+     * @Column(type="string", nullable=true)
+     */
+    protected $addresses_arr;
+
 
     /**
      * Returns the database table name
@@ -367,6 +372,16 @@ class Das extends _BaseModel {
     }
 
 
+    public function getAddressesArr() {
+        return $this->addresses_arr;
+
+    }
+
+    public function setAddressesArr(string $addresses_arr) {
+
+        $this->addresses_arr = $addresses_arr;
+
+    }
 
 
 

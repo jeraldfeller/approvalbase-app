@@ -213,7 +213,7 @@ class Email extends _BaseModel
         $config = $di->getConfig();
         $postFields = [
             'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
-            'subject' => 'ApprovalBase Subscription',
+            'subject' => 'Payment Received - Thank You!',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
             'to' => $email
@@ -246,7 +246,7 @@ class Email extends _BaseModel
         $config = $di->getConfig();
         $postFields = [
             'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
-            'subject' => 'ApprovalBase Subscription Notification',
+            'subject' => 'Subscription expired.',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
             'to' => $email

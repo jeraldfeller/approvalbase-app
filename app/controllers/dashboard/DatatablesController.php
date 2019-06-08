@@ -194,6 +194,7 @@ class DatatablesController extends _BaseController
         }
 
 
+
         $dasForCount = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
             , $das

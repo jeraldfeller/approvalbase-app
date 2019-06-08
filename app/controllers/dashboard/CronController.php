@@ -1391,7 +1391,7 @@ class CronController extends _BaseController
         $sql = 'SELECT dd.* FROM `das_documents` dd, `das` d
                 WHERE d.council_id = 20 
                 AND dd.das_id = d.id
-                AND dd.checked = 0 
+                AND dd.checked = 0
                 AND dd.as3_url IS NOT NULL 
               
                 ORDER BY dd.id DESC LIMIT 100';
@@ -1405,14 +1405,23 @@ class CronController extends _BaseController
         if($docs){
             foreach ($docs as $row){
                 $id = $row->getId();
-                $url = $row->getAs3Url();
+                $url = trim($row->getAs3Url());
+                echo $url . '<br>';
                 $htmlData = $this->curlToGet($url);
                 if(strpos($htmlData, '%PDF') === false){
                     $row->setCheckedStatus(0);
                     $row->setChecked(1);
                     $row->save();
                     // saved url for use later
-                    $ed = new ErrorDocs();
+                    $ed = ErrorDocs::findFirst([
+                       'conditions' => 'doc_id = :docId:',
+                        'bind' => [
+                            'docId' => $id
+                        ]
+                    ]);
+                    if(!$ed){
+                        $ed = new ErrorDocs();
+                    }
                     $ed->setDocId($id);
                     $ed->setAs3Url($url);
                     $ed->setFixed(0);
@@ -1528,6 +1537,36 @@ class CronController extends _BaseController
     }
 
 
+    public function recordDaAddressAction(){
+        $das = Das::find([
+           'conditions' => 'addresses_arr IS NOT NULL LIMIT 1000'
+        ]);
+
+        foreach ($das as $da){
+            $daddress = DasAddresses::find([
+               'conditions' => 'das_id = :dasId:',
+               'bind' => [
+                   'dasId' => $da->getId()
+               ]
+            ]);
+
+            if($daddress){
+                $address = [];
+                foreach ($daddress as $add){
+                    $address[] = addslashes($add->getCleanAddress() !=  NULL ? $add->getCleanAddress() : $add->getAddress());
+                }
+
+                $da->setAddressesArr(json_encode($address));
+                $da->save();
+            }
+
+        }
+
+        $das = null;
+        $daddress = null;
+        return true;
+    }
+
 
 
     public function updateUsersGoogleSheetsAction(){
@@ -1545,7 +1584,7 @@ class CronController extends _BaseController
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => "",
             CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 30,
+            CURLOPT_TIMEOUT => 300,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => "GET",
             CURLOPT_POSTFIELDS => "",
@@ -1558,6 +1597,9 @@ class CronController extends _BaseController
         $response = curl_exec($curl);
         $err = curl_error($curl);
 
+        if($err){
+            var_dump($err);
+        }
         curl_close($curl);
 
         return $response;

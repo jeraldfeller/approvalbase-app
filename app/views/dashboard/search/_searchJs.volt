@@ -6,7 +6,7 @@
 <script src="{{ url("dashboard_assets/js/vendor/bootstrap-contextmenu.js") }}"></script>
 <script type="text/javascript">
   localStorage.removeItem('hasCreatedSample');
-  var clickedDas = (localStorage.getItem('clickedDas') ? localStorage.getItem('clickedDas') : []);
+  var clickedDas = (localStorage.getItem('clickedDas') ? localStorage.getItem('clickedDas') : '');
   clickedDas = clickedDas.split(',');
   var isMobile = false; //initiate as false
   // device detection

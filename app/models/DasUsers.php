@@ -372,10 +372,17 @@ class DasUsers extends _BaseModel {
             , $das->getReadConnection()->query($sql, [], [])
         );
 
-        $totalCountToday = $result[0]->totalCountToday;
-        $totalCountBefore = $result[0]->totalCountBefore;
+        if(count($result) !== 0){
+            $totalCountToday = $result[0]->totalCountToday;
+            $totalCountBefore = $result[0]->totalCountBefore;
+        }else{
+            $totalCountToday = 0;
+            $totalCountBefore = 0;
+        }
+
 
         if($totalCountBefore == 0){
+
             if($totalCountBefore == 0 && $totalCountToday == 0){
                 $return = array('status' => 'level', 'percent' => 0);
             }else{
