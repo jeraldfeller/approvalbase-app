@@ -1539,7 +1539,7 @@ class CronController extends _BaseController
 
     public function recordDaAddressAction(){
         $das = Das::find([
-           'conditions' => 'addresses_arr IS NOT NULL LIMIT 1000'
+           'conditions' => 'addresses_arr IS NULL LIMIT 1000'
         ]);
 
         foreach ($das as $da){

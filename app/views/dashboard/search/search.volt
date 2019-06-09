@@ -60,11 +60,6 @@
                                                {% endfor %}
                                            </select>
                                        </div>
-
-                                       <div class="col-sm-12 ">
-                                           <input type="text" class="form-control" id="searchAddress" placeholder="Address">
-                                       </div>
-
                                        <div class="col-md-6  col-sm-12 col-xs-12 cost-range pull-left step-cost mrg-top-18">
                                            <div class="form-group search">
                                                <div class="col-sm-12 col-md-12 no-mrg-left no-mrg-right no-pdd-left no-pdd-right text-center">

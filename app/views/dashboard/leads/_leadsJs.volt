@@ -106,7 +106,7 @@
         var literalSearch = false;
         var excludePhrase = false;
         var metadata = false;
-        var address = '';
+
         // table
         var table = $('#dt-opt').DataTable({
             "serverSide": true,
@@ -799,7 +799,6 @@
         $('.refineSearchBtn').click(function () {
             $('#searchFilter').val($('#searchFilterModal').val());
             filter = $('#searchFilterModal').val();
-            address = $('#searchAddress').val();
             table.ajax.reload();
             $('#filterModal').modal('hide');
         });
@@ -836,7 +835,7 @@
                 "literalSearch": literalSearch,
                 "excludePhrase": excludePhrase,
                 "metadata": metadata,
-                "address": address
+
             }));
 
             return {
@@ -852,7 +851,7 @@
                 "literalSearch": literalSearch,
                 "excludePhrase": excludePhrase,
                 "metadata": metadata,
-                "address": address
+
             }
         }
 

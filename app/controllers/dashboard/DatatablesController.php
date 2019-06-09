@@ -68,12 +68,7 @@ class DatatablesController extends _BaseController
             $metadataQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 0 ';
         }
 
-        // address
-        $address = $customSearchData['address'];
-        $addressQuery = '';
-        if($address != ''){
-            $addressQuery .= ' AND (SELECT count(id) FROM das_addresses WHERE das_id = d.id AND address LIKE "%'.$address.'%" ) > 0 ';
-        }
+
 
         // Check if we're searching
         $filter = $customSearchData['filter'];
@@ -83,7 +78,13 @@ class DatatablesController extends _BaseController
 
         $searchFilterAll = true;
         $filterBy = $customSearchData['filterBy'];
+        $addressQuery = '';
         if (strlen($filter) > 0) {
+
+            // address
+
+            $addressQuery .= ' OR (d.addresses_arr LIKE "%'.$filter.'%" ) > 0 ';
+
             $filter = ($literalSearch == 'true' ? "[[:<:]]" . $filter . "[[:>:]]" : "%" . $filter . "%");
             // filter query by applicant
             $orAnd = ($customSearchData["excludePhrase"] == "true" ? " AND " : " OR ");
@@ -378,14 +379,6 @@ class DatatablesController extends _BaseController
             $excludeQuery = ($customSearchData['excludePhrase'] == 'true' ? ' NOT RLIKE ' : ' RLIKE ');
         }
 
-
-        // address
-        $address = $customSearchData['address'];
-        $addressQuery = '';
-        if($address != ''){
-            $addressQuery .= ' AND (SELECT count(id) FROM das_addresses WHERE das_id = d.id AND address LIKE "%'.$address.'%" ) > 0 ';
-        }
-
         // metadata
         $metadataQuery = '';
         if ($metadata == 'false') {
@@ -400,7 +393,9 @@ class DatatablesController extends _BaseController
         $filterByApplicant = '';
         $searchFilterAll = true;
         $filterBy = $customSearchData['filterBy'];
+        $addressQuery = '';
         if (strlen($filter) > 0) {
+            $addressQuery .= ' OR (d.addresses_arr LIKE "%'.$filter.'%" ) > 0 ';
             $filter = ($literalSearch == 'true' ? "[[:<:]]" . $filter . "[[:>:]]" : "%" . $filter . "%");
             // filter query by applicant
             $orAnd = ($customSearchData["excludePhrase"] == "true" ? " AND " : " OR ");
