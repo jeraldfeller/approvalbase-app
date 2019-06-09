@@ -37,7 +37,7 @@ class Email extends _BaseModel
             // send email via approvalbase to avoid flag warning on email
             $postFields = [
                 'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
-                'subject' => 'ApprovalBase',
+                'subject' => 'Shared Project',
                 'html' => $emailHtml,
                 'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
                 'to' => $email
@@ -49,7 +49,7 @@ class Email extends _BaseModel
 
         $postFields = [
             'from' => sprintf('%s <%s>', $name, $email),
-            'subject' => 'ApprovalBase',
+            'subject' => 'Shared Project',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
             'to' => $emailsTo
@@ -181,7 +181,7 @@ class Email extends _BaseModel
         $config = $di->getConfig();
         $postFields = [
             'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
-            'subject' => 'Reset your ApprovalBase password',
+            'subject' => 'Reset ApprovalBase Password',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
             'to' => $email
@@ -246,7 +246,7 @@ class Email extends _BaseModel
         $config = $di->getConfig();
         $postFields = [
             'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
-            'subject' => 'Subscription expired.',
+            'subject' => 'Subscription Expired!',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
             'to' => $email

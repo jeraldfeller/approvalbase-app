@@ -83,7 +83,7 @@ class DatatablesController extends _BaseController
 
             // address
 
-            $addressQuery .= ' OR (d.addresses_arr LIKE "%'.$filter.'%" ) > 0 ';
+            $addressQuery .= ' OR d.addresses_arr LIKE "%'.$filter.'%" ';
 
             $filter = ($literalSearch == 'true' ? "[[:<:]]" . $filter . "[[:>:]]" : "%" . $filter . "%");
             // filter query by applicant
@@ -93,17 +93,17 @@ class DatatablesController extends _BaseController
                     if (in_array('applicant', $filterBy)) {
                         $filterByApplicant = ' AND p.role = "Applicant" ';
                         $searchFilterAll = false;
-                        $searchQuery .= ' AND (p.name ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                        $searchQuery .= ' AND (p.name ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '"'. $addressQuery . ')';
                     }
                     if (in_array('description', $filterBy)) {
-                        $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                        $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '"'. $addressQuery . ')';
                     }
                 } else {
-                    $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                    $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '"'. $addressQuery . ')';
                 }
             } else {
 
-                $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '" '. $addressQuery . ')';
             }
 
 
@@ -166,8 +166,8 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $specialFilterQuery . '
-                 ' . $addressQuery;
+                ' . $specialFilterQuery;
+
         } else {
             $sql = 'SELECT
                        d.id,
@@ -190,10 +190,8 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $specialFilterQuery . '
-                ' . $addressQuery;
+                ' . $specialFilterQuery;
         }
-
 
 
         $dasForCount = new \Phalcon\Mvc\Model\Resultset\Simple(
@@ -229,7 +227,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $addressQuery . '
+            
                 ' . $specialFilterQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
@@ -255,7 +253,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $addressQuery . '
+              
                 ' . $specialFilterQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
@@ -404,17 +402,17 @@ class DatatablesController extends _BaseController
                     if (in_array('applicant', $filterBy)) {
                         $filterByApplicant = ' AND p.role = "Applicant" ';
                         $searchFilterAll = false;
-                        $searchQuery .= ' AND (p.name ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                        $searchQuery .= ' AND (p.name ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '"'. $addressQuery . ')';
                     }
                     if (in_array('description', $filterBy)) {
-                        $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                        $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '"'. $addressQuery . ')';
                     }
                 } else {
-                    $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                    $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '"'. $addressQuery . ')';
                 }
             } else {
 
-                $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '"'. $addressQuery . ')';
             }
         } else {
             if (count($filterBy) > 0) {
@@ -478,8 +476,8 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $specialFilterQuery . '
-                ' . $addressQuery;
+                ' . $specialFilterQuery;
+
         } else {
             $sql = 'SELECT
                        d.id,
@@ -508,8 +506,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $specialFilterQuery . '
-                ' . $addressQuery;
+                ' . $specialFilterQuery;
         }
 
         $dasForCount = new \Phalcon\Mvc\Model\Resultset\Simple(
@@ -553,7 +550,7 @@ class DatatablesController extends _BaseController
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
                 ' . $specialFilterQuery . '
-                ' . $addressQuery . '
+             
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         } else {
@@ -586,7 +583,7 @@ class DatatablesController extends _BaseController
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
                 ' . $specialFilterQuery . '
-                ' . $addressQuery . '
+              
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         }
@@ -641,7 +638,7 @@ class DatatablesController extends _BaseController
             $data[] = $dataRow;
             $index++;
         }
-        
+
 
         // Output
         echo json_encode([
