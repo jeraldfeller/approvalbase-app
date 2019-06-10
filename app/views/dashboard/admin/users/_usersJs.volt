@@ -88,7 +88,7 @@
 
       $('.btnAction').click(function(){
          $btn = $(this);
-         $btn.prop('disabled', true);
+         $btn.attr('disabled', true);
          $btn.html('<i class="fa fa-spinner fa-spin"></i>');
          $action = $btn.attr('data-action');
          $id = $btn.attr('data-id');
@@ -110,9 +110,13 @@
 
                         $('#usersModal').modal('hide');
                         table.ajax.reload();
+                         $btn.attr('disabled', false);
+                         $btn.html('Submit');
                      },
                      error: function (e){
                          showNotification('', 'error');
+                         $btn.attr('disabled', false);
+                         $btn.html('Submit');
                      }
                  })
                  break;
@@ -131,9 +135,13 @@
                              showNotification(e.message, 'info');
                          }
                          $('#usersModal').modal('hide');
+                         $btn.attr('disabled', false);
+                         $btn.html('Submit');
                      },
                      error: function (e){
                          showNotification('', 'error');
+                         $btn.attr('disabled', false);
+                         $btn.html('Submit');
                      }
                  })
                  break;
@@ -153,16 +161,18 @@
                          }
                          $('#usersModal').modal('hide');
                          table.ajax.reload();
+                         $btn.attr('disabled', false);
+                         $btn.html('Submit');
                      },
                      error: function (e){
                          showNotification('', 'error');
+                         $btn.attr('disabled', false);
+                         $btn.html('Submit');
                      }
                  })
                  break;
-
-                 $btn.prop('disabled', false);
-                 $btn.html('Submit');
          }
+
       });
 
 

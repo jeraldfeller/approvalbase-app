@@ -56,7 +56,7 @@ class LoginController extends _BaseController {
                 ]);
 
                 if ($user->getLevel() === \Aiden\Models\Users::LEVEL_ADMINISTRATOR) {
-                    return $this->response->redirect('leads', false, 302);
+                    return $this->response->redirect('dashboard', false, 302);
                 }
                 else {
                     if($user->getSeenModal() == true && $user->getOnboardingAlerts() == true && $user->getOnboardingFilter() == true){

@@ -111,9 +111,9 @@
                                         <div class="col-md-12 ">
                                             <div class="checkbox no-pdd-left display-inline-block">
                                                 <input type="checkbox" class="checkbox-filter" id="filter_input_metadata" name="input_case_sensitive">
-                                                <label for="input_metadata">Metadata</label>
+                                                <label for="input_metadata">hide no-value projects</label>
                                             </div>
-                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="includes applications with no PDF attachments"><i class="fa fa-question-circle"></i></div>
+                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="excludes projects with $0 construction value"><i class="fa fa-question-circle"></i></div>
                                         </div>
 
                                         <div class="col-md-12 ">
@@ -227,9 +227,9 @@
                                         <div class="col-md-12 ">
                                             <div class="checkbox no-pdd-left display-inline-block">
                                                 <input type="checkbox" class="checkbox-filter" id="input_metadata" name="input_case_sensitive">
-                                                <label for="input_metadata">Metadata</label>
+                                                <label for="input_metadata">hide no-value projects</label>
                                             </div>
-                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="includes applications with no PDF attachments"><i class="fa fa-question-circle"></i></div>
+                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="excludes projects with $0 construction value"><i class="fa fa-question-circle"></i></div>
                                         </div>
 
                                         <div class="col-md-12 ">
@@ -387,7 +387,7 @@
                                                 <div class="checkbox no-mrg-left no-pdd-left">
                                                     <input type="checkbox" class="checkbox-filter"
                                                            id="input_metadata_edit" name="input_case_sensitive">
-                                                    <label for="input_metadata_edit">Metadata</label>
+                                                    <label for="input_metadata_edit">hide no-value projects</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">

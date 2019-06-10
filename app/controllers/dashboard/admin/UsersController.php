@@ -89,7 +89,7 @@ class UsersController extends _BaseController {
         }else{
             $user = null;
             return json_encode([
-               'message' => 'User is subscription is not expired.',
+               'message' => 'User subscription is not expired.',
                 'success' => false
             ]);
         }

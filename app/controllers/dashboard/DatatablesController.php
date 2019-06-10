@@ -64,8 +64,8 @@ class DatatablesController extends _BaseController
 
         // metadata
         $metadataQuery = '';
-        if ($metadata == 'false') {
-            $metadataQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 0 ';
+        if ($metadata == 'true') {
+            $metadataQuery = ' AND d.estimated_cost > 0 ';
         }
 
 
@@ -379,8 +379,8 @@ class DatatablesController extends _BaseController
 
         // metadata
         $metadataQuery = '';
-        if ($metadata == 'false') {
-            $metadataQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1 ';
+        if ($metadata == 'true') {
+            $metadataQuery = ' AND d.estimated_cost > 0 ';
         }
 
 
