@@ -41,7 +41,6 @@
 
     <!-- left menu -->
     {% include "includes/leftmenu.volt" %}
-
     <!-- Content -->
     {% block content %}
     {% endblock %}

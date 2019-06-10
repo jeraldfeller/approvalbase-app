@@ -213,7 +213,9 @@
               }
               if(tour.getCurrentStep().id == 'step5'){
                 console.log('STEP5');
+
                 $('tbody .redirect:eq(0)').trigger('click')
+                $('.downloadPdfBtn').focus();
               }
             });
           }, 500);

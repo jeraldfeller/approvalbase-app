@@ -1,7 +1,9 @@
+<script src="{{ url("dashboard_assets/js/vendor/bootstrap-contextmenu.js") }}"></script>
 <script type="text/javascript">
   $(function () {
     var table = $('#dt-opt').DataTable({
       "serverSide": true,
+        "responsive": true,
       "ajax": {
         "url": "{{ url("admin/datatables/users") }}",
         "data": function (d) {
@@ -16,6 +18,7 @@
       "columnDefs": [
         {"targets": [0], "orderable": false},
         {"targets": [0], "width": "5%"},
+        {"targets": [1], "width": "25%"},
         {"targets": [0, 1, 2, 3, 4], "className": "text-center vertical-middle"},
       ],
       "language": {
@@ -24,6 +27,144 @@
       "order": [[1, "asc"]]
 
     });
+
+      table.on('draw', function () {
+          // Context Menu
+          $('.context-menu').contextmenu({
+              target: '#context-menu',
+              autoHide: false,
+              before: function (e) {
+                  $firstChildElement = $(this)[0]['$element'][0]['firstElementChild'].parentNode;
+                  $id = $firstChildElement.getAttribute('id');
+                  $class = $firstChildElement.getAttribute('class');
+                  $class = $class.split(' ');
+                  $email = $class[1];
+                  $('.userContext').attr('data-id', $id);
+                  $('.userContext').attr('data-email', $email);
+
+                  return true;
+              },
+              onItem: function (context, e) {
+                  $className = e['currentTarget']['className'];
+                  $className = $className.split(' ');
+                  $className = $className[0];
+
+                  switch ($className) {
+                      case 'reactivate':
+                          $email = $('.reactivate').attr('data-email');
+                          $id = $('.reactivate').attr('data-id');
+                          $('.usersModalBodyText').html('Are you sure do you want to reactivate free trial to <strong>'+$email+'</strong>?');
+                          $('.btnAction').attr('data-id', $id);
+                          $('.btnAction').attr('data-action', 'reactivate');
+                          $('#usersModal').modal('show');
+                          break;
+                      case 'sendEmail':
+                          $email = $('.sendEmail').attr('data-email');
+                          $id = $('.reactivate').attr('data-id');
+                          $('.usersModalBodyText').html('Send welcome email to this <strong>'+$email+'</strong>?');
+                          $('.btnAction').attr('data-id', $id);
+                          $('.btnAction').attr('data-action', 'sendEmail');
+                          $('#usersModal').modal('show');
+                          break;
+                      case 'delete':
+                          $email = $('.delete').attr('data-email');
+                          $id = $('.reactivate').attr('data-id');
+                          $('.usersModalBodyText').html('Are you sure do you want to delete <strong>'+$email+'</strong>?');
+                          $('.btnAction').attr('data-action', 'delete');
+                          $('.btnAction').attr('data-id', $id);
+                          $('#usersModal').modal('show');
+                          break;
+                  }
+              }
+
+          });
+
+
+          setTimeout(function () {
+              $('#dt-opt').removeAttr('style');
+          }, 3000);
+      });
+
+
+      $('.btnAction').click(function(){
+         $btn = $(this);
+         $btn.prop('disabled', true);
+         $btn.html('<i class="fa fa-spinner fa-spin"></i>');
+         $action = $btn.attr('data-action');
+         $id = $btn.attr('data-id');
+         switch ($action) {
+             case 'reactivate':
+                 $.ajax({
+                     url: '{{ url('admin/users/reactivateFreeTrial?ajax=1') }}',
+                     type: 'POST',
+                     data: {
+                         id: $id
+                     },
+                     dataType: 'json',
+                     success: function(e){
+                        if(e.success == true){
+                            showNotification(e.message, 'success');
+                        }else{
+                            showNotification(e.message, 'info');
+                        }
+
+                        $('#usersModal').modal('hide');
+                        table.ajax.reload();
+                     },
+                     error: function (e){
+                         showNotification('', 'error');
+                     }
+                 })
+                 break;
+             case 'sendEmail':
+                 $.ajax({
+                     url: '{{ url('admin/users/sendEmail?ajax=1') }}',
+                     type: 'POST',
+                     data: {
+                         id: $id
+                     },
+                     dataType: 'json',
+                     success: function(e){
+                         if(e.success == true){
+                             showNotification(e.message, 'success');
+                         }else{
+                             showNotification(e.message, 'info');
+                         }
+                         $('#usersModal').modal('hide');
+                     },
+                     error: function (e){
+                         showNotification('', 'error');
+                     }
+                 })
+                 break;
+             case 'delete':
+                 $.ajax({
+                     url: '{{ url('admin/users/deleteUser?ajax=1') }}',
+                     type: 'POST',
+                     data: {
+                         id: $id
+                     },
+                     dataType: 'json',
+                     success: function(e){
+                         if(e.success == true){
+                             showNotification(e.message, 'success');
+                         }else{
+                             showNotification(e.message, 'info');
+                         }
+                         $('#usersModal').modal('hide');
+                         table.ajax.reload();
+                     },
+                     error: function (e){
+                         showNotification('', 'error');
+                     }
+                 })
+                 break;
+
+                 $btn.prop('disabled', false);
+                 $btn.html('Submit');
+         }
+      });
+
 
     $("#dt-opt").on("change", "#checkbox-toggle-all", function (e) {
 
@@ -96,6 +237,9 @@
       var userId = $(e.target).parent().attr("id").split("_")[1];
       location.href = "{{ url('admin/users/') }}" + userId + "/view";
     });
-
   });
+
+  function userAction(elem){
+      console.log(elem);
+  }
 </script>

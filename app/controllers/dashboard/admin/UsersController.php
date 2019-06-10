@@ -64,4 +64,100 @@ class UsersController extends _BaseController {
 
     }
 
+    public function reactivateFreeTrialAction(){
+        $id = $this->request->getPost('id');
+        // get user with expired status only
+        $user = Users::findFirst([
+            'conditions' => 'id = :id: AND subscription_status = :status:',
+            'bind' => [
+                'id' => $id,
+                'status' => 'expired'
+            ]
+        ]);
+        if($user){
+            $date = new \DateTime();
+            $user->setCreated($date);
+            $user->setSubscriptionStatus('trial');
+            $user->save();
+
+            $email = $user->getEmail();
+            $user = null;
+            return json_encode([
+                'message' => $email. ' free trial period has been reactivated.',
+                'success' => true
+            ]);
+        }else{
+            $user = null;
+            return json_encode([
+               'message' => 'User is subscription is not expired.',
+                'success' => false
+            ]);
+        }
+
+    }
+
+    public function sendEmailAction(){
+        $id = $this->request->getPost('id');
+        $user = Users::findFirst([
+            'conditions' => 'id = :id:',
+            'bind' => [
+                'id' => $id
+            ]
+        ]);
+
+        if($user){
+            $email = $user->getEmail();
+            $name = $user->getName();
+            $lname = $user->getLastName();
+            $sendMail =  \Aiden\Models\Email::welcomeNotification($email, $name, $lname);
+            if($sendMail){
+                $user = null;
+                return json_encode([
+                    'success' => true,
+                    'message' => 'Welcome email successfully sent.'
+                ]);
+            }else{
+                $user = null;
+                return json_encode([
+                    'success' => false,
+                    'message' => ''
+                ]);
+            }
+        }else{
+            $user = null;
+            return json_encode([
+               'success' => false,
+               'message' => ''
+            ]);
+        }
+
+    }
+
+    public function deleteUserAction(){
+        $id = $this->request->getPost('id');
+        $user = Users::findFirst([
+            'conditions' => 'id = :id:',
+            'bind' => [
+                'id' => $id
+            ]
+        ]);
+
+        if($user){
+            $email = $email = $user->getEmail();
+            $user->delete();
+            $return = json_encode([
+                'success' => true,
+                'message' => $email . ' successsfully deleted.'
+            ]);
+        }else{
+            $return = json_encode([
+                'success' => false,
+                'message' => ''
+            ]);
+        }
+        $user = null;
+
+        return $return;
+    }
+
 }

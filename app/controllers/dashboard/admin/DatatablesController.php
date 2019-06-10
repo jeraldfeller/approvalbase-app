@@ -153,7 +153,7 @@ class DatatablesController extends _BaseController {
 
     public function usersAction() {
 
-        $columns = array('', 'email', 'level', 'created', 'last_login');
+        $columns = array('', 'email', 'subscription_status', 'level', 'created', 'last_login', '');
         $sqlParams = [];
         $sqlTypes = [];
 
@@ -196,7 +196,7 @@ class DatatablesController extends _BaseController {
         $recordsTotal = (int)$sqlTotalCount[0]->totalCount;
 
         $users = new Users();
-        $sql = 'SELECT `id`, `email`, `level`, `created`, `last_login`
+        $sql = 'SELECT `id`, `email`, `level`, `created`, `last_login`, `subscription_status`
                 FROM `users`
                 WHERE 1=1
                 ' . $searchQuery . '
@@ -219,9 +219,12 @@ class DatatablesController extends _BaseController {
             $lastLogin = $row->getLastLogin() ? $row->getLastLogin()->format("d/m/Y") : "";
 
             $row = [
-                'DT_RowId' => "user_" . $row->getId(),
+//                'DT_RowId' => "user_" . $row->getId(),
+                'DT_RowId' => $row->getId(),
+                'DT_RowClass' => 'context-menu '.$row->getEmail(),
                 $checkbox,
                 $row->getEmail(),
+                $row->getSubscriptionStatus(),
                 $row->getLevelString(),
                 $row->getCreated()->format("d/m/Y"),
                 $lastLogin

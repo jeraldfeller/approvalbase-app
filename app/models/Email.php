@@ -130,7 +130,7 @@ class Email extends _BaseModel
         return self::sendEmail($postFields, $config);
     }
 
-    public static function welcomeNotification($email, $firstName, $lastName, $verificationCode){
+    public static function welcomeNotification($email, $firstName, $lastName, $verificationCode = null){
         $di = \Phalcon\DI::getDefault();
         $config = $di->getConfig();
         $view = $di->getView();
