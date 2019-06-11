@@ -235,7 +235,7 @@
     var councils = $('#councils').val();
     var filter = '';
     var filterBy = ['description'];
-    var caseSensitive = false;
+    var searchAddresses = false;
     var literalSearch = false;
     var excludePhrase = false;
     var metadata = false;
@@ -360,13 +360,13 @@
               if(response.addresses.length > 0 ){
 
                 for($a = 0; $a < response.addresses.length; $a++){
-                  $partTable += '<tr><td><strong>Address</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com/maps/place/' + response.addresses[$a] + '">' + response.addresses[$a] + '</a></td></tr>';
+                  $partTable += '<tr><td><strong>Address</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com/maps/place/' + encodeURIComponent(response.addresses[$a]) + '">' + response.addresses[$a] + '</a></td></tr>';
                 }
               }
 
               if (response.parties.length > 0) {
                 for ($p = 0; $p < response.parties.length; $p++) {
-                  $partTable += '<tr><td><strong>' + response.parties[$p].role + '</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com.au/search?newwindow=1&q='+response.parties[$p].name+'">' + response.parties[$p].name + '</a></td></tr>';
+                  $partTable += '<tr><td><strong>' + response.parties[$p].role + '</strong></td><td class="break-word"><a target="_blank" href="https://www.google.com.au/search?newwindow=1&q='+encodeURIComponent(response.parties[$p].name)+'">' + response.parties[$p].name + '</a></td></tr>';
                 }
               }
               $partTable += '<tr><td><strong>Link</strong></td><td class="break-word"><a href="'+response.info.councilUrl+'" target="_blank">'+response.info.councilUrl+'</a></td></tr>';
@@ -589,6 +589,7 @@
       $max = parseInt($('#cost-to').val());
       $min = parseInt($('#cost-from').val());
       console.log('max', $max, 'min', $min);
+
       minCost = ($min > $max ? $max : $min);
       maxCost = ($max < $min ? $min : $max);
 //      table.ajax.reload();
@@ -598,7 +599,7 @@
     // checkbox filter
 
     $('.checkbox-filter').click(function () {
-      caseSensitive = $('#input_case_sensitive').is(':checked');
+      searchAddresses = $('#input_search_addresses').is(':checked');
       literalSearch = $('#input_literal_search').is(':checked');
       excludePhrase = $('#input_exclude_phrase').is(':checked');
       metadata = $('#input_metadata').is(':checked');
@@ -766,9 +767,9 @@
         }
       }
 
-      if ($searchHistory.caseSensitive != null) {
-        if ($searchHistory.caseSensitive == true) {
-          $('#input_case_sensitive').prop('checked', true);
+      if ($searchHistory.searchAddresses != null) {
+        if ($searchHistory.searchAddresses == true) {
+          $('#input_search_addresses').prop('checked', true);
         }
       }
 
@@ -806,7 +807,7 @@
       $('#cost-to').val(50000000).trigger('change');
       $('#cost-from').val(0).trigger('change');
       $('#input_metadata').prop('checked', false);
-      $('#input_case_sensitive').prop('checked', false);
+      $('#input_search_addresses').prop('checked', false);
       $('#input_literal_search').prop('checked', false);
       $('#input_exclude_phrase').prop('checked', false);
       table.ajax.reload();
@@ -860,7 +861,7 @@
         "councils": councils,
         "filter": filter,
         "filterBy": filterBy,
-        "caseSensitive": caseSensitive,
+        "searchAddresses": searchAddresses,
         "literalSearch": literalSearch,
         "excludePhrase": excludePhrase,
         "metadata": metadata,
@@ -875,7 +876,7 @@
         "councils": councils,
         "filter": filter,
         "filterBy": filterBy,
-        "caseSensitive": caseSensitive,
+        "searchAddresses": searchAddresses,
         "literalSearch": literalSearch,
         "excludePhrase": excludePhrase,
         "metadata": metadata,

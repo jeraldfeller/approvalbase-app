@@ -44,10 +44,11 @@ class DatatablesController extends _BaseController
         }
 
         // checkbox filter
-        $caseSensitive = $customSearchData['caseSensitive'];
+        $caseSensitive = false;
         $literalSearch = $customSearchData['literalSearch'];
         $excludePhrase = $customSearchData['excludePhrase'];
         $metadata = $customSearchData['metadata'];
+        $searchAddresses = $customSearchData['searchAddresses'];
 
         $checkBoxFilterOptions = array(
             'caseSensitive' => $caseSensitive,
@@ -78,12 +79,14 @@ class DatatablesController extends _BaseController
 
         $searchFilterAll = true;
         $filterBy = $customSearchData['filterBy'];
+
+        // address
         $addressQuery = '';
+        if($searchAddresses == 'true'){
+            $addressQuery .= ' OR d.addresses_arr LIKE "%'.$filter.'%" ';
+        }
         if (strlen($filter) > 0) {
 
-            // address
-
-            $addressQuery .= ' OR d.addresses_arr LIKE "%'.$filter.'%" ';
 
             $filter = ($literalSearch == 'true' ? "[[:<:]]" . $filter . "[[:>:]]" : "%" . $filter . "%");
             // filter query by applicant
@@ -360,10 +363,11 @@ class DatatablesController extends _BaseController
         }
 
         // checkbox filter
-        $caseSensitive = $customSearchData['caseSensitive'];
+        $caseSensitive = false;
         $literalSearch = $customSearchData['literalSearch'];
         $excludePhrase = $customSearchData['excludePhrase'];
         $metadata = $customSearchData['metadata'];
+        $searchAddresses = $customSearchData['searchAddresses'];
 
         $checkBoxFilterOptions = array(
             'caseSensitive' => $caseSensitive,
@@ -391,9 +395,13 @@ class DatatablesController extends _BaseController
         $filterByApplicant = '';
         $searchFilterAll = true;
         $filterBy = $customSearchData['filterBy'];
+        // address
         $addressQuery = '';
+        if($searchAddresses == 'true'){
+            $addressQuery .= ' OR d.addresses_arr LIKE "%'.$filter.'%" ';
+        }
         if (strlen($filter) > 0) {
-            $addressQuery .= ' OR (d.addresses_arr LIKE "%'.$filter.'%" ) > 0 ';
+
             $filter = ($literalSearch == 'true' ? "[[:<:]]" . $filter . "[[:>:]]" : "%" . $filter . "%");
             // filter query by applicant
             $orAnd = ($customSearchData["excludePhrase"] == "true" ? " AND " : " OR ");

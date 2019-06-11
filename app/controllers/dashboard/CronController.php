@@ -1547,7 +1547,7 @@ class CronController extends _BaseController
 
     public function recordDaAddressAction(){
         $das = Das::find([
-           'conditions' => 'addresses_arr IS NULL LIMIT 1000'
+           'conditions' => 'addresses_arr IS NULL OR addresses_arr = "" LIMIT 3000'
         ]);
 
         foreach ($das as $da){
@@ -1561,7 +1561,7 @@ class CronController extends _BaseController
             if($daddress){
                 $address = [];
                 foreach ($daddress as $add){
-                    $address[] = addslashes($add->getCleanAddress() !=  NULL ? $add->getCleanAddress() : $add->getAddress());
+                    $address[] = addslashes($add->getCleanAddress() !==  NULL ? $add->getCleanAddress() : $add->getAddress());
                 }
 
                 $da->setAddressesArr(json_encode($address));

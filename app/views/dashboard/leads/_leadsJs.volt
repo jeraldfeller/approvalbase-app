@@ -103,6 +103,7 @@
         var filter = '';
         var filterBy = ['description'];
         var caseSensitive = false;
+        var searchAddresses = false;
         var literalSearch = false;
         var excludePhrase = false;
         var metadata = false;
@@ -441,7 +442,7 @@
         // checkbox filter
 
         $('.checkbox-filter').click(function () {
-            caseSensitive = $('#input_case_sensitive').is(':checked');
+            searchAddresses = $('#input_search_addresses').is(':checked');
             literalSearch = $('#input_literal_search').is(':checked');
             excludePhrase = $('#input_exclude_phrase').is(':checked');
             metadata = $('#input_metadata').is(':checked');
@@ -773,9 +774,9 @@
                 }
             }
 
-            if ($searchHistory.caseSensitive != null) {
-                if ($searchHistory.caseSensitive == true) {
-                    $('#input_case_sensitive').prop('checked', true);
+            if ($searchHistory.searchAddresses != null) {
+                if ($searchHistory.searchAddresses == true) {
+                    $('#input_search_addresses').prop('checked', true);
                 }
             }
 
@@ -812,7 +813,7 @@
             $('#cost-to').val(50000000).trigger('change');
             $('#cost-from').val(0).trigger('change');
             $('#input_metadata').prop('checked', false);
-            $('#input_case_sensitive').prop('checked', false);
+            $('#input_search_addresses').prop('checked', false);
             $('#input_literal_search').prop('checked', false);
             $('#input_exclude_phrase').prop('checked', false);
             table.ajax.reload();
@@ -831,7 +832,7 @@
                 "councils": councils,
                 "filter": filter,
                 "filterBy": filterBy,
-                "caseSensitive": caseSensitive,
+                "searchAddresses": searchAddresses,
                 "literalSearch": literalSearch,
                 "excludePhrase": excludePhrase,
                 "metadata": metadata,
@@ -847,7 +848,7 @@
                 "councils": councils,
                 "filter": filter,
                 "filterBy": filterBy,
-                "caseSensitive": caseSensitive,
+                "searchAddresses": searchAddresses,
                 "literalSearch": literalSearch,
                 "excludePhrase": excludePhrase,
                 "metadata": metadata,

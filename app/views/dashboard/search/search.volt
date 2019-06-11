@@ -119,10 +119,11 @@
                                         </div>
 
                                         <div class="col-md-3 ">
-                                            <div class="checkbox no-pdd-left">
-                                                <input type="checkbox" class="checkbox-filter" id="input_case_sensitive" name="input_case_sensitive">
-                                                <label for="input_case_sensitive">Case sensitive</label>
+                                            <div class="checkbox no-pdd-left display-inline-block">
+                                                <input type="checkbox" class="checkbox-filter" id="input_search_addresses" name="input_search_addresses">
+                                                <label for="input_search_addresses">Search addresses</label>
                                             </div>
+                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="excludes projects with $0 construction value"><i class="fa fa-question-circle"></i></div>
                                         </div>
                                         <div class="col-md-3 ">
                                             <div class="checkbox display-inline-block no-pdd-left">

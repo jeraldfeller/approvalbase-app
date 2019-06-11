@@ -394,7 +394,7 @@
                                             <div class="col-md-12">
                                                 <div class="checkbox no-pdd-left display-inline-block">
                                                     <input type="checkbox" class="checkbox-filter" id="input_search_addresses_edit" name="input_search_addresses_edit">
-                                                    <label for="input_search_addresses_edit">Hide no-value projects</label>
+                                                    <label for="input_search_addresses_edit">Search Addresses</label>
                                                 </div>
                                                 <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="excludes projects with $0 construction value"><i class="fa fa-question-circle"></i></div>
                                             </div>
