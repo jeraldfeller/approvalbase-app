@@ -728,6 +728,7 @@ class Das extends _BaseModel {
 
     public function getAddresses($dasId, $limitOne = false){
 
+        $addressArr = [];
         if($limitOne == false){
             $addresses = DasAddresses::find([
                 'conditions' => 'das_id = :dasId:',
@@ -746,7 +747,10 @@ class Das extends _BaseModel {
                     'dasId' => $dasId
                 ]
             ]);
-            $addressArr[] = $addresses->getCleanAddress();
+            if($addresses){
+                $addressArr[] = $addresses->getCleanAddress();
+            }
+
         }
 
 

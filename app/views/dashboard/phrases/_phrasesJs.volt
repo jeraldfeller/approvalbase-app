@@ -8,6 +8,7 @@
     var maxCost = {{ maxCost }};
     var councils = $('#filter_councils').val();
     var caseSensitive = false;
+    var searchAddress = false;
     var literalSearch = false;
     var excludePhrase = false;
     var metadata = false;
@@ -174,6 +175,7 @@
           $id = response.id;
           $phrase = response.phrase;
           $cs = response.caseSensitive;
+          $sa = response.searchAddresses;
           $ls = (response.literalSearch == true ? 0 : 1);
           $ep = response.excludePhrase;
           $m = response.metadata;
@@ -216,7 +218,7 @@
 
 
           $('#input_metadata_edit').prop('checked', $m);
-          $('#input_case_sensitive_edit').prop('checked', $cs);
+          $('#input_search_addresses_edit').prop('checked', $sa);
           $('#input_literal_search_edit').prop('checked', $ls);
           $('#input_exclude_phrase_edit').prop('checked', $ep);
 
@@ -520,10 +522,10 @@
         'councils': $councils,
         'costFrom': $costFrom,
         'costTo': $costTo,
-        'inputCaseSensitive': ($('#input_case_sensitive').is(':checked') == true ? 1 : 0),
         'inputLiteralSearch': ($('#input_literal_search').is(':checked') == true ? 0 : 1),
         'inputExcludePhrase': ($('#input_exclude_phrase').is(':checked') == true ? 1 : 0),
-        'inputMetadata': ($('#input_metadata').is(':checked') == true ? 1 : 0)
+        'inputMetadata': ($('#input_metadata').is(':checked') == true ? 1 : 0),
+          'inputSearchAddresses': ($('#input_search_addresses').is(':checked') == true ? 1 : 0),
 
       }
       $.ajax({
@@ -569,10 +571,12 @@
         'councils': $councils,
         'costFrom': $costFrom,
         'costTo': $costTo,
-        'inputCaseSensitive': ($('#input_case_sensitive_edit').is(':checked') == true ? 1 : 0),
+
         'inputLiteralSearch': ($('#input_literal_search_edit').is(':checked') == true ? 0 : 1),
         'inputExcludePhrase': ($('#input_exclude_phrase_edit').is(':checked') == true ? 1 : 0),
-        'inputMetadata': ($('#input_metadata_edit').is(':checked') == true ? 1 : 0)
+        'inputMetadata': ($('#input_metadata_edit').is(':checked') == true ? 1 : 0),
+          'inputSearchAddresses': ($('#input_search_addresses_edit').is(':checked') == true ? 1 : 0),
+
 
       }
       $.ajax({

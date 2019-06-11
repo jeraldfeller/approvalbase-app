@@ -532,6 +532,7 @@ class CronController extends _BaseController
 
                 $phrase = $row->getPhrase();
                 $caseSensitive = $row->getCaseSensitive();
+                $searchAddresses = $row->getSearchAddresses();
                 $literalSearch = $row->getLiteralSearch();
                 $excludePhrase = $row->getExcludePhrase();
                 $metadata = $row->getMetadata();
@@ -593,6 +594,13 @@ class CronController extends _BaseController
                     $metadataQuery = ' AND d.estimated_cost > 0 ';
                 }
 
+                // search addresses
+
+                $searchAddressesQuery = '';
+                if($searchAddresses == true){
+                    $searchAddressesQuery = ' OR d.addresses_arr LIKE "%'.$phrase.'%"  ';
+                }
+
 
                 $filter = ($literalSearch == 'true' ? "[[:<:]]" . $phrase . "[[:>:]]" : "%" . $phrase . "%");
                 // filter query by applicant
@@ -607,13 +615,13 @@ class CronController extends _BaseController
                             $searchQuery .= ' AND (p.name ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
                         }
                         if (in_array('description', $filterBy)) {
-                            $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                            $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '" '. $searchAddressesQuery .')';
                         }
                     } else {
-                        $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                        $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '" '. $searchAddressesQuery .')';
                     }
                 } else {
-                    $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '")';
+                    $searchQuery .= ' AND (d.description ' . $excludeQuery . $caseSensitiveQuery . '"' . $filter . '" '. $searchAddressesQuery .')';
                 }
 
 
@@ -644,6 +652,7 @@ class CronController extends _BaseController
                 ' . $searchQuery . '
                 ' . $costQuery . '
                 ' . $councilsQry . '
+              
                 ' . $metadataQuery;
                 } else {
                     $sql = 'SELECT
@@ -654,11 +663,10 @@ class CronController extends _BaseController
                 ' . $searchQuery . '
                 ' . $costQuery . '
                 ' . $councilsQry . '
+               
                 ' . $metadataQuery . ' 
                 ' . $dateFilterQuery . $excludedPhrasesQuery;
                 }
-
-
 
                 $result = new \Phalcon\Mvc\Model\Resultset\Simple(
                     null

@@ -27,6 +27,11 @@ class UsersPhrases extends \Aiden\Models\_BaseModel {
     protected $case_sensitive;
 
     /**
+     * @Column(type="boolean", nullable=false)
+     */
+    protected $search_addresses;
+
+    /**
      * @Column(type="string", nullable=false)
      */
     protected $created;
@@ -257,6 +262,26 @@ class UsersPhrases extends \Aiden\Models\_BaseModel {
         $html .= '</div>';
 
         return sprintf($html, $this->getId());
+
+    }
+
+    /**
+     * Returns whether the phrase is case sensitive
+     * @return bool
+     */
+    public function getSearchAddresses() {
+
+        return (bool) $this->search_addresses;
+
+    }
+
+    /**
+     * Sets whether the phrase is case sensitive
+     * @param bool $case_sensitive
+     */
+    public function setSearchAddresses(bool $search_addresses) {
+
+        $this->search_addresses = $search_addresses;
 
     }
 

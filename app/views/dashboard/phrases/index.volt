@@ -111,15 +111,15 @@
                                         <div class="col-md-12 ">
                                             <div class="checkbox no-pdd-left display-inline-block">
                                                 <input type="checkbox" class="checkbox-filter" id="filter_input_metadata" name="input_case_sensitive">
-                                                <label for="input_metadata">hide no-value projects</label>
+                                                <label for="input_metadata">Hide no-value projects</label>
                                             </div>
                                             <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="excludes projects with $0 construction value"><i class="fa fa-question-circle"></i></div>
                                         </div>
 
                                         <div class="col-md-12 ">
                                             <div class="checkbox no-pdd-left">
-                                                <input type="checkbox" class="checkbox-filter" id="filter_input_case_sensitive" name="input_case_sensitive">
-                                                <label for="input_case_sensitive">Case sensitive</label>
+                                                <input type="checkbox" class="checkbox-filter" id="filter_input_search_addresses" name="input_search_addresses">
+                                                <label for="input_case_sensitive">Search Addresses</label>
                                             </div>
                                         </div>
                                         <div class="col-md-12 ">
@@ -227,16 +227,17 @@
                                         <div class="col-md-12 ">
                                             <div class="checkbox no-pdd-left display-inline-block">
                                                 <input type="checkbox" class="checkbox-filter" id="input_metadata" name="input_case_sensitive">
-                                                <label for="input_metadata">hide no-value projects</label>
+                                                <label for="input_metadata">Hide no-value projects</label>
                                             </div>
                                             <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="excludes projects with $0 construction value"><i class="fa fa-question-circle"></i></div>
                                         </div>
 
                                         <div class="col-md-12 ">
-                                            <div class="checkbox no-pdd-left">
-                                                <input type="checkbox" class="checkbox-filter" id="input_case_sensitive" name="input_case_sensitive">
-                                                <label for="input_case_sensitive">Case sensitive</label>
+                                            <div class="checkbox no-pdd-left display-inline-block">
+                                                <input type="checkbox" class="checkbox-filter" id="input_search_addresses" name="input_search_addresses">
+                                                <label for="input_search_addresses">Search Addresses</label>
                                             </div>
+                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Enabled for the search to include the addresses"><i class="fa fa-question-circle"></i></div>
                                         </div>
                                         <div class="col-md-12 ">
                                             <div class="checkbox display-inline-block no-pdd-left">
@@ -251,7 +252,7 @@
                                                 <input type="checkbox" class="checkbox-filter" id="input_exclude_phrase" name="input_exclude_phrase">
                                                 <label for="input_exclude_phrase">Exclude phrase</label>
                                             </div>
-                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Disqualifies a DA from being added to your inbox if
+                                            <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="Disqualifies a project from being added to your inbox if
                                         this phrase is found."><i class="fa fa-question-circle"></i></div>
                                         </div>
                                     </div>
@@ -387,15 +388,15 @@
                                                 <div class="checkbox no-mrg-left no-pdd-left">
                                                     <input type="checkbox" class="checkbox-filter"
                                                            id="input_metadata_edit" name="input_case_sensitive">
-                                                    <label for="input_metadata_edit">hide no-value projects</label>
+                                                    <label for="input_metadata_edit">Hide no-value projects</label>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
-                                                <div class="checkbox no-mrg-left no-pdd-left">
-                                                    <input type="checkbox" id="input_case_sensitive_edit"
-                                                           name="input_case_sensitive">
-                                                    <label for="input_case_sensitive_edit">Case sensitive</label>
+                                                <div class="checkbox no-pdd-left display-inline-block">
+                                                    <input type="checkbox" class="checkbox-filter" id="input_search_addresses_edit" name="input_search_addresses_edit">
+                                                    <label for="input_search_addresses_edit">Hide no-value projects</label>
                                                 </div>
+                                                <div class="display-inline-block" data-toggle="tooltip" data-html="true" data-placement="bottom" title="excludes projects with $0 construction value"><i class="fa fa-question-circle"></i></div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="checkbox display-inline-block no-mrg-left no-pdd-left">

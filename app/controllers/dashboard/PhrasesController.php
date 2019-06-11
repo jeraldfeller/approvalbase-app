@@ -46,7 +46,8 @@ class PhrasesController extends _BaseController {
 //        }
 
         $inputPhrase = ($this->request->getPost('inputPhrase') != '' ? $this->request->getPost('inputPhrase') : '-');
-        $inputCaseSensitive = $this->request->getPost('inputCaseSensitive');
+        $inputSearchAddresses = $this->request->getPost('inputSearchAddresses');
+        $inputCaseSensitive = false;
         $inputLiteralSearch = $this->request->getPost('inputLiteralSearch');
         $inputExcludePhrase = $this->request->getPost('inputExcludePhrase');
         $inputMetadata = $this->request->getPost('inputMetadata');
@@ -77,6 +78,7 @@ class PhrasesController extends _BaseController {
             $phrase->setUserId($this->getUser()->getId());
             $phrase->setPhrase($inputPhrase);
             $phrase->setCaseSensitive($inputCaseSensitive);
+            $phrase->setSearchAddresses($inputSearchAddresses);
             $phrase->setLiteralSearch($inputLiteralSearch);
             $phrase->setExcludePhrase($inputExcludePhrase);
             $phrase->setMetadata($inputMetadata);
@@ -325,7 +327,8 @@ class PhrasesController extends _BaseController {
                 'filterBy' => $phrase->getFilterBy(),
                 'councils' => $phrase->getCouncils(),
                 'costFrom' => $phrase->getCostFrom(),
-                'costTo' => $phrase->getCostTo()
+                'costTo' => $phrase->getCostTo(),
+                'searchAddresses' => $phrase->getSearchAddresses()
             ));
 
         }else{
