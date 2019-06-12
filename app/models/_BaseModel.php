@@ -52,5 +52,111 @@ class _BaseModel extends \Phalcon\Mvc\Model {
     }
 
 
+    /**
+     * Creates a document related to a development application
+     * @param type $da
+     * @param type $name
+     * @param type $url
+     * @param type $date
+     * @return boolean
+     */
+    public function saveDocument($da, $name, $url, $date = null) {
+
+        $daDocument = DasDocuments::createIfNotExists($da->getId(), $name, $url, $date);
+        switch ($daDocument) {
+
+            case DasDocuments::DOCUMENT_SAVED:
+
+                echo "Created related document  . $name . '<br>";
+                return true;
+
+            case DasDocuments::DOCUMENT_EXISTS:
+
+
+                echo "Document $name already exists, ignoring...";
+                return true;
+
+            case DasDocuments::DOCUMENT_NO_SAVED:
+             //   $this->logger->error(" Error creating related document [{document_name}]", ["document_name" => $name]);
+                return false;
+
+            case DasDocuments::DOCUMENT_NO_NAME:
+           //     $this->logger->error(" Error creating related document [{document_name}], no name", ["document_name" => $name]);
+                return false;
+//
+            case DasDocuments::DOCUMENT_NO_URL:
+                $this->logger->error(" Error creating related document [{document_name}], no URL", ["document_name" => $name]);
+                return false;
+        }
+
+    }
+
+
+
+
+    public function getAspFormDataByUrl($url)
+    {
+
+        $requestHeaders = [
+            'Accept: */*; q=0.01',
+            'Accept-Encoding: none'
+        ];
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $requestHeaders);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0');
+
+        $output = curl_exec($ch);
+        $errno = curl_errno($ch);
+        $errmsg = curl_error($ch);
+
+        curl_close($ch);
+
+        // No errors
+        if ($errno !== 0) {
+            // TODO: Log
+            return false;
+        }
+
+        $formData = $this->getAspFormDataByString($output);
+
+        return $formData;
+
+    }
+
+
+    public function getAspFormDataByString($string)
+    {
+
+        // Extract __VIEWSTATE, __VIEWSTATEGENERATOR, and other asp puke
+        $html = str_get_html($string);
+        if (!$html) {
+            // TODO: Log that HTML couldn't be parsed.
+            return false;
+        }
+
+        $formData = [];
+
+        $elements = $html->find("input[type=hidden]");
+        foreach ($elements as $element) {
+
+            if (isset($element->id) && isset($element->value)) {
+                $formData[$element->id] = html_entity_decode($element->value, ENT_QUOTES);
+            }
+        }
+
+        return $formData;
+
+    }
+
 
 }

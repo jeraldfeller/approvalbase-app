@@ -25,6 +25,8 @@ use Aiden\Models\DasPoiUsers;
 use Aiden\Models\UsersEmail;
 use Aiden\Models\DasInvalidDocs;
 use Aiden\Models\CamdenTask;
+use Aiden\Models\WilloughbyTask;
+
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1525,7 +1527,12 @@ class CronController extends _BaseController
 
     public function updateDasDataAction(){
         $das = Das::find([
-           'conditions' => 'checked = 0 AND council_id = 5 ORDER BY id DESC LIMIT 40'
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND id = :dasId: ORDER BY id DESC LIMIT 100',
+            'bind' => [
+                'councilId' => 29,
+                'checked' => 0,
+                'dasId' => 27049
+            ]
         ]);
         if($das){
             foreach ($das as $da){
@@ -1536,6 +1543,11 @@ class CronController extends _BaseController
                             $camden = new CamdenTask();
                             $camden->init(['data'], $da);
                             $camden = null;
+                            break;
+                        case 29: // Willoughby
+                            $willoughby = new WilloughbyTask();
+                            $willoughby->init(['data'], $da);
+                            $willoughby = null;
                             break;
                     }
                 }
