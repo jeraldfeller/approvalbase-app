@@ -1526,12 +1526,13 @@ class CronController extends _BaseController
 
 
     public function updateDasDataAction(){
+        $date = date('Y-m');
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND id = :dasId: ORDER BY id DESC LIMIT 100',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND lodge_date < :date: ORDER BY id DESC LIMIT 100',
             'bind' => [
                 'councilId' => 29,
                 'checked' => 0,
-                'dasId' => 27049
+                'date' => $date
             ]
         ]);
         if($das){

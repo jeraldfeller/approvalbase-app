@@ -45,7 +45,7 @@ class SecurityPlugin extends Plugin {
             // User resources
             $userResources = [
                 'Aiden\Controllers:index' => ['index', 'getMetrics', 'getData', 'getSources', 'getTableData'],
-                'Aiden\Controllers:search' => ['index', 'save', 'getDocumentsAndParties', 'saveDaNotes'],
+                'Aiden\Controllers:search' => ['index', 'save', 'getDocumentsAndParties', 'saveDaNotes', 'saveClickedDas'],
                 'Aiden\Controllers:leads' => [
                     'index', 'restore',
                     'view', 'indexSaved', 'save', 'unsave', 'archive',

@@ -141,6 +141,11 @@ class Users extends _BaseModel {
      */
     protected $verified;
 
+    /**
+     * @Column(type="string", nullable=true)
+     */
+    protected $clicked_da;
+
 
     /**
      * Returns the database table name
@@ -699,6 +704,25 @@ class Users extends _BaseModel {
      */
     public function setVerified(bool $verified) {
         $this->verified = (int) $verified;
+
+    }
+
+    /**
+     * Gets the user's subscription status
+     * @return string
+     */
+    public function getClickedDa() {
+        return $this->clicked_da;
+
+    }
+
+    /**
+     * Sets the user's profile image URL
+     * @return string
+     */
+    public function setClickedDa($clicked_da) {
+
+        $this->clicked_da = $clicked_da;
 
     }
 

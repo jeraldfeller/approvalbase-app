@@ -85,7 +85,7 @@ class _BaseModel extends \Phalcon\Mvc\Model {
                 return false;
 //
             case DasDocuments::DOCUMENT_NO_URL:
-                $this->logger->error(" Error creating related document [{document_name}], no URL", ["document_name" => $name]);
+//                $this->logger->error(" Error creating related document [{document_name}], no URL", ["document_name" => $name]);
                 return false;
         }
 

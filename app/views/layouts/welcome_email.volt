@@ -336,10 +336,10 @@
 
                                         <table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;"><tr style="vertical-align: top; text-align: left; padding: 0;" align="left"><td style="word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; line-height: 19px; font-size: 14px; margin: 0; padding: 0px 0px 10px;" align="left" valign="top">
                                                     <p class="lead" style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;" align="left">
-                                                        Hi {{ firstName }}!,
+                                                        Hi {{ firstName }},
                                                     </p>
                                                     <p class="lead" style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;" align="left">
-                                                        As Head of Customer Experience, I personally wanted to reach out and welcome you. We are excited that you have chosen to explore ApprovalBase as a sales and information partner for your business.
+                                                        We are excited that you have chosen to explore ApprovalBase as a sales and information partner for your business.
                                                     </p>
                                                     <p  style="color: #222222; font-family: 'Helvetica Neue', 'Arial', sans-serif; font-weight: normal; text-align: left; line-height: 25px; font-size: 16px; margin: 0 0 25px; padding: 0;">
                                                         You’ve now begun your 10-day free trial. If you have any questions feel free to send us an email or chat with us directly in the bottom right corner, once you login.

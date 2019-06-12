@@ -47,7 +47,8 @@ class SearchController extends _BaseController
             "maxCostValue" => $dasMaxCost[0]->getEstimatedCost(),
             "councils" => $councils,
             "currentViewedLead" => $leadId,
-            "onboardingStatus" => $onboardingStatus
+            "onboardingStatus" => $onboardingStatus,
+            "clickedDa" => json_encode(($this->getUser()->getClickedDa() != null ? explode(',', $this->getUser()->getClickedDa()) : array()))
 
         ]);
         $this->view->pick('search/search');
@@ -224,6 +225,15 @@ class SearchController extends _BaseController
             die("You are not an administrator, something went wrong.");
         }
 
+    }
+
+
+    public function saveClickedDasAction(){
+        $clickedDas = $this->request->getPost('clickedDas');
+
+        $this->getUser()->setClickedDa(implode(',', $clickedDas));
+        $this->getUser()->save();
+        return true;
     }
 
 }

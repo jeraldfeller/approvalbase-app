@@ -70,7 +70,12 @@
                   {
                     text: 'Next',
                     classes: 'btn btn-primary',
-                    action: tour.next
+                    action: function(){
+                        $('#createFilterModal').modal('hide')
+                        setTimeout(function(){
+                            return tour.next();
+                        }, 300);
+                    }
                   }]
               });
 
@@ -88,7 +93,12 @@
                 {
                   text: 'Back',
                   classes: 'btn btn-default',
-                  action: tour.back
+                  action: function(){
+                      $('#createFilterModal').modal('show')
+                      setTimeout(function(){
+                          return tour.back();
+                      }, 300);
+                  }
                 },
                 {
                   text: 'Next',
@@ -111,12 +121,12 @@
             setTimeout(function(){
               tour.start();
 
-              Shepherd.on('show', function(){
-                if(tour.getCurrentStep().id == 'step1'){
-                    $('#createFilterModal').modal('hide')
-
-                }
-              });
+              // Shepherd.on('show', function(){
+              //   if(tour.getCurrentStep().id == 'step1'){
+              //       $('#createFilterModal').modal('hide')
+              //
+              //   }
+              // });
             }, 500);
           }
 

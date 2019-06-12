@@ -24,7 +24,7 @@ class DatatablesController extends _BaseController
         $sqlTypes = [];
 
         $customSearchData = $this->request->getQuery("customSearch");
-        $clickedDas = $customSearchData['clickedDas'];
+        $clickedDas = (isset($customSearchData['clickedDas']) ? $customSearchData['clickedDas'] : []);
         $startDate = date('Y-m-d', strtotime($customSearchData['startDate']));
         $endDate = date('Y-m-d', strtotime($customSearchData['endDate']));
         $maxCost = $customSearchData['maxCost'];
@@ -69,6 +69,8 @@ class DatatablesController extends _BaseController
             $metadataQuery = ' AND d.estimated_cost > 0 ';
         }
 
+
+        $docQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1 ';
 
 
         // Check if we're searching
@@ -169,6 +171,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $docQuery . '
                 ' . $specialFilterQuery;
 
         } else {
@@ -193,6 +196,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $docQuery . '
                 ' . $specialFilterQuery;
         }
 
@@ -230,7 +234,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-            
+                ' . $docQuery . '
                 ' . $specialFilterQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
@@ -256,7 +260,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-              
+                ' . $docQuery . '
                 ' . $specialFilterQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
@@ -388,6 +392,8 @@ class DatatablesController extends _BaseController
         }
 
 
+        $docQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1 ';
+
         // Check if we're searching
         $filter = $customSearchData['filter'];
         $searchFilter = $filter;
@@ -484,6 +490,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $docQuery . '
                 ' . $specialFilterQuery;
 
         } else {
@@ -514,6 +521,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $docQuery . '
                 ' . $specialFilterQuery;
         }
 
@@ -557,6 +565,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $docQuery . '
                 ' . $specialFilterQuery . '
              
                 ORDER BY ' . $sortQuery . '
@@ -590,6 +599,7 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
+                ' . $docQuery . '
                 ' . $specialFilterQuery . '
               
                 ORDER BY ' . $sortQuery . '
