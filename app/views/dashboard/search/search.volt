@@ -7,7 +7,14 @@
     <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/select2-bootstrap.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/vendor/shepherd.css') }}"/>
 
-
+    <style>
+        .shepherd-element.shepherd-theme-arrows .shepherd-content:before{
+            opacity: 0;
+        }
+        .shepherd-element.shepherd-theme-arrows .visible:before{
+            opacity: 1 !important;
+        }
+    </style>
 {% endblock %}
 {% block extra_js %}
 

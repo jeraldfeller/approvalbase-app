@@ -77,6 +77,27 @@
               showCancelLink: true
             }
           });
+
+          tour.addStep('freshchat', {
+             title: 'Fresh Chat',
+             text: 'Firstly, if you ever need to talk to our support team,  click the chat bubble and write us a message.  We will respond as soon as possible',
+             attachTo: {
+                 element: '#fc_widget',
+                 on: 'left'
+             },
+              buttons: [
+                  {
+                      text: 'Exit',
+                      classes: 'btn btn-default',
+                      action: tour.cancel
+                  },
+                  {
+                      text: 'Next',
+                      classes: 'btn btn-primary',
+                      action: tour.next
+                  }]
+          });
+
           tour.addStep('step1', {
             title: 'Search',
             text: 'Search applications for key phrases and filter by <br> council area, construction cost and lodgement date',
@@ -207,6 +228,14 @@
           setTimeout(function(){
             tour.start();
             Shepherd.on('show', function(){
+                if(tour.getCurrentStep().id == 'freshchat'){
+                    console.log('fresh');
+                    setTimeout(function(){
+                        $('.shepherd-content').addClass('visible');
+                    }, 100);
+
+                }
+
               if(tour.getCurrentStep().id == 'step4'){
                 console.log('STEP4');
                 $('#filterModal').modal('hide');
@@ -218,7 +247,7 @@
                 $('.downloadPdfBtn').focus();
               }
             });
-          }, 500);
+            }, 500);
 
         }
       });

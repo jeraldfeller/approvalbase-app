@@ -75,7 +75,7 @@ class UsersController extends _BaseController {
             ]
         ]);
         if($user){
-            $date = new \DateTime();
+            $date = new \DateTime(date('Y-m-d', strtotime('-5 days')));
             $user->setCreated($date);
             $user->setSubscriptionStatus('trial');
             $user->save();

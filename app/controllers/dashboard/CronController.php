@@ -16,6 +16,7 @@ use Aiden\Models\DasPhrases;
 use Aiden\Models\DasUsers;
 use Aiden\Models\Email;
 use Aiden\Models\ErrorDocs;
+use Aiden\Models\MetaData;
 use Aiden\Models\Users;
 use Aiden\Models\Billing;
 use Aiden\Models\UsersPhrases;
@@ -29,6 +30,7 @@ class CronController extends _BaseController
 {
     public function checkSubscriptionAction()
     {
+        $trialPeriod = MetaData::getMetaDataByTitle('Trial Period');
         $dateNow = date('Y-m-d');
         //check trial users
         $user = new Users();
@@ -40,7 +42,7 @@ class CronController extends _BaseController
         );
 
         foreach ($results as $row) {
-            $createdPlus10 = date('Y-m-d', strtotime($row->getCreated()->format('Y-m-d') . '+10 days'));
+            $createdPlus10 = date('Y-m-d', strtotime($row->getCreated()->format('Y-m-d') . '+'.$trialPeriod));
             echo $row->getEmail() . ' ' . $dateNow . ' - ' . $createdPlus10 . '<br>';
             if ($createdPlus10 <= $dateNow) {
                 // trial expired
