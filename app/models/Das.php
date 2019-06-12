@@ -837,7 +837,11 @@ class Das extends _BaseModel {
 //                AND ((d.lodge_date >= "' . $from . '" AND d.lodge_date <= "' . $to . '") OR (d.created >= "' . $from . '" AND d.created <= "' . $to . '"))';
 
         $sql = 'SELECT count(d.id) as totalCount, SUM(d.estimated_cost) as cost
-                FROM das d WHERE created >= "'.$from.'" AND created <= "'.$to.'"';
+                FROM das d
+                WHERE ((lodge_date >= "'.$from.'" AND lodge_date <= "'.$to.'") OR (created >= "'.$from.'" AND created <= "'.$to.'"))
+                AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1
+                AND d.description NOT LIKE "%modification%"';
+
 
 
         $resultDas = new \Phalcon\Mvc\Model\Resultset\Simple(

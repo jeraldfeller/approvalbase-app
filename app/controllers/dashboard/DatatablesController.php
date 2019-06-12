@@ -67,6 +67,7 @@ class DatatablesController extends _BaseController
         $metadataQuery = '';
         if ($metadata == 'true') {
             $metadataQuery = ' AND d.estimated_cost > 0 ';
+            $costQuery = " AND (d.estimated_cost >= " . $minCost . " AND d.estimated_cost <= " . $maxCost . ")";
         }
 
 
