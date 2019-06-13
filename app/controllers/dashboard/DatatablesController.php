@@ -71,7 +71,7 @@ class DatatablesController extends _BaseController
         }
 
 
-        $docQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1 ';
+        $docQuery = ' HAVING docCount > 0 ';
 
 
         // Check if we're searching
@@ -162,7 +162,8 @@ class DatatablesController extends _BaseController
                        d.crawled,
                        c.name as councilName,
                        c.logo_url,
-                       p.name as applicantName
+                       p.name as applicantName,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c, das_parties p
                 WHERE d.council_id = c.id
                 AND d.id = p.das_id
@@ -172,8 +173,9 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
-                ' . $specialFilterQuery;
+    
+                ' . $specialFilterQuery . '
+                 ' . $docQuery;
 
         } else {
             $sql = 'SELECT
@@ -189,7 +191,8 @@ class DatatablesController extends _BaseController
                        d.created,
                        d.crawled,
                        c.name as councilName,
-                       c.logo_url
+                       c.logo_url,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c
                 WHERE d.council_id = c.id
                 AND ((d.lodge_date >= "' . $startDate . '" AND d.lodge_date <= "' . $endDate . '") OR (d.created >= "' . $startDate . '" AND d.created <= "' . $endDate . '"))
@@ -197,8 +200,9 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
-                ' . $specialFilterQuery;
+               
+                ' . $specialFilterQuery . '
+                 ' . $docQuery;
         }
 
 
@@ -225,7 +229,8 @@ class DatatablesController extends _BaseController
                        d.crawled,
                        c.name as councilName,
                        c.logo_url,
-                       p.name as applicantName
+                       p.name as applicantName,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c, das_parties p
                 WHERE d.council_id = c.id
                 AND d.id = p.das_id
@@ -235,8 +240,9 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
+               
                 ' . $specialFilterQuery . '
+                 ' . $docQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         } else {
@@ -253,7 +259,8 @@ class DatatablesController extends _BaseController
                        d.created,
                        d.crawled,
                        c.name as councilName,
-                       c.logo_url
+                       c.logo_url,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c
                 WHERE d.council_id = c.id
                 AND ((d.lodge_date >= "' . $startDate . '" AND d.lodge_date <= "' . $endDate . '"))
@@ -261,13 +268,12 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
+               
                 ' . $specialFilterQuery . '
+                 ' . $docQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         }
-
-//        echo $sql;
 
 
         // Base model
@@ -393,7 +399,7 @@ class DatatablesController extends _BaseController
         }
 
 
-        $docQuery = ' AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1 ';
+        $docQuery = ' HAVING docCount > 0 ';
 
         // Check if we're searching
         $filter = $customSearchData['filter'];
@@ -477,7 +483,8 @@ class DatatablesController extends _BaseController
                        c.name as councilName,
                        c.logo_url,
                        p.name as applicantName,
-                       du.status
+                       du.status,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c, das_parties p, das_users du
                 WHERE d.council_id = c.id
                 AND d.id = du.das_id
@@ -491,8 +498,9 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
-                ' . $specialFilterQuery;
+              
+                ' . $specialFilterQuery . '
+            ' . $docQuery;
 
         } else {
             $sql = 'SELECT
@@ -510,7 +518,8 @@ class DatatablesController extends _BaseController
                        du.seen,
                        c.name as councilName,
                        c.logo_url,
-                       du.status
+                       du.status,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c, das_users du
                 WHERE d.council_id = c.id
                 AND d.id = du.das_id
@@ -522,8 +531,9 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
-                ' . $specialFilterQuery;
+              
+                ' . $specialFilterQuery . '
+            ' . $docQuery;
         }
 
         $dasForCount = new \Phalcon\Mvc\Model\Resultset\Simple(
@@ -551,7 +561,8 @@ class DatatablesController extends _BaseController
                        c.name as councilName,
                        c.logo_url,
                        p.name as applicantName,
-                       du.status
+                       du.status,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c, das_parties p, das_users du
                 WHERE d.council_id = c.id
             
@@ -566,9 +577,9 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
+               
                 ' . $specialFilterQuery . '
-             
+              ' . $docQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         } else {
@@ -587,7 +598,8 @@ class DatatablesController extends _BaseController
                        du.seen,
                        c.name as councilName,
                        c.logo_url,
-                       du.status
+                       du.status,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c, das_users du
                 WHERE d.council_id = c.id
                
@@ -600,9 +612,9 @@ class DatatablesController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
                 ' . $metadataQuery . '
-                ' . $docQuery . '
+                
                 ' . $specialFilterQuery . '
-              
+              ' . $docQuery . '
                 ORDER BY ' . $sortQuery . '
                 LIMIT ' . $offset . ',' . $filterLimit;
         }

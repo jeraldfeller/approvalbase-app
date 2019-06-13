@@ -836,11 +836,12 @@ class Das extends _BaseModel {
 //                AND du.das_id = d.id
 //                AND ((d.lodge_date >= "' . $from . '" AND d.lodge_date <= "' . $to . '") OR (d.created >= "' . $from . '" AND d.created <= "' . $to . '"))';
 
-        $sql = 'SELECT count(d.id) as totalCount, SUM(d.estimated_cost) as cost
+        $sql = 'SELECT d.id, d.estimated_cost, (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount 
                 FROM das d
                 WHERE ((lodge_date >= "'.$from.'" AND lodge_date <= "'.$to.'") OR (created >= "'.$from.'" AND created <= "'.$to.'"))
-                AND (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) > 1
-                AND d.description NOT LIKE "%modification%"';
+        
+                AND d.description NOT LIKE "%modification%"
+                HAVING docCount > 0';
 
 
 
@@ -849,6 +850,13 @@ class Das extends _BaseModel {
             , $das
             , $das->getReadConnection()->query($sql, [], [])
         );
+
+        $totalProjectCount = 0;
+        $totalProjectCost = 0;
+        foreach($resultDas as $row){
+            $totalProjectCost += $row->getEstimatedCost();
+            $totalProjectCount++;
+        }
 
 
         $das = new Das();
@@ -890,8 +898,8 @@ class Das extends _BaseModel {
             }
         }
         return [
-            'totalCount' => $resultDas[0]->totalCount,
-            'totalCost' => ($resultDas[0]->cost != null ? $resultDas[0]->cost : 0),
+            'totalCount' => $totalProjectCount,
+            'totalCost' => ($totalProjectCost != null ? $totalProjectCost : 0),
             'incDec' => $return
         ];
     }

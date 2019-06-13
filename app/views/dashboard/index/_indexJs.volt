@@ -144,7 +144,7 @@
     $('#documents-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
 
-      //setTimeout(function () {
+      setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -157,7 +157,7 @@
         }).done(function (response) {
           resolve(response);
         });
-      //}, 1000)
+      }, 1000)
 
     });
   }
@@ -166,7 +166,7 @@
   function getAlertsData() {
     $('#alerts-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-      //setTimeout(function () {
+      setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -178,7 +178,7 @@
         }).done(function (response) {
           resolve(response);
         });
-      //}, 2300)
+      }, 2300)
 
     });
   }
@@ -186,7 +186,7 @@
   function getProjectsData() {
     $('#alerts-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-      //setTimeout(function () {
+      setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -198,7 +198,7 @@
         }).done(function (response) {
           resolve(response);
         });
-     //}, 2300)
+     }, 2300)
 
     });
   }
@@ -234,7 +234,7 @@
   function getApplicationsSavedData() {
     $('#applications-saved-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-     //setTimeout(function () {
+     setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
           type: 'POST',
@@ -247,7 +247,7 @@
         }).done(function (response) {
           resolve(response);
         });
-    //}, 3100)
+    }, 3100)
 
     });
   }
@@ -256,7 +256,7 @@
   function getSources() {
     $('#councils-container').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
     return new Promise((resolve, reject) => {
-     // setTimeout(function () {
+      setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getSources') }}',
           type: 'POST',
@@ -268,7 +268,7 @@
         }).done(function (response) {
           resolve(response);
         });
-   // }, 4000)
+   }, 4000)
 
     });
   }
@@ -276,7 +276,7 @@
   function getTableData(){
 //    $('#table-tbody').html('<tr><td colspan="5" style="text-align: center;"><i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i></td> </tr>');
     return new Promise((resolve, reject) => {
-    //  setTimeout(function(){
+      setTimeout(function(){
         $.ajax({
           url: '{{ url('dashboard/getTableData') }}',
           type: 'POST',
@@ -287,7 +287,7 @@
         }).done(function (response) {
           resolve(response);
         });
-   // }, 6000);
+   }, 6000);
 
     });
   }
@@ -326,16 +326,21 @@
       ).then(
         getTableData().then(
           d => {
-            $tableHtml = '';
-            for(var i = 0; i < d.length; i++){
-              $tableHtml += '<tr>' +
-                '<td>'+d[i].name+'</td>' +
-                '<td>'+formatNumber(d[i].projects)+'</td>' +
-                '<td>'+formatNumber(d[i].documents)+'</td>' +
-                '<td>$'+formatNumber(d[i].averageCost)+'</td>' +
-                '<td>$'+formatNumber(d[i].totalCost)+'</td>' +
-                '</tr>';
-            }
+              $totalProject = 0;
+              $tableHtml = '';
+              $.each(d, function(key, prop){
+                  $tableHtml += '<tr>' +
+                      '<td>'+key+'</td>' +
+                      '<td>'+formatNumber(prop.projects)+'</td>' +
+                      '<td>'+formatNumber(prop.documents)+'</td>' +
+                      '<td>$'+formatNumber(Math.floor(prop.totalCost / prop.projects))+'</td>' +
+                      '<td>$'+formatNumber(prop.totalCost)+'</td>' +
+                      '</tr>';
+
+                  $totalProject += prop.projects;
+              });
+
+              console.log('Total projects: ', $totalProject);
             $('#table-tbody').html($tableHtml);
             console.log(typeof(table));
             if(typeof(table) ==  'string'){

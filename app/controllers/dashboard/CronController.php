@@ -598,6 +598,10 @@ class CronController extends _BaseController
                     $metadataQuery = ' AND d.estimated_cost > 0 ';
                 }
 
+
+                // doc query
+                $docQuery = ' HAVING docCount > 0 ';
+
                 // search addresses
 
                 $searchAddressesQuery = '';
@@ -648,7 +652,8 @@ class CronController extends _BaseController
                     $sql = 'SELECT
                        d.id,
                        d.description,
-                       p.name as applicantName
+                       p.name as applicantName,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c, das_parties p
                 WHERE d.council_id = c.id
                 AND d.id = p.das_id
@@ -657,11 +662,13 @@ class CronController extends _BaseController
                 ' . $costQuery . '
                 ' . $councilsQry . '
               
-                ' . $metadataQuery;
+                ' . $metadataQuery . '
+                ' . $docQuery;
                 } else {
                     $sql = 'SELECT
                        d.id,
-                       d.description
+                       d.description,
+                       (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount
                 FROM das d, councils c
                 WHERE d.council_id = c.id
                 ' . $searchQuery . '
@@ -669,7 +676,8 @@ class CronController extends _BaseController
                 ' . $councilsQry . '
                
                 ' . $metadataQuery . ' 
-                ' . $dateFilterQuery . $excludedPhrasesQuery;
+                ' . $dateFilterQuery . $excludedPhrasesQuery . '
+                ' . $docQuery;
                 }
 
                 $result = new \Phalcon\Mvc\Model\Resultset\Simple(

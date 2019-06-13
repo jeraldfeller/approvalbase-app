@@ -5,7 +5,7 @@ date_default_timezone_set('Australia/Sydney');
  * APPLICATION ENVIRONMENT
  *---------------------------------------------------------------
  */
-define('ENVIRONMENT', 'production');
+define('ENVIRONMENT', 'product');
 
 error_reporting(E_ALL);
 

@@ -184,17 +184,27 @@ class IndexController extends _BaseController
             $to = date('Y-m-d', strtotime('+1 days'));
         }
 
-        $sql = 'SELECT c.name, (
-            SELECT count(id) FROM das WHERE council_id = c.id AND created >= "'.$from.'" AND created <= "'.$to.'"
-        ) as projectsCount,
+        $sql = 'SELECT c.name(
+            SELECT count(d.id) FROM das d WHERE d.council_id = c.id AND d.created >= "'.$from.'" AND d.created <= "'.$to.' AND (SELECT count(id) FROM das_documents WHERE id = d.id) > 0"
+        ) as projectsCount ,
         (
             SELECT count(dd.id) FROM das_documents dd, das d WHERE d.council_id = c.id AND d.id = dd.das_id AND d.created >= "'.$from.'" AND d.created <= "'.$to.'"
         ) as docsCount,
         (
             SELECT SUM(estimated_cost) FROM das WHERE council_id = c.id AND created >= "'.$from.'" AND created <= "'.$to.'"
         ) as totalCost
-        FROM councils c WHERE c.id != 1 AND c.id != 2 AND c.id != 8 AND c.id != 16 AND c.id != 33 ORDER BY `projectsCount` DESC';
+        FROM councils c WHERE c.id != 1 AND c.id != 2 AND c.id != 8 AND c.id != 16 AND c.id != 33 
+      
+        ORDER BY `projectsCount` DESC';
 
+
+        // get project count and cost
+
+        $sql = 'SELECT c.name, d.id, d.estimated_cost, (SELECT COUNT(id) FROM das_documents WHERE das_id = d.id) As docCount 
+                FROM das d, councils c
+                WHERE d.council_id = c.id AND ((d.lodge_date >= "'.$from.'" AND d.lodge_date <= "'.$to.'") OR (d.created >= "'.$from.'" AND d.created <= "'.$to.'"))
+                AND d.description NOT LIKE "%modification%"
+                HAVING docCount > 0';
 
         $das = new Das();
         $result = new \Phalcon\Mvc\Model\Resultset\Simple(
@@ -205,13 +215,30 @@ class IndexController extends _BaseController
 
         $data = [];
         foreach ($result as $row){
-            $data[] = [
-              'name' => $row->name,
-                'projects' => $row->projectsCount,
-                'documents' => $row->docsCount,
-                'averageCost' => number_format(($row->totalCost != null || $row->totalCost != 0 ? $row->totalCost / $row->projectsCount : 0), 0),
-                'totalCost' => number_format(($row->totalCost != null ? $row->totalCost : 0), 0),
-            ];
+
+            if(isset($data[$row->name])){
+
+                $data[$row->name] = [
+                    'projects' => $data[$row->name]['projects'] + 1,
+                    'totalCost' =>($row->estimated_cost != null ? $row->estimated_cost : 0) +  $data[$row->name]['totalCost'],
+                    'documents' =>  $data[$row->name]['documents'] + $row->docCount
+                ];
+
+            }else{
+                $data[$row->name] = [
+                  'projects' => 1,
+                  'totalCost' => ($row->estimated_cost != null ? $row->estimated_cost : 0),
+                    'documents' => $row->docCount,
+                ];
+            }
+
+//            $data[] = [
+//              'name' => $row->name,
+//                'projects' => $row->projectsCount,
+//                'documents' => $row->docsCount,
+//                'averageCost' => number_format(($row->totalCost != null || $row->totalCost != 0 ? $row->totalCost / $row->projectsCount : 0), 0),
+//                'totalCost' => number_format(($row->totalCost != null ? $row->totalCost : 0), 0),
+//            ];
         }
 
         return json_encode($data);

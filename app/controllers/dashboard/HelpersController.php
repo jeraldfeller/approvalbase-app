@@ -202,4 +202,32 @@ class HelpersController extends _BaseController
         $das = null;
         $result = null;
     }
+
+    public function checkDaCountWithDocsAction(){
+        $from = '2018-06-13';
+        $to = '2019-06-13';
+        $das = Das::find([
+            'conditions' => 'council_id = 5 AND ((lodge_date >= "'.$from.'" AND lodge_date <= "'.$to.'") OR (created >= "'.$from.'" AND created <= "'.$to.'")) AND description NOT LIKE "%modification%" '
+        ]);
+        $i = 0;
+        $totalCount = 0;
+        foreach($das as $row){
+            $id = $row->getId();
+            $doc = DasDocuments::find([
+                'conditions' => 'das_id = :dasId:',
+                'bind' => [
+                    'dasId' => $id
+                ]
+            ]);
+            if(count($doc) > 0){
+                $totalCount += count($doc);
+                $i++;
+            }else{
+                echo $id . ' - ' . $row->getCouncilUrl() . '<br>';
+            }
+        }
+
+        echo $i . ' - ' . $totalCount;
+
+    }
 }
