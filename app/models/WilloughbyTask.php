@@ -19,7 +19,14 @@ class WilloughbyTask extends _BaseModel
         $this->acceptTerms($this->getAspFormDataByUrl($url));
 
         // check documents;
-        $this->extractDocuments("", $da);
+        for($x = 0; $x < count($actions); $x++){
+            switch ($actions[$x]){
+                case 'documents':
+                    $this->extractDocuments("", $da);
+                    break;
+            }
+        }
+
 
     }
 

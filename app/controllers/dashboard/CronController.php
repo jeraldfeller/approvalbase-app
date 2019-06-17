@@ -26,6 +26,7 @@ use Aiden\Models\UsersEmail;
 use Aiden\Models\DasInvalidDocs;
 use Aiden\Models\CamdenTask;
 use Aiden\Models\WilloughbyTask;
+use Aiden\Models\BaysideTask;
 
 require 'simple_html_dom.php';
 class CronController extends _BaseController
@@ -1538,7 +1539,7 @@ class CronController extends _BaseController
         $das = Das::find([
            'conditions' => 'checked = :checked: AND council_id = :councilId: AND lodge_date < :date: ORDER BY id DESC LIMIT 100',
             'bind' => [
-                'councilId' => 29,
+                'councilId' => 32,
                 'checked' => 0,
                 'date' => $date
             ]
@@ -1552,6 +1553,11 @@ class CronController extends _BaseController
                             $camden = new CamdenTask();
                             $camden->init(['data'], $da);
                             $camden = null;
+                            break;
+                        case 32: // Bayside
+                            $bayside = new BaysideTask();
+                            $bayside->init(['documents'], $da);
+                            $bayside = null;
                             break;
                         case 29: // Willoughby
                             $willoughby = new WilloughbyTask();

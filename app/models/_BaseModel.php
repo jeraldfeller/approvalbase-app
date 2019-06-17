@@ -73,11 +73,13 @@ class _BaseModel extends \Phalcon\Mvc\Model {
             case DasDocuments::DOCUMENT_EXISTS:
 
 
-                echo "Document $name already exists, ignoring...";
+                echo "Document $name already exists, ignoring...<br>";
                 return true;
 
-            case DasDocuments::DOCUMENT_NO_SAVED:
+            case DasDocuments::DOCUMENT_ERROR_SAVING:
              //   $this->logger->error(" Error creating related document [{document_name}]", ["document_name" => $name]);
+
+                echo " Error creating related document $name <br>";
                 return false;
 
             case DasDocuments::DOCUMENT_NO_NAME:
@@ -156,6 +158,32 @@ class _BaseModel extends \Phalcon\Mvc\Model {
 
         return $formData;
 
+    }
+
+    public function scrapeTo($url){
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 2);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 300);
+        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0');
+
+        $output = curl_exec($ch);
+        $errno = curl_errno($ch);
+        $errmsg = curl_error($ch);
+        curl_close($ch);
+
+        if ($errno !== 0) {
+            $this->logger->error("cURL error: {errmsg} ({errno})", ["errmsg" => $errmsg, "errno" => $errno]);
+            return false;
+        }
+
+        return str_get_html($output);
     }
 
 
