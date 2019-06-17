@@ -73,6 +73,11 @@ class Users extends _BaseModel {
     /**
      * @Column(type="string", nullable=true)
      */
+    protected $reactivated;
+
+    /**
+     * @Column(type="string", nullable=true)
+     */
     protected $last_login;
 
     /**
@@ -447,6 +452,27 @@ class Users extends _BaseModel {
     public function setCreated(\DateTime $created) {
 
         $this->created = $created->format('Y-m-d H:i:s');
+
+    }
+
+    /**
+     * Gets the creation date
+     * @return \DateTime|null
+     */
+    public function getReactivated() {
+
+        $reactivatedDateTime = \DateTime::createFromFormat('Y-m-d H:i:s', $this->reactivated);
+        return $reactivatedDateTime;
+
+    }
+
+    /**
+     * Sets the creation date
+     * @param string $created
+     */
+    public function setReactivated(\DateTime $reactivated) {
+
+        $this->reactivated = $reactivated->format('Y-m-d H:i:s');
 
     }
 

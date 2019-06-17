@@ -37,9 +37,16 @@ class BaysideTask extends _BaseModel
         foreach($filesContainer as $file){
             $a = $file->find('a', 1);
             if($a){
+                $date = null;
+                $td = $file->find('td', 2);
+                if($td){
+                    $dateStr = $this->cleanString($td->innertext());
+                    $documentDate = \DateTime::createFromFormat("d/m/Y", $dateStr);
+
+                }
                 $documentName = $this->cleanString($a->innertext());
                 $documentUrl = 'https://eplanning.bayside.nsw.gov.au/ePlanning/'.str_replace('../../', '', $a->getAttribute('href'));
-                if ($this->saveDocument($da, $documentName, $documentUrl)) {
+                if ($this->saveDocument($da, $documentName, $documentUrl, $documentDate)) {
                     $addedDocuments++;
                 }
             }

@@ -353,6 +353,7 @@ class DasDocuments extends _BaseModel {
             return self::DOCUMENT_SAVED;
         }
         else {
+            var_dump($daDocument->getMessages());
             return self::DOCUMENT_ERROR_SAVING;
         }
 

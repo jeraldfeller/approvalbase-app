@@ -33,11 +33,11 @@ class CronController extends _BaseController
 {
     public function checkSubscriptionAction()
     {
-        $trialPeriod = MetaData::getMetaDataByTitle('Trial Period');
+
         $dateNow = date('Y-m-d');
         //check trial users
         $user = new Users();
-        $sql = 'SELECT id, name, last_name, email, created, subscription_status FROM users WHERE subscription_status = "trial"';
+        $sql = 'SELECT id, name, last_name, email, created, reactivated, subscription_status FROM users WHERE subscription_status = "trial" OR subscription_status = "reactivated trial"';
         $results = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
             , $user
@@ -45,8 +45,16 @@ class CronController extends _BaseController
         );
 
         foreach ($results as $row) {
-            $createdPlus10 = date('Y-m-d', strtotime($row->getCreated()->format('Y-m-d') . '+'.$trialPeriod));
-            echo $row->getEmail() . ' ' . $dateNow . ' - ' . $createdPlus10 . '<br>';
+
+            $numDays = ($row->getsubscriptionStatus() == 'trial' ? MetaData::getMetaDataByTitle('Trial Period') : MetaData::getMetaDataByTitle('Reactivated Trial Period'));
+            echo $numDays . ' <br>';
+            $created = ($row->getsubscriptionStatus() == 'trial' ? $row->getCreated()->format('Y-m-d') : $row->getReactivated()->format('Y-m-d'));
+            $createdPlus10 = date('Y-m-d', strtotime($created . '+'.$numDays.' days'));
+            echo "Email: ".$row->getEmail()."<br>";
+            echo "Date: ".$dateNow ."<br>";
+            echo "Created: ".$row->getCreated()->format('Y-m-d') ."<br>";
+            echo "Created+: ".$createdPlus10 ."<br>";
+            echo "<hr>";
             if ($createdPlus10 <= $dateNow) {
                 // trial expired
                 $this->updateSubscriptionStatus($row->getId());
@@ -1536,12 +1544,14 @@ class CronController extends _BaseController
 
     public function updateDasDataAction(){
         $date = date('Y-m');
+        $dateFrom = date('Y-m-d', strtotime('-2 months'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND lodge_date < :date: ORDER BY id DESC LIMIT 100',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND lodge_date > :dateFrom: AND lodge_date < :date: ORDER BY id DESC LIMIT 10',
             'bind' => [
-                'councilId' => 32,
+                'councilId' => 5,
                 'checked' => 0,
-                'date' => $date
+                'date' => $date,
+                'dateFrom' => $dateFrom
             ]
         ]);
         if($das){
@@ -1551,7 +1561,7 @@ class CronController extends _BaseController
                     switch ($da->getCouncilId()){
                         case 5: // Camdem
                             $camden = new CamdenTask();
-                            $camden->init(['data'], $da);
+                            $camden->init(['data', 'documents'], $da);
                             $camden = null;
                             break;
                         case 32: // Bayside

@@ -15,6 +15,7 @@ class CamdenTask extends _BaseModel
     public function init($actions, $da, $method ='get')
     {
         $url = $da->getCouncilUrl();
+        echo 'URL : ' . $url . '<br>';
         $html = ($method == 'get' ? $this->curlToGet($url) : $this->curlToGet($url));
         if ($html) {
             $htmlData = str_get_html($html);
@@ -25,6 +26,9 @@ class CamdenTask extends _BaseModel
                     switch ($a) {
                         case 'data':
                             $this->getData($htmlData, $da);
+                            break;
+                        case 'documents':
+                            $this->extractDocuments($htmlData, $da);
                             break;
                     }
                 }
@@ -60,6 +64,41 @@ class CamdenTask extends _BaseModel
         }
         $estimatedCostValue = self::cleanString($divElement->innertext());
         return $this->saveEstimatedCost($da, $estimatedCostValue);
+    }
+
+    protected function extractDocuments($html, $da, $params = null): bool
+    {
+        $addedDocuments = 0;
+
+        $tableElement = $html->find("table[id=doc-table]", 0);
+        if ($tableElement === null) {
+            return false;
+        }
+
+        $tbodyElement = $tableElement->children(1);
+        if ($tbodyElement === null) {
+            return false;
+        }
+
+        foreach ($tbodyElement->children() as $tableRowElement) {
+
+            $documentNameElement = $tableRowElement->children(1);
+            if ($documentNameElement === null) {
+                continue;
+            }
+
+            $documentName = $this->cleanString($documentNameElement->innertext());
+
+            // URL
+            $anchorElement = $tableRowElement->children(4)->children(0);
+            $documentUrl = $this->cleanString($anchorElement->href);
+
+            if ($this->saveDocument($da, $documentName, $documentUrl, $da->getLodgeDate())) {
+                $addedDocuments++;
+            }
+        }
+
+        return ($addedDocuments > 0);
     }
 
     public function curlToGet($url){
