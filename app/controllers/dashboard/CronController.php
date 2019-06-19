@@ -9,6 +9,7 @@
 namespace Aiden\Controllers;
 
 use Aiden\Forms\EditLeadForm;
+
 use Aiden\Models\Das;
 use Aiden\Models\DasAddresses;
 use Aiden\Models\DasDocuments;
@@ -28,6 +29,8 @@ use Aiden\Models\CamdenTask;
 use Aiden\Models\WilloughbyTask;
 use Aiden\Models\BaysideTask;
 use Aiden\Models\CampbelltownTask;
+use Aiden\Models\CanadabayTask;
+use Aiden\Models\CanterburyBankstownTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1546,9 +1549,9 @@ class CronController extends _BaseController
         $date = date('Y-m');
         $dateFrom = date('Y-m-d', strtotime('-6 months'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL ORDER BY id DESC LIMIT 50',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 50',
             'bind' => [
-                'councilId' => 5,
+                'councilId' => 34,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1569,15 +1572,25 @@ class CronController extends _BaseController
                             $campbelltown->init(['data', 'documents'], $da);
                             $campbelltown = null;
                             break;
-                        case 32: // Bayside
-                            $bayside = new BaysideTask();
-                            $bayside->init(['documents'], $da);
-                            $bayside = null;
+                        case 7:
+                            $canadabay = new CanadabayTask();
+                            $canadabay->init(['documents'], $da);
+                            $canadabay = null;
                             break;
                         case 29: // Willoughby
                             $willoughby = new WilloughbyTask();
                             $willoughby->init(['data'], $da);
                             $willoughby = null;
+                            break;
+                        case 32: // Bayside
+                            $bayside = new BaysideTask();
+                            $bayside->init(['documents'], $da);
+                            $bayside = null;
+                            break;
+                        case 34: // Canterburybankstown
+                            $canterburyBankstown = new CanterburyBankstownTask();
+                            $canterburyBankstown->init(['documents'], $da);
+                            $canterburyBankstown = null;
                             break;
                     }
                 }
