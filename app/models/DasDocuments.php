@@ -36,7 +36,7 @@ class DasDocuments extends _BaseModel {
      */
     protected $as3_url;
     /**
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
     protected $date;
     /**

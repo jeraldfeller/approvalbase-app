@@ -31,6 +31,7 @@ use Aiden\Models\BaysideTask;
 use Aiden\Models\CampbelltownTask;
 use Aiden\Models\CanadabayTask;
 use Aiden\Models\CanterburyBankstownTask;
+use Aiden\Models\CityofsydneyTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1549,9 +1550,9 @@ class CronController extends _BaseController
         $date = date('Y-m');
         $dateFrom = date('Y-m-d', strtotime('-6 months'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 50',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 100',
             'bind' => [
-                'councilId' => 34,
+                'councilId' => 9,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1576,6 +1577,11 @@ class CronController extends _BaseController
                             $canadabay = new CanadabayTask();
                             $canadabay->init(['documents'], $da);
                             $canadabay = null;
+                            break;
+                        case 9:
+                            $cityofsydney = new CityofsydneyTask();
+                            $cityofsydney->init(['documents'], $da);
+                            $cityofsydney = null;
                             break;
                         case 29: // Willoughby
                             $willoughby = new WilloughbyTask();

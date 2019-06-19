@@ -214,7 +214,7 @@ class _BaseModel extends \Phalcon\Mvc\Model {
         curl_close($ch);
 
         if ($errno !== 0) {
-            $this->logger->error("cURL error: {errmsg} ({errno})", ["errmsg" => $errmsg, "errno" => $errno]);
+            echo "cURL error: $errmsg $errno <br>";
             return false;
         }
 
