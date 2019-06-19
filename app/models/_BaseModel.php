@@ -94,6 +94,41 @@ class _BaseModel extends \Phalcon\Mvc\Model {
     }
 
 
+    public function saveLodgeDate($da, $date) {
+
+        if (($date instanceof \DateTime) === false) {
+            echo "Passed $date [{date}] was not instanceof \DateTime <br>";
+            return false;
+        }
+
+        $oldLodgeDate = $da->getLodgeDate();
+        $date->setTime(0, 0, 0);
+
+
+        if (is_a($oldLodgeDate, "DateTime") && $date->format("Y-m-d") === $oldLodgeDate->format("Y-m-d")) {
+
+            echo "Date did not change, skipping...\n";
+            return true;
+        }
+        else {
+
+            if ($date !== false && $oldLodgeDate !== $date) {
+
+                $da->setLodgeDate($date);
+                if ($da->save()) {
+                    echo "Created lodge date ".$date->format("r")." \n";
+                    return true;
+                }
+                else {
+                    echo "Error creating lodge date ".$date->format("r")." \n";
+                    return false;
+                }
+            }
+        }
+
+    }
+
+
 
 
     public function getAspFormDataByUrl($url)
@@ -113,8 +148,8 @@ class _BaseModel extends \Phalcon\Mvc\Model {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../../../app/cookies/');
-        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../cookies/cookies.txt');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../cookies/cookies.txt');
         curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0');
 
         $output = curl_exec($ch);
@@ -169,8 +204,8 @@ class _BaseModel extends \Phalcon\Mvc\Model {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 300);
-        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../../../app/cookies/');
-        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../cookies/cookies.txt');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../cookies/cookies.txt');
         curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0');
 
         $output = curl_exec($ch);

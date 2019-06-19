@@ -27,7 +27,7 @@ use Aiden\Models\DasInvalidDocs;
 use Aiden\Models\CamdenTask;
 use Aiden\Models\WilloughbyTask;
 use Aiden\Models\BaysideTask;
-
+use Aiden\Models\CampbelltownTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1544,9 +1544,9 @@ class CronController extends _BaseController
 
     public function updateDasDataAction(){
         $date = date('Y-m');
-        $dateFrom = date('Y-m-d', strtotime('-2 months'));
+        $dateFrom = date('Y-m-d', strtotime('-6 months'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND lodge_date > :dateFrom: AND lodge_date < :date: ORDER BY id DESC LIMIT 10',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL ORDER BY id DESC LIMIT 50',
             'bind' => [
                 'councilId' => 5,
                 'checked' => 0,
@@ -1563,6 +1563,11 @@ class CronController extends _BaseController
                             $camden = new CamdenTask();
                             $camden->init(['data', 'documents'], $da);
                             $camden = null;
+                            break;
+                        case 6: // Campbelltown
+                            $campbelltown = new CampbelltownTask();
+                            $campbelltown->init(['data', 'documents'], $da);
+                            $campbelltown = null;
                             break;
                         case 32: // Bayside
                             $bayside = new BaysideTask();

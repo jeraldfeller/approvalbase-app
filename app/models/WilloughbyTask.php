@@ -60,8 +60,8 @@ class WilloughbyTask extends _BaseModel
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../../../app/cookies/');
-        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../cookies/cookies.txt');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../cookies/cookies.txt');
         curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0');
 
         $output = curl_exec($ch);
@@ -168,8 +168,8 @@ class WilloughbyTask extends _BaseModel
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../../../app/cookies/');
-        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../../../app/cookies/');
+        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../cookies/cookies.txt');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../cookies/cookies.txt');
 
         $output = curl_exec($ch);
         $errno = curl_errno($ch);

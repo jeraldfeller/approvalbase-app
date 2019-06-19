@@ -50,7 +50,32 @@ class CamdenTask extends _BaseModel
     {
         // get estimated cost
         $this->getEstimatedCost($html, $da);
+        $this->extractLodgeDate($html, $da);
         return true;
+    }
+
+    public function extractLodgeDate($html, $da)
+    {
+        echo "extracting lodge date....<br>";
+        $tdElements = $html->find("td");
+        foreach ($tdElements as $tdElement) {
+
+            $tdText = $this->cleanString($tdElement->innertext());
+            if (strpos(strtolower($tdText), "submitted date") === false) {
+                continue;
+            }
+
+            $valueElement = $tdElement->next_sibling();
+            if ($valueElement === null) {
+                continue;
+            }
+
+            $value = $this->cleanString($valueElement->innertext());
+            $date = \DateTime::createFromFormat("d/m/Y", $value);
+            return ($this->saveLodgeDate($da, $date));
+        }
+
+        return false;
     }
 
     public function getEstimatedCost($html, $da){
