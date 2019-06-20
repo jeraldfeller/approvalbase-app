@@ -532,6 +532,9 @@
                                                             Name: <strong>{{ fname }} {{ lname }}</strong>
                                                         </p>
                                                         <p style="font-size: 15px; color: #666666; line-height: 22px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; margin: 0 0 10px; padding: 0;">
+                                                            Mobile Number: <strong>{{ contactNumber }}</strong>
+                                                        </p>
+                                                        <p style="font-size: 15px; color: #666666; line-height: 22px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; margin: 0 0 10px; padding: 0;">
                                                             Website: <strong>{{ website }}</strong>
                                                         </p>
                                                         <p style="font-size: 15px; color: #666666; line-height: 22px; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; font-weight: normal; margin: 0 0 10px; padding: 0;">

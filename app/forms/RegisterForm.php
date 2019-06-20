@@ -49,17 +49,19 @@ class RegisterForm extends \Phalcon\Forms\Form
 
         $mobileNumber = new \Phalcon\Forms\Element\Text('mobileNumber', [
             'class' => 'form-control',
-            'placeholder' => 'Mobile Number:'
+            'placeholder' => 'Mobile Number:',
+            'required' => '',
+            'value' => ''
         ]);
         $mobileNumber
             ->setLabel('Mobile Number:')
             ->addValidators([
                 new \Phalcon\Validation\Validator\StringLength([
                     'max' => 15,
-                    'min' => 0,
+                    'min' => 9,
                     'messageMaximum' => 'The mobile number is too long.',
                     'messageMinimum' => 'The mobile number is too short.',
-                    'cancelOnFail' => false,
+                    'cancelOnFail' => true,
                 ]),
             ]);
         $this->add($mobileNumber);
@@ -68,17 +70,19 @@ class RegisterForm extends \Phalcon\Forms\Form
         // Website Url
         $websiteUrl = new \Phalcon\Forms\Element\Text('websiteUrl', [
             'class' => 'form-control',
-            'placeholder' => 'Your Website URL'
+            'placeholder' => 'Your Website URL',
+            'required' => '',
+            'value' => ''
         ]);
         $websiteUrl
             ->setLabel('Website URL:')
             ->addValidators([
                 new \Phalcon\Validation\Validator\StringLength([
                     'max' => 100,
-                    'min' => 0,
+                    'min' => 3,
                     'messageMaximum' => 'The website url is too long.',
                     'messageMinimum' => 'The website url is too short.',
-                    'cancelOnFail' => false,
+                    'cancelOnFail' => true,
                 ])
             ]);
         $this->add($websiteUrl);

@@ -98,6 +98,7 @@ class Email extends _BaseModel
         $companyCity = $user->company_city;
         $companyCountry = $user->company_country;
         $solution = ucfirst($user->solution);
+        $contactNumber = $user->mobile_number;
 
 
         $di = \Phalcon\DI::getDefault();
@@ -111,7 +112,8 @@ class Email extends _BaseModel
             'company' => $company,
             'companyCity' => $companyCity,
             'companyCountry' =>  $companyCountry,
-            'solution' => $solution
+            'solution' => $solution,
+            'contactNumber' => $contactNumber
         ]);
         $view->setTemplateAfter('signup_email'); // template name
         $view->render('controller', 'action');

@@ -14,7 +14,7 @@
             </div>
             <div class="fields">
                 <strong>Your information</strong>
-                {{ form.render('name', ['class' : 'form-control', 'placeholder' : 'First Name']) }}
+                {{ form.render('name', ['class' : 'form-control', 'placeholder' : 'First Namee']) }}
                 {{ form.render('lname', ['class' : 'form-control', 'placeholder' : 'Last Name']) }}
                 {{ form.render('mobileNumber', ['class' : 'form-control', 'placeholder' : 'Mobile Number']) }}
                 {{ form.render('websiteUrl', ['class' : 'form-control', 'placeholder' : 'Your Website URL']) }}
