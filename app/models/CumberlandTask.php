@@ -29,58 +29,48 @@ class CumberlandTask extends  _BaseModel
 
 
     protected function extractDocuments($html, $da, $params = null): bool {
+        echo "Extracting Documents <br>";
         $addedDocuments = 0;
 
         // <div id="edms">
-        $documentsContainerElement = $html->find("div[id=edms]", 0);
+        $documentsContainerElement = $html->find("#edms", 0);
         if ($documentsContainerElement === null) {
             return false;
         }
 
-        // <div class="details">
-        $detailElement = $documentsContainerElement->children(0);
-        if ($detailElement) {
-            return false;
-        }
+        $table = $documentsContainerElement->find('table', 0);
+        if($table){
+            $tr = $table->find('tr');
+            foreach($tr as $row){
+                $linkContainer = $row->find('td', 0);
+                if($linkContainer){
+                    $anchorElement = $linkContainer->find('a', 0);
+                    $documentUrl = $this->cleanString($anchorElement->href);
+                    $documentUrl = str_replace("../../", "/", $documentUrl);
+                    $documentUrl = "http://eplanning.cumberland.nsw.gov.au" . $documentUrl;
 
-        // <div class="detailright"the 2nd child of <div class="detail">, the 1st child is hidden.
-        $detailRightElement = $detailElement->children(1);
-        if ($detailRightElement === null) {
-            return false;
-        }
+                    $nameContainer = $row->find('td', 1);
+                    if($nameContainer){
+                        $documentName = $this->cleanString($nameContainer->innertext());
+                    }
 
-        // <table> is the 1st childof <div class="detailright">
-        $tableElement = $detailRightElement->children(0);
-        if ($tableElement === null) {
-            return false;
-        }
+                    $dateContainer = $row->find('td', 2);
+                    if($dateContainer){
+                        $documentDate = \DateTime::createFromFormat("l, d M Y H:i:s T", $this->cleanString($dateContainer->innertext()));
+                        if($documentDate == false){
+                            $documentDate = null;
+                        }
+                    }else{
+                        $documentDate = null;
+                    }
 
-        // Each of $tableElements children contains a document
-        foreach ($tableElement->children() as $tableRowElement) {
 
-            $firstTd = $tableRowElement->children(0); // Contains the URL
-            $secondTd = $tableRowElement->children(1); // Contains the Name
-            $thirdTd = $tableElement->children(2); // Contains the Date
+                    if ($this->saveDocument($da, $documentName, $documentUrl, $documentDate)) {
+                        $addedDocuments++;
+                    }
+                }
 
-            if ($firstTd === null || $secondTd === null || $thirdTd === null) {
-                continue;
-            }
 
-            $anchorElement = $firstTd->children(0);
-            if ($anchorElement === null) {
-                continue;
-            }
-
-            // Generate Document URL
-            $documentUrl = $this->cleanString($anchorElement->href);
-            $documentUrl = str_replace("../../", "/", $documentUrl);
-            $documentUrl = "http://eplanning.cumberland.nsw.gov.au" . $documentUrl;
-
-            $documentName = $this->cleanString($secondTd->innertext());
-            $documentDate = \DateTime::createFromFormat("r", $this->cleanString($thirdTd->innertext()));
-
-            if ($this->saveDocument($da, $documentName, $documentUrl, $documentDate)) {
-                $addedDocuments++;
             }
         }
 
