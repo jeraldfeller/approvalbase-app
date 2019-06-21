@@ -92,8 +92,6 @@ class CronController extends _BaseController
         $emails = null;
         $results = null;
 
-        // check billing
-//        $dateNow = date('Y-m-d', strtotime('+3 days'));
         $dateNow = date('Y-m-d');
         $billing = new Billing();
         $sql = 'SELECT b.id, b.users_id, u.name, u.last_name, u.email  
@@ -177,10 +175,6 @@ class CronController extends _BaseController
 
     public function alertNotificationAction()
     {
-//        error_reporting(E_ALL);
-//        ini_set('display_errors', TRUE);
-//        ini_set('display_startup_errors', TRUE);
-
 
         /* check phrase count is working */
 
@@ -342,22 +336,12 @@ class CronController extends _BaseController
 
     public function alertPoiNotificationAction($fromImported = false, $poiIds = [])
     {
-//        $fromImported = ($this->request->getQuery("imported") ? true : false);
-//                error_reporting(E_ALL);
-//        ini_set('display_errors', TRUE);
-//        ini_set('display_startup_errors', TRUE);
+
         $das = new Das();
         $users = Users::find([
             'conditions' => 'send_notifications_on_leads = 1'
         ]);
-//        $users = Users::find(
-//            [
-//                'conditions' => 'id = :id:',
-//                'bind' => [
-//                    'id' => 41
-//                ]
-//            ]
-//        );
+
         $di = \Phalcon\DI::getDefault();
         $daIds = [];
         $config = $di->getConfig();
@@ -536,9 +520,6 @@ class CronController extends _BaseController
         $fromDate = date('Y-m-d', strtotime('-12 months'));
         $dateNow = date('Y-m-d');
         if ($stat == 0) {
-//            $file = fopen("CRONLOCK", "w");
-//            fwrite($file, '1');
-//            fclose($file);
             $up = UsersPhrases::find();
             foreach ($up as $row) {
                 $userId = $row->getUserId();
@@ -704,12 +685,6 @@ class CronController extends _BaseController
                 );
 
                 foreach ($result as $val) {
-                    // check excluded phrases and overrides result of matched
-//                    for($p = 0; $p < count($excludedPhrases); $p++){
-//                        if(strpos($val->description, $excludedPhrases) === false){
-//
-//                        }
-//                    }
                     // check if phrase and da already exists
                     if($phraseId){
                         if($phraseId != null){
@@ -764,9 +739,7 @@ class CronController extends _BaseController
                 }
 
             }
-//            $file = fopen("CRONLOCK", "w");
-//            fwrite($file, '0');
-//            fclose($file);
+
         } else {
             echo "Cron file locked, the crawler is already processing a phrase search";
         }
@@ -1013,14 +986,6 @@ class CronController extends _BaseController
                 ];
 
 
-                if ($d['dasId'] == 8242) {
-                    echo $d['dasId'] . ' ' . $usersId . ' ' . $row->getId() . '<br>';
-                }
-                if (count($dasPoiUsers) == 1) {
-
-//                        echo $d['dasId'] . ' ' . $usersId . ' ' . $row->getId() . '<br>';
-                }
-
 
                 if ($dasPoiUsers == false) {
 
@@ -1118,10 +1083,6 @@ class CronController extends _BaseController
 
                 if ($d['dasId'] == 8242) {
                     echo $d['dasId'] . ' ' . $usersId . ' ' . $row->getId() . '<br>';
-                }
-                if (count($dasPoiUsers) == 1) {
-
-//                        echo $d['dasId'] . ' ' . $usersId . ' ' . $row->getId() . '<br>';
                 }
 
 
@@ -1420,9 +1381,6 @@ class CronController extends _BaseController
 
 
     public function checkDaDocsAction(){
-//        $docs = DasDocuments::find([
-//           'conditions' => 'checked = 0 AND as3_url is not null ORDER BY id DESC LIMIT 40',
-//        ]);
 
         $dd = new DasDocuments();
         $sql = 'SELECT dd.* FROM `das_documents` dd, `das` d
