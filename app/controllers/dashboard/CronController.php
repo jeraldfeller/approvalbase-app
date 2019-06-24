@@ -36,6 +36,7 @@ use Aiden\Models\CumberlandTask;
 use Aiden\Models\FairfieldcityTask;
 use Aiden\Models\GeorgestiverTask;
 use Aiden\Models\HornsbyshireTask;
+use Aiden\Models\KuringgaiTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1514,7 +1515,7 @@ class CronController extends _BaseController
         $das = Das::find([
            'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 1',
             'bind' => [
-                'councilId' => 13,
+                'councilId' => 14,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1562,6 +1563,11 @@ class CronController extends _BaseController
                             $hornsbyshire = new HornsbyshireTask();
                             $hornsbyshire->init(['documents'], $da);
                             $hornsbyshire = null;
+                            break;
+                        case 14:
+                            $kuringgai = new KuringgaiTask();
+                            $kuringgai->init(['documents'], $da);
+                            $kuringgai = null;
                             break;
                         case 29: // Willoughby
                             $willoughby = new WilloughbyTask();

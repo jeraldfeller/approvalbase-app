@@ -195,7 +195,7 @@ class _BaseModel extends \Phalcon\Mvc\Model {
 
     }
 
-    public function scrapeTo($url){
+    public function scrapeTo($url,  $showInfo = false){
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 2);
@@ -207,8 +207,14 @@ class _BaseModel extends \Phalcon\Mvc\Model {
         curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../cookies/cookies.txt');
         curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../cookies/cookies.txt');
         curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0');
+        if($showInfo == true){
+            curl_setopt($ch, CURLINFO_HEADER_OUT, true);
+        }
 
         $output = curl_exec($ch);
+        if($showInfo == true){
+            $information = curl_getinfo($ch);
+        }
         $errno = curl_errno($ch);
         $errmsg = curl_error($ch);
         curl_close($ch);
@@ -218,7 +224,15 @@ class _BaseModel extends \Phalcon\Mvc\Model {
             return false;
         }
 
-        return str_get_html($output);
+        if($showInfo == true){
+            return [
+                'output' => str_get_html($output),
+                'info' => $information
+            ];
+        }else{
+            return str_get_html($output);
+        }
+
     }
 
 
