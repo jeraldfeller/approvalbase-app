@@ -37,6 +37,8 @@ use Aiden\Models\FairfieldcityTask;
 use Aiden\Models\GeorgestiverTask;
 use Aiden\Models\HornsbyshireTask;
 use Aiden\Models\KuringgaiTask;
+use Aiden\Models\LanecoveTask;
+use Aiden\Models\InnerWestTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1513,9 +1515,9 @@ class CronController extends _BaseController
         $date = date('Y-m');
         $dateFrom = date('Y-m-d', strtotime('-6 months'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 100',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 1',
             'bind' => [
-                'councilId' => 14,
+                'councilId' => 17,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1568,6 +1570,16 @@ class CronController extends _BaseController
                             $kuringgai = new KuringgaiTask();
                             $kuringgai->init(['documents'], $da);
                             $kuringgai = null;
+                            break;
+                        case 15:
+                            $laneCove = new LanecoveTask();
+                            $laneCove->init(['documents'], $da);
+                            $laneCove = null;
+                            break;
+                        case 17:
+                            $innerWest = new InnerWestTask();
+                            $innerWest->init(['documents'], $da);
+                            $innerWest = null;
                             break;
                         case 29: // Willoughby
                             $willoughby = new WilloughbyTask();
