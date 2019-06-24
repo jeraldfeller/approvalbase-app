@@ -1513,7 +1513,7 @@ class CronController extends _BaseController
         $date = date('Y-m');
         $dateFrom = date('Y-m-d', strtotime('-6 months'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 1',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 100',
             'bind' => [
                 'councilId' => 14,
                 'checked' => 0,

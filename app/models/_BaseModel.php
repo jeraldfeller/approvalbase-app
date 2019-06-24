@@ -226,7 +226,7 @@ class _BaseModel extends \Phalcon\Mvc\Model {
 
         if($showInfo == true){
             return [
-                'output' => str_get_html($output),
+                'output' => $output,
                 'info' => $information
             ];
         }else{
