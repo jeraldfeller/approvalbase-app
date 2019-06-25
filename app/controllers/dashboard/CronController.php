@@ -40,6 +40,8 @@ use Aiden\Models\KuringgaiTask;
 use Aiden\Models\LanecoveTask;
 use Aiden\Models\InnerWestTask;
 use Aiden\Models\MosmanTask;
+use Aiden\Models\NorthenbeachesTask;
+use Aiden\Models\NorthSydneyTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1518,7 +1520,7 @@ class CronController extends _BaseController
         $das = Das::find([
            'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 1',
             'bind' => [
-                'councilId' => 18,
+                'councilId' => 20,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1586,6 +1588,16 @@ class CronController extends _BaseController
                             $mosman = new MosmanTask();
                             $mosman->init(['data', 'documents'], $da);
                             $mosman = null;
+                            break;
+                        case 19:
+                            $northernbeaches = new NorthenbeachesTask();
+                            $northernbeaches->init(['data', 'documents'], $da);
+                            $northernbeaches = null;
+                            break;
+                        case 20:
+                            $northsydney = new NorthSydneyTask();
+                            $northsydney->init(['data', 'documents'], $da);
+                            $northsydney = null;
                             break;
                         case 29: // Willoughby
                             $willoughby = new WilloughbyTask();

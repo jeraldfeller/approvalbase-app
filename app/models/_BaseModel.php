@@ -157,12 +157,14 @@ class _BaseModel extends \Phalcon\Mvc\Model {
         $errmsg = curl_error($ch);
 
         curl_close($ch);
-
         // No errors
         if ($errno !== 0) {
+            var_dump($errmsg);
             // TODO: Log
             return false;
         }
+
+
 
         $formData = $this->getAspFormDataByString($output);
 
