@@ -44,6 +44,11 @@ use Aiden\Models\NorthenbeachesTask;
 use Aiden\Models\NorthSydneyTask;
 use Aiden\Models\ParramattaTask;
 use Aiden\Models\PenrithTask;
+use Aiden\Models\RandwickTask;
+use Aiden\Models\StrathfieldTask;
+use Aiden\Models\SutherlandTask;
+use Aiden\Models\ThehillsTask;
+use Aiden\Models\WaverleyTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1522,7 +1527,7 @@ class CronController extends _BaseController
         $das = Das::find([
            'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 1',
             'bind' => [
-                'councilId' => 22,
+                'councilId' => 28,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1610,6 +1615,31 @@ class CronController extends _BaseController
                             $penrith = new PenrithTask();
                             $penrith->init(['data', 'documents'], $da);
                             $penrith = null;
+                            break;
+                        case 23:
+                            $randwick = new RandwickTask();
+                            $randwick->init(['data', 'documents'], $da);
+                            $randwick = null;
+                            break;
+                        case 25:
+                            $strathfield = new StrathfieldTask();
+                            $strathfield->init(['data', 'documents'], $da);
+                            $strathfield = null;
+                            break;
+                        case 26:
+                            $sutherland = new SutherlandTask();
+                            $sutherland->init(['documents'], $da);
+                            $sutherland = null;
+                            break;
+                        case 27:
+                            $thehills = new ThehillsTask();
+                            $thehills->init(['data', 'documents'], $da);
+                            $thehills = null;
+                            break;
+                        case 28:
+                            $waverley = new WaverleyTask();
+                            $waverley->init(['data', 'documents'], $da);
+                            $waverley = null;
                             break;
                         case 29: // Willoughby
                             $willoughby = new WilloughbyTask();
