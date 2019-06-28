@@ -20,14 +20,101 @@ class InnerWestTask extends _BaseModel
         for($x = 0; $x < count($actions); $x++){
             switch ($actions[$x]){
                 case 'documents':
-                    if(strpos($da->getCouncilUrl(), 'http://eservices.lmc.nsw.gov.au') !== false){
+                    if(strpos($da->getCouncilUrl(), 'eservices.lmc.nsw.gov.au') !== false){
                         $this->extractDocumentsLeichhardt('', $da);
+                    }else if(strpos($da->getCouncilUrl(), 'eproperty.marrickville.nsw.gov.au') !== false){
+                        $this->extractDocumentsMarrickville('', $da);
                     }
 
                     break;
             }
         }
     }
+
+
+    protected function extractDocumentsMarrickville($html, $da, $params = null): bool {
+
+        $addedDocuments = 0;
+        $url = "https://gotrim.marrickville.nsw.gov.au/WebGrid/default.aspx"
+            . "?s=PlanningDocuments"
+            . "&container=" . $da->getCouncilReference();
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 2);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+        curl_setopt($ch, CURLOPT_COOKIEFILE, __DIR__ . '/../cookies/cookies.txt');
+        curl_setopt($ch, CURLOPT_COOKIEJAR, __DIR__ . '/../cookies/cookies.txt');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0');
+
+        $output = curl_exec($ch);
+        $errno = curl_errno($ch);
+        $errmsg = curl_error($ch);
+        curl_close($ch);
+
+        if ($errno !== 0) {
+            return false;
+        }
+
+        $docsHtml = str_get_html($output);
+        if (!$docsHtml) {
+
+            return false;
+        }
+
+        $anchorElements = $docsHtml->find("a[title=Download]");
+        foreach ($anchorElements as $anchorElement) {
+
+            $documentUrl = $this->cleanString($anchorElement->href);
+
+            // Document Date (used)
+            $documentUrlParentElement = $anchorElement->parent();
+            if ($documentUrlParentElement === null) {
+                continue;
+            }
+
+            $documentDateElement = $documentUrlParentElement->prev_sibling();
+            if ($documentDateElement === null) {
+                continue;
+            }
+
+            $documentDateString = $documentDateElement->innertext();
+            $documentDateStringParts = explode(" ", $documentDateString);
+            $documentDate = \DateTime::createFromFormat("j/m/Y", $documentDateStringParts[0]);
+
+            // Document File Size (unused)
+            $documentSizeElement = $documentDateElement->prev_sibling();
+            if ($documentSizeElement === null) {
+                continue;
+            }
+
+            // Document Type (unused)
+            $documentTypeElement = $documentSizeElement->prev_sibling();
+            if ($documentTypeElement === null) {
+                continue;
+            }
+
+            // Document Name (used)
+            $documentNameElement = $documentTypeElement->prev_sibling();
+            if ($documentNameElement === null) {
+                continue;
+            }
+
+            $documentName = $this->cleanString($documentNameElement->innertext());
+
+            if ($this->saveDocument($da, $documentName, $documentUrl, $documentDate)) {
+                $addedDocuments++;
+            }
+        }
+
+        return ($addedDocuments > 0);
+
+    }
+
 
     protected function extractDocumentsLeichhardt($html, $da, $params = null): bool {
         $addedDocuments = 0;

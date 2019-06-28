@@ -49,6 +49,7 @@ use Aiden\Models\StrathfieldTask;
 use Aiden\Models\SutherlandTask;
 use Aiden\Models\ThehillsTask;
 use Aiden\Models\WaverleyTask;
+use Aiden\Models\WoollahraTask;
 require 'simple_html_dom.php';
 class CronController extends _BaseController
 {
@@ -1525,9 +1526,9 @@ class CronController extends _BaseController
         $date = date('Y-m');
         $dateFrom = date('Y-m-d', strtotime('-6 months'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 1',
+           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 5',
             'bind' => [
-                'councilId' => 28,
+                'councilId' => 17,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1645,6 +1646,11 @@ class CronController extends _BaseController
                             $willoughby = new WilloughbyTask();
                             $willoughby->init(['data'], $da);
                             $willoughby = null;
+                            break;
+                        case 30:
+                            $woollahra = new WoollahraTask();
+                            $woollahra->init(['documents'], $da);
+                            $woollahra = null;
                             break;
                         case 32: // Bayside
                             $bayside = new BaysideTask();
