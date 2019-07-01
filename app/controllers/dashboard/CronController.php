@@ -10,6 +10,7 @@ namespace Aiden\Controllers;
 
 use Aiden\Forms\EditLeadForm;
 
+use Aiden\Models\Councils;
 use Aiden\Models\Das;
 use Aiden\Models\DasAddresses;
 use Aiden\Models\DasDocuments;
@@ -1712,6 +1713,51 @@ class CronController extends _BaseController
 
         $das = null;
         $daddress = null;
+        return true;
+    }
+
+    /**
+     * Cron: Once a week
+     * Checks number of projects per council ever week
+     * If Projects < 5 alert admin
+     * @return bool
+     */
+
+    public function checkCouncilProjectsAction(){
+        $date = date('Y-m');
+        $dateFrom = date('Y-m-d', strtotime('-7 days'));
+        $council = new Councils();
+        $sql = 'SELECT id, name, (Select count(id) FROM das where council_id = c.id AND lodge_date >= "'.$dateFrom.'" AND lodge_date <= "'.$date.'") as projectCount 
+                FROM councils c
+                WHERE id != 1 AND id != 2 
+                AND id != 8
+                AND id != 16
+                AND id != 33
+                HAVING projectCount < 5';
+
+
+        $councils = new \Phalcon\Mvc\Model\Resultset\Simple(
+            null
+            , $council
+            , $council->getReadConnection()->query($sql, [], [])
+        );
+
+        $data = [];
+        foreach($councils as $row){
+            $councilName = $row->getName();
+            $projectCount = $row->projectCount;
+            $data[] = [
+              'council' => $councilName,
+              'count' => $projectCount
+            ];
+            echo $councilName . ' - ' . $projectCount . '<br>';
+        }
+
+        if(count($data) > 0){
+            // send email notification;
+            \Aiden\Models\Email::councilAlertEmail($data);
+        }
+
         return true;
     }
 

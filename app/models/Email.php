@@ -12,6 +12,31 @@ namespace Aiden\Models;
 class Email extends _BaseModel
 {
 
+    public static function councilAlertEmail($councils){
+        $di = \Phalcon\DI::getDefault();
+        $view = $di->getView();
+        $view->start();
+        $view->setVars([
+            'councils' => $councils
+        ]);
+        $view->setTemplateAfter('council_alert'); // template name
+        $view->render('controller', 'action');
+        $view->finish();
+
+        $emailHtml = $view->getContent();
+        $config = $di->getConfig();
+        $postFields = [
+            'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
+            'subject' => 'Weekly Council Report',
+            'html' => $emailHtml,
+            'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),
+            'to' => $config->adminEmail, 'jeraldfeller@gmail.com'
+        ];
+        self::sendEmail($postFields, $config);
+
+        return true;
+    }
+
     public static function shareDaEmail($email, $fullName, $name, $emails, $council, $da, $docs, $address, $parties){
         $di = \Phalcon\DI::getDefault();
         $view = $di->getView();

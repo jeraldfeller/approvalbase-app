@@ -56,7 +56,7 @@ class SecurityPlugin extends Plugin {
                 'Aiden\Controllers:phrases' => ['index', 'create', 'delete', 'flipCase', 'flipLiteral', 'flipExclude', 'get'],
                 'Aiden\Controllers:settings' => ['index', 'support', 'updateProfile', 'contact', 'billing', 'stripeApi', 'subscribe', 'updateSeen', 'notifications', 'notificationsUpdate', 'save', 'getUsersEmail', 'updateUsersEmail', 'cancelSubscription', 'setRestoreId'],
                 'Aiden\Controllers:councils' => ['index', 'subscribe', 'unsubscribe', 'bulkSubscribe', 'bulkUnsubscribe'],
-                'Aiden\Controllers:cron' => ['checkSubscription', 'alertNotification', 'alertPoiNotification', 'execScanPhrase', 'getAddressLatLang', 'getCleanAddress', 'execScanPoi', 'execCSVPoi', 'fixParramatta', 'getDaDocs', 'cleanUsersDa', 'checkDaDocs', 'updateDasData', 'rescanGetDaDocs', 'updateUsersGoogleSheets', 'recordDaAddress', 'resetCheckedAction'],
+                'Aiden\Controllers:cron' => ['checkSubscription', 'alertNotification', 'alertPoiNotification', 'execScanPhrase', 'getAddressLatLang', 'getCleanAddress', 'execScanPoi', 'execCSVPoi', 'fixParramatta', 'getDaDocs', 'cleanUsersDa', 'checkDaDocs', 'updateDasData', 'rescanGetDaDocs', 'updateUsersGoogleSheets', 'recordDaAddress', 'resetCheckedAction', 'checkCouncilProjects'],
                 'Aiden\Controllers:poi' => ['index', 'primary', 'secondary', 'alert', 'alertSaved', 'get', 'save', 'delete', 'getPoiAlerts', 'saveDa', 'import'],
                 'Aiden\Controllers:pdf' => ['downloadPdf', 'download'],
                 'Aiden\Controllers:helpers' => ['*'],
