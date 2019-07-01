@@ -1398,11 +1398,10 @@ class CronController extends _BaseController
 
         $dd = new DasDocuments();
         $sql = 'SELECT dd.* FROM `das_documents` dd, `das` d
-                WHERE d.council_id = 20 
+                WHERE d.council_id = 17 
                 AND dd.das_id = d.id
                 AND dd.checked = 0
-                AND dd.as3_url IS NOT NULL 
-              
+                AND dd.as3_url IS NOT NULL
                 ORDER BY dd.id DESC LIMIT 100';
 
         $docs = new \Phalcon\Mvc\Model\Resultset\Simple(
@@ -1521,14 +1520,28 @@ class CronController extends _BaseController
         return true;
     }
 
+    /**
+     * Set checked to 0 to be rescan for checking document updates
+     * @return bool
+     */
+    public function resetCheckedAction(){
+        $das = new Das();
+        $sql = "UPDATE das SET checked = 0";
+        new \Phalcon\Mvc\Model\Resultset\Simple(
+            null
+            , $das
+            , $das->getReadConnection()->query($sql, [], [])
+        );
+
+        return true;
+    }
 
     public function updateDasDataAction(){
         $date = date('Y-m');
-        $dateFrom = date('Y-m-d', strtotime('-6 months'));
+        $dateFrom = date('Y-m-d', strtotime('-10 days'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND council_id = :councilId: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 5',
+           'conditions' => 'checked = :checked: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 100',
             'bind' => [
-                'councilId' => 17,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
