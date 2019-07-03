@@ -129,6 +129,100 @@ class _BaseModel extends \Phalcon\Mvc\Model {
     }
 
 
+    /**
+     * Creates an address related to a development application
+     * @param type $da
+     * @param type $address
+     * @return boolean
+     */
+    public function saveAddress($da, $address) {
+
+        $daAddress = DasAddresses::createIfNotExists($da->getId(), $address);
+
+        switch ($daAddress) {
+
+            case DasAddresses::ADDRESS_CREATED:
+                echo "Created related address $address <br>";
+                return true;
+
+            case DasAddresses::ADDRESS_ERROR_ON_SAVE:
+                echo "Error creating related address $address <br>";
+                return false;
+
+            case DasAddresses::ADDRESS_EXISTS:
+                echo "Address $address did not change, skipping...";
+                return true;
+
+            case DasAddresses::ADDRESS_ZERO_LENGTH:
+                echo " Address with zero length detected (error ignored, address may be added later)... <br>";
+                return true;
+        }
+
+    }
+
+    /**
+     * Creates a description related to a development application
+     * @param type $da
+     * @param type $newDescription
+     * @return boolean
+     */
+    public function saveDescription($da, $newDescription) {
+
+        $oldDescription = $da->getDescription();
+
+        if ($oldDescription === $newDescription) {
+            echo " Description didn't change, skipping... <br>";
+            return true;
+        }
+        else {
+
+            $da->setDescription($newDescription);
+            if ($da->save()) {
+
+                echo "Created description $newDescription <br>";
+                return true;
+            }
+            else {
+                echo " Error creating description $newDescription <br>";
+                return false;
+            }
+        }
+
+    }
+
+    /**
+     * Creates a party related to a development application
+     * @param type $da
+     * @param type $role
+     * @param type $name
+     * @return boolean
+     */
+    public function saveParty($da, $role, $name) {
+
+        $dasParty = DasParties::createIfNotExists($da->getId(), $role, $name);
+        switch ($dasParty) {
+
+            case DasParties::PARTY_SAVED:
+                echo "Created related party $role with value $name <br>";
+                return true;
+
+            case DasParties::PARTY_ERROR_SAVING:
+                echo "Error creating related party $role with value $name <br>";
+                return false;
+
+            case DasParties::PARTY_NO_NAME:
+
+                echo "Error creating related party $role with value $name, no name <br>";
+                return false;
+
+            case DasParties::PARTY_EXISTS:
+
+                echo "Related party $role with value $name already exists, ignoring...<br>";
+                return true;
+        }
+
+    }
+
 
 
     public function getAspFormDataByUrl($url)

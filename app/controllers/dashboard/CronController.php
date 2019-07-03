@@ -1403,7 +1403,7 @@ class CronController extends _BaseController
                 AND dd.das_id = d.id
                 AND dd.checked = 0
                 AND dd.as3_url IS NOT NULL
-                ORDER BY dd.id DESC LIMIT 100';
+                ORDER BY dd.id DESC LIMIT 1';
 
         $docs = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
@@ -1415,9 +1415,27 @@ class CronController extends _BaseController
             foreach ($docs as $row){
                 $id = $row->getId();
                 $url = trim($row->getAs3Url());
+                $sourceUrl = $row->getUrl(true);
                 echo $url . '<br>';
+                echo $sourceUrl . '<br>';
+                if (strpos($sourceUrl, 'eservices.lmc.nsw.gov.au') !== false) {
+                    parse_str($sourceUrl, $urlParam);
+                    if (trim($urlParam['ext']) != 'pdf' AND trim($urlParam['ext']) != 'doc') {
+                        echo 'NOT PDF <br>';
+                        // delete document
+                        $dd = DasDocuments::findFirst([
+                            'conditions' => 'id = ' . $id
+                        ]);
+                        if ($dd) {
+                            $dd->delete();
+                        }
+
+                        return false;
+                    }
+                }
+
                 $htmlData = $this->curlToGet($url);
-                if(strpos($htmlData, '%PDF') === false){
+                if($htmlData === ''){
                     $row->setCheckedStatus(0);
                     $row->setChecked(1);
                     $row->save();
@@ -1539,10 +1557,11 @@ class CronController extends _BaseController
 
     public function updateDasDataAction(){
         $date = date('Y-m');
-        $dateFrom = date('Y-m-d', strtotime('-10 days'));
+        $dateFrom = date('Y-m-d', strtotime('-30 days'));
         $das = Das::find([
-           'conditions' => 'checked = :checked: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 100',
+           'conditions' => 'council_id = :councilId: AND checked = :checked: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 10',
             'bind' => [
+                'councilId' => 9,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1565,12 +1584,12 @@ class CronController extends _BaseController
                             break;
                         case 7:
                             $canadabay = new CanadabayTask();
-                            $canadabay->init(['documents'], $da);
+                            $canadabay->init(['data', 'documents'], $da);
                             $canadabay = null;
                             break;
                         case 9:
                             $cityofsydney = new CityofsydneyTask();
-                            $cityofsydney->init(['documents'], $da);
+                            $cityofsydney->init(['data', 'documents'], $da);
                             $cityofsydney = null;
                             break;
                         case 10:

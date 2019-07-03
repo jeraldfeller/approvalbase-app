@@ -193,10 +193,151 @@ class CampbelltownTask extends _BaseModel
 
     public function extractData($html, $da)
     {
+        $this->extractOfficers($html, $da);
+        $this->extractAddresses($html, $da);
+        $this->extractApplicants($html, $da);
+        $this->extractDescription($html, $da);
         $this->extractLodgeDate($html, $da);
         return true;
     }
 
+
+    protected function extractAddresses($html, $da, $params = null): bool {
+
+        $addedAddresses = 0;
+
+        $legendElements = $html->find("legend");
+        foreach ($legendElements as $legendElement) {
+
+            $legendText = $this->cleanString($legendElement->innertext());
+            if (strpos(strtolower($legendText), "address") === false) {
+                continue;
+            }
+
+            $fieldsetElement = $legendElement->parent();
+            if ($fieldsetElement === null) {
+                continue;
+            }
+
+            // This HTML is so so badly formatted, but luckily they use our required classes when we want them to.
+            $fieldsetHtml = \Sunra\PhpSimple\HtmlDomParser::str_get_html($fieldsetElement->innertext());
+            if ($fieldsetHtml === false) {
+                return false;
+            }
+
+            $addressElements = $fieldsetHtml->find("div[class=ContentText],div[class=AlternateContentText]");
+            foreach ($addressElements as $addressElement) {
+
+                $address = $this->cleanString($addressElement->innertext());
+                if ($this->saveAddress($da, $address)) {
+                    $addedAddresses++;
+                }
+            }
+        }
+
+        return ($addedAddresses > 0);
+
+    }
+
+    protected function extractApplicants($html, $da, $params = null): bool {
+
+        $addedApplicants = 0;
+        $legendElement = $html->find("legend");
+
+        foreach ($legendElement as $legendElement) {
+
+            $legendText = $this->cleanString($legendElement->innertext());
+            if (strpos(strtolower($legendText), "applicant") === false) {
+                continue;
+            }
+
+            $fieldsetElement = $legendElement->parent();
+            if ($fieldsetElement === null) {
+                continue;
+            }
+
+            $fieldsetHtml = str_get_html($fieldsetElement->innertext());
+            if ($fieldsetHtml === false) {
+                continue;
+            }
+
+            $applicantElements = $fieldsetHtml->find("[class=ContentText],[class=AlternateContentText]");
+            foreach ($applicantElements as $applicantElement) {
+
+                $role = "Applicant";
+                $name = $this->cleanString($applicantElement->innertext());
+
+                if (strlen($name) > 0 && $this->saveParty($da, $role, $name)) {
+                    $addedApplicants++;
+                }
+            }
+        }
+
+        return ($addedApplicants > 0);
+
+    }
+
+    protected function extractDescription($html, $da, $params = null): bool {
+
+        $headerElements = $html->find("[class=AlternateContentHeading]");
+        foreach ($headerElements as $headerElement) {
+
+            $headerText = $this->cleanString($headerElement->innertext());
+            if (strpos(strtolower($headerText), "description") === false) {
+                continue;
+            }
+
+            $spanElement = $headerElement->next_sibling();
+            if ($spanElement === null) {
+                return false;
+            }
+
+            $valueElement = $spanElement->children(0);
+            if ($valueElement === null) {
+                return false;
+            }
+
+            $value = $this->cleanString($valueElement->innertext());
+            return (strlen($value) > 0 && $this->saveDescription($da, $value));
+        }
+
+        return false;
+
+    }
+
+    protected function extractOfficers($html, $da, $params = null): bool {
+
+        $headerElements = $html->find("[class=AlternateContentHeading]");
+        foreach ($headerElements as $headerElement) {
+
+            $headerText = $this->cleanString($headerElement->innertext());
+            if (strpos(strtolower($headerText), "officer") === false) {
+                continue;
+            }
+
+            // Their HTML is badly formatted, and for some reason there's an orphan <td>
+            $valueElement = $headerElement->next_sibling();
+            if ($valueElement === null) {
+                return false;
+            }
+
+            if ($valueElement->tag !== "div") {
+                $valueElement = $valueElement->children(0);
+
+                if ($valueElement === null) {
+                    continue;
+                }
+            }
+
+            $role = "Officer";
+            $name = $this->cleanString($valueElement->innertext());
+
+            return (strlen($name) > 0 && $this->saveParty($da, $role, $name));
+        }
+
+        return false;
+
+    }
 
 
     public function extractLodgeDate($html, $da){

@@ -48,10 +48,134 @@ class CamdenTask extends _BaseModel
 
     public function getData($html, $da)
     {
-        // get estimated cost
+        $this->extractDescription($html, $da);
         $this->getEstimatedCost($html, $da);
         $this->extractLodgeDate($html, $da);
+        $this->extractAddresses($html, $da);
+        $this->extractPeople($html, $da);
+        $this->extractOfficers($html, $da);
         return true;
+    }
+
+    protected function extractAddresses($html, $da, $params = null): bool {
+
+        $addedAddresses = 0;
+
+        $propertyListElement = $html->find("[id=property-list]", 0);
+        if ($propertyListElement === null) {
+            return false;
+        }
+
+        $addressesString = $propertyListElement->innertext();
+        $addressesArray = explode("<br/>", $addressesString);
+
+        foreach ($addressesArray as $address) {
+
+            $address = $this->cleanString($address);
+            if ($this->saveAddress($da, $address)) {
+                $addedAddresses++;
+            }
+        }
+
+        return ($addedAddresses > 0);
+
+    }
+
+    protected function extractPeople($html, $da, $params = null): bool {
+
+        $addedPeople = 0;
+
+        $peopleHeaderElement = $html->find("h3[id=people]", 0);
+        if ($peopleHeaderElement === null) {
+            return false;
+        }
+
+        $peopleElement = $peopleHeaderElement->next_sibling();
+        if ($peopleElement === null) {
+            return false;
+        }
+
+        $tableElement = $peopleElement->children(0);
+        if ($tableElement === null) {
+            return false;
+        }
+
+        $tbodyElement = $tableElement->children(0);
+        if ($tbodyElement === null) {
+            return false;
+        }
+
+        foreach ($tbodyElement->children() as $tableRowElement) {
+
+            $cellElement = $tableRowElement->children(0);
+            $rowParts = explode(":", $cellElement->innertext());
+
+            if (count($rowParts) === 2) {
+
+                $role = $this->cleanString($rowParts[0]);
+                $name = $this->cleanString($rowParts[1]);
+
+                if ($this->saveParty($da, $role, $name) === true) {
+                    $addedPeople++;
+                }
+            }
+        }
+
+        return ($addedPeople > 0);
+
+    }
+
+    protected function extractOfficers($html, $da, $params = null): bool {
+
+        $addedOfficers = 0;
+
+        $officerHeaderElement = $html->find("h3[id=officer]", 0);
+        if ($officerHeaderElement === null) {
+            return false;
+        }
+
+        $officerElement = $officerHeaderElement->next_sibling();
+        if ($officerElement === null) {
+            return false;
+        }
+
+        $tableElement = $officerElement->children(0);
+        if ($tableElement === null) {
+            return false;
+        }
+
+        $tbodyElement = $tableElement->children(0);
+        if ($tbodyElement === null) {
+            return false;
+        }
+
+        foreach ($tbodyElement->children() as $tableRowElement) {
+
+            $cellElement = $tableRowElement->children(0);
+
+            $role = "Officer";
+            $name = $this->cleanString($cellElement->innertext());
+
+            if ($this->saveParty($da, $role, $name)) {
+                $addedOfficers++;
+            }
+        }
+
+        return ($addedOfficers > 0);
+
+    }
+
+    protected function extractDescription($html, $da, $params = null): bool {
+
+        $descriptionCellElement = $html->find("td[id=description]", 0);
+        if ($descriptionCellElement) {
+
+            $newDescription = $this->cleanString(strip_tags($descriptionCellElement->innertext()));
+            return $this->saveDescription($da, $newDescription);
+        }
+
+        return false;
+
     }
 
     public function extractLodgeDate($html, $da)
