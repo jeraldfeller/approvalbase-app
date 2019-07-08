@@ -22,6 +22,9 @@ class FairfieldcityTask extends  _BaseModel
         // check documents;
         for($x = 0; $x < count($actions); $x++){
             switch ($actions[$x]){
+                case 'data':
+                    $this->getData($html, $da);
+                    break;
                 case 'documents':
                     $this->extractDocuments($html, $da);
                     break;
@@ -93,6 +96,160 @@ class FairfieldcityTask extends  _BaseModel
             echo $logMsg . "<br>";
             return true;
         }
+
+    }
+
+    public function getData($html, $da){
+        $this->extractOfficers($html, $da);
+        $this->extractAddresses($html, $da);
+        $this->extractLodgeDate($html, $da);
+        $this->extractPeople($html, $da);
+        $this->extractDescription($html, $da);
+        $this->extractEstimatedCost($html, $da);
+    }
+
+
+    protected function extractAddresses($html, $da, $params = null): bool {
+
+        $addedAddresses = 0;
+        $addressesElement = $html->find("div[id=lblProperties]", 0);
+
+        if ($addressesElement !== null) {
+
+            $addressesArray = explode("<br>", $addressesElement->innertext());
+            foreach ($addressesArray as $daAddress) {
+
+                $daAddress = $this->cleanString($daAddress);
+                if (strlen($daAddress) === 0) {
+                    continue;
+                }
+
+                if ($this->saveAddress($da, $daAddress) === true) {
+                    $addedAddresses++;
+                }
+            }
+        }
+
+        return ($addedAddresses > 0);
+
+    }
+
+    protected function extractPeople($html, $da, $params = null): bool {
+
+        // The council called this element peeps, just following their naming...
+        $peepsCreated = 0;
+        $peepsElement = $html->find("div[id=lblPeeps]", 0);
+
+        if ($peepsElement !== null) {
+
+            foreach (explode("<br />", $peepsElement->innertext()) as $peep) {
+
+                $peepArray = explode(":", $peep);
+                if (count($peepArray) === 1) {
+
+                    if (strlen($peepArray[0]) === 0) {
+                        continue;
+                    }
+
+                    $role = "Applicant";
+                    $name = trim($this->cleanString($peepArray[0]));
+                }
+                else {
+
+                    if (strlen($peepArray[1]) === 0) {
+                        continue;
+                    }
+
+                    $role = trim($this->cleanString($peepArray[0]));
+                    $name = trim($this->cleanString($peepArray[1]));
+                }
+
+                if ($this->saveParty($da, $role, $name)) {
+                    $peepsCreated++;
+                }
+            }
+        }
+
+        return ($peepsCreated > 0);
+
+    }
+
+    protected function extractOfficers($html, $da, $params = null): bool {
+
+        $officersCreated = 0;
+        $officerElement = $html->find("div[id=lblOff]", 0);
+
+        if ($officerElement !== null) {
+
+            $role = "Officer";
+            $name = $this->cleanString($officerElement->innertext());
+
+            if ($this->saveParty($da, $role, $name) === true) {
+                $officersCreated++;
+            }
+        }
+
+        return ($officersCreated > 0);
+
+    }
+
+    protected function extractEstimatedCost($html, $da, $params = null): bool {
+
+        $estimatedCostElement = $html->find("[id=lblDim]", 0);
+
+        if ($estimatedCostElement !== null) {
+            return $this->saveEstimatedCost($da, $estimatedCostElement->innertext());
+        }
+        return false;
+
+    }
+
+    protected function extractDescription($html, $da, $params = null): bool {
+
+        $tdElements = $html->find("td");
+
+        foreach ($tdElements as $tdElement) {
+
+            $tdText = $this->cleanString($tdElement->innertext());
+            if (strpos(strtolower($tdText), "description") === false) {
+                continue;
+            }
+
+            $valueElement = $tdElement->next_sibling();
+            if ($valueElement === null) {
+                continue;
+            }
+
+            $value = $this->cleanString($valueElement->innertext());
+            return $this->saveDescription($da, $value);
+        }
+
+        return false;
+
+    }
+
+    protected function extractLodgeDate($html, $da, $params = null): bool {
+
+        $tdElements = $html->find("td");
+
+        foreach ($tdElements as $tdElement) {
+
+            $tdText = $this->cleanString($tdElement->innertext());
+            if (strpos(strtolower($tdText), "submitted date") === false) {
+                continue;
+            }
+
+            $valueElement = $tdElement->next_sibling();
+            if ($valueElement === null) {
+                continue;
+            }
+
+            $value = $this->cleanString($valueElement->innertext());
+            $date = \DateTime::createFromFormat("d/m/Y", $value);
+            return $this->saveLodgeDate($da, $date);
+        }
+
+        return false;
 
     }
 

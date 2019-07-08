@@ -1159,7 +1159,7 @@ class CronController extends _BaseController
     public function scanDasDocumentsAction()
     {
         $pdf = new PdfController();
-        $pdf->getDocumentUrlAction(40);
+        $pdf->getDocumentUrlAction(60);
         $pdf = null;
     }
 
@@ -1211,6 +1211,49 @@ class CronController extends _BaseController
         $das = null;
         $ddas = null;
         $result = null;
+    }
+
+    public function fixDocUrlAction(){
+        $councilId = $this->request->getQuery('councilId');
+        $das = new DasDocuments();
+        $sql = "SELECT dd.*
+                FROM das d, das_documents dd 
+                WHERE d.id = dd.das_id
+                AND d.council_id = $councilId";
+
+        $result = new \Phalcon\Mvc\Model\Resultset\Simple(
+            null
+            , $das
+            , $das->getReadConnection()->query($sql, [], [])
+        );
+
+        switch ($councilId){
+            case 17:
+                foreach ($result as $row){
+                    $url = $row->getUrl(true);
+                    if (strpos($url, 'eservices.lmc.nsw.gov.au') !== false) {
+                        if(strpos($url, "ApplicationTracking") === false){
+                            $str = "http://www.eservices.lmc.nsw.gov.au/";
+                            $replace = "http://eservices.lmc.nsw.gov.au/ApplicationTracking/";
+                            $newUrl = str_replace($str, $replace, $url);
+
+                            $row->setUrl($newUrl);
+                            if($row->save()){
+                                echo $newUrl . '<br>';
+                            }else{
+                                var_dump($row->getMessages());
+                            }
+                        }
+                    }
+                }
+
+                break;
+        }
+
+        $das = null;
+        $result = null;
+
+        return true;
     }
 
 
@@ -1313,7 +1356,7 @@ class CronController extends _BaseController
         $das = new Das();
 
         $sql = 'SELECT d.* FROM das d, das_invalid_docs did
-                WHERE did.das_id = d.id AND did.fixed = 0 LIMIT 30';
+                WHERE did.das_id = d.id AND did.fixed = 0 LIMIT 100';
 
         $result = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
@@ -1403,7 +1446,7 @@ class CronController extends _BaseController
                 AND dd.das_id = d.id
                 AND dd.checked = 0
                 AND dd.as3_url IS NOT NULL
-                ORDER BY dd.id DESC LIMIT 1';
+                ORDER BY dd.id DESC LIMIT 100';
 
         $docs = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
@@ -1480,7 +1523,7 @@ class CronController extends _BaseController
 
 
     public function rescanGetDaDocsAction(){
-        $sql = 'select dd.*, ed.id as ed_id, d.council_id from das_documents dd, error_docs ed, das d WHERE d.council_id = 20 and dd.das_id = d.id and ed.doc_id = dd.id and ed.status = 0';
+        $sql = 'select dd.*, ed.id as ed_id, d.council_id from das_documents dd, error_docs ed, das d WHERE d.council_id = 17 and dd.das_id = d.id and ed.doc_id = dd.id and ed.status = 0';
         $dasDoc = new DasDocuments();
         $result = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
@@ -1495,17 +1538,23 @@ class CronController extends _BaseController
                 if($ed->save()){
                     $id = $row->id;
                     $as3url = $row->as3_url;
-                    $docUrl = $row->url;
+                    $docUrl = $row->getUrl(true);
                     $councilId = $row->council_id;
 
-                    echo $councilId . ' - ' . $as3url . '<br>';
+                    echo $councilId . ' - ' . $as3url . ' - ' . $docUrl . '<br>';
                     switch ($councilId){
+                        case 17:
+                            if(strpos($docUrl, "eservices.lmc.nsw.gov.au") !== false){
+                                $this->updateForRescan($id);
+                            }
+                            break;
                         case 29: //Willoughby
                             $this->updateForRescan($id);
                             break;
                         case 20: // North Sydney
                             $this->updateForRescan($id);
                             break;
+
                     }
                 }
             }
@@ -1557,11 +1606,10 @@ class CronController extends _BaseController
 
     public function updateDasDataAction(){
         $date = date('Y-m');
-        $dateFrom = date('Y-m-d', strtotime('-30 days'));
+        $dateFrom = date('Y-m-d', strtotime('-160 days'));
         $das = Das::find([
-           'conditions' => 'council_id = :councilId: AND checked = :checked: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 10',
+           'conditions' => 'checked = :checked: AND (lodge_date > :dateFrom: AND lodge_date < :date: OR lodge_date IS NULL) ORDER BY id DESC LIMIT 100',
             'bind' => [
-                'councilId' => 9,
                 'checked' => 0,
                 'date' => $date,
                 'dateFrom' => $dateFrom
@@ -1594,11 +1642,11 @@ class CronController extends _BaseController
                             break;
                         case 10:
                             $cumberland = new CumberlandTask();
-                            $cumberland->init(['documents'], $da);
+                            $cumberland->init(['data', 'documents'], $da);
                             $cumberland = null;
                         case 11:
                             $fairfield = new FairfieldcityTask();
-                            $fairfield->init(['documents'], $da);
+                            $fairfield->init(['data', 'documents'], $da);
                             $fairfield = null;
                             break;
                         case 12:
@@ -1682,17 +1730,17 @@ class CronController extends _BaseController
                             break;
                         case 30:
                             $woollahra = new WoollahraTask();
-                            $woollahra->init(['documents'], $da);
+                            $woollahra->init(['data','documents'], $da);
                             $woollahra = null;
                             break;
                         case 32: // Bayside
                             $bayside = new BaysideTask();
-                            $bayside->init(['documents'], $da);
+                            $bayside->init(['data', 'documents'], $da);
                             $bayside = null;
                             break;
                         case 34: // Canterburybankstown
                             $canterburyBankstown = new CanterburyBankstownTask();
-                            $canterburyBankstown->init(['documents'], $da);
+                            $canterburyBankstown->init(['data', 'documents'], $da);
                             $canterburyBankstown = null;
                             break;
                     }

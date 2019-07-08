@@ -233,7 +233,7 @@
                     </ul>
                 </div>
                 <!-- end context menu -->
-                <div class="row overflow-x-scroll">
+                <div class="row">
                     {# Leads-table #}
                     <table id="dt-opt" class="table-hover ">
                         <thead>
