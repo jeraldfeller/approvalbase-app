@@ -30,7 +30,6 @@ class PdfController extends _BaseController
         $sql = 'SELECT dd.id as docId, dd.name, dd.url, d.id, c.name as councilName
                 FROM das d, das_documents dd, councils c
                 WHERE dd.das_id = d.id
-            
                 AND d.council_id = c.id
                 AND dd.as3_processed = 0
                 AND (dd.status = 0 OR dd.status IS NULL)
@@ -74,7 +73,7 @@ class PdfController extends _BaseController
                         ];
                         $pdfUrl = $this->curlCheckUrl($url, $header);
 
-                        $baseName = str_replace([' ', '/'], '_', $docName);
+                        $baseName = str_replace([' ', '/', ':'], '_', $docName);
                         $file = fopen('pdf/' . $docId . '_=_' . $baseName . '.pdf', "w");
                         fwrite($file, $pdfUrl['html']);
                         fclose($file);
@@ -94,7 +93,7 @@ class PdfController extends _BaseController
 
                         $this->acceptTerms($termsUrl, $formData, $council);
                         $pdfUrl = $this->curlCheckUrl($url, [], true);
-                        $baseName = str_replace([' ', '/'], '_', $docName);
+                        $baseName = str_replace([' ', '/', ':'], '_', $docName);
 
 
                         // Delete pdf if not exists
@@ -126,16 +125,26 @@ class PdfController extends _BaseController
                                     "__EVENTVALIDATION" => "/wEdAARp1NkhAoKaK1I3hXc8MEhSOcBhpQsJgyMjpoz897IvWkTdyBz/e/CcgfJ5zxj4jwg/VxUvaVtQChmSC3DOB0MpkNxT3w602E/WJYe1zMh6GAw3VwQ="
                                 ];
                                 $this->acceptTerms($termsUrl, $formData, $council);
+                                $baseName = str_replace([' ', '/', ':'], '_', $docName);
                                 $pdfUrl = $this->curlCheckUrl($url, [], true);
-                                $baseName = str_replace([' ', '/'], '_', $docName);
-                                // Delete pdf if not exists
-                                if (strpos($pdfUrl['html'], '%PDF') !== false) {
-                                    $file = fopen('pdf/' . $docId . '_=_' . $baseName . '.pdf', "w");
-                                    fwrite($file, $pdfUrl['html']);
-                                    fclose($file);
-                                } else {
-                                    echo $pdfUrl['html'] . '<Br>';
+                                if(trim($urlParam['ext']) == 'pdf'){
+                                    // Delete pdf if not exists
+                                    if (strpos($pdfUrl['html'], '%PDF') !== false) {
+                                        $file = fopen('pdf/' . $docId . '_=_' . $baseName . '.pdf', "w");
+                                        fwrite($file, $pdfUrl['html']);
+                                        fclose($file);
+                                    } else {
+                                        echo $pdfUrl['html'] . '<Br>';
+                                    }
+                                }else if(trim($urlParam['ext']) == 'doc'){
+                                    $fopen = @fopen($url, 'r');
+                                    $path = 'pdf/' . $docId . '_=_' . $baseName . '.doc';
+
+                                    if ($fopen !== false) {
+                                        file_put_contents($path, $fopen);
+                                    }
                                 }
+
                             }else{ // not valid doc file - delete
                                 $this->deletePdfById($docId);
                                 return false;
@@ -160,7 +169,7 @@ class PdfController extends _BaseController
                         $acceptedTerms = $this->acceptTerms($termsUrl, $formData, $council);
 
                         $pdfUrl = $this->curlCheckUrl($url, [], true);
-                        $baseName = str_replace([' ', '/'], '_', $docName);
+                        $baseName = str_replace([' ', '/', ':'], '_', $docName);
                         $file = fopen('pdf/' . $docId . '_=_' . $baseName . '.pdf', "w");
                         fwrite($file, $pdfUrl['html']);
                         fclose($file);
@@ -189,14 +198,14 @@ class PdfController extends _BaseController
                                 parse_str($parseUrl['query']);
                                 $qryTitle = $title;
                                 $qryTitle = $docName;
-                                $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $qryTitle) . '.pdf';
+                                $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/', ':'], '_', $qryTitle) . '.pdf';
                                 $pdfUrl = trim($pdfUrl['url']);
                                 break;
                             case 'Camden':
                                 parse_str(basename($pdfUrl['url']));
                                 $qryTitle = $fileName;
                                 $qryTitle = $docName;
-                                $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $qryTitle) . '.pdf';
+                                $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/', ':'], '_', $qryTitle) . '.pdf';
                                 $pdfUrl = trim($pdfUrl['url']);
                                 break;
                             case 'Fairfield City':
@@ -220,7 +229,7 @@ class PdfController extends _BaseController
                                     $src = str_replace('../../', '', $iframe->getAttribute('src'));
                                     $pdfUrl = $src;
 //                                $path = 'pdf/' . $docId . '_=_' . basename($pdfUrl);
-                                    $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/'], '_', $docName);
+                                    $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/', ':'], '_', $docName);
                                 } else {
                                     $path = '';
                                 }
@@ -229,7 +238,7 @@ class PdfController extends _BaseController
                                 $pdfData = $pdfUrl['html'];
                                 $pdfUrl = trim($pdfUrl['url']);
                                 $baseName = basename($pdfUrl);
-                                $baseName = str_replace([' ', '/'], '_', $docName);
+                                $baseName = str_replace([' ', '/', ':'], '_', $docName);
                                 $path = 'pdf/' . $docId . '_=_' . $this->clean($baseName);
                                 break;
 

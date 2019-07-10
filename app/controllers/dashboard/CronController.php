@@ -1213,6 +1213,10 @@ class CronController extends _BaseController
         $result = null;
     }
 
+    public function fixDocUrlSourceAction(){
+        echo 'TEST';
+    }
+
     public function fixDocUrlAction(){
         $councilId = $this->request->getQuery('councilId');
         $das = new DasDocuments();
@@ -1220,7 +1224,6 @@ class CronController extends _BaseController
                 FROM das d, das_documents dd 
                 WHERE d.id = dd.das_id
                 AND d.council_id = $councilId";
-
         $result = new \Phalcon\Mvc\Model\Resultset\Simple(
             null
             , $das
@@ -1865,4 +1868,5 @@ class CronController extends _BaseController
 
         return $response;
     }
+
 }
