@@ -19,7 +19,7 @@
         <div id="datatables">
             <div class="content-wrapper">
                 {% include "includes/flashMessages.volt" %}
-                <div class="row">
+                <div class="row overflow-x-scroll overflow-y-hidden">
                     <table id="dt-opt" class="table-hover">
                         <thead>
                         <tr>

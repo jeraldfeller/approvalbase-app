@@ -284,7 +284,7 @@
                         {#</a>#}
                     {#</div>#}
                 {#</div>#}
-                <div class="row overflow-x-scroll">
+                <div class="row overflow-x-scroll overflow-y-hidden">
                     <div class="col-md-12">
                         {# Phrases table #}
                         <table id="dt-opt"
