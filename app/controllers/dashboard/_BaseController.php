@@ -10,9 +10,9 @@ class _BaseController extends \Phalcon\Mvc\Controller {
     private $user;
 
     public function initialize() {
+        // get users UA
+        $ua = $this->get_browser_name($_SERVER['HTTP_USER_AGENT']);
         $this->setUrlVariables();
-
-
 
         if ($this->session->has('auth')) {
             $user = $this->session->get("auth")["user"];
@@ -22,7 +22,8 @@ class _BaseController extends \Phalcon\Mvc\Controller {
 
             $users = Users::getUsersInfoById($this->getUser()->getId());
             $this->view->setVars([
-                'user'			=> $users
+                'user'			=> $users,
+                'ua' => $ua
             ]);
 
             // check user subscription status
@@ -40,6 +41,19 @@ class _BaseController extends \Phalcon\Mvc\Controller {
         }
 
     }
+
+    function get_browser_name($user_agent)
+    {
+        if (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) return 'Opera';
+        elseif (strpos($user_agent, 'Edge')) return 'Edge';
+        elseif (strpos($user_agent, 'Chrome')) return 'Chrome';
+        elseif (strpos($user_agent, 'Safari')) return 'Safari';
+        elseif (strpos($user_agent, 'Firefox')) return 'Firefox';
+        elseif (strpos($user_agent, 'MSIE') || strpos($user_agent, 'Trident/7')) return 'Internet Explorer';
+
+        return 'Other';
+    }
+
 
     public function afterExecuteRoute() {
         $this->view->setViewsDir($this->getDI()->get('config')->directories->viewsDirDashboard);

@@ -48,9 +48,9 @@ function shortizeNumber (x) {
 
 }
 
-function downloadPdfZip($btn, dasId, $part, $files, $index){
+function downloadPdfZip($btn, dasId, $part, $files = [], $index = 0){
 
-  return new Promise(function(resolve, reject){
+  return new Promise((resolve, reject)=>{
     $.ajax({
       url: '/pdf/downloadPdf?ajax=1',
       type: 'POST',

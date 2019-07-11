@@ -19,6 +19,7 @@
 
 {% endblock %}
 {% block content %}
+
     <div id="content" style="height: auto;">
         <div class="menubar sticky">
             <div class="sidebar-toggler visible-xs">

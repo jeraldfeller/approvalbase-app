@@ -33,6 +33,10 @@
     <!-- Fresh chat -->
     <script src="https://wchat.freshchat.com/js/widget.js"></script>
 
+    <script>
+        var browser = "{{ ua }}";
+    </script>
+
 
 </head>
 
@@ -69,7 +73,12 @@
       localStorage.setItem('freshLogin', false);
   });
 </script>
-<script src="{{ url("dashboard_assets/js/common.js?v=2.0.9") }}"></script>
+
+{% if us == 'Safari' %}
+    <script src="{{ url("dashboard_assets/js/common_safari.js?v=2.0.10") }}"></script>
+{% else %}
+<script src="{{ url("dashboard_assets/js/common.js?v=2.0.10") }}"></script>
+{% endif %}
 <script>
   var restoreId = "{{ user['restoreId'] }}"; //Which need to be fetched from your DB
   window.fcWidget.init({
