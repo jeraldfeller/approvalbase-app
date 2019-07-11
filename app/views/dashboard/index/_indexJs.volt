@@ -91,7 +91,7 @@
     $('.data-projects-percent-value').html('<i class="icomoon icomoon-spinner2 icomoon-spin"></i>');
     $('.data-value').html('<i class="icomoon icomoon-spinner2 icomoon-spin"></i>');
 
-    return new Promise((resolve, reject) => {
+    return new Promise( function(resolve, reject) {
       // ajax request to fetch data
       $.ajax({
         url: '{{ url('dashboard/getMetrics') }}',
@@ -142,7 +142,7 @@
 
   function getDocumentsSearchData() {
     $('#documents-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
-    return new Promise((resolve, reject) => {
+      return new Promise( function(resolve, reject) {
 
       //setTimeout(function () {
         $.ajax({
@@ -165,7 +165,7 @@
 
   function getAlertsData() {
     $('#alerts-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
-    return new Promise((resolve, reject) => {
+      return new Promise( function(resolve, reject) {
      // setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
@@ -185,7 +185,7 @@
 
   function getProjectsData() {
     $('#alerts-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
-    return new Promise((resolve, reject) => {
+      return new Promise( function(resolve, reject) {
       //setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
@@ -217,13 +217,13 @@
         // initial zoom
         zoom: 4
       });
-      return new Promise((resolve, reject) => {
+        return new Promise( function(resolve, reject) {
         map.on('load', function (e) {
           resolve(true);
         });
       })
     } else {
-      return new Promise((resolve, reject) => {
+        return new Promise( function(resolve, reject) {
         resolve(true);
       })
     }
@@ -233,7 +233,7 @@
 
   function getApplicationsSavedData() {
     $('#applications-saved-chart').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
-    return new Promise((resolve, reject) => {
+      return new Promise( function(resolve, reject) {
      //setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getData') }}',
@@ -255,7 +255,7 @@
 
   function getSources() {
     $('#councils-container').html('<i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i>');
-    return new Promise((resolve, reject) => {
+      return new Promise( function(resolve, reject) {
       //setTimeout(function () {
         $.ajax({
           url: '{{ url('dashboard/getSources') }}',
@@ -275,7 +275,7 @@
 
   function getTableData(){
 //    $('#table-tbody').html('<tr><td colspan="5" style="text-align: center;"><i class="icomoon icomoon-spinner2 icomoon-spin fa-2x"></i></td> </tr>');
-    return new Promise((resolve, reject) => {
+      return new Promise( function(resolve, reject) {
       //setTimeout(function(){
         $.ajax({
           url: '{{ url('dashboard/getTableData') }}',
@@ -295,8 +295,8 @@
 
   function reload(options) {
     getMetrics().then(
-      getProjectsData().then(
-        d => {
+      getProjectsData().then(function(d)
+       {
 
           var plotAlerts = $.plot($("#alerts-chart"), [d], $.extend(options, {
             tooltipOpts: {
@@ -324,8 +324,8 @@
 //          }
         }
       ).then(
-        getTableData().then(
-          d => {
+        getTableData().then(function(d)
+        {
               $totalProject = 0;
               $tableHtml = '';
               $.each(d, function(key, prop){

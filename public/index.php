@@ -5,7 +5,7 @@ date_default_timezone_set('Australia/Sydney');
  * APPLICATION ENVIRONMENT
  *---------------------------------------------------------------
  */
-define('ENVIRONMENT', 'development');
+define('ENVIRONMENT', 'production');
 
 error_reporting(E_ALL);
 
@@ -21,7 +21,7 @@ switch (ENVIRONMENT) {
         require $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
         ini_set('display_errors', 1);
         error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
-        define('BASE_URI', 'http://app.approvalbase.com/');
+        define('BASE_URI', 'https://app.approvalbase.com/');
         define('ADMIN_EMAIL', 'oscar@willowcapital.com.au');
         define('STRIPE_ENV', 'stripe');
         break;

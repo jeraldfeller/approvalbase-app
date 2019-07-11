@@ -529,7 +529,7 @@
                             $btn.html('<i class="fa fa-spinner fa-spin font-size-20"></i>');
                             $btn.attr('disabled', true);
                             var dasId = $(this).attr('data-id');
-                            await downloadPdfZip($btn, dasId, 1).then(
+                            await downloadPdfZip($btn, dasId, 1, [], 0).then(
                                 async result => {
                                     if (result.length > 0) {
                                         var paths = [];
@@ -545,7 +545,7 @@
                                                 async response => {
                                                     paths.push(result[nextIndex]['path']);
                                                     if (nextIndex + 1 == result.length) {
-                                                        await downloadPdfZip($btn, dasId, 3, paths).then(
+                                                        await downloadPdfZip($btn, dasId, 3, paths, 0).then(
                                                             response => console.log(response)
                                                         );
                                                     }
