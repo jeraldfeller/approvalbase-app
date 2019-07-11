@@ -74,7 +74,7 @@
   });
 </script>
 
-{% if us == 'Safari' %}
+{% if ua == 'Safari' %}
     <script src="{{ url("dashboard_assets/js/common_safari.js?v=2.0.10") }}"></script>
 {% else %}
 <script src="{{ url("dashboard_assets/js/common.js?v=2.0.10") }}"></script>

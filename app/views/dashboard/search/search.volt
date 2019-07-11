@@ -305,6 +305,10 @@
             </div>
         </div>
     </div>
+    {% if ua == 'Safari' %}
+        {% include "search/_searchJsSafari.volt" %}
+    {% else %}
     {% include "search/_searchJs.volt" %}
+    {% endif %}
     {% include "_helpers/_shareDaJs.volt" %}
 {% endblock %}

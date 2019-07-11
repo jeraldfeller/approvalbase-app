@@ -189,7 +189,7 @@
                                 action: function(){
                                     setTimeout(function(){
                                         $('#filterModal').modal('hide');
-                                       return tour.next();
+                                        return tour.next();
                                     }, 300);
                                 }
                             }]
@@ -526,46 +526,47 @@
                         });
 
 
-                        $('.downloadPdfBtn').unbind().click(async function () {
-                            $btn = $(this);
-                            $btn.html('<i class="fa fa-spinner fa-spin font-size-20"></i>');
-                            $btn.attr('disabled', true);
-                            var dasId = $(this).attr('data-id');
-                            await downloadPdfZip($btn, dasId, 1).then(
-                                async result => {
-                                    if (result.length > 0) {
-                                        var paths = [];
-                                        var indexCount = 0
-                                        var nextIndex = 0;
-                                        $btn.html('<div style="width: 100px; padding: 1px;"><div class="progress progress-striped active">' +
-                                            '<div class="progress-bar progress-bar-btn"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">' +
-                                            '<span class="percent-text">0%</span>' +
-                                            '</div>' +
-                                            '</div></div>')
-                                        while (indexCount < result.length) {
-                                            await downloadPdfZip($btn, dasId, 2, result[nextIndex], nextIndex).then(
-                                                async response => {
-                                                    paths.push(result[nextIndex]['path']);
-                                                    if (nextIndex + 1 == result.length) {
-                                                        await downloadPdfZip($btn, dasId, 3, paths).then(
-                                                            response => console.log(response)
-                                                        );
+                            $('.downloadPdfBtn').unbind().click(function () {
+                                $btn = $(this);
+                                $btn.html('<i class="fa fa-spinner fa-spin font-size-20"></i>');
+                                $btn.attr('disabled', true);
+                                var dasId = $(this).attr('data-id');
+                                downloadPdfZip($btn, dasId, 1, [], 0).then( function(result)
+                                    {
+                                        if (result.length > 0) {
+                                            var paths = [];
+                                            var indexCount = 0
+                                            var nextIndex = 0;
+                                            $btn.html('<div style="width: 100px; padding: 1px;"><div class="progress progress-striped active">' +
+                                                '<div class="progress-bar progress-bar-btn"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">' +
+                                                '<span class="percent-text">0%</span>' +
+                                                '</div>' +
+                                                '</div></div>')
+                                            while (indexCount < result.length) {
+                                                downloadPdfZip($btn, dasId, 2, result[nextIndex], nextIndex).then( function(result)
+                                                    {
+                                                        paths.push(result[nextIndex]['path']);
+                                                        if (nextIndex + 1 == result.length) {
+                                                            downloadPdfZip($btn, dasId, 3, paths, 0).then( function(response){
+                                                                    console.log(response)
+                                                                }
+                                                            );
+                                                        }
+                                                        console.log(nextIndex, result.length)
+                                                        nextIndex++;
+                                                        console.log(paths);
                                                     }
-                                                    console.log(nextIndex, result.length)
-                                                    nextIndex++;
-                                                    console.log(paths);
-                                                }
-                                            )
-                                            indexCount++;
-                                            $percent = (indexCount / result.length) * 100;
-                                            $('.progress-bar').css({width: $percent.toFixed(0) + '%'});
-                                            $('.percent-text').html($percent.toFixed(0) + '%');
-                                        }
+                                                )
+                                                indexCount++;
+                                                $percent = (indexCount / result.length) * 100;
+                                                $('.progress-bar').css({width: $percent.toFixed(0) + '%'});
+                                                $('.percent-text').html($percent.toFixed(0) + '%');
+                                            }
 
+                                        }
                                     }
-                                }
-                            );
-                        });
+                                );
+                            });
                     }, 500);
 
                 }
