@@ -384,7 +384,7 @@
     if (!isMobile) {
       // councils
 
-      let branch_all = [];
+      var branch_all = [];
 
       function formatResult(state) {
         if (!state.id) {

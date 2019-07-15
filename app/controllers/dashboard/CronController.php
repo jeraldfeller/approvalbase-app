@@ -1213,9 +1213,42 @@ class CronController extends _BaseController
         $result = null;
     }
 
-    public function fixDocUrlSourceAction(){
-        echo 'TEST';
+    public function fixProjectUrlAction(){
+        $councilId = $this->request->getQuery('councilId');
+        $das = new Das();
+        $sql = 'SELECT * FROM das WHERE council_id = '.$councilId;
+
+        $result = new \Phalcon\Mvc\Model\Resultset\Simple(
+            null
+            , $das
+            , $das->getReadConnection()->query($sql, [], [])
+        );
+
+        switch ($councilId){
+            case '17':
+                foreach ($result as $row){
+                    $url = $row->getCouncilUrl();
+                    if (strpos($url, 'eproperty.marrickville.nsw.gov.au') !== false) {
+                        if (strpos($url, "PublicNotices") !== false) {
+                            $find = ['PublicNotices/PublicNoticeDetails', '&rf=%24P1.ESB.PUBNOTAL.ENQ', 'ESB.PUBNOT'];
+                            $replace = ['eTrack/eTrackApplicationDetails', '', 'ETR.APPDET'];
+                            $newUrl = str_replace($find, $replace, $url);
+                            echo $newUrl . '<br>';
+                            $row->setCouncilUrl($newUrl);
+                            $row->save();
+                        }
+                    }
+                }
+
+                break;
+        }
+
+        $das = null;
+        $result = null;
+        return true;
+
     }
+
 
     public function fixDocUrlAction(){
         $councilId = $this->request->getQuery('councilId');
@@ -1548,6 +1581,8 @@ class CronController extends _BaseController
                     switch ($councilId){
                         case 17:
                             if(strpos($docUrl, "eservices.lmc.nsw.gov.au") !== false){
+                                $this->updateForRescan($id);
+                            }else if(strpos($docUrl, "gotrim.marrickville.nsw.gov.au") !== false){
                                 $this->updateForRescan($id);
                             }
                             break;

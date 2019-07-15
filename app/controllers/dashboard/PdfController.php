@@ -151,6 +151,17 @@ class PdfController extends _BaseController
 
                             }
 //
+                        }else if(strpos($url, 'gotrim.marrickville.nsw.gov.au') !== false){
+                            $baseName = str_replace([' ', '/', ':'], '_', $docName);
+                            $pdfUrl = $this->curlCheckUrl($url, [], false);
+                            if (strpos($pdfUrl['html'], '%PDF') !== false) {
+                                $file = fopen('pdf/' . $docId . '_=_' . $baseName . '.pdf', "w");
+                                fwrite($file, $pdfUrl['html']);
+                                fclose($file);
+                            } else {
+                                echo $pdfUrl['html'] . '<Br>';
+                            }
+
                         }
                         break;
                     case 'North Sydney':

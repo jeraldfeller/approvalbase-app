@@ -254,6 +254,11 @@
             </div>
         </div>
     </div>
-    {% include "leads/_leadsJs.volt" %}
+
+    {% if ua == 'Safari' %}
+        {% include "leads/_leadsJsSafari.volt" %}
+    {% else %}
+        {% include "leads/_leadsJs.volt" %}
+    {% endif %}
     {% include "_helpers/_shareDaJs.volt" %}
 {% endblock %}
