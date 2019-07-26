@@ -39,11 +39,14 @@
         if ($onBoardingFinish == 1) {
             $('#welcome-modal').modal('show');
         }
+        console.log('F: ', $freshLogin);
         if ($freshLogin == 'true') {
 
             $hasSeenModal = '{{ user['seenModal'] }}';
             $onboardingAlerts = '{{ user['onboardingAlerts'] }}';
             $onboardingFilter = '{{ user['onboardingFilter'] }}';
+
+            console.log('M: ', $hasSeenModal, $onboardingAlerts, $onboardingFilter);
 
             if ($hasSeenModal == 1 && $onboardingAlerts == 1 && $onboardingFilter == 1) {
                 console.log('oboarding finish');
@@ -68,7 +71,8 @@
 
                 $hasToured = localStorage.getItem('tourFinished');
                 $tourFinal = localStorage.getItem('tourFinal');
-                console.log($hasToured);
+                console.log('H: ', $hasToured);
+                console.log('T: ', $tourFinal);
                 if ($hasToured == null) {
                     $('body').attr('id', 'ui');
                     var tour;

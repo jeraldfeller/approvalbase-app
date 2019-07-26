@@ -30,6 +30,7 @@ class PdfController extends _BaseController
         $sql = 'SELECT dd.id as docId, dd.name, dd.url, d.id, c.name as councilName
                 FROM das d, das_documents dd, councils c
                 WHERE dd.das_id = d.id
+                AND dd.id = 32350
                 AND d.council_id = c.id
                 AND dd.as3_processed = 0
                 AND (dd.status = 0 OR dd.status IS NULL)
@@ -159,7 +160,17 @@ class PdfController extends _BaseController
                                 fwrite($file, $pdfUrl['html']);
                                 fclose($file);
                             } else {
-                                echo $pdfUrl['html'] . '<Br>';
+
+                                $fopen = @fopen($url, 'r');
+                                $path = 'pdf/' . $docId . '_=_' . $baseName . '.pdf';
+                                echo $fopen;
+                                if ($fopen !== false) {
+                                    file_put_contents($path, $fopen);
+                                }else{
+                                    //$this->deletePdfById($docId);
+                                    return false;
+                                }
+
                             }
 
                         }

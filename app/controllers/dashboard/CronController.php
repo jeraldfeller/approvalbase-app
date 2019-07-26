@@ -1904,4 +1904,88 @@ class CronController extends _BaseController
         return $response;
     }
 
+
+    public function scrapeTestAction(){
+        $url = 'https://lionpic.co.uk/search/filterresult';
+        $postFields = [
+           'p' => 1,
+           's' => 75,
+           'sort' => 0,
+           'd' => 1,
+           'c' => 1349,
+           'stock' => 0,
+           'lionEssentialsOnly',
+            'rangeId' => -1
+        ];
+        $curl = curl_init();
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => "",
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 300,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => "POST",
+            CURLOPT_POSTFIELDS => $postFields,
+            CURLOPT_HTTPHEADER => array(
+                "Postman-Token: 34b89c43-47fa-44df-9ab3-c9a8cdd0060f",
+                "cache-control: no-cache"
+            ),
+        ));
+
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
+
+        if($err){
+            var_dump($err);
+        }
+        curl_close($curl);
+
+
+        $csv = 'lionpic.csv';
+        $data[] = implode('","', array(
+            'Title',
+            'Url',
+            'Price',
+            'Quantity',
+            'Image'
+        ));
+
+        $html = str_get_html($response);
+        if($html){
+            $container = $html->find('#product-list', 0);
+            $results = $container->find('.search-result');
+            foreach($results as $row){
+                $a = $row->find('.product-name', 0);
+                $productUrl = $a->find('a', 0)->getAttribute('href');
+                $name = $a->plaintext;
+                $price = $row->find('.product-price', 0)->plaintext;
+                $price = str_replace('&#163;', '', $price);
+                $inStock = $row->find('.in-stock', 0)->plaintext;
+                $qty = preg_replace("/[^0-9]/", "", $inStock);
+                $productImg = $row->find('.product-image', 0);
+                $productImg = $productImg->find('img', 0);
+                $productImg = $productImg->getAttribute('src');
+                echo $name . '<br>';
+                echo $productUrl . '<br>';
+                echo $qty . '<br>';
+                $data[] = implode('","', array(
+                    $name,
+                    'https://lionpic.co.uk'.$productUrl,
+                    $price,
+                    $qty,
+                    'https://lionpic.co.uk'.$productImg
+                ));
+            }
+        }
+
+        $file = fopen($csv,"a");
+        foreach ($data as $line){
+            fputcsv($file, explode('","',$line));
+        }
+        fclose($file);
+    }
+
+
+    
 }

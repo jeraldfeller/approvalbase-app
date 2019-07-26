@@ -549,7 +549,9 @@
                                                                         style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
                                                                         valign="top">
                                                                         {% for add in address %}
+                                                                        <a target="_blank" href="https://www.google.com/maps/place/{{ add.readAttribute('clean_address') }}">
                                                                             {{ add.readAttribute('clean_address') }}
+                                                                        </a>
                                                                         {% endfor %}
                                                                     </td>
                                                                 </tr>
@@ -563,7 +565,9 @@
                                                                         <td class="content-block"
                                                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 13px; vertical-align: top; margin: 0; padding: 10px 10px 0;"
                                                                             valign="top">
+                                                                            <a target="_blank" href="https://www.google.com.au/search?newwindow=1&q={{ p.readAttribute('name') }}">
                                                                             {{ p.readAttribute('name') }}
+                                                                            </a>
                                                                         </td>
                                                                     </tr>
                                                                 {% endfor %}

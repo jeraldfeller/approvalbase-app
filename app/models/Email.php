@@ -73,7 +73,8 @@ class Email extends _BaseModel
         $emailsTo = implode(',', $emails);
 
         $postFields = [
-            'from' => sprintf('%s <%s>', $name, $email),
+//            'from' => sprintf('%s <%s>', $name, $email),
+            'from' => sprintf('%s <%s>', $config->mailgun->mailFromName, $config->mailgun->mailFromEmail),
             'subject' => 'Shared Project',
             'html' => $emailHtml,
             'text' => strip_tags(\Aiden\Classes\SwissKnife::br2nl($emailHtml)),

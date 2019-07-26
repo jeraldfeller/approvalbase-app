@@ -555,6 +555,19 @@ class SettingsController extends _BaseController
         return true;
     }
 
+
+    public function resetOnboardingAction(){
+        $user = $this->getUser();
+        $user->setSeenModal(0);
+        $user->setOnboardingAlerts(0);
+        $user->setOnboardingFilter(0);
+        $user->save();
+
+        echo json_encode(true);
+
+
+    }
+
     public function setRestoreIdAction(){
         $restoreId =  $this->request->getPost('restoreId');
         $user = $this->getUser();
