@@ -1159,7 +1159,7 @@ class CronController extends _BaseController
     public function scanDasDocumentsAction()
     {
         $pdf = new PdfController();
-        $pdf->getDocumentUrlAction(60);
+        $pdf->getDocumentUrlAction(1);
         $pdf = null;
     }
 

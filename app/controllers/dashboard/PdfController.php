@@ -30,7 +30,7 @@ class PdfController extends _BaseController
         $sql = 'SELECT dd.id as docId, dd.name, dd.url, d.id, c.name as councilName
                 FROM das d, das_documents dd, councils c
                 WHERE dd.das_id = d.id
-                AND dd.id = 32350
+            
                 AND d.council_id = c.id
                 AND dd.as3_processed = 0
                 AND (dd.status = 0 OR dd.status IS NULL)
@@ -196,14 +196,38 @@ class PdfController extends _BaseController
                         fwrite($file, $pdfUrl['html']);
                         fclose($file);
                         break;
+
+                    case 'Georges River':
+                        $url = str_replace('&amp;', '&', $url);
+                        $baseName = str_replace([' ', '/', ':'], '_', $docName);
+                        parse_str($url, $urlParam);
+                        if (trim($urlParam['ext']) == 'pdf' || trim($urlParam['ext']) == 'docx') {
+                            if(trim($urlParam['ext']) == 'pdf'){
+                                $pdfUrl = $this->curlCheckUrl($url, $header);
+                                if (strpos($pdfUrl['html'], '%PDF') !== false) {
+                                    $file = fopen('pdf/' . $docId . '_=_' . $baseName . '.pdf', "w");
+                                    fwrite($file, $pdfUrl['html']);
+                                    fclose($file);
+                                }
+                            }else{
+                                $fopen = @fopen($url, 'r');
+                                $path = 'pdf/' . $docId . '_=_' . $baseName . '.docx';
+                                if ($fopen !== false) {
+                                    file_put_contents($path, $fopen);
+                                }
+                            }
+                        }
+
+                        break;
                     default:
                         $pdfUrl = $this->curlCheckUrl($url, $header);
                         if (isset($pdfUrl['error'])) {
                             $this->setErrorMessage($docId, $pdfUrl['error']);
-
                         }
                         break;
                 }
+
+
 
 
                 if ($pdfUrl['url'] != false) {
@@ -243,19 +267,6 @@ class PdfController extends _BaseController
                                     $path = '';
                                 }
                                 break;
-                            case 'Georges River':
-                                $html = str_get_html(str_replace('%20', ' ', $pdfUrl['html']));
-                                $iframe = $html->find('iframe', 0);
-                                if ($iframe) {
-
-                                    $src = str_replace('../../', '', $iframe->getAttribute('src'));
-                                    $pdfUrl = $src;
-//                                $path = 'pdf/' . $docId . '_=_' . basename($pdfUrl);
-                                    $path = 'pdf/' . $docId . '_=_' . str_replace([' ', '/', ':'], '_', $docName);
-                                } else {
-                                    $path = '';
-                                }
-                                break;
                             default:
                                 $pdfData = $pdfUrl['html'];
                                 $pdfUrl = trim($pdfUrl['url']);
@@ -272,7 +283,7 @@ class PdfController extends _BaseController
                     }
 
                     if ($path != '') {
-                        if ($council != 'Penrith' && $council != 'Willoughby' && $council != 'Inner West' && $council != 'North Sydney') {
+                        if ($council != 'Penrith' && $council != 'Willoughby' && $council != 'Inner West' && $council != 'North Sydney' && $council != 'Georges River') {
                             if (!strpos($path, '.doc') && !strpos($path, '.DOC')) {
                                 $path = (!strpos($path, '.pdf') && !strpos($path, '.PDF') ? $path . '.pdf' : $path);
                             }

@@ -1,6 +1,6 @@
 {% extends "_templates/base.volt" %}
 {% block extra_css %}
-    <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/mapbox.css?v=4.7.10')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url('dashboard_assets/css/mapbox.css?v=4.7.11')}}" />
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
     <link rel='stylesheet'
           href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css'

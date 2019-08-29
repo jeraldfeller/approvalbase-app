@@ -43,11 +43,7 @@ class IndexController extends _BaseController
         ]);
 
 
-        if($solution == 'monitor'){
-            $this->view->pick('index/index-monitor');
-        }else{
-            $this->view->pick('index/index');
-        }
+        $this->view->pick('index/index');
 
 
     }

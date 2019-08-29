@@ -275,7 +275,7 @@ class DatatablesController extends _BaseController
                 LIMIT ' . $offset . ',' . $filterLimit;
         }
 
-
+        
         // Base model
         $developmentApplicationRows = new \Phalcon\Mvc\Model\Resultset\Simple(
             null

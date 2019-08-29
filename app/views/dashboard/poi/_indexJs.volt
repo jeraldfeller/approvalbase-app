@@ -616,25 +616,29 @@
 
 
 
-//          $('.da-list-row').removeClass('shown');
+//          $('.da-list-row').removeClass('shown-mb');
 
           // show list
 
           setTimeout(function(){
             console.log('THIS');
+            $target = '.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-') + ' .redirect:eq(0)';
+            $targetScroll = '.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-');
             $('.poi_' + clickedPoint.properties.poiId + '').addClass('active-selected');
             if ($('.poi_' + clickedPoint.properties.poiId + '').find('.poi-action-show-list').hasClass('fa-angle-double-down')) {
                   $('.poi_' + clickedPoint.properties.poiId + '').find('.poi-action-show-list').trigger('click');
             }
-            console.log($('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')+ ' .redirect:eq(0)'));
-            $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')+ ' .redirect:eq(0)').trigger('click');
-//            $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')).addClass('shown');
-//
 
-
-            $('.scroll-wrapper').animate({
-              scrollTop: $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')).offset().top
-            }, 500);
+              $($target).trigger('click');
+              setTimeout(function(){
+                  console.log($($targetScroll+'-input'));
+                  $($targetScroll+'-input').trigger('focus');
+              }, 500);
+            // console.log($('.scroll-wrapper ' + $targetScroll).offset().top);
+            //       $('.scroll-wrapper').animate({
+            //         // scrollTop: $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-')).offset().top
+            //           scrollTop: $($target).offset().top
+            //       }, 500);
         }, 500);
 
 
@@ -806,6 +810,7 @@
           link.addEventListener('click', function (e) {
             // Update the currentFeature to the store associated with the clicked link
             var clickedListing = data.features[this.dataPosition];
+
             // 1. Fly to the point associated with the clicked link
             flyToStore(clickedListing);
             // 2. Close all other popups and display popup for clicked store
@@ -995,7 +1000,7 @@
 //                        '</li>';
 
           $rowIdentifier = key.properties.dasId+'-'+key.properties.address;
-          $htmlData += '<tr data-index="'+index+'" class=" da-list-row hover da-'+$rowIdentifier.replace(/ /g, '-').replace(/,/g, '-')+'" data-dasId="' + key.properties.dasId + '" id="' + key.properties.poiId + '"><td class="da-li text-left ">' + key.properties.lodgeDateUnix + '</td><td class="da-li text-left  redirect">' + key.properties.lodgeDate + '</td><td class="da-li text-left  redirect">' +
+          $htmlData += '<tr data-index="'+index+'" class=" da-list-row hover da-'+$rowIdentifier.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-')+'" data-dasId="' + key.properties.dasId + '" id="' + key.properties.poiId + '"><td class="da-li text-left ">' + key.properties.lodgeDateUnix + ' </td><td class="da-li text-left  redirect">' + key.properties.lodgeDate + '</td><td class="da-li text-left  redirect"> <input type="text" style="position: absolute; opacity: 0;" class="da-'+$rowIdentifier.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-')+'-input">' +
             key.properties.address +
             '</td></tr>';
         }
@@ -1034,19 +1039,19 @@
             // This row is already open - close it
             $('.card-slider', row.child()).slideUp(function () {
               row.child.hide();
-              tr.removeClass('shown');
+              tr.removeClass('shown-mb');
             });
           }
           else {
-            // Open this row (the format() function would return the data to be shown)
-            if (table.row('.shown').length) {
-              console.log(table.row('.shown').length);
-              $('.redirect', table.row('.shown').node()).click();
+            // Open this row (the format() function would return the data to be shown-mb)
+            if (table.row('.shown-mb').length) {
+              console.log(table.row('.shown-mb').length);
+              $('.redirect', table.row('.shown-mb').node()).click();
             }
 
             row.child(format($dasId, $poiId)).show();
             row.child().find('td').addClass('no-pdd-left no-pdd-right');
-            tr.addClass('shown');
+            tr.addClass('shown-mb');
             $('.card-slider', row.child()).slideDown();
             $('.card-block-poi').removeClass('text-left').addClass('text-center');
             // get Documents and Parties
