@@ -45,7 +45,7 @@
             {% include "includes/user-dropdown.volt" %}
             <div class="pull-right" style="margin-right: 190px;">
                 <button class="btn btn-primary map-style-change" data-style="{{ template }}" disabled>Map view</button>
-                <button class="btn btn-default map-style-change" data-style="mapbox://styles/mapbox/satellite-v9">Map view</button>
+                <button class="btn btn-default map-style-change" data-style="mapbox://styles/mapbox/satellite-v9">Satellite view</button>
             </div>
         </div>
         <div id="sidebar">

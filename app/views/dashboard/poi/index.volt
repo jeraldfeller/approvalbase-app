@@ -44,7 +44,7 @@
             {#<a class="bulk-action-button btn btn-default" id="showModal" data-action="add">Create Asset</a>#}
             <a class="btn btn-default" data-toggle="modal" data-target="#uploadModal">Upload CSV</a>
             <button class="btn btn-primary map-style-change" data-style="{{ template }}" disabled>Map view</button>
-            <button class="btn btn-default map-style-change" data-style="mapbox://styles/mapbox/satellite-v9">Map view</button>
+            <button class="btn btn-default map-style-change" data-style="mapbox://styles/mapbox/satellite-v9">Satellite view</button>
         </div>
     </div>
     <div id="sidebar">
