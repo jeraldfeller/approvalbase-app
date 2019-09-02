@@ -13,6 +13,8 @@
   var table = null;
   var map = {};
   $(document).on('click', '#showModal', function () {
+
+
     $metaDataDefault = (poiType == 2 ? true : false);
     $action = $(this).attr('data-action');
     if ($action == 'edit') {
@@ -274,6 +276,17 @@
       });
       return false;
     });
+
+
+      // change map view
+      $('.map-style-change').click(function(){
+          $('.map-style-change').removeClass('btn-primary').addClass('btn-default');
+          $('.map-style-change').attr('disabled', false);
+          $(this).addClass('btn-primary');
+          $(this).attr('disabled', 'disabled');
+          $mapStyle = $(this).attr('data-style');
+          map.setStyle($mapStyle);
+      });
 
   });
 

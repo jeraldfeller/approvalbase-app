@@ -5,7 +5,7 @@ date_default_timezone_set('Australia/Sydney');
  * APPLICATION ENVIRONMENT
  *---------------------------------------------------------------
  */
-define('ENVIRONMENT', 'production');
+define('ENVIRONMENT', 'staging');
 
 error_reporting(E_ALL);
 
@@ -17,6 +17,12 @@ error_reporting(E_ALL);
 switch (ENVIRONMENT) {
 
     case 'staging':
+        require $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
+        define('BASE_URI', 'https://staging.approvalbase.com/');
+        define('ADMIN_EMAIL', 'jeraldfeller@gmail.com');
+        define('STRIPE_ENV', 'stripe_dev');
+        break;
+
     case 'production':
         require $_SERVER["DOCUMENT_ROOT"] . '/vendor/autoload.php';
         ini_set('display_errors', 1);
