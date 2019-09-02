@@ -21,6 +21,7 @@
 
 
 
+
   });
   var addressesFeaturesAlpha = [];
   var addressesFeaturesBeta = [];
@@ -180,22 +181,26 @@
 
           // show list
 
-          setTimeout(function(){
-            console.log('THIS');
-            $('.poi_' + clickedPoint.properties.poiId + '').addClass('active-selected');
-            if ($('.poi_' + clickedPoint.properties.poiId + '').find('.poi-action-show-list').hasClass('fa-angle-double-down')) {
-              $('.poi_' + clickedPoint.properties.poiId + '').find('.poi-action-show-list').trigger('click');
-            }
-            console.log($('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')+ ' .redirect:eq(0)'));
-            $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')+ ' .redirect:eq(0)').trigger('click');
-//            $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')).addClass('shown');
-//
+            setTimeout(function(){
+                console.log('THIS');
+                $target = '.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-') + ' .redirect:eq(0)';
+                $targetScroll = '.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-');
+                $('.poi_' + clickedPoint.properties.poiId + '').addClass('active-selected');
+                if ($('.poi_' + clickedPoint.properties.poiId + '').find('.poi-action-show-list').hasClass('fa-angle-double-down')) {
+                    $('.poi_' + clickedPoint.properties.poiId + '').find('.poi-action-show-list').trigger('click');
+                }
 
-
-            $('.scroll-wrapper').animate({
-              scrollTop: $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-')).offset().top
+                $($target).trigger('click');
+                setTimeout(function(){
+                    console.log($($targetScroll+'-input'));
+                    $($targetScroll+'-input').trigger('focus');
+                }, 500);
+                // console.log($('.scroll-wrapper ' + $targetScroll).offset().top);
+                //       $('.scroll-wrapper').animate({
+                //         // scrollTop: $('.da-'+clickedPoint.properties.dasId+'-'+clickedPoint.properties.address.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-')).offset().top
+                //           scrollTop: $($target).offset().top
+                //       }, 500);
             }, 500);
-          }, 500);
 
 
           // 1. Fly to the point
@@ -260,9 +265,9 @@
                 $desc = '';
               }
               $rowIdentifier = key.properties.dasId+'-'+key.properties.address;
-              $htmlData += '<tr data-index="'+index+'" class=" da-list-row hover da-'+$rowIdentifier.replace(/ /g, '-').replace(/,/g, '-')+'" data-dasId="' + key.properties.dasId + '" id="' + key.properties.poiId + '"><td class="da-li text-left ">' + key.properties.lodgeDateUnix + '</td><td class="da-li text-left  redirect">' + key.properties.lodgeDate + '</td><td class="da-li text-left  redirect">' +
-                key.properties.address +
-                '</td></tr>';
+              $htmlData += '<tr data-index="'+index+'" class=" da-list-row hover da-'+$rowIdentifier.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-')+'" data-dasId="' + key.properties.dasId + '" id="' + key.properties.poiId + '"><td class="da-li text-left ">' + key.properties.lodgeDateUnix + ' </td><td class="da-li text-left  redirect">' + key.properties.lodgeDate + '</td><td class="da-li text-left  redirect"> <input type="text" style="position: absolute; opacity: 0;" class="da-'+$rowIdentifier.replace(/ /g, '-').replace(/,/g, '-').replace(/:/g, '-').replace(/\//g, '-').replace(/\./g, '-')+'-input">' +
+                  key.properties.address +
+                  '</td></tr>';
           });
 
 //      $container.html('<ul class="da-list">'+($htmlData != '' ? $htmlData : 'No DA available')+'</ul>');
@@ -744,6 +749,17 @@
 
 
 
+            // change map view
+            $('.map-style-change').click(function(){
+                $('.map-style-change').removeClass('btn-primary').addClass('btn-default');
+                $('.map-style-change').attr('disabled', false);
+                $(this).addClass('btn-primary');
+                $(this).attr('disabled', 'disabled');
+                $mapStyle = $(this).attr('data-style');
+                map.setStyle($mapStyle);
+            });
+     
+
     }
   );
 
@@ -853,4 +869,6 @@
       });
     })
   }
+
+
 </script>
