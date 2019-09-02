@@ -883,7 +883,7 @@
                     "councils": (councils == '' || councils == null ? 'all' : councils),
                     "inputPhrase": $('#searchFilterModal').val(),
                     "filter": filterBy,
-                    "inputCaseSensitive": (caseSensitive == true ? 1 : 0),
+                    "inputSearchAddresses": (searchAddresses == true ? 1 : 0),
                     "inputLiteralSearch": (literalSearch == true ? 1 : 0),
                     "inputExcludePhrase": (excludePhrase == true ? 1 : 0),
                     "inputMetadata": (metadata == true ? 1 : 0)
