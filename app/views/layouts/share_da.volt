@@ -453,7 +453,7 @@
                         <tr style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
                             <td style="color: #fff; text-align: center; font-size: 18px; text-shadow: 1px 1px rgba(0, 0, 0, 0.23); font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; margin: 0; padding: 0;"
                                 align="center">
-                                <img style="width: 170px;" width="170" src="/dashboard_assets/images/email-logo.png">
+                                <img style="width: 170px;" width="170" src="https://app.approvalbase.com/dashboard_assets/images/email-logo.png">
                             </td>
                         </tr>
                     </table>
