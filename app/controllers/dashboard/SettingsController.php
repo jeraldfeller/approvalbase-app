@@ -231,7 +231,7 @@ class SettingsController extends _BaseController
             $billingCount++;
         }
 
-        while ($shareCount != 5) {
+        while ($shareCount != 1) {
             $share .= '<div class="'.$columnClass.' no-pdd-left mrg-top-10">
                         <div class="">
                             <input data-type="share" data-id="0" type="email" class="form-control input-email" placeholder="email address" />

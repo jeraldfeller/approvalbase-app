@@ -5,7 +5,7 @@ date_default_timezone_set('Australia/Sydney');
  * APPLICATION ENVIRONMENT
  *---------------------------------------------------------------
  */
-define('ENVIRONMENT', 'production');
+define('ENVIRONMENT', 'local');
 
 error_reporting(E_ALL);
 
@@ -33,7 +33,7 @@ switch (ENVIRONMENT) {
         define('STRIPE_ENV', 'stripe_dev');
         break;
     case 'local':
-        define('BASE_URI', 'http://dev.approval-base.com/');
+        define('BASE_URI', 'http://local.approval-base.com/');
         define('ADMIN_EMAIL', 'jeraldfeller@gmail.com');
         break;
     default:
