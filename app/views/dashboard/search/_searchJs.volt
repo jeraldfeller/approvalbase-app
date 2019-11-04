@@ -938,7 +938,7 @@
                 "literalSearch": literalSearch,
                 "excludePhrase": excludePhrase,
                 "metadata": metadata,
-                "clickedDas": clickedDas
+                // "clickedDas": clickedDas
             }
         }
 

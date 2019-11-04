@@ -24,7 +24,7 @@ class DatatablesController extends _BaseController
         $sqlTypes = [];
 
         $customSearchData = $this->request->getQuery("customSearch");
-        $clickedDas = (isset($customSearchData['clickedDas']) ? $customSearchData['clickedDas'] : []);
+        $clickedDas = ($this->getUser()->getClickedDa() != null ? explode(',', $this->getUser()->getClickedDa()) : array());
         $startDate = date('Y-m-d', strtotime($customSearchData['startDate']));
         $endDate = date('Y-m-d', strtotime($customSearchData['endDate']));
         $maxCost = $customSearchData['maxCost'];
